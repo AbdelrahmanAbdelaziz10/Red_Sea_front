@@ -1,0 +1,110 @@
+.footer{
+    background-color: var(--main);
+    color: var(--white);
+    font-family: myFont;
+    overflow:hidden;
+}
+
+.footer ul li .triangle {
+	position: relative;
+	background-color: var(--heavenly);
+    
+}
+.footer .triangle:before,
+.footer .triangle:after {
+	content: '';
+	position: absolute;
+	background-color: inherit;
+}
+.footer .triangle,
+.footer .triangle:before,
+.footer .triangle:after {
+	width:  .4em;
+	height: .4em;
+	border-top-right-radius: 40%;
+}
+
+.footer .triangle {
+	transform: rotate(-35deg) skewX(-30deg) scale(1,.866);
+}
+.footer .triangle:before {
+	transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+}
+.footer .triangle:after {
+	transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+}
+
+.footer h5{
+    font-weight: 400;
+    font-size: 1.3rem;
+    padding-right: 7%;
+    padding-bottom: 3%;
+}
+.footer h6{
+    font-size: 1.1rem;
+
+}
+.footer ul li,
+.footer ul li a{
+    font-size: 1rem;
+    padding-bottom: 2px;
+    padding-left: 0;
+    padding-right: 4%;
+}
+.footer ul li:hover a{
+    font-size: 1.2rem;
+    transition: all .5s;
+}
+.footer ul li:hover {
+    font-size: 1.1rem;
+    transition: all .5s;
+}
+.footer .arrow_icon{
+    color: var(--heavenly);
+    font-size: 2rem;
+    border-radius: 3px;
+    font-weight: 700;
+}
+.footer .privity_list{
+    gap: 17%;
+}
+.footer .Social_icon li:hover a{
+    transition: all .5s;
+    font-size: 2.1rem !important;
+}
+.footer .Social_icon{
+    gap: 5%;
+}
+.footer .Social_icon li a{
+    font-size: 1.9rem;
+}
+.footer .Social_icon li .instagram_icon{
+    background-color: var(--white);
+    color: var(--main) !important;
+    border-radius: 50%;
+    padding: 5px;
+    font-size: 2.2rem;
+
+}
+.footer .line{
+    width:88vw;
+    height: .1vh;
+    background-color: var(--heavenly);
+}
+.footer .left{
+    display: flex;
+    justify-content: end;
+    flex-direction: column;
+}
+.footer p{
+    margin: 0;
+    font-size: 15px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.footer .footer_logo{
+    width: 9vw;
+}
+
+
