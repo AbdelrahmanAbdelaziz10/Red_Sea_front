@@ -9,10 +9,9 @@ import Header from '../../Components/Header/Header'
 const HomePage = () => {
   return (
     <div className='Home'>
-    {/* <NavBar /> */}
     <Header />
     <About />
-    <div className='home_product'>
+    <div className='homepage_product'>
     <Products />
     </div>
     <Brand />

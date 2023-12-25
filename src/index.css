@@ -59,9 +59,9 @@ a{
 .Product_page{
     overflow: hidden;
 }
-.home_product{
-    background-color: var(--main);
-    color: #fff;
+.homepage_product .product{
+    background-color: var(--main) !important;
+    color: #fff !important;
 }
 .page_product{
     background-color: var(--white);
