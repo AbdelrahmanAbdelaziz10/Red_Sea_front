@@ -11,7 +11,7 @@
 }
 .brand p{
     text-align: center;
-    font-size: 1,2rem;
+    font-size: 1.2rem;
     font-weight: 400;
 }
 .brand .triangle {
@@ -29,8 +29,8 @@
 .brand .triangle,
 .brand .triangle:before,
 .brand .triangle:after {
-	width:  2em;
-	height: 1.9em;
+	width:  2.1em;
+	height: 2.1em;
 	border-top-right-radius: 40%;
 }
 
@@ -46,8 +46,8 @@
 
 .brand .triangle_control{
     position: absolute;
-    top:1px;
-    right: 52%;
+    top:-1px;
+    right: 53%;
 }
 
 .brand .brand_card{

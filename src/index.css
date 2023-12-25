@@ -41,6 +41,9 @@
     src: url(../public/Fonts/ArbFONTS-DINNextLTArabic-Medium-4.ttf);
     font-weight: 500;
 }
+body{
+    font-family: myfont !important;
+}
 ul{
     list-style: none;
 
@@ -52,9 +55,17 @@ a{
     text-decoration: none !important;
     color: #fff !important;
 }
+.Home{
+    overflow: hidden;
+}
+.triangle_control{
+    position: relative;
+    left: -80%;
+    bottom:9rem;
+}
 
 .triangle {
-	position: relative;
+	position: absolute;
 	background-color: var(--heavenly);
     
 }
@@ -80,10 +91,4 @@ a{
 }
 .triangle:after {
 	transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
-}
-
-.triangle_control{
-    position: absolute;
-    bottom:-54%;
-    left: 90px;
 }

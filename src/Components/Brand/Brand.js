@@ -3,6 +3,8 @@ import "./Brand.css";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import apolpg from '../../images/علامة-ابو-للوج.png';
 import Wildcat from '../../images/علامة-القط-البري.png';
+import topbrand from '../../images/علامة-توب.png';
+import zahrabrand from '../../images/علامة-زهراء.png';
 
 const Brand = () => {
   return (
@@ -18,26 +20,32 @@ const Brand = () => {
           </div>
       </Row>
       <Row className="mb-5">
-        <Col lg='3'>
+      
+      <Col lg='3'>
             <Card className="brand_card">
-            <img src={apolpg} alt='' />
+            <img src={zahrabrand} alt='' />
+            </Card>
+        </Col>
+      <Col lg='3'>
+            <Card className="brand_card">
+            <img src={topbrand} alt='' />
             </Card>
         </Col>
         <Col lg='3'>
             <Card className="brand_card">
-            <img src={apolpg} alt='' />
+            <div className="brand_img">
+            <img src={Wildcat} alt=''/>
+
+            </div>
             </Card>
         </Col>
         <Col lg='3'>
             <Card className="brand_card">
-            <img src={apolpg} alt='' />
+            <Card.Img variant="top" src={apolpg} />
             </Card>
         </Col>
-        <Col lg='3'>
-            <Card className="brand_card">
-            <img src={apolpg} alt='' />
-            </Card>
-        </Col>
+
+
       </Row>
     </Container>
 
