@@ -55,6 +55,25 @@ a{
     text-decoration: none !important;
     color: #fff !important;
 }
+.Contact,
+.Product_page{
+    overflow: hidden;
+}
+.home_product{
+    background-color: var(--main);
+    color: #fff;
+}
+.page_product{
+    background-color: var(--white);
+    color: var(--main);
+}
+.page_product p{
+    color: var(--gray);
+}
+.page_product ,
+.Product_page ,.product_Brand{
+    margin-bottom: 6% !important;
+}
 .Home{
     overflow: hidden;
 }
@@ -92,3 +111,12 @@ a{
 .triangle:after {
 	transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
 }
+
+.header_hover{
+    background-color: #0b057a7e;
+    width: 100%;
+    height: 100% ;
+    position: absolute;
+    top: 0;
+    z-index: 11;
+  }

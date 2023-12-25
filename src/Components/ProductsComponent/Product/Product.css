@@ -1,0 +1,7 @@
+.product{
+    background-color: var(--white);
+    color: var(--gray);
+}
+.prod_title p{
+    color: var(--gray);
+}

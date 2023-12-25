@@ -5,19 +5,14 @@ import apolpg from '../../images/علامة-ابو-للوج.png';
 import Wildcat from '../../images/علامة-القط-البري.png';
 import topbrand from '../../images/علامة-توب.png';
 import zahrabrand from '../../images/علامة-زهراء.png';
+import Title from "../Title/Title";
 
 const Brand = () => {
   return (
     <section className="brand">
     <Container>
     <Row className="mb-3">
-      <div className="map_text mt-4 ">
-          <h5>  العلامات التجارية</h5>
-            <div className="triangle_control">
-              <div className="triangle" />
-            </div>
-            <p>علامتنا التجارية في السوق المحلية والخارجية</p>
-          </div>
+    <Title title='العلامات التجارية' pragraph='علامتنا التجارية في السوق المحلية والخارجية' />
       </Row>
       <Row className="mb-5">
       

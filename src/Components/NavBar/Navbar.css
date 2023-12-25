@@ -1,6 +1,5 @@
-
-.navbar{
-    background-color:#f4f5f948;
+.navbar {
+    background-color: #f4f5f948;
     border-radius: 5px;
     max-height: 8vh;
     display: flex;
@@ -10,19 +9,38 @@
     top: 10px;
     z-index: 100000;
 }
-.contact{
+
+.contact {
     position: relative;
     top: 10px;
     z-index: 100000;
 }
-.navbar ul li{
+
+.navbar ul li {
     padding-right: 20px;
 }
-.navbar .logo_nav{
+
+.navbar .logo_nav {
     max-width: 7vw;
     margin-top: -11px !important;
 
 }
-.navbar .language_icon{
+
+.navbar .language_icon {
     color: var(--heavenly);
+}
+
+.contact_icon {
+    color: var(--heavenly);
+}
+
+.contact_list {
+    color: var(--white);
+    font-size: .9rem;
+    font-weight: 300;
+    margin-right: 5%;
+}
+
+.contact_list li {
+    margin-left: 1.5%;
 }

@@ -1,13 +1,7 @@
-.product{
-    background-color: var(--main);
-    color: var(--white);
-    
-}
 
 .product h5{
     font-family: myfont;
     text-align: center;
-    color: var(--white);
     font-size: 1.4rem;
     font-weight: 800;
     margin-bottom: 3%;
@@ -18,6 +12,7 @@
     text-align: center;
     font-size: 1,2rem;
     font-weight: 400;
+    color: var(--white);
 }
 .product .triangle {
 	position: absolute;

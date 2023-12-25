@@ -1,21 +1,19 @@
 .header{
-
+  height: 110vh;
 }
   .swiper {
     position: absolute;
     top: -7.1rem !important;
     z-index: 1;
     width: 100%;
-    height: 75vh;
+    height: 72vh;
   }
   
   .swiper-slide {
     text-align: center;
     font-size: 18px;
     background: #fff;
-  
-    /* Center slide text vertically */
-    display: flex;
+      display: flex;
     justify-content: center;
     align-items: center;
   }
@@ -26,27 +24,88 @@
     height: 100%;
     object-fit: cover;
   }
-  .slide_1{
-    background-image: url('../../images/صور-الشركة.jpg');
-    background-size: cover;
-    background-position: 15% 80%;
-    background-repeat: no-repeat;
-    
+
+  .slide img{
+    position: absolute;
+    z-index: 11;
   }
-  .header .header_text{
-    background-color: #0b057a7e;
-    width: 100%;
-    height: 100% ;
-  }
-  .header .contact_icon{
-    color: var(--heavenly);
-  }
-  .header .contact_list{
+
+  .header .head_text{
+    position: absolute;
+    z-index: 11111;
     color: var(--white);
-    font-size: .9rem;
+    text-align: right;
+    margin-top: 17%;
+    margin-right: 4%;
+  }
+  .header .head_text p{ 
+    font-family: myfont;
+    font-size: 16px;
     font-weight: 300;
-    padding-right: 5%;
   }
-  .header .contact_list li{
-    margin-left: 1.5%;
+  .header .video {
+    position: relative;
+    top: -19rem;
+    left: 0;
+    right: 0;
+    z-index: 11111;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 70vw;
   }
+  .header .video video{
+    width: 60vw;
+    border-radius: 4px !important;
+    z-index: 11;
+
+  }
+  .header .play_video{
+    color: var(--white);
+    position: absolute;
+    z-index: 100000;
+    font-size: 4rem;
+    cursor: pointer;
+    margin-top: 13%;
+  }
+  /* .header .triangle { */
+    /* position: absolute; */
+    /* background-color: var(--heavenly); */
+      /* opacity: 1; */
+      /* z-index: 111; */
+/*  */
+  /* } */
+  /* .header .triangle:before, */
+  /* .header .triangle:after { */
+    /* content: ''; */
+    /* position: absolute; */
+    /* background-color: inherit; */
+/*  */
+  /* } */
+  /* .header .triangle, */
+  /* .header .triangle:before, */
+  /* .header .triangle:after { */
+    /* width:  2.1em; */
+    /* height: 2.1em; */
+    /* border-top-right-radius: 40%; */
+    /* border: 2px 0px 0px 0px; */
+    /* border: solid #fff; */
+/*  */
+  /* } */
+  /*  */
+  /* .header .triangle { */
+    /* transform: rotate(-150deg) skewX(-30deg) scale(1,.866); */
+  /* } */
+  /* .header .triangle:before { */
+    /* transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%); */
+  /* } */
+  /* .header .triangle:after { */
+    /* transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%); */
+  /* } */
+  /*  */
+  /* .header .triangle_control{ */
+    /* width: 5vw; */
+    /* height: 5vh; */
+      /* position: absolute; */
+      /* top:-1px; */
+      /* right: 54%; */
+  /* } */

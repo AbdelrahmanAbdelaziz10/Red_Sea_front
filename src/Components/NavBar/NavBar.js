@@ -10,7 +10,7 @@ import { IoIosMail } from "react-icons/io";
 export const NavBar = () => {
   return (
     <>
-      <Row className="pt-4 contact">
+      <Row className="pt-3 contact">
         <ul className="d-flex justify-content-start contact_list">
           <li>
             info@rsdyemen.com
@@ -35,33 +35,23 @@ export const NavBar = () => {
                 من نحن
               </Link>
             </li>
-            <li class="nav-item dropdown">
+            <li class="nav-item ">
               <Link
-                class="nav-link dropdown-toggle"
-                to="/"
+                class="nav-link "
+                to="/products"
                 role="button"
-                data-bs-toggle="dropdown"
+                // data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
                 منتجاتنا
               </Link>
-              <ul class="dropdown-menu">
+              {/* <ul class="dropdown-menu">
                 <li>
                   <a class="dropdown-item" href="#">
                     Action
                   </a>
                 </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                    Another action
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                    Something else here
-                  </a>
-                </li>
-              </ul>
+              </ul> */}
             </li>
             <li class="nav-item dropdown">
               <Link
@@ -97,7 +87,7 @@ export const NavBar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/">
+              <Link className="nav-link active" aria-current="page" to="/contact">
                 التواصل
               </Link>
             </li>

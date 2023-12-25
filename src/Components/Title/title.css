@@ -1,0 +1,58 @@
+.map_text {
+    position: relative;
+}
+
+.map_text h4 {
+    text-align: center;
+    color: var(--main);
+    font-size: 1.4rem;
+    font-weight: 800;
+    margin-bottom: 3%;
+}
+
+.map_text p {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--gray);
+}
+
+.map_text .triangle {
+    position: absolute;
+    background-color: var(--heavenly);
+    opacity: .6;
+    z-index: 0;
+}
+
+.map_text .triangle:before,
+.map_text .triangle:after {
+    content: '';
+    position: absolute;
+    background-color: inherit;
+}
+
+.map_text .triangle,
+.map_text .triangle:before,
+.map_text .triangle:after {
+    width: 2.1em;
+    height: 2.1em;
+    border-top-right-radius: 40%;
+}
+
+.map_text .triangle {
+    transform: rotate(-150deg) skewX(-30deg) scale(1, .866);
+}
+
+.map_text .triangle:before {
+    transform: rotate(-135deg) skewX(-45deg) scale(1.414, .707) translate(0, -50%);
+}
+
+.map_text .triangle:after {
+    transform: rotate(135deg) skewY(-45deg) scale(.707, 1.414) translate(50%);
+}
+
+.map_text .triangle_control {
+    position: absolute;
+    top: -1px;
+    right: 54.2%;
+}
