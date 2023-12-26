@@ -12,7 +12,7 @@ const HomePage = () => {
     <Header />
     <About />
     <div className='homepage_product'>
-    <Products />
+    <Products title='منتجاتنا  '/>
     </div>
     <Brand />
     <LocationMap title='موقعنا علي الخرائط'/>

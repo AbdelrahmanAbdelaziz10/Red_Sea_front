@@ -6,6 +6,7 @@ import ZahraProduct from "./Pages/ProductsPage/ZahraProduct";
 import BrandPage from "./Pages/BrandPage/BrandPage";
 import PolicyPage from "./Pages/PrivacyPolicy/PolicyPage";
 import TermsPage from "./Pages/TermsUsing/TermsPage";
+import PackagingPage from "./Pages/Packaging/PackagingPage";
 function App() {
   return (
     <div className="App">
@@ -19,6 +20,8 @@ function App() {
         <Route path="/brand" element={<BrandPage />} />
         <Route path="/privacy_policy" element={<PolicyPage />} />
         <Route path="/terms_using" element={<TermsPage />} />
+        <Route path="/packaging" element={<PackagingPage />} />
+
 
 
 
