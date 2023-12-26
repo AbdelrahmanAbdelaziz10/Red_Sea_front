@@ -9,6 +9,18 @@
     top: 10px;
     z-index: 100000;
 }
+.navbar .dropdown-menu{
+    background-color: #f4f5f948;
+    border: 2px solid #f4f5f948;
+}
+.navbar .dropdown-menu li{
+    padding-right: 0;
+}
+
+.navbar .dropdown-menu .dropdown-item:hover{
+    background-color: #f4f5f948 !important;
+
+}
 
 .contact {
     position: relative;

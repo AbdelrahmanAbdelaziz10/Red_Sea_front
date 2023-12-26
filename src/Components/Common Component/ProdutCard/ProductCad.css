@@ -1,0 +1,104 @@
+
+.card{
+    max-width: 70%;
+    max-height: 50vh;
+    border: none !important;
+    border-radius: 9px !important;
+    box-shadow: 1px 1px 10px var(--gray);
+}
+.card:hover{
+    transform: scale(1);
+    transition: all .7s ;
+}
+.card .img{
+    width: 60%;
+    max-height: 70% !important;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.card h6{
+    color: var(--main);
+    text-align: center;
+    margin-bottom: 7%;
+    font-size: 1.1rem;
+}
+.card .product_btn{
+    background-color: var(--heavenly);
+    border: none;
+    width: 50%;
+    height: 18%;
+    padding-bottom: 2%;
+    margin-left: 50%;
+    border-radius: 15px 0 9px 0;
+    color: var(--main);
+    font-size: 1.2rem;
+    font-weight: 300 !important;
+}
+.product .product_description{
+    color: var(--gray) ;
+    width: 70%;
+    text-align: right;
+    font-family: myfont;
+    font-size: .9rem;
+}
+.flex_col{
+    flex-direction: column;
+    justify-content: center !important;
+}
+
+
+
+.arrow .triangle {
+    position: absolute;
+    background-color: var(--heavenly);
+    opacity: .6;
+    z-index: 0;
+}
+
+.arrow .triangle:before,
+.arrow .triangle:after {
+    content: '';
+    position: absolute;
+    background-color: inherit;
+}
+
+.arrow .triangle,
+.arrow .triangle:before,
+.arrow .triangle:after {
+    width: .6em;
+    height: .6em;
+    border-top-right-radius: 40%;
+    cursor: pointer;
+}
+
+.arrow .triangle {
+    transform: rotate(-150deg) skewX(-30deg) scale(1, .866);
+}
+
+.arrow .triangle:before {
+    transform: rotate(-135deg) skewX(-45deg) scale(1.414, .707) translate(0, -50%);
+}
+
+.arrow .triangle:after {
+    transform: rotate(135deg) skewY(-45deg) scale(.707, 1.414) translate(50%);
+}
+
+.arrow .triangle2 {
+    transform: rotate(-90deg) skewX(-30deg) scale(1, .866);
+}
+
+.arrow .triangle2:before {
+    transform: rotate(-135deg) skewX(-45deg) scale(1.414, .707) translate(0, -50%);
+}
+
+.arrow .triangle2:after {
+    transform: rotate(135deg) skewY(-45deg) scale(.707, 1.414) translate(50%);
+}
+.arrow .triangle_control {
+    position: absolute;
+    top: -1px;
+    right: 54.2%;
+}

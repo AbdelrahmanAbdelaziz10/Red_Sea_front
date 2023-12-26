@@ -4,6 +4,7 @@ import { Col, Container } from "react-bootstrap";
 import { FaInstagram, FaYoutube } from "react-icons/fa";
 import footerLogo from "../../images/logo.png";
 import { FaFacebook } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -74,13 +75,19 @@ const Footer = () => {
         <div className="row">
           <div className="col lg-6">
             <ul className="d-flex privity_list">
-              <li className="d-flex">
-                <div className="triangle mt-2 me-2 ms-2" />
+              <li className="d-flex ">
+              <div className="triangle mt-2 me-1 " />
+              <Link to='/privacy_policy' className="link">
                 سياسية الخصوصية
+              </Link>
+
               </li>
               <li className="d-flex">
                 <div className="triangle mt-2 me-2 ms-2" />
+                <Link to='/terms_using' className="link">
                 شروط الاستخدام
+                </Link>
+
               </li>
             </ul>
           </div>

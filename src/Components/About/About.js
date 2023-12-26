@@ -4,9 +4,9 @@ import "./About.css";
 
 const About = () => {
   return (
-    <section className="about mb-5">
+    <section className="about pb-5 mb-5">
       <Container>
-        <Row className="mb-3">
+        <Row className="mb-5 pb-5">
           <div className="map_text mt-4 ">
             <h5> عن الشركة</h5>
             <div className="triangle_control">

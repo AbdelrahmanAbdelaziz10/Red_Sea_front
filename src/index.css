@@ -55,24 +55,38 @@ a{
     text-decoration: none !important;
     color: #fff !important;
 }
+a,Link{
+    cursor: pointer !important;
+
+}
+
 .Contact,
 .Product_page{
     overflow: hidden;
 }
-.homepage_product .product{
+.homepage_product .product
+{
     background-color: var(--main) !important;
     color: #fff !important;
 }
-.page_product{
-    background-color: var(--white);
+.brandpage_product .product{
+    background-color: #fff !important;
     color: var(--main);
 }
-.page_product p{
+.page_product .product{
+    background-color: var(--white) !important;
+    color: var(--main) !important;
+}
+.page_product .product p,
+.brandpage_product .product p{
+
     color: var(--gray);
 }
-.page_product ,
-.Product_page ,.product_Brand{
+.page_product  ,.product_Brand{
     margin-bottom: 6% !important;
+}
+.product_Brand{
+    margin-top: -7%;
 }
 .Home{
     overflow: hidden;
@@ -100,6 +114,7 @@ a{
 	width:  12em;
 	height: 12em;
 	border-top-right-radius: 40%;
+    z-index: 11111;
 }
 
 .triangle {

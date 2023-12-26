@@ -7,7 +7,7 @@ import contactPoster from '../../images/واجهة-شركة-البحر-الاح�
 
 const ZahraProduct = () => {
   return (
-    <div className='Product_page'>
+    <div className='Product_page Contact'>
         <Head title='منتجاتنا< منتج الزهراء' poster={contactPoster}/>
 
     <div className='page_product'>
@@ -20,7 +20,8 @@ const ZahraProduct = () => {
     <div className="triangle"/>
     </div>
         <Footer />
-    </div>  )
+    </div>  
+    )
 }
 
 export default ZahraProduct

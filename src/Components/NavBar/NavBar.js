@@ -35,49 +35,49 @@ export const NavBar = () => {
                 من نحن
               </Link>
             </li>
-            <li class="nav-item ">
-              <Link
-                class="nav-link "
-                to="/products"
-                role="button"
-                // data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                منتجاتنا
-              </Link>
-              {/* <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="#">
-                    Action
-                  </a>
-                </li>
-              </ul> */}
-            </li>
             <li class="nav-item dropdown">
               <Link
                 class="nav-link dropdown-toggle"
-                to="/"
+                to="/products"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                العلامات التجارية
+                منتجاتنا
               </Link>
               <ul class="dropdown-menu">
-                <li>
-                  <a class="dropdown-item" href="#">
-                    Action
-                  </a>
+              <li className="dropmenu">
+                  <Link class="dropdown-item" to="/products">
+                  جميع المنتجات
+                  </Link>
                 </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                    Another action
-                  </a>
+                <li className="dropmenu">
+                  <Link class="dropdown-item" to="/products/elzahra">
+                    منتجات الزهرة
+                  </Link>
                 </li>
-                <li>
-                  <a class="dropdown-item" href="#">
-                    Something else here
-                  </a>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <Link
+                class="nav-link dropdown-toggle"
+                to="/products"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+              العلامات التجارية
+              </Link>
+              <ul class="dropdown-menu">
+              <li className="dropmenu">
+                  <Link class="dropdown-item" to="/brand">
+                  جميع العلامات
+                  </Link>
+                </li>
+                <li className="dropmenu">
+                  <Link class="dropdown-item" to="/">
+                    منتجات الزهرة
+                  </Link>
                 </li>
               </ul>
             </li>

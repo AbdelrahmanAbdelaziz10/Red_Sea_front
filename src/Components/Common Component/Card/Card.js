@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './card.css';
 const CardComponent = ({title,imageSrc,index}) => {
   return (
     <div className="card d-flex flex-column mb-5 mt-4" key={index}>

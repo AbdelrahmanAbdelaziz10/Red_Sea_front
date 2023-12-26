@@ -25,7 +25,7 @@
 }
 
 .footer .triangle {
-	transform: rotate(-35deg) skewX(-30deg) scale(1,.866);
+	transform: rotate(-25deg) skewX(-30deg) scale(1,.866);
 }
 .footer .triangle:before {
 	transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
@@ -46,18 +46,21 @@
 }
 .footer ul li,
 .footer ul li a{
-    font-size: 1rem;
+    font-family: myfont;
+    font-weight: 300;
+    font-size: 15px;
     padding-bottom: 2px;
     padding-left: 0;
     padding-right: 4%;
 }
 .footer ul li:hover a{
-    font-size: 1.2rem;
+    font-size: 16px;
     transition: all .5s;
 }
 .footer ul li:hover {
     font-size: 1.1rem;
     transition: all .5s;
+    cursor: pointer;
 }
 .footer .arrow_icon{
     color: var(--heavenly);
@@ -67,6 +70,10 @@
 }
 .footer .privity_list{
     gap: 17%;
+}
+.footer .privity_list li {
+    display: flex;
+    width: 100%;
 }
 .footer .Social_icon li:hover a{
     transition: all .5s;

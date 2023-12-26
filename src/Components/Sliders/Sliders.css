@@ -1,17 +1,16 @@
-.overflow_visible{
+.overflow_visible {
     overflow: visible !important;
-}
-.card{
+  }
+  .card {
     max-width: 17vw;
     border: none !important;
     border-radius: 9px !important;
-    box-shadow: 1px 1px 10px var(--gray);
-}
-.card:hover{
-    transform: scale(1.1);
-    transition: all .7s ;
-}
-.card .img{
+  }
+  .card:hover {
+    transform: scale(1.066);
+    transition: all 0.7s;
+  }
+  .card .img {
     max-width: 70%;
     max-height: 50% !important;
     margin: auto;
@@ -19,14 +18,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.card h6{
+  }
+  .card h6 {
     color: var(--main);
     text-align: center;
     margin-bottom: 7%;
     font-size: 1.1rem;
-}
-.card .product_btn{
+  }
+  .card .product_btn {
     background-color: var(--heavenly);
     border: none;
     width: 50%;
@@ -37,40 +36,57 @@
     color: var(--main);
     font-size: 1.2rem;
     font-weight: 300 !important;
-}
-
-.slider .triangle {
-	position: absolute;
-	background-color: var(--heavenly) ;
+  }
+  
+  .slider .triangle {
+    position: absolute;
+    background-color: var(--heavenly);
     z-index: 1111;
     opacity: 1;
-}
-.slider .triangle:before,
-.slider .triangle:after {
-	content: '';
-	position: absolute;
-	background-color: inherit;
-}
-.slider .triangle,
-.slider .triangle:before,
-.slider .triangle:after {
-	width: 1em;
-	height: 1em;
-	border-top-right-radius: 40%;
-}
-
-.slider .triangle {
-	transform: rotate(-90deg) skewX(-30deg) scale(1,.866);
-}
-.slider .triangle:before {
-	transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
-}
-.slider .triangle:after {
-	transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
-}
-
-.slider .triangle_control{
+  }
+  .slider .triangle:before,
+  .slider .triangle:after {
+    content: "";
     position: absolute;
-    top:9.9rem;
-    right: -.6rem;
-}
+    background-color: inherit;
+  }
+  .slider .triangle,
+  .slider .triangle:before,
+  .slider .triangle:after {
+    width: 1em;
+    height: 1em;
+    border-top-right-radius: 40%;
+  }
+  
+  .slider .triangle {
+    transform: rotate(-90deg) skewX(-30deg) scale(1, 0.866);
+  }
+  .slider .triangle:before {
+    transform: rotate(-135deg) skewX(-45deg) scale(1.414, 0.707)
+      translate(0, -50%);
+  }
+  .slider .triangle:after {
+    transform: rotate(135deg) skewY(-45deg) scale(0.707, 1.414) translate(50%);
+  }
+  
+  .slider .triangle_control {
+    position: absolute;
+    top: 9.9rem;
+    right: -0.6rem;
+  }
+  
+  .slider .slick-prev:before,
+  .slider .slick-next:before {
+    content: "➤";
+    color: var(--heavenly);
+    font-size: 1.6rem;
+  }
+  
+  .slider .slick-next {
+    transform: rotate(180deg);
+    left: -2.3rem;
+  }
+  
+  .slider .slick-prev {
+    right: -2.3rem;
+  }

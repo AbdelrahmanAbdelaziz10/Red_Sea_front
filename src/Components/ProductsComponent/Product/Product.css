@@ -1,7 +1,13 @@
+
 .product{
+    position: relative;
+    z-index: 11111;
+    top:-9rem;
+    border-radius: 8px;
     background-color: var(--white);
     color: var(--gray);
 }
+
 .prod_title p{
-    color: var(--gray);
+    color: var(--gray) ;
 }

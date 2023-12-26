@@ -7,6 +7,7 @@ import productImg1 from "../../../images/منتج-توب.png";
 import productImg2 from "../../../images/باكت-الشروق.png";
 import productImg3 from "../../../images/منتج-زهرة3.png";
 import productImg4 from "../../../images/ابو-اللو.png";
+import ProductCard from './../../Common Component/ProdutCard/ProductCard';
 
 const cards = [
     {
@@ -45,25 +46,27 @@ const cards = [
 
 const Product = () => {
   return (
-    <Container>
-    <section className='product  '>
+    <section className='product_container  '>
+    <div className='product'>
     <div className='prod_title pt-4'>
     <Title title='منتجاتنا' pragraph='منتجاتنا من الافضل في الاسواق المحلية والخارجية' />
 
     </div>
-    <Container>
-        <Row className='d-flex justify-content-center'>
+    <Container className=''>
+        <Row className='d-flex justify-content-center pb-2 me-5'>
             {cards.map((card, index) => (
-                <Col lg='6' className='d-flex justify-content-center'>
-          <CardComponent index={index} title={card.title} imageSrc={card.imageSrc} />
+                <Col lg='4' className='d-flex justify-content-center'>
+          <ProductCard index={index} title={card.title} imageSrc={card.imageSrc} />
 
           </Col>
 
         ))}
         </Row>
     </Container>
+    </div>
+    
+
     </section>
-    </Container>
 
   )
 }

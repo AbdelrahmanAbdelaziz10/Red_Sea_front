@@ -5,12 +5,15 @@ import Brand from "./../../Components/Brand/Brand";
 import Head from "../../Components/Head/Head";
 import contactPoster from "../../images/واجهة-شركة-البحر-الاحمر3.jpg";
 import Product from './../../Components/ProductsComponent/Product/Product';
+import { Container } from "react-bootstrap";
 
 const ProductsPage = () => {
   return (
     <div className="Product_page">
       <Head title="منتجاتنا" poster={contactPoster} />
+      <Container>
       <Product />
+      </Container>
       <div className="product_Brand">
         <Brand />
       </div>

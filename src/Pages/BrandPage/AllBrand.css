@@ -1,0 +1,34 @@
+.product_container{
+    
+}
+.product{
+    position: relative;
+    z-index: 11111;
+    top:-9rem;
+    border-radius: 8px;
+    background-color: var(--white);
+    color: var(--gray);
+}
+
+.prod_title p{
+    color: var(--gray) ;
+}
+.brand .brand_card{
+    box-shadow: 5px 5px 10px #4d4d4db0;
+}
+.brand .brand_img {
+    width: 100%;
+    padding: 9px;
+  border-radius: 2px;
+}
+.flex_col{
+    flex-direction: column;
+    justify-content: center !important;
+}
+.product_description{
+    color: var(--gray) ;
+    width: 70%;
+    text-align: right;
+    font-family: myfont;
+    font-size: .9rem;
+}

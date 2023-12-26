@@ -5,7 +5,7 @@ import Sliders from "../Sliders/Sliders";
 
 const Products = () => {
   return (
-    <section className="product mb-5">
+    <section className="product ">
       <Container>
         <Row className="">
           <div className="map_text mt-4 ">
