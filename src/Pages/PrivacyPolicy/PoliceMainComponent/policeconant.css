@@ -1,18 +1,75 @@
-.product{
-    position: relative;
-    z-index: 11111;
-    top:-9rem;
-    border-radius: 8px;
-    background-color: var(--white);
+.product {
+  z-index: 11111;
+  top: -9rem;
+  border-radius: 8px;
+  background-color: var(--white);
 }
 
-.prod_title p{
-    color: var(--gray) ;
+.zahra_page .product {
+  position: relative;
+  min-height: 100vh;
 }
-.policy_paragraph{
-    color: #4D4D4D !important;
-    line-height: 2.3;
-    font-size: 16px;
-    font-weight: 300;
-    font-family: myfont;
+
+.prod_title p {
+  color: var(--gray);
 }
+.policy_paragraph {
+  color: #4d4d4d !important;
+  line-height: 2.3;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: myfont;
+}
+
+.zahra_page p {
+  color: #635d5d;
+  width: 70%;
+  margin-right: auto;
+  text-align: right;
+  padding: 0 30px;
+  line-height: 2.2;
+}
+
+
+/* zahra-page-triangle */
+
+.zahra-page-triangle.triangle_control {
+  top: 4rem !important;
+  right: 10rem !important;
+}
+.zahra-page-triangle.triangle_control .triangle,
+.zahra-page-triangle.triangle_control .triangle::before,
+.zahra-page-triangle.triangle_control .triangle::after {
+  width: 20em;
+  height: 20em;
+}
+
+.zahra-page-triangle-bg.zahra-page-triangle.triangle_control {
+  right: 14rem !important;
+}
+
+.zahra-page-triangle-bg.zahra-page-triangle.triangle_control .triangle,
+.zahra-page-triangle-bg.zahra-page-triangle.triangle_control .triangle::before,
+.zahra-page-triangle-bg.zahra-page-triangle.triangle_control .triangle::after {
+  background-image: url("../../../images/التعبئة-والتغليف.jpg");
+  background-size: cover;
+  background-position: center;
+  opacity: 1 !important;
+  border: 2px solid var(--heavenly);
+}
+
+.m_right .triangle_control{
+  right: 54.2% !important;
+
+}
+.m_right .triangle,
+.m_right .triangle:before,
+.m_right .triangle:after {
+  width: 2.4em !important;
+  height: 2.4em !important;
+}
+.margin_right .triangle_control{
+  right: 59.4% !important;
+
+}
+

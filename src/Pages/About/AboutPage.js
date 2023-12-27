@@ -1,18 +1,22 @@
 import React from 'react'
+import contactPoster from '../../images/واجهة-شركة-البحر-الاحمر1.jpg'
 import Head from '../../Components/Head/Head'
 import { Container } from 'react-bootstrap'
 import Brand from '../../Components/Brand/Brand'
 import Footer from '../../Components/Footer/Footer'
-import contactPoster from '../../images/واجهة-شركة-البحر-الاحمر9.jpg'
-import PolicyConant from './PoliceMainComponent/PolicyConant'
+import Products from '../../Components/Products/Products'
+import AboutMain from './AboutMain/AboutMain';
 
-const PolicyPage = () => {
+const AboutPage = () => {
   return (
     <div className="Product_page">
-      <Head title="سياسة الخصوصية" poster={contactPoster} />
+      <Head title=" من نحن" poster={contactPoster} />
       <Container>
-      <PolicyConant title='سياسة الخصوصية'/>
+      <AboutMain title='عن الشركة'/>
       </Container>
+      <div className='brandpage_product mt-3'>
+    <Products />
+    </div>
       <div className="product_Brand">
         <Brand />
       </div>
@@ -20,8 +24,8 @@ const PolicyPage = () => {
         <div className="triangle" />
       </div>
       <Footer />
-    </div>  
-    )
+    </div> 
+  )
 }
 
-export default PolicyPage
+export default AboutPage

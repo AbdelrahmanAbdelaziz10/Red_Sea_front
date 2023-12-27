@@ -5,7 +5,6 @@ import productImg3 from "../../images/علامة-ابو-للوج.png";
 import productImg4 from "../../images/علامة-القط-البري.png";
 import Title from '../../Components/Title/Title';
 import { Card, Col, Container, Row } from 'react-bootstrap';
-import ProductCard from '../../Components/Common Component/ProdutCard/ProductCard';
 import './AllBrand.css';
 
 
@@ -63,7 +62,8 @@ const AllBrand = () => {
     </div>
     
 
-    </section>  )
+    </section>  
+    )
 }
 
 export default AllBrand

@@ -1,0 +1,117 @@
+.product {
+    z-index: 11111;
+    top: -9rem;
+    border-radius: 8px;
+    background-color: var(--white);
+  }
+  .about-left{
+    position: relative;
+  }
+  
+  .about .product {
+    position: relative;
+    min-height: 100vh;
+  }
+  
+  .prod_title p {
+    color: var(--gray);
+  }
+  .policy_paragraph {
+    color: #4d4d4d !important;
+    line-height: 2.3;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: myfont;
+  }
+  
+  .about p {
+    text-align: right;
+    color: #635d5d;
+    line-height: 2.2;
+    font-size: 16px;
+    opacity: .9;
+  }
+  .about .paragraph{
+    padding: 0 !important;
+  }
+.about .paragraph-header{
+  font-size: 17px !important;
+  opacity: 1 !important;
+}
+
+  
+  .about-left .triangle {
+    position: absolute;
+    right: 21% !important;
+    background-color: var(--heavenly);
+    opacity: .5;
+  }
+  .about-left .triangle:before,
+  .about-left .triangle:after {
+    content: "";
+    position: absolute;
+    background-color: inherit;
+  }
+  .about-left .triangle,
+  .about-left .triangle:before,
+  .about-left .triangle:after {
+    width: 12em;
+    height: 12em;
+  }
+  
+  .about-left .triangle {
+    transform: rotate(-90deg) skewX(-30deg) scale(1, 0.866);
+  }
+
+
+
+  .about-left.about-page-triangle-bg .triangle {
+    right: 19% !important;
+    opacity: 1;
+  }
+  .about-left.about-page-triangle-bg .triangle,
+  .about-left.about-page-triangle-bg .triangle:before,
+  .about-left.about-page-triangle-bg .triangle:after {
+    background-image: url('../../images/صور-الشركة.jpg');
+    background-size: cover;
+  }
+  
+  .about-left .triangle {
+    transform: rotate(-90deg) skewX(-30deg) scale(1, 0.866);
+  }
+
+
+
+
+
+
+  /* about-page-triangle */
+/*  */
+/* .about-left-page-triangle.triangle_control { */
+    /* top: 2rem !important; */
+    /* left: 1rem !important; */
+  /* } */
+  /* .about-left-page-triangle.triangle_control .triangle, */
+  /* .about-left-page-triangle.triangle_control .triangle::before, */
+  /* .about-left-page-triangle.triangle_control .triangle::after { */
+    /* width: 12em; */
+    /* height: 12em; */
+    /* border: 2px 0px 1px 0; */
+  /* } */
+  /*  */
+  /* .about-left.about-page-triangle-bg.about-page-triangle.triangle_control { */
+    /* right: 8rem !important; */
+  /* } */
+  /*  */
+  /* .about-left-page-triangle-bg.about-page-triangle.triangle_control .triangle, */
+  /* .about-left-page-triangle-bg.about-page-triangle.triangle_control .triangle::before, */
+  /* .about-left-page-triangle-bg.about-page-triangle.triangle_control .triangle::after { */
+    /* background-size: cover; */
+    /* background-position: center; */
+    /* opacity: 1 !important; */
+    /* border-top-right-radius: 40% ; */
+    /* border: solid #29abe2; */
+/*  */
+/*  */
+    /*  */
+  /* } */

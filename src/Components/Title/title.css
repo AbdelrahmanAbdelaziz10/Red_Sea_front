@@ -12,7 +12,7 @@
 
 .map_text p {
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 400;
     color: var(--gray);
     margin-bottom: 2%;
@@ -56,14 +56,4 @@
     position: absolute;
     top: -1px;
     right: 54.2%;
-}
-.m_right .triangle_control{
-    right: 54.2% !important;
-
-}
-.m_right .triangle,
-.m_right .triangle:before,
-.m_right .triangle:after {
-    width: 2.4em !important;
-    height: 2.4em !important;
 }

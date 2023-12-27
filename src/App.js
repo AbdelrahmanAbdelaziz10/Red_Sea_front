@@ -7,12 +7,14 @@ import BrandPage from "./Pages/BrandPage/BrandPage";
 import PolicyPage from "./Pages/PrivacyPolicy/PolicyPage";
 import TermsPage from "./Pages/TermsUsing/TermsPage";
 import PackagingPage from "./Pages/Packaging/PackagingPage";
+import AboutPage from "./Pages/About/AboutPage";
 function App() {
   return (
     <div className="App">
     <BrowserRouter >
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<Contact />} />
 
         <Route path="/products" element={<ProductsPage />} />

@@ -1,0 +1,15 @@
+.product-table{
+    background-color: #f4f5f9 !important;
+    width: 100%;
+}
+.product-table th{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--gray) !important;
+}
+.product-table td{
+    font-size: 15px;
+    font-weight: 400;
+    color: #4d4d4de0 !important;
+    padding-right: 3px;
+}

@@ -1,0 +1,91 @@
+
+.product{
+    position: relative;
+    z-index: 11111;
+    top:-9rem;
+    border-radius: 8px;
+    background-color: var(--white);
+    color: var(--gray);
+}
+.product .product_head{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.product .prod_title h6{
+    font-size: 17px;
+}
+.product .product-name{
+    background-color: var(--heavenly);
+    color: var(--main);
+    text-align: center;
+    padding: 6px 0;
+    border-radius: 50px 2px 50px 2px;
+}
+.prod_title p{
+    color: var(--gray) ;
+    font-size: 16px !important;
+}
+.product-contant .map_text h4{
+    font-size: 18px;
+    font-weight: 500;
+}
+.product-contant .map_text p{
+    padding: 2% ;
+    word-spacing: 3px;
+    color: var(--gray);
+    font-size: 16px !important;
+    font-weight: 300 !important;
+
+}
+.brand .brand_card{
+    box-shadow: 5px 5px 10px #4d4d4db0;
+}
+.brand .brand_img {
+    width: 100%;
+    padding: 9px;
+  border-radius: 2px;
+}
+.flex_col{
+    flex-direction: column;
+    justify-content: center !important;
+}
+.product_description{
+    color: var(--gray) ;
+    width: 70%;
+    text-align: right;
+    font-family: myfont;
+    font-size: .9rem;
+}
+
+.product-details .card{
+    display: flex;
+    flex-direction: column ;
+    overflow: hidden;
+}
+.product-details .card .card_icon{
+    width: 30%;
+    font-size: 1.2rem !important;
+}
+.product-details .card .card_img{
+    max-width: 30% !important;
+    padding: 10px ;
+}
+.product-details .card .small_card{
+    display: block;
+    position: relative;
+    left: -15.6em;
+    width: 30%;
+
+}
+.product-details .card .small_card .card-alpom{
+    max-height: 18%;
+    overflow: hidden;
+    border-radius: 0 !important;
+
+}
+.product-details .card .small_card .card-alpom img{
+    max-height: 50%;
+    overflow: hidden;
+}

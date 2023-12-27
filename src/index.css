@@ -1,137 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --main: #0b057a;
+  --white: #f4f5f9;
+  --bink: #ff0099;
+  --heavenly: #29abe2;
+  --gray: #4d4d4d;
+}
+@font-face {
+  font-family: myFont;
+  src: url(../public/Fonts/ArbFONTS-DINNextLTArabic-Regular-4.ttf);
+}
+@font-face {
+  font-family: myFont;
+  src: url(../public/Fonts/ArbFONTS-DINNextLTArabic-Bold-2.ttf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: myFont;
+  src: url(../public/Fonts/ArbFONTS-DINNextLTArabic-Bold-3.ttf);
+  font-weight: bolder;
+}
+@font-face {
+  font-family: myFont;
+  src: url(../public/Fonts/ArbFONTS-DINNextLTArabic-Heavy2-2.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: myFont;
+  src: url(../public/Fonts/ArbFONTS-DINNextLTArabic-Medium-3.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: myFont;
+  src: url(../public/Fonts/ArbFONTS-DINNextLTArabic-Medium-4.ttf);
+  font-weight: 500;
+}
+body {
+  font-family: myfont !important;
+}
+ul {
+  list-style: none;
+}
+img {
+  width: 100%;
+}
+a {
+  text-decoration: none !important;
+  color: #fff !important;
+}
+a,
+Link {
+  cursor: pointer !important;
+}
+.contact_container{
+  background-color: var(--white);
+  margin-bottom: 1% !important;
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
-:root{
-    --main:#0B057A;
-    --white:#f4f5f9;
-    --bink:#ff0099;
-    --heavenly:#29ABE2;
-    --gray:#4D4D4D;
-}
-@font-face {
-    font-family:myFont ;
-    src: url(../public/Fonts/ArbFONTS-DINNextLTArabic-Regular-4.ttf);
-    
-}
-@font-face {
-    font-family:myFont ;
-    src: url(../public/Fonts/ArbFONTS-DINNextLTArabic-Bold-2.ttf);
-    font-weight: bold;
-}
-@font-face {
-    font-family:myFont ;
-    src: url(../public/Fonts/ArbFONTS-DINNextLTArabic-Bold-3.ttf);
-    font-weight: bolder;
-}
-@font-face {
-    font-family:myFont ;
-    src: url(../public/Fonts/ArbFONTS-DINNextLTArabic-Heavy2-2.ttf);
-    font-weight:700 ;
-}
-@font-face {
-    font-family:myFont ;
-    src: url(../public/Fonts/ArbFONTS-DINNextLTArabic-Medium-3.ttf);
-    font-weight: 400;
-}
-@font-face {
-    font-family:myFont ;
-    src: url(../public/Fonts/ArbFONTS-DINNextLTArabic-Medium-4.ttf);
-    font-weight: 500;
-}
-body{
-    font-family: myfont !important;
-}
-ul{
-    list-style: none;
-
-}
-img{
-    width: 100%;
-}
-a{
-    text-decoration: none !important;
-    color: #fff !important;
-}
-a,Link{
-    cursor: pointer !important;
-
-}
-
 .Contact,
-.Product_page{
-    overflow: hidden;
+.Product_page {
+  overflow: hidden;
 }
-.homepage_product .product
-{
-    background-color: var(--main) !important;
-    color: #fff !important;
+.homepage_product .product {
+  background-color: var(--main) !important;
+  color: #fff !important;
 }
-.brandpage_product .product{
-    background-color: #fff !important;
-    color: var(--main);
+.brandpage_product .product {
+  background-color: #fff !important;
+  color: var(--main);
 }
-.page_product .product{
-    background-color: var(--white) !important;
-    color: var(--main) !important;
+.page_product .product {
+  background-color: var(--white) !important;
+  color: var(--main) !important;
 }
 .page_product .product p,
-.brandpage_product .product p{
-
-    color: var(--gray);
+.brandpage_product .product p {
+  color: var(--gray);
 }
-.page_product  ,.product_Brand{
-    margin-bottom: 6% !important;
+.page_product,
+.product_Brand {
+  margin-bottom: 6% !important;
 }
-.product_Brand{
-    margin-top: -7%;
+.product_Brand {
+  margin-top: -7%;
 }
-.Home{
-    overflow: hidden;
+.Home {
+  overflow: hidden;
 }
-.triangle_control{
-    position: relative;
-    left: -80%;
-    bottom:9rem;
+.triangle_control {
+  position: relative;
+  left: -80%;
+  bottom: 9rem;
 }
 
 .triangle {
-	position: absolute;
-	background-color: var(--heavenly);
-    
+  position: absolute;
+  background-color: var(--heavenly);
 }
 .triangle:before,
 .triangle:after {
-	content: '';
-	position: absolute;
-	background-color: inherit;
+  content: "";
+  position: absolute;
+  background-color: inherit;
 }
 .triangle,
 .triangle:before,
 .triangle:after {
-	width:  12em;
-	height: 12em;
-	border-top-right-radius: 40%;
-    z-index: 11111;
+  width: 12em;
+  height: 12em;
+  border-top-right-radius: 40%;
+  z-index: 11111;
 }
 
 .triangle {
-	transform: rotate(-90deg) skewX(-30deg) scale(1,.866);
+  transform: rotate(-90deg) skewX(-30deg) scale(1, 0.866);
 }
 .triangle:before {
-	transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+  transform: rotate(-135deg) skewX(-45deg) scale(1.414, 0.707)
+    translate(0, -50%);
 }
 .triangle:after {
-	transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+  transform: rotate(135deg) skewY(-45deg) scale(0.707, 1.414) translate(50%);
 }
 
-.header_hover{
-    background-color: #0b057a7e;
-    width: 100%;
-    height: 100% ;
-    position: absolute;
-    top: 0;
-    z-index: 11;
-  }
+.header_hover {
+  background-color: #0b057a7e;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 11;
+}
+.ma-right .prod_title  .triangle_control{
+  right: 60% !important;
+
+}
+.ma-right .prod_title.m-right  .triangle_control{
+  right: 62% !important;
+
+}
+.m-small .prod_title.m-right  .triangle_control{
+  right: 56% !important;
+
+}
+.ma-right .prod_title .triangle,
+.ma-right .prod_title .triangle:before,
+.ma-right .prod_title .triangle:after {
+  width: 2.4em !important;
+  height: 2.4em !important;
+}
+.product{
+  box-shadow: 1px 1px 10px #4d4d4d70;
+}

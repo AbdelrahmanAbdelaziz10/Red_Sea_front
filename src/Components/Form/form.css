@@ -1,0 +1,27 @@
+.form .form-label{
+    color: var(--main);
+    margin-right: 2%;
+}
+.form .form-control{
+    border: 2px solid var(--heavenly);
+    border-radius: 20px 20px;
+}
+.form .form-control:focus{
+    border: 2px solid var(--heavenly);
+    box-shadow: none !important;
+}
+.form .massage{
+    height: 25vh;
+}
+.form .btn2{
+    background-color: var(--main);
+    color: #fff;
+    width: 20%;
+    padding-bottom: 6px;
+    border-radius: 20px 20px;
+    font-family: myfont;
+    transition: all .5s;
+}
+.form .btn2:hover{
+    background-color: var(--main);
+}

@@ -1,11 +1,12 @@
-import React from "react";
 import "./Navbar.css";
-import { Link } from "react-router-dom";
-import { MdLanguage } from "react-icons/md";
-import logo from "../../images/شعار-البحر-الاحمر.png";
-import { Row } from "react-bootstrap";
+
 import { IoCall } from "react-icons/io5";
 import { IoIosMail } from "react-icons/io";
+import { Link } from "react-router-dom";
+import { MdLanguage } from "react-icons/md";
+import React from "react";
+import { Row } from "react-bootstrap";
+import logo from "../../images/شعار-البحر-الاحمر.png";
 
 export const NavBar = () => {
   return (
@@ -31,7 +32,7 @@ export const NavBar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/">
+              <Link className="nav-link active" aria-current="page" to="/about">
                 من نحن
               </Link>
             </li>

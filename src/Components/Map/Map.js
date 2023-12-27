@@ -1,5 +1,4 @@
 import React from "react";
-import { Row } from "react-bootstrap";
 import './Map.css';
 export const Map = () => {
   return (

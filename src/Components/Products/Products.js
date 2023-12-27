@@ -6,12 +6,12 @@ import Title from "../Title/Title";
 
 const Products = () => {
   return (
-    <section className="product ">
+    <section className="product mt-5 ">
       <Container>
-      <Row className='prod_title m_right pt-4'>
+      <div className='prod_title m_right pt-4'>
         <Title title='منتجات قد تعجبك' pragraph='منتجاتنا هي افضل منتجات في الاسواق المحلية والخارجية' />
 
-        </Row>
+        </div>
         <Row>
           <Sliders />
         </Row>
