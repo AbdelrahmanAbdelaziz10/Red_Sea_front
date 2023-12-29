@@ -1,3 +1,9 @@
+.form{
+    margin-top: 2%;
+}
+.form .form_row{
+    padding: 0 ;
+}
 .form .form-label{
     color: var(--main);
     margin-right: 2%;
@@ -24,4 +30,27 @@
 }
 .form .btn2:hover{
     background-color: var(--main);
+    color: #fff;
 }
+@media (max-width: 425px) {
+    /* For mobile phones: */
+    .form{
+        margin-top: 2%;
+    }
+    .form .form_row{
+        padding: 0 5%;
+    }
+    .form .massage{
+        height: 12vh;
+    }
+  }
+  @media (max-width: 768px) {
+    /* For tablets: */
+    .form{
+        margin-top: 2%;
+    }
+    .form .massage{
+        height: 18vh;
+    }
+  }
+  

@@ -15,8 +15,8 @@ const ZahraProduct = () => {
         <Container>
             <ProductDeteils />
         </Container>
-    <div className='page_product'>
-    <Products />
+    <div className='page_product m-right'>
+    <Products title='منتجات قد تعجبك' />
     </div>
         <div className='product_Brand'>
     <Brand />

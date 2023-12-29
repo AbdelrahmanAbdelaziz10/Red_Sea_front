@@ -102,3 +102,14 @@
     top: -1px;
     right: 54.2%;
 }
+
+@media (max-width: 768px) {
+    /* For tablets: */
+    .arrow .triangle1{
+        margin-top: .3rem !important;
+    }
+}
+
+@media (max-width: 425px) {
+    /* For mobile phones: */
+}  

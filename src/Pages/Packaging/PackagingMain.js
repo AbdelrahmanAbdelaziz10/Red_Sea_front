@@ -11,8 +11,8 @@ const PackagingMain = ({title}) => {
           <Title title={title} pragraph="" />
         </div>
         <Container className="zahra_container position-relative">
-          <Row className="d-flex justify-content-center mt-5 pb-2 me-5">
-            <div style={{ height: "25rem" }} className="position-relative">
+          <Row className="d-flex justify-content-center mt-5 pb-lg-2 pb-md-2 me-lg-5 me-md-5">
+            <div className="position-relative packaging_height">
               <div className="triangle_control zahra-page-triangle">
                 <div className="triangle" />
               </div>
@@ -22,7 +22,7 @@ const PackagingMain = ({title}) => {
               <div className="z-img">
               </div>
             </div>
-            <p>
+            <p >
               مع بداية العام 1998 م بدات الشركة بتنفيذ مشروع تصنيع المواد
               التعبئة والتغليف البلاستيكية البو يلثن لتكون معتمدة على نفسها
               بتصنيع جميع مواد التعبئة والتغليف بجميع اصنافها ومقاستها واحجامها

@@ -5,7 +5,7 @@ import React from "react";
 const CardComponent = ({ title, imageSrc, index }) => {
 
   return (
-    <div className="card d-flex flex-column mb-5 mt-4" key={index}>
+    <div className="card slider_card d-flex flex-column mb-5 mt-4" key={index}>
       <div className="img pt-4">
         <img alt={title} src={imageSrc} />
       </div>

@@ -30,3 +30,33 @@
     font-family: myfont;
     font-size: .9rem;
 }
+
+@media (max-width: 768px) {
+    /* For tablets: */
+    .product{
+        top:-5rem !important;
+        border-radius: 8px;
+        background-color: var(--white);
+        color: var(--gray);
+    }
+    
+    .m_right .triangle_control{
+        right: 56% !important;
+    }
+    .brand_card{
+        width: 100% !important;
+    }
+
+}
+
+@media (max-width: 425px) {
+    /* For mobile phones: */
+    .flex_col{
+        flex-direction: column;
+        justify-content: center !important;
+        margin-right: 10% !important;
+    }
+    .m_right .triangle_control{
+        right: 58% !important;
+    }
+}  

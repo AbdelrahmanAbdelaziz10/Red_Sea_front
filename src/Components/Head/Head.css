@@ -1,6 +1,6 @@
-.head{
+    .head{
     position: relative;
-    height: 75vh;
+    height: 75vh !important;
 
 }
 .head_img{
@@ -16,7 +16,30 @@
     position: absolute;
     z-index: 11;
     color: var(--white);
-    margin-top: 14%;
-    font-size: .9rem;
+    margin-top: 14% !important;
+    font-size: 1rem !important;
     font-family: myfont;
 }
+@media (max-width: 768px) {
+    /* For tablets: */
+    .head{
+        height: 42vh !important;
+        overflow: hidden;
+    }
+    .head .head_text{
+        margin-top: 27% !important;
+        font-size: 1.2rem !important;
+    }
+  }
+@media (max-width: 425px) {
+    /* For mobile phones: */
+    .head{
+        height: 40vh;
+        overflow: hidden !important;
+    }
+    .head .head_text{
+        margin-top: 10em !important;
+        font-size: 1.4rem !important;
+    }
+  }
+

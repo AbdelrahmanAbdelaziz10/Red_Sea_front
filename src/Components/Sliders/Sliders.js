@@ -1,14 +1,15 @@
-import React, { Component, useEffect, useState } from "react";
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./Sliders.css";
 
+import React, { Component, useEffect, useState } from "react";
+
+import CardComponent from "../Common Component/Card/Card";
+import Slider from "react-slick";
 import productImg1 from "../../images/منتج-توب.png";
 import productImg2 from "../../images/باكت-الشروق.png";
 import productImg3 from "../../images/منتج-زهرة3.png";
 import productImg4 from "../../images/ابو-اللو.png";
-import CardComponent from "../Common Component/Card/Card";
 
 const Sliders = () => {
   const [activeSlide, setActiveSlide] = useState(0);
@@ -52,13 +53,37 @@ const Sliders = () => {
     className: "center",
     centerMode: true,
     infinite: true,
-    centerPadding: "60px",
+    centerPadding: "0",
     slidesToShow: 3,
     speed: 500,
-    arrow: false,
-    slidesToShow: 4,
+    arrows: true,
     slidesToScroll: 1,
-    infinite: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerPadding: "25%",
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          centerPadding: "20%",
+        },
+      },
+    ],
   };
 
   return (
@@ -68,9 +93,12 @@ const Sliders = () => {
       </button> */}
       <Slider {...sliderSettings} className="overflow_visible">
         {cards.map((card, index) => (
-          <CardComponent index={index} title={card.title} imageSrc={card.imageSrc} />
+          <CardComponent
+            index={index}
+            title={card.title}
+            imageSrc={card.imageSrc}
+          />
         ))}
-
       </Slider>
     </div>
   );

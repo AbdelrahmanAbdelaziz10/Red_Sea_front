@@ -3,15 +3,15 @@ import './AboutRight.css';
 import Title from '../Title/Title';
 import { Col, Container, Row } from 'react-bootstrap';
 const AboutRight = ({title,paragraph,head1}) => {
-  return (
-    <div className="product ">
-    <div className="prod_title pt-4">
+  return (   
+     <Container className="about position-relative">
+
+    <div className="prod_title m-right pt-4">
       <Title title={title} pragraph="" />
     </div>
-    <Container className="about position-relative">
-      <Row className="d-flex justify-content-center mt-5 pb-2 me-5">
-      <Col lg='3' >
-      <div style={{ height: "20rem" }} >
+      <Row className="d-flex about_right justify-content-center mt-5 pb-2 me-5">
+      <Col lg='3' md='12' xs='12' sm='12'>
+      <div className=' justify-content-center'>
           <div className="triangle_control about-page-triangle">
             <div className="triangle" />
           </div>
@@ -22,10 +22,10 @@ const AboutRight = ({title,paragraph,head1}) => {
           </div>
         </div>
       </Col>
-      <Col lg='8' >
-      <div className='pt-5'>
-      <span className='paragraph-header pe-5 '>{head1} </span> <br/>
-      <p className='paragraph me-5'>
+      <Col lg='8' md='10' xs='12' sm='12'>
+      <div className='pt-5 about_text'>
+      <span className='paragraph-header pe-lg-5 '>{head1} </span> <br/>
+      <p className='paragraph me-lg-5'>
         {paragraph}
         </p>
       </div>
@@ -34,7 +34,6 @@ const AboutRight = ({title,paragraph,head1}) => {
 
       </Row>
     </Container>
-  </div>
     )
 }
 

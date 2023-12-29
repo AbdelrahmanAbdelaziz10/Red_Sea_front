@@ -36,3 +36,17 @@
     font-size: 1.2rem;
     font-weight: 300 !important;
 }
+
+@media (max-width:  425px) {
+    .slider_card.card{
+        max-width: 80vw !important;
+        border: none !important;
+        border-radius: 9px !important;
+        box-shadow: 1px 1px 10px var(--gray);
+        margin: 0 4em 0 0;
+        height: 33vh !important;
+    }
+    .slider_card.card h6{
+        font-size: 1.5rem !important;
+    }
+}

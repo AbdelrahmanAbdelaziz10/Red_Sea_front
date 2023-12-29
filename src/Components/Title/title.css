@@ -57,3 +57,18 @@
     top: -1px;
     right: 54.2%;
 }
+
+  @media (max-width: 768px) {
+    /* For tablets: */
+    .m-right .triangle{
+        right: 1% !important;
+    }
+
+  }
+  @media (max-width: 425px) {
+    /* For mobile phones: */
+    .m-right .triangle{
+        right: 4% !important;
+    }
+
+  }

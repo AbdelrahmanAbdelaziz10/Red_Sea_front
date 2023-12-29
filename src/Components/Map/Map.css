@@ -1,15 +1,32 @@
-.map{
-    position: relative;
-    width: 100vw;
-    margin: 9% 0;
-    margin-top: 3%;
-    overflow: hidden;
+.map {
+  position: relative;
+  width: 100vw;
+  margin-top: 3% !important;
+  overflow: hidden;
 }
-.map .location_iframe{
-    height: 53vh !important;
-    width: 100%;
+.map .location_iframe {
+  height: 53vh !important;
+  width: 100%;
+  margin-bottom: 7rem !important;
 }
-.Contact .map{
-    margin: 0 0 !important;
-
+.Contact .map {
+  margin: 0 0 !important;
+}
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .map .location_iframe {
+    margin-bottom: 6rem !important;
+  }
+  .map .location_iframe {
+    height: 40vh !important;
+  }
+}
+@media only screen and (  min-width: 600px) {
+  /* For tablets: */
+  .map .location_iframe {
+    margin-bottom: 6rem !important;
+  }
+.map .location_iframe {
+  height: 40vh !important;
+}
 }

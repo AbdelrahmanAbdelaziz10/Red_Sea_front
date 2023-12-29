@@ -9,16 +9,12 @@
   position: relative;
   min-height: 100vh;
 }
+.packaging_height{
+  height: 25rem;
+}
 
 .prod_title p {
   color: var(--gray);
-}
-.policy_paragraph {
-  color: #4d4d4d !important;
-  line-height: 2.3;
-  font-size: 16px;
-  font-weight: 300;
-  font-family: myfont;
 }
 
 .zahra_page p {
@@ -73,3 +69,70 @@
 
 }
 
+
+@media (max-width: 768px) {
+  /* For tablets: */
+  .product{
+    overflow: hidden;
+    height: auto;
+  }
+  .margin_right .triangle_control{
+    right: 62.4% !important;
+  }
+  .zahra-page-triangle.triangle_control {
+    top: 4rem !important;
+    right: 7rem !important;
+  }
+  .zahra-page-triangle.triangle_control .triangle,
+  .zahra-page-triangle.triangle_control .triangle::before,
+  .zahra-page-triangle.triangle_control .triangle::after {
+    width: 17em;
+    height: 17em;
+  }
+  
+  .zahra-page-triangle-bg.zahra-page-triangle.triangle_control {
+    right: 10rem !important;
+  }
+  .zahra_page p {
+    width: 80%;
+  }
+  .zahra_page .product {
+    position: relative;
+    min-height: auto;
+}
+
+}
+
+@media (max-width: 425px) {
+  /* For mobile phones: */
+
+  .margin_right .triangle_control{
+    right: 70.4% !important;
+  }
+  .zahra-page-triangle.triangle_control {
+    top: 4rem !important;
+    right: 6rem !important;
+  }
+  .zahra-page-triangle.triangle_control .triangle,
+  .zahra-page-triangle.triangle_control .triangle::before,
+  .zahra-page-triangle.triangle_control .triangle::after {
+    width: 12em !important;
+    height: 12em !important;
+  }
+  
+  .zahra-page-triangle-bg.zahra-page-triangle.triangle_control {
+    right: 9rem !important;
+  }
+  .zahra_page p {
+    width: 100% !important;
+    color: #635d5d;
+    text-align: right;
+    padding: 0 15px;
+    line-height: 2.2;
+    margin-bottom: 5%;
+  }
+  .zahra_page .product {
+    position: relative;
+    min-height: auto;
+}
+}

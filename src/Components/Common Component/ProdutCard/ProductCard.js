@@ -6,8 +6,8 @@ const ProductCard = ({title,imageSrc,index}) => {
   return (<div className='d-flex justify-content-center flex_col'>
     <div className="card d-flex flex-column mb-2 mt-4" key={index}>
     <div className='card_text d-flex mt-3'>
-    <div className='arrow d-flex align-items-center'>
-    <div className="triangle me-4 mt-1"/>
+    <div className='arrow d-flex align-items-center me-1'>
+    <div className="triangle triangle1 me-4 mt-1"/>
     <div className="triangle triangle2 me-2"/>
 
     </div>

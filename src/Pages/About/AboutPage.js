@@ -14,8 +14,8 @@ const AboutPage = () => {
       <Container>
       <AboutMain title='عن الشركة'/>
       </Container>
-      <div className='brandpage_product mt-3'>
-    <Products />
+      <div className='brandpage_product m-right mt-3'>
+    <Products title='منتجات قد تعجبك'/>
     </div>
       <div className="product_Brand">
         <Brand />

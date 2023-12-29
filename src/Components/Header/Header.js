@@ -2,8 +2,8 @@ import "./header.css";
 import "swiper/css";
 import "swiper/css/pagination";
 
-import { A11y, Navigation, Pagination, Scrollbar } from "swiper/modules";
-import { Container, Row } from "react-bootstrap";
+import { Pagination } from "swiper/modules";
+import { Container,  } from "react-bootstrap";
 import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 

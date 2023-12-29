@@ -1,117 +1,251 @@
-.footer{
-    background-color: var(--main);
-    color: var(--white);
-    font-family: myFont;
-    overflow:hidden;
+.footer {
+  background-color: var(--main);
+  color: var(--white);
+  font-family: myFont;
+  overflow: hidden;
 }
 
 .footer ul li .triangle {
-	position: relative;
-	background-color: var(--heavenly);
-    
+  position: relative;
+  background-color: var(--heavenly);
 }
 .footer .triangle:before,
 .footer .triangle:after {
-	content: '';
-	position: absolute;
-	background-color: inherit;
+  content: "";
+  position: absolute;
+  background-color: inherit;
 }
 .footer .triangle,
 .footer .triangle:before,
 .footer .triangle:after {
-	width:  .4em;
-	height: .4em;
-	border-top-right-radius: 40%;
+  width: 0.4em;
+  height: 0.4em;
+  border-top-right-radius: 40%;
 }
 
 .footer .triangle {
-	transform: rotate(-25deg) skewX(-30deg) scale(1,.866);
+  transform: rotate(-33deg) skewX(-30deg) scale(1, 0.866);
 }
 .footer .triangle:before {
-	transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+  transform: rotate(-135deg) skewX(-45deg) scale(1.414, 0.707)
+    translate(0, -50%);
 }
 .footer .triangle:after {
-	transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+  transform: rotate(135deg) skewY(-45deg) scale(0.707, 1.414) translate(50%);
 }
 
-.footer h5{
-    font-weight: 400;
-    font-size: 1.3rem;
-    padding-right: 7%;
-    padding-bottom: 3%;
+.footer h5 {
+  font-weight: 400;
+  font-size: 1.3rem;
+  padding-right: 7%;
+  padding-bottom: 3%;
 }
-.footer h6{
-    font-size: 1.1rem;
-
+.footer h6 {
+  font-size: 1.1rem;
 }
 .footer ul li,
-.footer ul li a{
-    font-family: myfont;
-    font-weight: 300;
-    font-size: 15px;
-    padding-bottom: 2px;
-    padding-left: 0;
-    padding-right: 4%;
+.footer ul li a {
+  font-family: myfont;
+  font-weight: 300;
+  font-size: 15px;
+  padding-bottom: 2px;
+  padding-left: 0;
+  padding-right: 4%;
 }
-.footer ul li:hover a{
-    font-size: 16px;
-    transition: all .5s;
+.footer ul li:hover a {
+  font-size: 16px;
+  transition: all 0.5s;
 }
 .footer ul li:hover {
-    font-size: 1.1rem;
-    transition: all .5s;
-    cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.5s;
+  cursor: pointer;
 }
-.footer .arrow_icon{
-    color: var(--heavenly);
-    font-size: 2rem;
-    border-radius: 3px;
-    font-weight: 700;
+.footer .arrow_icon {
+  color: var(--heavenly);
+  font-size: 2rem;
+  border-radius: 3px;
+  font-weight: 700;
 }
-.footer .privity_list{
-    gap: 17%;
+.footer .privity_list {
+  gap: 17%;
 }
 .footer .privity_list li {
+  display: flex;
+  width: 100%;
+}
+.footer .Social_icon li:hover a {
+  transition: all 0.5s;
+  font-size: 2.1rem !important;
+}
+.footer .Social_icon {
+  gap: 5%;
+}
+.footer .Social_icon li a {
+  font-size: 1.9rem;
+}
+.footer .Social_icon li .instagram_icon {
+  background-color: var(--white);
+  color: var(--main) !important;
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 2.2rem;
+}
+.footer .line {
+  width: 88vw;
+  height: 0.1vh;
+  background-color: var(--heavenly);
+}
+.footer .left {
+  display: flex;
+  justify-content: end;
+  flex-direction: column;
+}
+.footer p {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.footer .footer_logo {
+  width: 9vw;
+}
+@media (max-width: 768px) {
+  /* For tablets: */
+  .footer .company h5 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding-bottom: 3%;
+  }
+  .footer .company a,
+  .footer .company li {
+    font-size: 18px !important;
+    font-weight: 300 !important;
+    margin-right: 2px !important;
+  }
+
+  .footer .triangle,
+  .footer .triangle:before,
+  .footer .triangle:after {
+    width: 0.5em;
+    height: 0.5em;
+  }
+  .footer .privity_list a {
+    font-size: 1.4rem;
+  }
+  .footer .Social_icon {
+    justify-content: center !important;
+  }
+  .footer .Social_icon li a {
+    font-size: 2.8rem;
+  }
+  .footer .Social_icon li .instagram_icon {
+    font-size: 2.8rem;
+  }
+  .footer .footer-end {
     display: flex;
-    width: 100%;
-}
-.footer .Social_icon li:hover a{
-    transition: all .5s;
-    font-size: 2.1rem !important;
-}
-.footer .Social_icon{
-    gap: 5%;
-}
-.footer .Social_icon li a{
-    font-size: 1.9rem;
-}
-.footer .Social_icon li .instagram_icon{
-    background-color: var(--white);
-    color: var(--main) !important;
-    border-radius: 50%;
-    padding: 5px;
-    font-size: 2.2rem;
+    justify-content: center !important;
+  }
+  .footer .left {
+    justify-content: center !important;
+    margin: auto;
+    text-align: center;
+  }
+  .footer_tola {
+    flex-direction: column-reverse;
+  }
+  .footer_tola h6 {
+    font-size: 1.5rem;
+  }
+  .footer p {
+    font-size: 17px;
+    padding-right: 2% !important;
+    padding-bottom: 2% !important;
+  }
 
+  .footer .footer_logo {
+    margin: auto;
+    text-align: center;
+    width: 23vw;
+  }
+  .footer .pe-1 {
+    padding-bottom: 0 !important;
+    font-size: 1.3rem;
+  }
 }
-.footer .line{
-    width:88vw;
-    height: .1vh;
-    background-color: var(--heavenly);
+@media (max-width: 425px) {
+  /* For mobile phones: */
+  .footer .company h5 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-bottom: 3%;
+  }
+  .footer .company li {
+    display: flex !important;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .footer .company a,
+  .footer .company li {
+    font-size: 15px !important;
+    font-weight: 300 !important;
+    line-height: 30px;
+  }
+.ml-3{
+  margin-left: .3em;
 }
-.footer .left{
+  .footer .triangle,
+  .footer .triangle:before,
+  .footer .triangle:after {
+    width: 0.4em;
+    height: 0.4em;
+  }
+  .footer .privity_list .triangle {
+    margin-top: .7em !important;
+    margin-left: .4em;
+  }
+  .footer .privity_list a {
+    font-size: 1.2rem;
+  }
+  .footer .Social_icon {
+    justify-content: center !important;
+  }
+  .footer .Social_icon li a {
+    font-size: 2.4rem;
+  }
+  .footer .Social_icon li .instagram_icon {
+    font-size: 2.6rem;
+  }
+  .footer .footer-end {
     display: flex;
-    justify-content: end;
-    flex-direction: column;
-}
-.footer p{
-    margin: 0;
-    font-size: 15px;
-    font-weight: 300;
-    letter-spacing: 1px;
-}
+    justify-content: center !important;
+  }
+  .footer .left {
+    justify-content: center !important;
+    margin: auto;
+    text-align: center;
+  }
+  .footer_tola {
+    flex-direction: column-reverse;
+  }
+  .footer_tola h6 {
+    text-align: center;
+    font-size: 1rem !important;
+  }
+  .footer p {
+    font-size: 16px;
+    padding-right: 2% !important;
+    padding-bottom: 2% !important;
+  }
 
-.footer .footer_logo{
-    width: 9vw;
+  .footer .footer_logo {
+    margin: auto;
+    text-align: center;
+    width: 38vw;
+  }
+  .footer .pe-1 {
+    padding-bottom: 0 !important;
+    font-size: 1.4rem;
+  }
 }
-
-

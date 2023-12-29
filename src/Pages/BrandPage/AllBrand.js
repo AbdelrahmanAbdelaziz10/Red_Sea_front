@@ -47,9 +47,9 @@ const AllBrand = () => {
 
     </div>
     <Container className=''>
-        <Row className='d-flex justify-content-center pb-5 me-5 '>
+        <Row className='d-flex justify-content-center pb-5 me-5 mt-md-4 '>
             {cards.map((card, index) => (
-                <Col lg='4' className='d-flex justify-content-center flex_col'>
+                <Col lg='4' md='4' sm='12' xs='12' className='d-flex justify-content-center flex_col mt-4 my-3'>
           <Card className="brand_card">
             <img src={card.imageSrc} alt='' />
             </Card>

@@ -11,8 +11,8 @@ const HomePage = () => {
     <div className="Home">
       <Header />
       <About />
-      <div className="homepage_product">
-        <Products />
+      <div className="homepage_product ">
+        <Products title='منتجاتنا'/>
       </div>
       <Brand />
       <LocationMap title="موقعنا علي الخرائط" />

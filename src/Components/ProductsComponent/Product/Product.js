@@ -55,7 +55,7 @@ const Product = () => {
     <Container className=''>
         <Row className='d-flex justify-content-center pb-2 me-5'>
             {cards.map((card, index) => (
-                <Col lg='4' className='d-flex justify-content-center'>
+                <Col lg='4' md='6' sm='12' xs='12' className='d-flex justify-content-center'>
           <ProductCard index={index} title={card.title} imageSrc={card.imageSrc} />
 
           </Col>

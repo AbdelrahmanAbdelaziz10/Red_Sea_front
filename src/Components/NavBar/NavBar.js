@@ -7,6 +7,7 @@ import { MdLanguage } from "react-icons/md";
 import React from "react";
 import { Row } from "react-bootstrap";
 import logo from "../../images/شعار-البحر-الاحمر.png";
+import { CgMenuLeft } from "react-icons/cg";
 
 export const NavBar = () => {
   return (
@@ -23,82 +24,7 @@ export const NavBar = () => {
           </li>
         </ul>
       </Row>
-      <nav className="navbar navbar-expand-lg px-3 mx-5 ">
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/">
-                الرئيسية
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/about">
-                من نحن
-              </Link>
-            </li>
-            <li class="nav-item dropdown">
-              <Link
-                class="nav-link dropdown-toggle"
-                to="/products"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-                منتجاتنا
-              </Link>
-              <ul class="dropdown-menu">
-              <li className="dropmenu">
-                  <Link class="dropdown-item" to="/products">
-                  جميع المنتجات
-                  </Link>
-                </li>
-                <li className="dropmenu">
-                  <Link class="dropdown-item" to="/products/elzahra">
-                    منتجات الزهرة
-                  </Link>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item dropdown">
-              <Link
-                class="nav-link dropdown-toggle"
-                to="/products"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
-              العلامات التجارية
-              </Link>
-              <ul class="dropdown-menu">
-              <li className="dropmenu">
-                  <Link class="dropdown-item" to="/brand">
-                  جميع العلامات
-                  </Link>
-                </li>
-                <li className="dropmenu">
-                  <Link class="dropdown-item" to="/">
-                    منتجات الزهرة
-                  </Link>
-                </li>
-              </ul>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/packaging">
-                التعبئة والتغليف
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link className="nav-link active" aria-current="page" to="/contact">
-                التواصل
-              </Link>
-            </li>
-            <li className="nav-item pe-5 me-3">
-              <Link className="nav-link active" aria-current="page" to="/">
-                <MdLanguage className="language_icon" /> English
-              </Link>
-            </li>
-          </ul>
-        </div>
+      <nav className="navbar navbar-expand-lg px-3 mx-5 justify-content-between">
         <button
           className="navbar-toggler"
           type="button"
@@ -108,11 +34,102 @@ export const NavBar = () => {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span className="navbar-toggler-icon"></span>
+          <span className="menu">
+            <CgMenuLeft />
+          </span>
         </button>
-        <Link className="navbar-brand" to="#">
+
+        <div className="d-flex align-items-center">
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li className="nav-item">
+                <Link className="nav-link active" aria-current="page" to="/">
+                  الرئيسية
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link
+                  className="nav-link active"
+                  aria-current="page"
+                  to="/about"
+                >
+                  من نحن
+                </Link>
+              </li>
+              <li class="nav-item dropdown">
+                <Link
+                  class="nav-link dropdown-toggle"
+                  to="/products"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  منتجاتنا
+                </Link>
+                <ul class="dropdown-menu">
+                  <li className="dropmenu">
+                    <Link class="dropdown-item" to="/products">
+                    جميع المنتجات
+                    </Link>
+                  </li>
+                  <li className="dropmenu">
+                    <Link class="dropdown-item" to="/products/elzahra">
+                      منتجات الزهرة
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <Link
+                  class="nav-link dropdown-toggle"
+                  to="/products"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  العلامات التجارية
+                </Link>
+                <ul class="dropdown-menu">
+                  <li className="dropmenu">
+                    <Link class="dropdown-item" to="/brand">
+                      جميع العلامات
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+              <li className="nav-item">
+                <Link
+                  className="nav-link active"
+                  aria-current="page"
+                  to="/packaging"
+                >
+                  التعبئة والتغليف
+                </Link>
+              </li>
+              <li className="nav-item me-md-4">
+                <Link
+                  className="nav-link "
+                  aria-current="page"
+                  to="/contact"
+                >
+                  التواصل
+                </Link>
+              </li>
+
+            </ul>
+          </div>
+          <div className="nav-item pe-5 me-3">
+            <Link className="nav-link active" aria-current="page" to="/">
+              <MdLanguage className="language_icon" /> English
+            </Link>
+          </div>
+
+        </div>
+
+        <Link className="navbar-brand" to="/">
           <img src={logo} alt="" className="logo_nav" />
         </Link>
+
       </nav>
     </>
   );

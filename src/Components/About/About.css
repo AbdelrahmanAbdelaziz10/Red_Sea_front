@@ -9,14 +9,14 @@
 }
 .about p{
     text-align: center;
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: var(--gray);
     padding: 0 6%;
-    word-spacing: 2px;
-    
+    opacity: 1 !important;
+
 }
 .about .about_prag{
-    opacity: .8;
+    opacity: 1;
     font-weight: 200;
 }
 .about .btnn{

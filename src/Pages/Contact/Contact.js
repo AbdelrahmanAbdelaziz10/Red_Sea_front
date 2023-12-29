@@ -1,12 +1,11 @@
-import React from 'react'
+import { ContacMain } from './Contact Main/ContacMain';
 import { Container } from 'react-bootstrap'
 import Footer from '../../Components/Footer/Footer';
-import { Map } from '../../Components/Map/Map';
 import Head from '../../Components/Head/Head';
-import contactPoster from '../../images/صور-الشركة2.jpg'
+import { Map } from '../../Components/Map/Map';
 import Product from '../../Components/ProductsComponent/Product/Product';
-import { ContacMain } from './Contact Main/ContacMain';
-
+import React from 'react'
+import contactPoster from '../../images/صور-الشركة2.jpg'
 
 const Conact = () => {
   return (

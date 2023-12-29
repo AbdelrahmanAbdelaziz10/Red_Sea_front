@@ -1,14 +1,22 @@
-
-.contact{
-    position: relative;
-    z-index: 11111;
-    top:-9rem;
-    border-radius: 8px;
-    background-color: #fff !important;
-    color: var(--gray);
-    box-shadow: 1px 1px 10px #4d4d4d8c;
+.contact-page {
+  position: relative;
+  z-index: 11111;
+  top: -9rem;
+  border-radius: 8px;
+  background-color: #fff !important;
+  color: var(--gray);
+  box-shadow: 1px 1px 10px #4d4d4d8c;
 }
 
-.contact_title p{
-    color: var(--gray) ;
+.contact_title p {
+  color: var(--gray);
+}
+@media (max-width: 425px) {
+  /* For mobile phones: */
+}
+@media (max-width: 768px) {
+  /* For tablets: */
+  .contact-page {
+    top: -4rem;
+  }
 }

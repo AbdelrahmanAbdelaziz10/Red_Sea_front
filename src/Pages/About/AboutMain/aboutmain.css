@@ -1,0 +1,29 @@
+.aboutleft.m-right .map_text .triangle{
+    right: 4.5em !important;
+}
+
+@media (max-width: 768px) {
+    /* For mobile Tablet: */
+    .aboutleft.m-right .map_text .triangle{
+        right: 6em !important;
+    }
+    
+    .medals.m-right .map_text .triangle{
+        right: 1.6em !important;
+
+    }
+}
+@media (max-width: 425px) {
+    /* For mobile phones: */
+    .medals.m-right .map_text .triangle{
+        right: 2.5em !important;
+
+    }
+    .aboutleft.m-right .map_text .triangle{
+        right: 7em !important;
+    }
+    .aboutleft.ma-right .map_text .triangle{
+        right: 3em !important;
+
+    }
+}

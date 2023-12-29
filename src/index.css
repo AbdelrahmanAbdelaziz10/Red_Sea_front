@@ -9,6 +9,7 @@
   --bink: #ff0099;
   --heavenly: #29abe2;
   --gray: #4d4d4d;
+  font-size: 16px;
 }
 @font-face {
   font-family: myFont;
@@ -56,10 +57,9 @@ a,
 Link {
   cursor: pointer !important;
 }
-.contact_container{
+.contact_container {
   background-color: var(--white);
   margin-bottom: 1% !important;
-
 }
 .Contact,
 .Product_page {
@@ -67,6 +67,9 @@ Link {
 }
 .homepage_product .product {
   background-color: var(--main) !important;
+}
+.homepage_product .product h4,
+.homepage_product .product p {
   color: #fff !important;
 }
 .brandpage_product .product {
@@ -135,17 +138,14 @@ Link {
   top: 0;
   z-index: 11;
 }
-.ma-right .prod_title  .triangle_control{
+.ma-right .prod_title .triangle_control {
   right: 60% !important;
-
 }
-.ma-right .prod_title.m-right  .triangle_control{
+.ma-right .prod_title.m-right .triangle_control {
   right: 62% !important;
-
 }
-.m-small .prod_title.m-right  .triangle_control{
+.m-small .prod_title.m-right .triangle_control {
   right: 56% !important;
-
 }
 .ma-right .prod_title .triangle,
 .ma-right .prod_title .triangle:before,
@@ -153,6 +153,39 @@ Link {
   width: 2.4em !important;
   height: 2.4em !important;
 }
-.product{
+.product {
   box-shadow: 1px 1px 10px #4d4d4d70;
+}
+.m-right .prod_title .triangle_control {
+  right: 56% !important;
+}
+
+@media (max-width: 768px) {
+  :root {
+    font-size: 14px;
+  }
+  .triangle,
+  .triangle:before,
+  .triangle:after {
+    width: 9em;
+    height: 9em;
+  }
+  .triangle_control {
+    bottom: 7rem;
+  }
+}
+
+@media (max-width: 425px) {
+  :root {
+    font-size: 13px;
+  }
+  .triangle,
+  .triangle:before,
+  .triangle:after {
+    width: 8em;
+    height: 8em;
+  }
+  .triangle_control {
+    left: -71%;
+  }
 }

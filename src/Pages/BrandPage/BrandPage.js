@@ -1,10 +1,8 @@
 
 import React from "react";
 import Footer from "./../../Components/Footer/Footer";
-import Brand from "./../../Components/Brand/Brand";
 import Head from "../../Components/Head/Head";
 import contactPoster from "../../images/واجهة-شركة-البحر-الاحمر4.jpg";
-import Product from './../../Components/ProductsComponent/Product/Product';
 import { Container } from "react-bootstrap";
 import AllBrand from "./AllBrand";
 import Products from "../../Components/Products/Products";
@@ -16,8 +14,8 @@ const BrandPage = () => {
           <Container>
           <AllBrand />
           </Container>
-          <div className='brandpage_product mt-3'>
-    <Products />
+          <div className='brandpage_product m-right mt-3'>
+    <Products title='منتجات قد تعجبك'/>
     </div>
           <div className="triangle_control">
             <div className="triangle" />
