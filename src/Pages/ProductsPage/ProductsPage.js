@@ -3,7 +3,7 @@ import Footer from "./../../Components/Footer/Footer";
 import Products from "../../Components/Products/Products";
 import Brand from "./../../Components/Brand/Brand";
 import Head from "../../Components/Head/Head";
-import contactPoster from "../../images/واجهة-شركة-البحر-الاحمر3.jpg";
+import contactPoster from "../../images/company 6.jpg";
 import Product from './../../Components/ProductsComponent/Product/Product';
 import { Container } from "react-bootstrap";
 

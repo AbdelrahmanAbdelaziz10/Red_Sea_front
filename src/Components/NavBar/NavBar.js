@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { MdLanguage } from "react-icons/md";
 import React from "react";
 import { Row } from "react-bootstrap";
-import logo from "../../images/شعار-البحر-الاحمر.png";
+import logo from "../../images/redsea logo.png";
 import { CgMenuLeft } from "react-icons/cg";
 
 export const NavBar = () => {

@@ -4,10 +4,10 @@ import { Card, Col, Container, Row } from "react-bootstrap";
 
 import React from "react";
 import Title from "../Title/Title";
-import Wildcat from "../../images/علامة-القط-البري.png";
-import apolpg from "../../images/علامة-ابو-للوج.png";
-import topbrand from "../../images/علامة-توب.png";
-import zahrabrand from "../../images/علامة-زهراء.png";
+import Wildcat from "../../images/Wildcatbrand.png";
+import apolpg from "../../images/abo lolologo.png";
+import topbrand from "../../images/topbrand.png";
+import zahrabrand from "../../images/zahra bacge.png";
 
 const Brand = () => {
   return (

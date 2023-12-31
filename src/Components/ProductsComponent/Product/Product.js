@@ -3,10 +3,10 @@ import './Product.css';
 import Title from '../../Title/Title';
 import { Col, Container, Row } from 'react-bootstrap';
 import CardComponent from '../../Common Component/Card/Card';
-import productImg1 from "../../../images/منتج-توب.png";
-import productImg2 from "../../../images/باكت-الشروق.png";
-import productImg3 from "../../../images/منتج-زهرة3.png";
-import productImg4 from "../../../images/ابو-اللو.png";
+import productImg1 from "../../../images/topbroduct.png";
+import productImg2 from "../../../images/sherok backge.png";
+import productImg3 from "../../../images/zahra broduct.png";
+import productImg4 from "../../../images/abo lolo.png";
 import ProductCard from './../../Common Component/ProdutCard/ProductCard';
 
 const cards = [

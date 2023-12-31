@@ -9,11 +9,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import { FaRegCirclePlay } from "react-icons/fa6";
 import { NavBar } from "../NavBar/NavBar";
-import poster from "../../images/واجهة-شركة-البحر-الاحمر12.jpg";
-import poster1 from "../../images/واجهة-شركة-البحر-الاحمر10.jpg";
-import poster2 from "../../images/صور-الشركة.jpg";
-import poster3 from "../../images/واجهة-شركة-البحر-الاحمر1.jpg";
-import poster4 from "../../images/واجهة-شركة-البحر-الاحمر3.jpg";
+import poster from "../../images/company 12.jpg";
+import poster1 from "../../images/company 10.jpg";
+import poster2 from "../../images/company 1.jpg";
+import poster3 from "../../images/company 3.jpg";
+import poster4 from "../../images/company2.jpg";
 import vedio from "../../images/video.mp4";
 
 const Header = () => {

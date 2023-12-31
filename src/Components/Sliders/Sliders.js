@@ -6,10 +6,10 @@ import React, { Component, useEffect, useState } from "react";
 
 import CardComponent from "../Common Component/Card/Card";
 import Slider from "react-slick";
-import productImg1 from "../../images/منتج-توب.png";
-import productImg2 from "../../images/باكت-الشروق.png";
-import productImg3 from "../../images/منتج-زهرة3.png";
-import productImg4 from "../../images/ابو-اللو.png";
+import productImg1 from "../../images/topbroduct.png";
+import productImg2 from "../../images/sherok backge.png";
+import productImg3 from "../../images/zahra broduct.png";
+import productImg4 from "../../images/abo lolo.png";
 
 const Sliders = () => {
   const [activeSlide, setActiveSlide] = useState(0);

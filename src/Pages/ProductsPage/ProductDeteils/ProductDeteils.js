@@ -5,7 +5,7 @@ import { IoMdArrowDropup , IoMdArrowDropdown} from "react-icons/io";
 import ProductComp from "../../../Components/Product components/ProductComp";
 import React from "react";
 import Title from "../../../Components/Title/Title";
-import productimg from "../../../images/منتج-زهرة3.png";
+import productimg from "../../../images/zahra broduct.png";
 import { FaRegPlayCircle } from "react-icons/fa";
 import { CgMaximizeAlt } from "react-icons/cg";
 

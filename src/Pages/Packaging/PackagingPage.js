@@ -1,6 +1,6 @@
 import React from 'react'
 
-import contactPoster from '../../images/واجهة-شركة-البحر-الاحمر12.jpg';
+import contactPoster from '../../images/company 12.jpg';
 import Head from '../../Components/Head/Head';
 import { Container } from 'react-bootstrap';
 import Brand from '../../Components/Brand/Brand';

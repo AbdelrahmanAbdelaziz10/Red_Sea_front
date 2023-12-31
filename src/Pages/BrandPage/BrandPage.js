@@ -2,7 +2,7 @@
 import React from "react";
 import Footer from "./../../Components/Footer/Footer";
 import Head from "../../Components/Head/Head";
-import contactPoster from "../../images/واجهة-شركة-البحر-الاحمر4.jpg";
+import contactPoster from "../../images/company 5.jpg";
 import { Container } from "react-bootstrap";
 import AllBrand from "./AllBrand";
 import Products from "../../Components/Products/Products";

@@ -1,8 +1,8 @@
 import React from 'react'
-import productImg1 from "../../images/علامة-توب.png";
-import productImg2 from "../../images/علامة-زهراء.png";
-import productImg3 from "../../images/علامة-ابو-للوج.png";
-import productImg4 from "../../images/علامة-القط-البري.png";
+import productImg1 from "../../images/topbrand.png";
+import productImg2 from "../../images/zahra bacge.png";
+import productImg3 from "../../images/abo lolologo.png";
+import productImg4 from "../../images/Wildcatbrand.png";
 import Title from '../../Components/Title/Title';
 import { Card, Col, Container, Row } from 'react-bootstrap';
 import './AllBrand.css';

@@ -5,7 +5,7 @@ import Head from '../../Components/Head/Head';
 import PolicyConant from '../PrivacyPolicy/PoliceMainComponent/PolicyConant';
 import Products from '../../Components/Products/Products';
 import React from 'react'
-import contactPoster from '../../images/واجهة-شركة-البحر-الاحمر3.jpg';
+import contactPoster from '../../images/company 6.jpg';
 import ProductDeteils from './ProductDeteils/ProductDeteils';
 
 const ZahraProduct = () => {

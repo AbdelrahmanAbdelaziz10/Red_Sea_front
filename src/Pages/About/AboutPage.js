@@ -1,5 +1,5 @@
 import React from 'react'
-import contactPoster from '../../images/واجهة-شركة-البحر-الاحمر1.jpg'
+import contactPoster from '../../images/company 3.jpg';
 import Head from '../../Components/Head/Head'
 import { Container } from 'react-bootstrap'
 import Brand from '../../Components/Brand/Brand'

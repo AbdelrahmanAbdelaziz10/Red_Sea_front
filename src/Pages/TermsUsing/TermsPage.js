@@ -3,7 +3,7 @@ import Head from '../../Components/Head/Head'
 import { Container } from 'react-bootstrap'
 import Brand from '../../Components/Brand/Brand'
 import Footer from '../../Components/Footer/Footer'
-import contactPoster from '../../images/واجهة-شركة-البحر-الاحمر9.jpg'
+import contactPoster from '../../images/company 9.jpg'
 import TermsMain from './TermsMainComponent/TermsMain';
 
 const TermsPage = () => {
