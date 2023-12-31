@@ -1,12 +1,12 @@
 .header {
-  height: 110vh;
+  height: 115vh;
 }
 .swiper {
   position: absolute;
-  top: -7.1rem !important;
+  top: -9.4rem !important;
   z-index: 1;
   width: 100%;
-  height: 72vh;
+  height: 80vh;
 }
 .header .swiper-vertical > .swiper-pagination-bullets,
 .swiper-pagination-vertical.swiper-pagination-bullets {
@@ -39,7 +39,7 @@
   color: var(--white);
   text-align: right;
   /* margin-top: 17%; */
-  top: 10rem;
+  top: 16rem;
   margin-right: 4%;
 }
 .header .head_text p {
@@ -119,16 +119,16 @@
   } */
 
   .header .swiper {
-    height: 60%;
+    height: 65%;
   } 
 
   .header {
-    height: 70vh;
+    height: 63vh;
     overflow: hidden;
   }
 
   .header .video {
-    top: -11rem;
+    top: -15rem;
   }
 
   .header .video video {
