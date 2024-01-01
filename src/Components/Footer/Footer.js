@@ -7,8 +7,13 @@ import { FaFacebook } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import React from "react";
 import footerLogo from "../../images/logo.png";
+import useFetch from './../../hooks/useFeatch';
 
 const Footer = () => {
+
+  const {data:setting}=useFetch(`/api/v1/website/setting`);
+
+
   return (
     <footer className="footer py-4">
       <Container>
@@ -55,24 +60,24 @@ const Footer = () => {
             <h5>تواصل معنا</h5>
             <ul>
               <li className="d-flex">
-                <div className="triangle ml-3 mt-2 me-2 mt-md-3 ms-md-3" />
-                العنوان : الجمهورية اليمنية- تعز
+                <div className="triangle ml-3 me-2 mt-md-3 ms-md-3" />
+                العنوان : {setting&&setting[0]?.address}
               </li>
               <li className="d-flex">
                 <div className="triangle ml-3 mt-2 me-2 mt-md-3 ms-md-3" />
-                هاتف : +9674218294
+                هاتف : {setting&&setting[0]?.phone}
               </li>
               <li className="d-flex">
                 <div className="triangle ml-3 mt-2 me-2 mt-md-3 ms-md-3" />
-                فاكس : 04218208
+                فاكس : {setting&&setting[0]?.fax}
               </li>
               <li className="d-flex">
                 <div className="triangle ml-3 mt-2 me-2 mt-md-3 ms-md-3" />
-                البريد الالكتروني: info@rsdyemen
+                البريد الالكتروني: {setting&&setting[0]?.email}
               </li>
               <li className="d-flex">
                 <div className="triangle ml-3 mt-2 me-2 mt-md-3 ms-md-3" />
-                صندوق البريد : P.O.Box5499 - Taiz-Yemen
+                صندوق البريد : {setting&&setting[0]?.mail_box}
               </li>
             </ul>
           </Col>

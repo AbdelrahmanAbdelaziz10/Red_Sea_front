@@ -1,7 +1,9 @@
 import React from 'react'
-import style from './AboutLift.css';
 import Title from '../Title/Title';
+import style from './AboutLift.css';
+
 import { Col, Container, Row } from 'react-bootstrap';
+import { BiSolidLeftArrow } from "react-icons/bi";
 
 const AboutLeft = ({title,head,aboutAr,loading}) => {
     return (
@@ -12,10 +14,21 @@ const AboutLeft = ({title,head,aboutAr,loading}) => {
         <Row className="d-flex justify-content-center mt-5 pb-2 me-3">
         <Col lg='7' md='12' xs='12' sm='12'>
         <div className='pt-5 about_text'>
-        <p className='paragraph'>
+        <div className='paragraph'>
         <span>{head}</span><br/>
-          {aboutAr}
-          </p>
+        <ul className='medals_list'>
+        {aboutAr&&aboutAr.map((about)=>{
+          return(
+            <li className='mt-2'>
+            <BiSolidLeftArrow className='arrow ms-1'/>
+            {about}
+            </li>
+          )
+        })}
+
+        </ul>
+
+          </div>
         </div>
   
         </Col>

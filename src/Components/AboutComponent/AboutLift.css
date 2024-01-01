@@ -23,7 +23,9 @@
     font-weight: 300;
     font-family: myfont;
   }
-  
+  .paragraph span{
+    font-weight: bold;
+  }
   .about p {
     text-align: right;
     color: #635d5d;
@@ -80,7 +82,12 @@
   .about-left .triangle {
     transform: rotate(-90deg) skewX(-30deg) scale(1, 0.866);
   }
-
+.medals_list .arrow{
+  color: #29abe2;
+}
+.medals_list li{
+  color: #635d5d;
+}
 
   @media (max-width: 768px) {
     /* For tablets: */

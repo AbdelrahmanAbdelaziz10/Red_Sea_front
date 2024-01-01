@@ -4,12 +4,10 @@ import { Card, Col, Container, Row } from "react-bootstrap";
 
 import React from "react";
 import Title from "../Title/Title";
-import Wildcat from "../../images/Wildcatbrand.png";
-import apolpg from "../../images/abo lolologo.png";
-import topbrand from "../../images/topbrand.png";
-import zahrabrand from "../../images/zahra bacge.png";
+import useFetch from "./../../hooks/useFeatch";
 
 const Brand = () => {
+  const { data: brands } = useFetch("/api/v1/brands");
   return (
     <section className="brand mb-md-5">
       <Container>
@@ -20,52 +18,24 @@ const Brand = () => {
           />
         </Row>
         <Row className="mb-5 pb-md-4 mb-md-5">
-          <Col
-            xs="6"
-            lg="3"
-            md="3"
-            sm="6"
-            className="d-flex justify-content-center"
-          >
-            <Card className="brand_card pb-2 mb-2">
-              <img src={zahrabrand} alt="" />
-            </Card>
-          </Col>
-          <Col
-            xs="6"
-            lg="3"
-            md="3"
-            sm="6"
-            className="d-flex justify-content-center"
-          >
-            <Card className="brand_card mb-2">
-              <img src={topbrand} alt="" />
-            </Card>
-          </Col>
-          <Col
-            xs="6"
-            lg="3"
-            md="3"
-            sm="6"
-            className="d-flex justify-content-center"
-          >
-            <Card className="brand_card mb-2">
-              <div className="brand_img">
-                <img src={Wildcat} alt="" />
-              </div>
-            </Card>
-          </Col>
-          <Col
-            xs="6"
-            lg="3"
-            md="3"
-            sm="6"
-            className="d-flex justify-content-center"
-          >
-            <Card className="brand_card mb-2">
-              <Card.Img variant="top" src={apolpg} />
-            </Card>
-          </Col>
+          {brands &&
+            brands.slice(0, 4).map((brand) => (
+              <Col
+                key={brand.id}
+                xs="6"
+                lg="3"
+                md="3"
+                sm="6"
+                className="d-flex justify-content-center"
+              >
+                <Card className="brand_card pb-2 mb-2">
+                  <img
+                    src={`https://beautyproducts.website/${brand.brand}`}
+                    alt={brand.title_en}
+                  />
+                </Card>
+              </Col>
+            ))}
         </Row>
       </Container>
     </section>

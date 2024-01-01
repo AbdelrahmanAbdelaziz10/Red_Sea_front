@@ -10,9 +10,11 @@ import productImg1 from "../../images/topbroduct.png";
 import productImg2 from "../../images/sherok backge.png";
 import productImg3 from "../../images/zahra broduct.png";
 import productImg4 from "../../images/abo lolo.png";
+import useFetch from './../../hooks/useFeatch';
 
 const Sliders = () => {
   const [activeSlide, setActiveSlide] = useState(0);
+  const {data:slider,loading}=useFetch(`/api/v1/products`)
 
   const cards = [
     {
@@ -92,11 +94,9 @@ const Sliders = () => {
         <div className="triangle slick-arrow slick-prev" />
       </button> */}
       <Slider {...sliderSettings} className="overflow_visible">
-        {cards.map((card, index) => (
+        {slider&&slider.map((slide) => (
           <CardComponent
-            index={index}
-            title={card.title}
-            imageSrc={card.imageSrc}
+          slide={slide}
           />
         ))}
       </Slider>

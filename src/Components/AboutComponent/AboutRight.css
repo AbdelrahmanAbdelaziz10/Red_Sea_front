@@ -20,7 +20,12 @@
     font-weight: 300;
     font-family: myfont;
   }
-  
+  .description2{
+    margin-right: -15%;
+  }
+  .description2 span{
+    font-weight: bold;
+  }
   .about p {
     text-align: right;
     color: #635d5d;
@@ -65,7 +70,10 @@
     border: solid #29abe2;
     background-image: url(../../images/company2.jpg);
   }
-
+  .description2 .list{
+    color: #635d5d;
+    font-weight: 400;
+  }
   @media (max-width: 768px) {
     /* For tablets: */
     .about_text{

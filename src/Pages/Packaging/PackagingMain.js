@@ -2,8 +2,11 @@ import "../PrivacyPolicy/PoliceMainComponent/policeconant.css";
 import { Container, Row } from "react-bootstrap";
 import React from "react";
 import Title from "../../Components/Title/Title";
+import useFetch from "../../hooks/useFeatch";
 
 const PackagingMain = ({title}) => {
+  const {data:packaging,loading}=useFetch(`/api/v1/packaging`);
+
   return (
     <section className="product_container">
       <div className="product">
@@ -23,19 +26,8 @@ const PackagingMain = ({title}) => {
               </div>
             </div>
             <p >
-              مع بداية العام 1998 م بدات الشركة بتنفيذ مشروع تصنيع المواد
-              التعبئة والتغليف البلاستيكية البو يلثن لتكون معتمدة على نفسها
-              بتصنيع جميع مواد التعبئة والتغليف بجميع اصنافها ومقاستها واحجامها
-              المختلفة بدلا من استيرادها محليا او خارجيا والاتكفاء الذاتي ، حيث
-              بدائت الشركة بتركيب خط انتاج المشمع وخط طباعة البلوثلين ومع مرور
-              السنوات وزيادة كمية الإنتاجية وارتفاع طلب مواد التعبئة والتغليف
-              قامت الشركة بتطوير وتحديث خط النتاج البلوثلين - في باظافة الة مشمع
-              جديدة وكذاك اضافة آلة طباعة جديدة وحديثة وكذالك اظافة خط جديد في
-              تطوير التي تعمل [ Lamination وتحديث وجودة مواد التعبئة والتغليف
-              الذي يمثل في الة اللمنيشن والذي يعد حاليا من ارقى مواد التعبئة
-              والتغليف ، BET,LLD طبقتين للف ولهذا استهانت الشركة بمنافسة جيع
-              الأسواق المحلية والخارجية بتحسين المواد الخاصة بتعبئة وتغليف جميع
-              منتجاتها
+            {loading&& <div>Loading ....</div>}
+            {packaging&&packaging[0]?.description_ar}
             </p>
           </Row>
         </Container>

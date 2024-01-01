@@ -4,7 +4,6 @@
   border-radius: 8px;
   background-color: var(--white);
 }
-
 .zahra_page .product {
   position: relative;
   min-height: 100vh;
@@ -134,5 +133,8 @@
   .zahra_page .product {
     position: relative;
     min-height: auto;
+}
+.m-mall-screen{
+  margin: 0 3% !important;
 }
 }

@@ -2,7 +2,7 @@ import React from 'react'
 import './AboutRight.css';
 import Title from '../Title/Title';
 import { Col, Container, Row } from 'react-bootstrap';
-const AboutRight = ({title,paragraph,head1}) => {
+const AboutRight = ({title,head,aboutAr,description2,head2,loading}) => {
   return (   
      <Container className="about position-relative">
 
@@ -24,10 +24,22 @@ const AboutRight = ({title,paragraph,head1}) => {
       </Col>
       <Col lg='8' md='10' xs='12' sm='12'>
       <div className='pt-5 about_text'>
-      <span className='paragraph-header pe-lg-5 '>{head1} </span> <br/>
+      <span className='paragraph-header pe-lg-5 '> {head}</span> <br/>
       <p className='paragraph me-lg-5'>
-        {paragraph}
+        {aboutAr}
         </p>
+        <p className='description2'>
+        <span >{head2}</span><br/>
+        {description2&&description2.map((about)=>{
+          return(
+            <>
+            <span className='list'>{about}</span><br/>
+            </>
+            )
+        })}
+
+        </p>
+        
       </div>
 
       </Col>
