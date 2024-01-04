@@ -2,21 +2,35 @@
   overflow: hidden;
   top: -10px;
 }
-.brand .brand_card {
+ .brand .col_card .brand_card {
   padding-top: 2px;
   box-shadow: 5px 5px 10px #4d4d4db0;
   min-height: 110px;
+  width: 28vh;
 }
 .brand .brand_img {
-  width: 100%;
+  width: 100% !important;
   padding: 9px;
   border-radius: 2px;
+}
+.brand .col_card{
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+
+}
+.rtl .Home .mp-right .map_text .triangle_control,
+.rtl .Product_page .mp-right .map_text .triangle_control{
+  right: 54%;
+  top:-4px;
+}
+.ltr .mp-right .map_text .triangle_control{
+  left: 51% !important;
 }
 img {
   width: 100%;
   height: 100%;
 }
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
   /* For mobile phones: */
   .brand{
     margin-bottom: 20%;
@@ -24,8 +38,20 @@ img {
   .brand .brand_card{
     margin-bottom: 9% !important;
   }
-}
-@media only screen and (  min-width: 600px) {
-  /* For tablets: */
+  .rtl .Home .brand .map_text .triangle_control,
+  .rtl .Product_page .mp-right .map_text .triangle_control{
 
+    right: 56% !important;
+  }
+}
+@media (max-width: 425px) {
+  /* For tablets: */
+   .brand .brand_card {
+    min-width: 30vw !important;
+
+  }
+  .rtl .Home .brand .map_text .triangle_control,
+  .rtl .Product_page .mp-right .map_text .triangle_control{
+    right: 61% !important;
+  }
 }

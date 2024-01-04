@@ -11,3 +11,25 @@
 .prod_title p{
     color: var(--gray) ;
 }
+ .product_row{
+    padding: 0 5% !important;
+}
+.rtl .product_row{
+    margin-right: 2% ;
+}
+.ltr .product_row{
+    margin-left: 2% ;
+}
+.ltr .Product_page .product_container .prod_title .map_text .triangle_control{
+    left: 52% !important;
+}
+
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 425px) {
+    .ltr .product_container .product .product_row .flex_col{
+        margin-left: 12% !important;
+    }
+}

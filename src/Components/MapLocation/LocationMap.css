@@ -1,6 +1,24 @@
 .location{
     overflow: hidden;
 }
+.rtl .Home .location.m_right .map_text .triangle_control{
+    top:-1% !important;
+    right: 55% !important;
+}
+@media (max-width: 768px) {
+    .rtl .Home .location.m_right .map_text .triangle_control{
+        right: 57% !important;
+    }
+    .ltr .Home .location.m_right .map_text .triangle_control{
+        left: 55% !important;
+    }
+}
 
-
- 
+@media (max-width: 425px) {
+    .rtl .Home .location.m_right .map_text .triangle_control{
+        right: 61% !important;
+    }
+    .ltr .Home .location.m_right .map_text .triangle_control{
+        left: 58% !important;
+    }
+}

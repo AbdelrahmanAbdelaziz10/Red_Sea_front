@@ -6,22 +6,21 @@ import { Container } from 'react-bootstrap';
 import Brand from '../../Components/Brand/Brand';
 import Footer from '../../Components/Footer/Footer';
 import PackagingMain from './PackagingMain';
+import { useTranslation } from 'react-i18next';
 
 const PackagingPage = () => {
+  const { t, i18n } = useTranslation();
   return (
     <div className='Product_page  Contact'>
-        <Head title='التعبئة والتغليف البلاستيكية' poster={contactPoster}/>
+        <Head title={t('packaging_title')} poster={contactPoster}/>
         <Container className='zahra_page'>
-      <PackagingMain title='التعبئة والتغليف البلاستيكية'/>
+      <PackagingMain title={t('packaging_title')} />
 
       </Container>
         <div className='product_Brand'>
     <Brand />
     </div>
-    <div className='triangle_control'>
-    <div className="triangle"/>
-    </div>
-        <Footer />
+
     </div>  
     )
 }

@@ -1,31 +1,36 @@
-import React from 'react'
-import contactPoster from '../../images/company 3.jpg';
-import Head from '../../Components/Head/Head'
-import { Container } from 'react-bootstrap'
-import Brand from '../../Components/Brand/Brand'
-import Footer from '../../Components/Footer/Footer'
-import Products from '../../Components/Products/Products'
-import AboutMain from './AboutMain/AboutMain';
+import React, { useContext } from "react";
+import { useTranslation } from "react-i18next";
+import AboutMain from "./AboutMain/AboutMain";
+import Brand from "../../Components/Brand/Brand";
+import { Container } from "react-bootstrap";
+import { ContextLang } from "../../App";
+import Footer from "../../Components/Footer/Footer";
+import Head from "../../Components/Head/Head";
+import Products from "../../Components/Products/Products";
+import contactPoster from "../../images/company 3.jpg";
 
 const AboutPage = () => {
+  const { selectedLanguage } = useContext(ContextLang);
+  const { t, i18n } = useTranslation();
+
   return (
-    <div className="Product_page">
-      <Head title=" من نحن" poster={contactPoster} />
+    <div className="Product_page About">
+      <Head title={t("about")} poster={contactPoster} />
       <Container>
-      <AboutMain title='عن الشركة'/>
+        <AboutMain
+          title={t("brand_product_title")}
+          selectedLanguage={selectedLanguage}
+        />
       </Container>
-      <div className='brandpage_product m-right mt-3'>
-    <Products title='منتجات قد تعجبك'/>
-    </div>
+      <div className="brandpage_product m-right mt-3">
+        <Products title={t("brand_product_title")} />
+      </div>
       <div className="product_Brand">
         <Brand />
       </div>
-      <div className="triangle_control">
-        <div className="triangle" />
-      </div>
-      <Footer />
-    </div> 
-  )
-}
 
-export default AboutPage
+    </div>
+  );
+};
+
+export default AboutPage;

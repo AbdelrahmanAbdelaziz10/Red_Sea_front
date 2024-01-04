@@ -1,0 +1,29 @@
+.triangle-com{
+    color: var(--heavenly);
+    filter: url('#goo');
+    position: absolute;
+}
+.rtl .triangle-com{
+    transform: rotate(-90deg);
+}
+.ltr .right .triangle-com{
+    transform: rotate(-30deg);
+}
+.ltr .left .triangle-com{
+    transform: rotate(-330deg) !important;
+}
+.triangle-before{
+    content: '""';
+    display: block;
+    padding-top: 86%;
+    background: currentColor;
+    clip-path: polygon(50% 0, 100% 100%, 0 100%);
+    overflow: hidden;
+    background-Size: cover;
+}
+.ltr .right .triangle-before{
+    margin-right: 10%;
+}
+.rtl .right.description .triangle-com{
+    margin-top: 8rem;
+}

@@ -5,7 +5,7 @@ import Title from './../Title/Title';
 import { Map } from './../Map/Map';
 const LocationMap = ({title}) => {
   return (
-    <section className="location">
+    <section className="location m_right">
       <Row>
       <Title title={title} pragraph=''/>
       <Map />

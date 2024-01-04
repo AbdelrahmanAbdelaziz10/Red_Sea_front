@@ -48,8 +48,11 @@
 	border-top-right-radius: 40%;
 }
 
-.about .triangle {
+.rtl .about .triangle {
 	transform: rotate(-150deg) skewX(-30deg) scale(1,.866);
+}
+.ltr .about .triangle {
+	transform: rotate(-90deg) skewX(-30deg) scale(1,.866);
 }
 .about .triangle:before {
 	transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
@@ -60,6 +63,14 @@
 
 .about .triangle_control{
     position: absolute;
-    top:-1px;
+}
+.rtl .about .triangle_control{
     right: 52.5%;
+    top:-1px;
+
+}
+.ltr .Home .about .map_text .triangle_control{
+    left: 51% !important;
+    top:-6px;
+
 }

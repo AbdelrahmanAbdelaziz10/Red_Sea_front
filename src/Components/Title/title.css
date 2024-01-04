@@ -40,10 +40,12 @@
     border-top-right-radius: 40%;
 }
 
-.map_text .triangle {
+.rtl .map_text .triangle {
     transform: rotate(-150deg) skewX(-30deg) scale(1, .866);
 }
-
+.ltr .map_text .triangle {
+    transform: rotate(-90deg) skewX(-30deg) scale(1, .866);
+}
 .map_text .triangle:before {
     transform: rotate(-135deg) skewX(-45deg) scale(1.414, .707) translate(0, -50%);
 }
@@ -54,10 +56,20 @@
 
 .map_text .triangle_control {
     position: absolute;
+
+}
+.rel .map_text .triangle_control {
     top: -1px;
     right: 54.2%;
 }
-
+.ltr .map_text .triangle_control {
+    top: -6px;
+    left: 51%;
+}
+.ltr .margin_right .map_text .triangle{
+    left: 58% !important;
+    top:-5% !important;
+}
   @media (max-width: 768px) {
     /* For tablets: */
     .m-right .triangle{

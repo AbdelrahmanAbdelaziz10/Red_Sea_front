@@ -1,52 +1,90 @@
 .product {
-    z-index: 11111;
-    top: -9rem;
-    border-radius: 8px;
-    background-color: var(--white);
-  }
-  
-  .about .product {
-    position: relative;
-    min-height: 100vh;
-  }
-  
-  .prod_title p {
-    color: var(--gray);
-  }
-  .policy_paragraph {
-    color: #4d4d4d !important;
-    line-height: 2.3;
-    font-size: 16px;
-    font-weight: 300;
-    font-family: myfont;
-  }
-  .description2{
-    margin-right: -15%;
-  }
-  .description2 span{
-    font-weight: bold;
-  }
-  .about p {
-    text-align: right;
-    color: #635d5d;
-    line-height: 2.2;
-    font-size: 16px;
-    opacity: .9;
-  }
-.about .paragraph-header{
+  z-index: 11111;
+  top: -9rem;
+  border-radius: 8px;
+  background-color: var(--white);
+}
+.about .product {
+  position: relative;
+  min-height: 100vh;
+}
+
+.prod_title p {
+  color: var(--gray);
+}
+.policy_paragraph {
+  color: #4d4d4d !important;
+  line-height: 2.3;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: myfont;
+}
+.description2 {
+  margin-right: -15%;
+}
+.description2 span {
+  font-weight: bold;
+}
+.about p {
+  text-align: right;
+  color: #635d5d;
+  line-height: 2.2;
+  font-size: 16px;
+  opacity: 0.9;
+}
+.about .paragraph-header {
   font-size: 17px !important;
   opacity: 1 !important;
 }
 
 /* about-page-triangle */
-.about-page-triangle.triangle_control .triangle{
+.about-page-triangle.triangle_control .triangle {
   background-color: var(--heavenly);
   opacity: 1;
 }
 
-.about-page-triangle.triangle_control {
-    top: 10rem !important;
-    right: 8rem !important;
+.rtl .about-page-triangle.triangle_control {
+  top: 10rem !important;
+  right: 8rem !important;
+}
+.ltr .about-page-triangle.triangle_control {
+  left: 8rem !important;
+}
+.about-page-triangle.triangle_control .triangle,
+.about-page-triangle.triangle_control .triangle::before,
+.about-page-triangle.triangle_control .triangle::after {
+  width: 13em;
+  height: 13em;
+  border: 2px 0px 1px 0;
+}
+
+.about-page-triangle-bg.about-page-triangle.triangle_control {
+  right: 10rem !important;
+}
+
+.about-page-triangle-bg.about-page-triangle.triangle_control .triangle,
+.about-page-triangle-bg.about-page-triangle.triangle_control .triangle::before,
+.about-page-triangle-bg.about-page-triangle.triangle_control .triangle::after {
+  background-size: cover;
+  background-position: center;
+  opacity: 1 !important;
+  border-top-right-radius: 40%;
+  border: solid #29abe2;
+  background-image: url(../../images/company2.jpg);
+}
+.description2 .list {
+  color: #635d5d;
+  font-weight: 400;
+}
+@media (max-width: 768px) {
+  /* For tablets: */
+  .about_text {
+    text-align: center;
+  }
+
+  .about-page-triangle.triangle_control {
+    top: 10.5rem !important;
+    right: 20rem !important;
   }
   .about-page-triangle.triangle_control .triangle,
   .about-page-triangle.triangle_control .triangle::before,
@@ -55,78 +93,128 @@
     height: 13em;
     border: 2px 0px 1px 0;
   }
-  
+
   .about-page-triangle-bg.about-page-triangle.triangle_control {
-    right: 10rem !important;
+    right: 21.5rem !important;
+    top: 12rem !important;
   }
-  
-  .about-page-triangle-bg.about-page-triangle.triangle_control .triangle,
-  .about-page-triangle-bg.about-page-triangle.triangle_control .triangle::before,
-  .about-page-triangle-bg.about-page-triangle.triangle_control .triangle::after {
-    background-size: cover;
-    background-position: center;
-    opacity: 1 !important;
-    border-top-right-radius: 40% ;
-    border: solid #29abe2;
-    background-image: url(../../images/company2.jpg);
+
+  .about_text {
+    margin-top: 52%;
   }
-  .description2 .list{
-    color: #635d5d;
-    font-weight: 400;
+
+  .triangle-control-com {
+    top: -8rem;
+    right: 2rem;
   }
-  @media (max-width: 768px) {
-    /* For tablets: */
-    .about_text{
-      text-align: center;
-    }
-    
-.about-page-triangle.triangle_control {
-  top: 10.5rem !important;
-  right: 20rem !important;
-}
-.about-page-triangle.triangle_control .triangle,
-.about-page-triangle.triangle_control .triangle::before,
-.about-page-triangle.triangle_control .triangle::after {
-  width: 13em;
-  height: 13em;
-  border: 2px 0px 1px 0;
-}
 
-.about-page-triangle-bg.about-page-triangle.triangle_control {
-  right: 21.5rem !important;
-  top: 12rem !important;
-
-}
-
-.about_text{
-  margin-top: 52%;
-}
+  .ltr .triangle-control-com {
+    top: 0;
   }
-  @media (max-width: 425px) {
-    /* For mobile phones: */
-    .about_text{
-      text-align: center;
-    }
-    
-.about-page-triangle.triangle_control {
-  top: 10.5rem !important;
-  right: 11rem !important;
-}
-.about-page-triangle.triangle_control .triangle,
-.about-page-triangle.triangle_control .triangle::before,
-.about-page-triangle.triangle_control .triangle::after {
-  width: 13em;
-  height: 13em;
-  border: 2px 0px 1px 0;
-}
-
-.about-page-triangle-bg.about-page-triangle.triangle_control {
-  right: 12.4rem !important;
-  top: 12.5rem !important;
-
-}
-
-.about_text{
-  margin-top: 79%;
-}
+  .ltr .triangle-control-com :first-child {
+    left: -2rem;
   }
+}
+
+@media (max-width: 425px) {
+  /* For mobile phones: */
+  .about_text {
+    text-align: center;
+  }
+
+  .about-page-triangle.triangle_control {
+    top: 10.5rem !important;
+    right: 11rem !important;
+  }
+  .about-page-triangle.triangle_control .triangle,
+  .about-page-triangle.triangle_control .triangle::before,
+  .about-page-triangle.triangle_control .triangle::after {
+    width: 13em;
+    height: 13em;
+    border: 2px 0px 1px 0;
+  }
+
+  .about-page-triangle-bg.about-page-triangle.triangle_control {
+    right: 12.4rem !important;
+    top: 12.5rem !important;
+  }
+
+  .about_text {
+    margin-top: 79%;
+  }
+}
+
+.triangle-control-com {
+  position: relative;
+  left: 2rem;
+}
+
+.triangle-control-com :first-child {
+  right: -2rem !important;
+}
+.rtl .right .description2 {
+  text-align: right;
+}
+.lt .About .aboutright .prod_title .map_text .triangle_control {
+  left: 56% !important;
+}
+
+/*  */
+
+.rtl .description2 {
+  margin-right: -15%;
+}
+.ltr .description2 {
+  margin-left: -20%;
+  text-align: left;
+}
+.ltr .policy_paragraph {
+  margin-left: 95% !important;
+  width: 40%;
+}
+.description2 span {
+  font-weight: bold;
+}
+.about p {
+  text-align: right;
+  color: #635d5d;
+  line-height: 2.2;
+  font-size: 16px;
+  opacity: 0.9;
+}
+.about .paragraph-header {
+  font-size: 17px !important;
+  opacity: 1 !important;
+}
+
+.description2 .list {
+  color: #635d5d;
+  font-weight: 400;
+}
+.ltr .about_text {
+  margin-left: 13%;
+  margin-right: 0 !important;
+}
+.ltr .paragraph {
+  margin-right: -10% !important;
+}
+@media (max-width: 768px) {
+  .about_text {
+    text-align: center;
+  }
+  .about_text {
+    margin-top: 52%;
+  }
+}
+@media (max-width: 425px) {
+  .about_text {
+    text-align: center;
+  }
+  .about_text {
+    margin-top: 79%;
+  }
+  .triangle-control-com {
+    top: -7rem;
+    right: 3rem;
+  }
+}

@@ -1,9 +1,12 @@
 
-.card{
+.slider_card{
     max-width: 17vw;
     border: none !important;
     border-radius: 9px !important;
     box-shadow: 1px 1px 10px var(--gray);
+    min-height: 50vh;
+    max-height: 50vh;
+
 }
 .card:hover{
     transform: scale(1.1);
@@ -24,19 +27,41 @@
     margin-bottom: 7%;
     font-size: 1.1rem;
 }
+.card .img{
+    max-height: 70%;
+    overflow: hidden;
+}
 .card .product_btn{
     background-color: var(--heavenly);
     border: none;
     width: 50%;
-    height: 18%;
+    min-height: 10%;
+    max-height: 12%;
+
     padding-bottom: 2%;
     margin-left: 50%;
     border-radius: 15px 0 9px 0;
     color: var(--main);
     font-size: 1.2rem;
     font-weight: 300 !important;
+    overflow: hidden;
 }
+.ltr .slider_card h6{
+    text-align: center !important;
+    margin-left: 0 !important;
+}
+@media (max-width: 768px) {
+    .slider_card.card{
+        max-width: 60vw !important;
+        border: none !important;
+        border-radius: 9px !important;
+        box-shadow: 1px 1px 10px var(--gray);
+        margin: 0 4em 0 0;
+        max-height: 30vh !important;
+        min-height: 30vh !important;
 
+    }
+  }
 @media (max-width:  425px) {
     .slider_card.card{
         max-width: 80vw !important;

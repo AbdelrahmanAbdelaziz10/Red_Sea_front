@@ -1,59 +1,25 @@
-import React from "react";
-import productImg1 from "../../images/topbrand.png";
-import productImg2 from "../../images/zahra bacge.png";
-import productImg3 from "../../images/abo lolologo.png";
-import productImg4 from "../../images/Wildcatbrand.png";
-import Title from "../../Components/Title/Title";
-import { Card, Col, Container, Row } from "react-bootstrap";
 import "./AllBrand.css";
+
+import { Card, Col, Container, Row } from "react-bootstrap";
+
+import React from "react";
+import Title from "../../Components/Title/Title";
 import useFetch from "../../hooks/useFeatch";
+import { useTranslation } from "react-i18next";
 
-const cards = [
-  {
-    imageSrc: productImg1,
-  },
-  {
-    imageSrc: productImg2,
-  },
-  {
-    imageSrc: productImg3,
-  },
-  {
-    imageSrc: productImg4,
-  },
-  {
-    imageSrc: productImg1,
-  },
-  {
-    imageSrc: productImg2,
-  },
-  {
-    imageSrc: productImg3,
-  },
-  {
-    imageSrc: productImg4,
-  },
-  {
-    imageSrc: productImg1,
-  },
-];
-
-const AllBrand = () => {
+const AllBrand = ({ selectedLanguage }) => {
+  const { t, i18n } = useTranslation();
   const { data: brand } = useFetch(`/api/v1/brands`);
 
   return (
     <section className="product_container  ">
       <div className="product ">
-        <div className="prod_title m_right pt-5">
-          <Title
-            className=""
-            title="العلامات التجارية"
-            pragraph="علامتنا التجارية في السوق المحلية والخارجية"
-          />
+        <div className="prod_title ml_right pt-5">
+          <Title className="" title={t("brand")} pragraph={t("brand_p")} />
         </div>
         <Container className="">
-          <Row className="d-flex justify-content-center pb-5 me-5 mt-md-4 ">
-            {brand !== [] ? (
+          <Row className="d-flex justify-content-center pb-5 mt-md-4 brand_row">
+            {brand ? (
               brand.map((brand) => (
                 <Col
                   key={brand.id}
@@ -70,8 +36,11 @@ const AllBrand = () => {
                     />
                   </Card>
                   <p className="product_description mt-2">
-                    {brand.description_ar}
+                    {selectedLanguage === "ar"
+                      ? brand.description_ar
+                      : brand.description_en}
                   </p>
+
                 </Col>
               ))
             ) : (
@@ -85,3 +54,4 @@ const AllBrand = () => {
 };
 
 export default AllBrand;
+

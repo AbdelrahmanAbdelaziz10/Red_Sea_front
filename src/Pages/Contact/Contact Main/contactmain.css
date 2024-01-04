@@ -11,12 +11,31 @@
 .contact_title p {
   color: var(--gray);
 }
-@media (max-width: 425px) {
-  /* For mobile phones: */
+.rtl .contact-page .contact_title .map_text .triangle_control{
+  top:-1% !important;
+  right: 52% !important;
 }
+.ltr .contact-page .contact_title .map_text .triangle_control{
+  left: 51% !important;
+}
+
 @media (max-width: 768px) {
   /* For tablets: */
   .contact-page {
     top: -4rem;
+  }.rtl .contact-page .contact_title .map_text .triangle_control{
+    right: 53% !important;
+  }
+  .ltr .contact-page .contact_title .map_text .triangle_control{
+    left: 52% !important;
   }
 }
+  @media (max-width: 425px) {
+    /* For mobile phones: */
+  .rtl .contact-page .contact_title .map_text .triangle_control{
+    right: 54% !important;
+  }
+  .ltr .contact-page .contact_title .map_text .triangle_control{
+    left: 54% !important;
+  }
+  }

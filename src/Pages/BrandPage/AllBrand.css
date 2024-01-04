@@ -11,9 +11,23 @@
 .prod_title p{
     color: var(--gray) ;
 }
-.brand .brand_card{
+.flex_col .brand_card{
     box-shadow: 5px 5px 10px #4d4d4db0;
+    max-height: 25vh !important;
+    overflow: hidden;
 }
+.brand_card img{
+    height: 100% !important;
+}
+.ltr .brand_row{
+    margin-left: 4rem !important;
+    margin-right: 0rem !important;
+}
+.rtl .brand_row{
+    margin-right: 4rem !important;
+    margin-left: 0rem !important;
+}
+
 .brand .brand_img {
     width: 100%;
     padding: 9px;
@@ -26,9 +40,21 @@
 .product_description{
     color: var(--gray) ;
     width: 70%;
-    text-align: right;
     font-family: myfont;
     font-size: .9rem;
+}
+.rtl .product_description{
+    text-align: right;
+}
+.ltr .product_description{
+    text-align: left  !important;
+
+}
+.rtl .brands .ml_right .map_text .triangle_control{
+    right: 54%;
+}
+.ltr .brands .ml_right .map_text .triangle_control{
+    left: 50% !important;
 }
 
 @media (max-width: 768px) {
@@ -39,12 +65,25 @@
         background-color: var(--white);
         color: var(--gray);
     }
+    .flex_col .brand_card{
+        max-height: 25vh !important;
+        min-height: 13vh !important;
+        min-width: 20vw;
+    }
+    .flex_col .brand_card img{
+    }
     
-    .m_right .triangle_control{
+    .rtl .ml_right .map_text .triangle_control{
         right: 56% !important;
+    }
+    .ltr .ml_right .triangle_control{
+        left: 2% !important;
     }
     .brand_card{
         width: 100% !important;
+    }
+    .ltr .brands .ml_right .map_text .triangle_control{
+        left: 50% !important;
     }
 
 }
@@ -56,7 +95,17 @@
         justify-content: center !important;
         margin-right: 10% !important;
     }
-    .m_right .triangle_control{
-        right: 58% !important;
+    .flex_col .brand_card{
+        min-width: 48vw !important;
     }
+    .ltr .brand_row{
+        margin-left: 7rem !important;
+    }
+    .rtl .brands .ml_right .map_text .triangle_control{
+        right: 61% !important;
+    }
+    .ltr .brands .ml_right .map_text .triangle_control{
+        left: 50% !important;
+    }
+    
 }  

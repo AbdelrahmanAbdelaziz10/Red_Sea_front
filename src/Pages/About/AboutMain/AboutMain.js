@@ -1,39 +1,117 @@
-import React from 'react'
-import './aboutmain.css'
-import AboutRight from '../../../Components/AboutComponent/AboutRight';
-import AboutLeft from '../../../Components/AboutComponent/AboutLeft';
-import useFetch from '../../../hooks/useFeatch';
-import Medals from '../../../Components/AboutComponent/Medals';
+import "./aboutmain.css";
 
-const head1 ='ثلاثة عقود من الثقة';
-const paragraph1="تبرز شركة البحر األحمر للمنظفات كشركة عمالقة في مجال تصنیع مساحیق التنظیف بعد أن فرضت نفسھا بقوة .... وھي بمسیرتھا       الناجحة منذو تأسیسھا في العام 1984 م لم تكن بمنأى عن مواكبة التطورات فقد وسعت من طاقتھا اإلنتاجیة على مرحلتین وذلك       باستحداث الیتھا اإلنتاجیة لمواكبة التطورات و التوسعات في األسواق لتلبي اإلحتیاجات الداخلیة والخارجیة ویتم تعبئة المنتجات وفق<br/>        أحدث اآلالت العالمية المتخصصة في مجال التعبئة"
-const AboutMain = () => {
+import AboutLeft from "../../../Components/AboutComponent/AboutLeft";
+import AboutRight from "../../../Components/AboutComponent/AboutRight";
+import Medals from "../../../Components/AboutComponent/Medals";
+import React from "react";
+import useFetch from "../../../hooks/useFeatch";
+import { useTranslation } from "react-i18next";
 
-  const {data:about,loading}=useFetch(`/api/v1/about`)
+const AboutMain = ({ selectedLanguage }) => {
+  const { t, i18n } = useTranslation();
+  const { data: about, loading } = useFetch(`/api/v1/about`);
   return (
-    <section className="product_container ">
-        <div className="product pb-4 about-us ">
+    <section className="product_container aboutright">
+      <div className="product pb-4 about-us ">
+        <AboutRight
+          title={t("title")}
+          head={
+            about && selectedLanguage === "ar"
+              ? about[0]?.about_header_ar
+              : about[0]?.about_header_en
+          }
+          description2=""
+          aboutAr={
+            about && selectedLanguage === "ar"
+              ? about[0]?.about_description_ar
+              : about[0]?.about_description_en
+          }
+          aboutImage={about && about[0]?.about_image}
+          loading={loading}
+        />
+        <AboutLeft
+          title={t("about_title2")}
+          aboutAr={
+            about && selectedLanguage === "ar"
+              ? about[0]?.building_description_ar
+              : about[0]?.building_description_en
+          }
+          aboutImage={about && about[0]?.building_image}
+          loading={loading}
+        />
+        <AboutRight
+          title={t("about_title3")}
+          head=""
+          head2={
+            about && selectedLanguage === "ar"
+              ? about[0]?.quality_header_ar
+              : about[0]?.quality_header_en
+          }
+          description2={
+            about && selectedLanguage === "ar"
+              ? about[0]?.quality_description2_ar
+              : about[0]?.quality_description2_en
+          }
+          aboutAr={
+            about && selectedLanguage === "ar"
+              ? about[0]?.quality_description1_ar
+              : about[0]?.quality_description1_en
+          }
+          aboutImage={about && about[0]?.quality_image}
+          loading={loading}
+        />
+        <div className="m-right medals">
+          <Medals
+            title={t("about_title4")}
+            head={
+              about && selectedLanguage === "ar"
+                ? about[0]?.certifications_short_description_ar
+                : about[0]?.certifications_short_description_en
+            }
+            aboutAr={
+              about && selectedLanguage === "ar"
+                ? about[0]?.certifications_ar
+                : about[0]?.certifications_en
+            }
+            aboutImage={about && about[0]?.certifications_image}
+            description2=""
+            loading={loading}
+          />
+          {/* <AboutLeft head={about&&about[0]?.certifications_short_description_ar} aboutAr={about&&about[0]?.certifications_ar} description2='' loading={loading}/> */}
+        </div>
+        <div className="ma-right aboutleft">
+          <AboutRight
+            title={t("about_title5")}
+            head=""
+            description2=""
+            aboutAr={
+              about && selectedLanguage === "ar"
+                ? about[0]?.market_description_ar
+                : about[0]?.market_description_en
+            }
+            aboutImage={about && about[0]?.market_image}
+            loading={loading}
+          />
+        </div>
 
-    <AboutRight title='عن الشركة' head={about&&about[0]?.about_header_ar} description2=''
-    aboutAr={about&&about[0]?.about_description_ar} loading={loading}/>
-    <AboutLeft title='التاسيس ' aboutAr={about&&about[0]?.building_description_ar} loading={loading}/>
-    <AboutRight title='سياسة الجودة' head='' head2={about&&about[0]?.quality_header_ar}  description2={about&&about[0]?.quality_description2_ar}  
-    aboutAr={about&&about[0]?.quality_description1_ar} loading={loading}/>
-    <div className='m-right medals'>
-    <Medals title='الشهادة والاوسمة'   head={about&&about[0]?.certifications_short_description_ar} aboutAr={about&&about[0]?.certifications_ar} description2='' loading={loading}/>
-    {/* <AboutLeft head={about&&about[0]?.certifications_short_description_ar} aboutAr={about&&about[0]?.certifications_ar} description2='' loading={loading}/> */}
-    </div>
-    <div className='ma-right aboutleft'>
-    <AboutRight title='تلبية السوق المحلية والخارجية' head='' description2='' aboutAr={about&&about[0]?.market_description_ar} loading={loading}/>
-    </div>
-
-    <div className='m-right aboutleft mb-5 pb-3'>
-
-    <AboutLeft title=' خطوط التوسع والخطط المستقبلية' description2='' aboutAr={about&&about[0]?.expanding_description_ar} loading={loading}/>
-</div>
-</div>
+        <div className="m-right aboutleft mb-5 pb-3">
+          <AboutLeft
+            title={t("about_title6")}
+            description2=""
+            aboutAr={
+              about && selectedLanguage === "ar"
+                ? about[0]?.expanding_description_ar
+                : about[0]?.expanding_description_en
+            }
+            aboutImage={about && about[0]?.expanding_image}
+            loading={loading}
+          />
+        </div>
+      </div>
     </section>
-  )
-}
+  );
+};
 
-export default AboutMain
+export default AboutMain;
+
+

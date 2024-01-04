@@ -7,43 +7,10 @@ import React from "react";
 import Title from "../../Title/Title";
 import productImg1 from "../../../images/topbroduct.png";
 import useFetch from "./../../../hooks/useFeatch";
-
-// const cards = [
-//   {
-//     imageSrc: productImg1,
-//     title: "صابون ثوب",
-//   },
-//   {
-//     imageSrc: productImg2,
-//     title: "صابون شروق",
-//   },
-//   {
-//     imageSrc: productImg3,
-//     title: "صابون زهره",
-//   },
-//   {
-//     imageSrc: productImg4,
-//     title: "صابون ابوللو",
-//   },
-//   {
-//     imageSrc: productImg1,
-//     title: "صابون ثوب",
-//   },
-//   {
-//     imageSrc: productImg2,
-//     title: "صابون شروق",
-//   },
-//   {
-//     imageSrc: productImg3,
-//     title: "صابون زهره",
-//   },
-//   {
-//     imageSrc: productImg4,
-//     title: "صابون ابوللو",
-//   },
-// ];
+import { useTranslation } from 'react-i18next';
 
 const Product = () => {
+  const { t, i18n } = useTranslation();
   const { data: product } = useFetch("/api/v1/products");
 
   return (
@@ -51,12 +18,12 @@ const Product = () => {
       <div className="product">
         <div className="prod_title pt-4">
           <Title
-            title="منتجاتنا"
-            pragraph="منتجاتنا من الافضل في الاسواق المحلية والخارجية"
+            title={t('product')}
+            pragraph={t('brand_p')}
           />
         </div>
         <Container className="">
-          <Row className="d-flex justify-content-center pb-2 me-5">
+          <Row className="d-flex product_row justify-content-center pb-2 ">
             {product.map((product) => (
               <Col
                 key={product.id}
@@ -68,7 +35,6 @@ const Product = () => {
               >
                 <ProductCard
                   product={product}
-                  // title={card.name_ar}
                 />
               </Col>
             ))}

@@ -3,6 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+.App{
+  overflow: hidden;
+}
 :root {
   --main: #0b057a;
   --white: #f4f5f9;
@@ -99,6 +102,12 @@ Link {
   left: -80%;
   bottom: 9rem;
 }
+.rtl .triangle_control {
+  left: -80%;
+}
+.ltr .triangle_control {
+  left: 82%;
+}
 
 .triangle {
   position: absolute;
@@ -119,8 +128,11 @@ Link {
   z-index: 11111;
 }
 
-.triangle {
+.rtl .triangle {
   transform: rotate(-90deg) skewX(-30deg) scale(1, 0.866);
+}
+.ltr .triangle {
+  transform: rotate(-30deg) skewX(-30deg) scale(1, 0.866);
 }
 .triangle:before {
   transform: rotate(-135deg) skewX(-45deg) scale(1.414, 0.707)
@@ -173,19 +185,32 @@ Link {
   .triangle_control {
     bottom: 7rem;
   }
+  
 }
 
 @media (max-width: 425px) {
   :root {
     font-size: 13px;
   }
-  .triangle,
-  .triangle:before,
-  .triangle:after {
+  .rtl .triangle,
+  .rtl .triangle:before,
+  .rtl .triangle:after {
     width: 8em;
     height: 8em;
   }
-  .triangle_control {
+  .ltr .triangle,
+  .ltr .triangle:before,
+  .ltr .triangle:after {
+    width: 7em;
+    height: 7em;
+  }
+
+  .ltr .triangle_control {
+    left: 74%;
+    bottom: 6rem;
+  }
+
+  .rtl .triangle_control {
     left: -71%;
   }
 }

@@ -5,14 +5,14 @@ import Head from '../../Components/Head/Head';
 import { Map } from '../../Components/Map/Map';
 import React from 'react'
 import contactPoster from '../../images/company2.jpg'
-
+import { useTranslation } from 'react-i18next';
 const Conact = () => {
 
-  
+  const { t, i18n } = useTranslation();
 
   return (
     <div className='Contact'>
-    <Head title='تواصل معنا' poster={contactPoster}/>
+    <Head title={t('contact')} poster={contactPoster}/>
     <section className='contact_container'>
     <Container>
       <ContacMain />
@@ -20,10 +20,10 @@ const Conact = () => {
     </section>
 
         <Map />
-    <div className='triangle_control'>
+    {/* <div className='triangle_control'>
     <div className="triangle"/>
     </div>
-        <Footer />
+        <Footer /> */}
     </div>
   )
 }

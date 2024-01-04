@@ -1,11 +1,14 @@
 import { useNavigate } from "react-router-dom";
 import "./card.css";
-
-import React from "react";
+import { useTranslation } from 'react-i18next';
+import React, { useContext } from "react";
+import { ContextLang } from "../../../App";
 
 const CardComponent = ({ slide }) => {
-  const navigate = useNavigate();
+  const { selectedLanguage } = useContext(ContextLang);
 
+  const navigate = useNavigate();
+  const { t, i18n } = useTranslation();
   return (
     <div
       className="card slider_card d-flex flex-column mb-5 mt-4"
@@ -17,14 +20,17 @@ const CardComponent = ({ slide }) => {
           src={`https://beautyproducts.website/${slide.images[0]?.image}`}
         />
       </div>
-      <h6>{slide.name_ar}</h6>
+      <h6 >{
+        slide && selectedLanguage === "ar"
+              ? slide.name_ar
+              : slide.name_en }</h6>
       <button
         className="product_btn"
         onClick={() => {
           navigate(`/products/${slide.id}`);
         }}
       >
-        اعرف أكثر
+      {t('product_btn')}
       </button>
     </div>
   );

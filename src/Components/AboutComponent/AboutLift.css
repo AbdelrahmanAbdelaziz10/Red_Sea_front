@@ -1,144 +1,389 @@
 .product {
-    z-index: 11111;
-    top: -9rem;
-    border-radius: 8px;
-    background-color: var(--white);
-  }
-  .about-left{
-    position: relative;
-  }
-  
-  .about .product {
-    position: relative;
-    min-height: 100vh;
-  }
-  
-  .prod_title p {
-    color: var(--gray);
-  }
-  .policy_paragraph {
-    color: #4d4d4d !important;
-    line-height: 2.3;
-    font-size: 16px;
-    font-weight: 300;
-    font-family: myfont;
-  }
-  .paragraph span{
-    font-weight: bold;
-  }
-  .about p {
-    text-align: right;
-    color: #635d5d;
-    line-height: 2.2;
-    font-size: 16px;
-    opacity: .9;
-  }
-  .about .paragraph{
-    padding: 0 !important;
-  }
-.about .paragraph-header{
+  z-index: 11111;
+  top: -9rem;
+  border-radius: 8px;
+  background-color: var(--white);
+}
+.about-left {
+  position: relative;
+}
+
+.about .product {
+  position: relative;
+  min-height: 100vh;
+}
+
+.prod_title p {
+  color: var(--gray);
+}
+.policy_paragraph {
+  color: #4d4d4d !important;
+  line-height: 2.3;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: myfont;
+}
+.paragraph span {
+  font-weight: bold;
+}
+.about p {
+  text-align: right;
+  color: #635d5d;
+  line-height: 2.2;
+  font-size: 16px;
+  opacity: 0.9;
+}
+.about .paragraph {
+  padding: 0 !important;
+}
+.about .paragraph-header {
   font-size: 17px !important;
   opacity: 1 !important;
 }
 
-  
-  .about-left .triangle {
-    position: absolute;
-    top:30% !important;
-    right: 21% !important;
-    background-color: var(--heavenly);
-    opacity: 1;
-  }
-  .about-left .triangle:before,
-  .about-left .triangle:after {
-    content: "";
-    position: absolute;
-    background-color: inherit;
-  }
-  .about-left .triangle,
-  .about-left .triangle:before,
-  .about-left .triangle:after {
-    width: 12em;
-    height: 12em;
-  }
-  
-  .about-left .triangle {
-    transform: rotate(-90deg) skewX(-30deg) scale(1, 0.866);
+.about-left .triangle {
+  position: absolute;
+  top: 30% !important;
+  right: 21% !important;
+  background-color: var(--heavenly);
+  opacity: 1;
+}
+.about-left .triangle:before,
+.about-left .triangle:after {
+  content: "";
+  position: absolute;
+  background-color: inherit;
+}
+.about-left .triangle,
+.about-left .triangle:before,
+.about-left .triangle:after {
+  width: 12em;
+  height: 12em;
+}
+
+.about-left .triangle {
+  transform: rotate(-90deg) skewX(-30deg) scale(1, 0.866);
+}
+
+.about-left.about-page-triangle-bg .triangle {
+  right: 19% !important;
+  opacity: 1;
+}
+.about-left.about-page-triangle-bg .triangle,
+.about-left.about-page-triangle-bg .triangle:before,
+.about-left.about-page-triangle-bg .triangle:after {
+  background-image: url("../../images/company\ 1.jpg");
+  background-size: cover;
+}
+
+.about-left .triangle {
+  transform: rotate(-90deg) skewX(-30deg) scale(1, 0.866);
+}
+.medals_list .arrow {
+  color: #29abe2;
+}
+.medals_list li {
+  color: #635d5d;
+}
+
+@media (max-width: 768px) {
+  /* For tablets: */
+  .about_text {
+    text-align: center;
+    margin-top: 52%;
   }
 
-
-
-  .about-left.about-page-triangle-bg .triangle {
-    right: 19% !important;
-    opacity: 1;
+  .about-left {
+    top: -5rem !important;
+    right: 0rem !important;
   }
   .about-left.about-page-triangle-bg .triangle,
   .about-left.about-page-triangle-bg .triangle:before,
   .about-left.about-page-triangle-bg .triangle:after {
-    background-image: url('../../images/company\ 1.jpg');
-    background-size: cover;
+    width: 13em;
+    height: 13em;
+    border: 2px 0px 1px 0;
   }
-  
-  .about-left .triangle {
-    transform: rotate(-90deg) skewX(-30deg) scale(1, 0.866);
+
+  .about-left.about-page-triangle-bg .triangle {
+    right: 16.7rem !important;
+    top: 16.7rem !important;
   }
-.medals_list .arrow{
+
+  .triangle-control-com-left {
+    top: -37rem;
+    right: calc(-50% + 13rem) !important;
+  }
+
+  .modals .triangle-control-com-left {
+    top: -47rem;
+  }
+
+  .triangle-control-com-left :nth-child(2) {
+    left: 2rem;
+  }
+
+  .ltr .triangle-control-com-left {
+    top: 8rem !important;
+  }
+}
+@media (max-width: 425px) {
+  /* For mobile phones: */
+  .about_text {
+    margin-top: 79%;
+  }
+
+  .about-left.about-page-triangle-bg .triangle {
+    top: 21.4em !important;
+    right: 8rem !important;
+  }
+  .about-left.about-page-triangle-bg .triangle,
+  .about-left.about-page-triangle-bg .triangle:before,
+  .about-left.about-page-triangle-bg .triangle:after {
+    width: 13em;
+    height: 13em;
+    border: 2px 0px 1px 0;
+  }
+
+  .about-left {
+    right: 1.5rem !important;
+    top: -10rem !important;
+  }
+}
+
+.triangle-control-com-left {
+  position: relative;
+  right: 2rem;
+}
+
+.triangle-control-com-left .triangle-com {
+  transform: rotate(90deg) !important;
+}
+
+.triangle-control-com-left :first-child {
+  left: 0rem !important;
+}
+
+.ltr .About .about-us .left .prod_title .map_text .triangle_control {
+  left: 53% !important;
+}
+.ltr .About .about-us .right .prod_title .map_text .triangle_control {
+  left: 52% !important;
+}
+.ltr .About .about-us .right .prod_title .map_text .triangle_control {
+  left: 53% !important;
+}
+.ltr .About .ma-right .right .prod_title .map_text .triangle_control {
+  left: 63% !important;
+}
+.ltr .About .aboutleft .left .prod_title .map_text .triangle_control {
+  left: 72% !important;
+}
+.ltr .About .medals .left .prod_title .map_text .triangle_control {
+  left: 57% !important;
+}
+
+/*  */
+/*  */
+
+.ltr .left .triangle-control-com-left {
+  position: absolute;
+  right: 23rem !important;
+}
+
+.product {
+  z-index: 11111;
+  top: -9rem;
+  border-radius: 8px;
+  background-color: var(--white);
+}
+.about-left {
+  position: relative;
+}
+
+.about .product {
+  position: relative;
+  min-height: 100vh;
+}
+
+.prod_title p {
+  color: var(--gray);
+}
+.ltr
+  .product_container
+  .models
+  .aboutleft
+  .ma-right
+  .map_text
+  .triangle_control {
+  left: 63% !important;
+}
+.policy_paragraph {
+  color: #4d4d4d !important;
+  line-height: 2.3;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: myfont;
+}
+.paragraph span {
+  font-weight: bold;
+}
+.ltr .paragraph span {
+  margin-left: -5%;
+}
+.ltr .medals_list {
+  margin-left: -10% !important;
+}
+.about p {
+  text-align: right;
+  color: #635d5d;
+  line-height: 2.2;
+  font-size: 16px;
+  opacity: 0.9;
+}
+.about .paragraph {
+  padding: 0 !important;
+}
+.about .paragraph-header {
+  font-size: 17px !important;
+  opacity: 1 !important;
+}
+
+.about-left .triangle {
+  position: absolute;
+  top: 30% !important;
+  right: 21% !important;
+  background-color: var(--heavenly);
+  opacity: 1;
+}
+.about-left .triangle:before,
+.about-left .triangle:after {
+  content: "";
+  position: absolute;
+  background-color: inherit;
+}
+.about-left .triangle,
+.about-left .triangle:before,
+.about-left .triangle:after {
+  width: 12em;
+  height: 12em;
+}
+
+.rtl .aboutleft .about-left .triangle {
+  transform: rotate(-90deg) skewX(-30deg) scale(1, 0.866);
+}
+.ltr .aboutleft .about-left .triangle {
+  transform: rotate(-30deg) skewX(-30deg) scale(1, 0.866);
+}
+.ltr .aboutleft .about-left.about-page-triangle .triangle {
+  left: 51rem !important;
+  top: -4rem !important;
+  opacity: 1;
+}
+.rtl .aboutleft .about-left.about-page-triangle .triangle {
+  right: 46rem !important;
+  top: -4rem !important;
+  opacity: 1;
+}
+
+.ltr .aboutleft .about-left.about-page-triangle-bg .triangle {
+  left: 49rem !important;
+  opacity: 1;
+}
+
+.rtl .aboutleft .about-left.about-page-triangle-bg .triangle {
+  right: 43rem !important;
+  top: -2rem !important;
+  opacity: 1;
+}
+.about-left.about-page-triangle-bg .triangle,
+.about-left.about-page-triangle-bg .triangle:before,
+.about-left.about-page-triangle-bg .triangle:after {
+  background-image: url("../../images/company\ 1.jpg");
+  background-size: cover;
+}
+
+.about-left .triangle {
+  transform: rotate(-90deg) skewX(-30deg) scale(1, 0.866);
+}
+.medals_list .arrow {
   color: #29abe2;
 }
-.medals_list li{
+.medals_list li {
   color: #635d5d;
 }
-
-  @media (max-width: 768px) {
-    /* For tablets: */
-    .about_text{
-      text-align: center;
-      margin-top: 52%;
-
-    }
-    
-    .about-left {
-      top: -5rem !important;
-  right: 0rem !important;
+.ltr .aboutleft .about_text .paragraph {
+  direction: ltr;
+  text-align: left;
+  margin-left: 0;
 }
-.about-left.about-page-triangle-bg .triangle,
-.about-left.about-page-triangle-bg .triangle:before,
-.about-left.about-page-triangle-bg .triangle:after {
-  width: 13em;
-  height: 13em;
-  border: 2px 0px 1px 0;
+.ltr .ma_right .map_text .triangle_control {
+  left: 56% !important;
 }
-
-.about-left.about-page-triangle-bg .triangle {
-  right: 16.7rem !important;
-  top: 16.7rem !important;
-
+.ltr .prod_title .map_text .triangle_control {
+  left: 53% !important;
 }
-
+.ltr .m-right .aboutleft .map_text .triangle_control {
+  left: 62% !important;
+}
+.ltr .m_button {
+  margin-bottom: 8rem !important;
+}
+.ltr .triangle-control-com-left :nth-child(2) {
+  left: -2rem;
+}
+@media (max-width: 768px) {
+  .about_text {
+    text-align: center;
+    margin-top: 52%;
   }
-  @media (max-width: 425px) {
-    /* For mobile phones: */
-    .about_text{
-      margin-top: 79%;
 
-    }
-    
-.about-left.about-page-triangle-bg .triangle {
-  top: 21.4em !important;
-  right: 8rem !important;
-}
-.about-left.about-page-triangle-bg .triangle,
-.about-left.about-page-triangle-bg .triangle:before,
-.about-left.about-page-triangle-bg .triangle:after {
-  width: 13em;
-  height: 13em;
-  border: 2px 0px 1px 0;
-}
-
-.about-left {
-  right: 1.5rem !important;
-  top: -10rem !important;
-
-}
-
+  .about-left {
+    top: -5rem !important;
+    right: 0rem !important;
   }
+  .ltr .About .about-us .left .prod_title .map_text .triangle_control {
+    left: 59% !important;
+  }
+  .ltr .About .about-us .right .prod_title .map_text .triangle_control {
+    left: 59% !important;
+  }
+  .ltr .About .ma-right .right .prod_title .map_text .triangle_control {
+    left: 73% !important;
+  }
+  .ltr .About .aboutleft .left .prod_title .map_text .triangle_control {
+    left: 82% !important;
+  }
+  .ltr .About .medals .left .prod_title .map_text .triangle_control {
+    left: 67% !important;
+  }
+}
+@media (max-width: 425px) {
+  .about_text {
+    margin-top: 79%;
+  }
+
+  .ltr .About .about-us .left .prod_title .map_text .triangle_control {
+    left: 65% !important;
+  }
+  .ltr .About .about-us .right .prod_title .map_text .triangle_control {
+    left: 65% !important;
+  }
+  .ltr .About .ma-right .right .prod_title .map_text .triangle_control {
+    left: 99% !important;
+  }
+  .ltr .About .aboutleft .left .prod_title .map_text .triangle_control {
+    left: 110% !important;
+  }
+  .ltr .About .medals .left .prod_title .map_text .triangle_control {
+    left: 81% !important;
+  }
+  .about-left {
+    right: 1.5rem !important;
+    top: -10rem !important;
+  }
+  .ltr .About .right,
+  .ltr .About .left {
+    text-align: left !important;
+  }
+}

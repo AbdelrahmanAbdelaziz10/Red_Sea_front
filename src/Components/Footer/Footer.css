@@ -23,8 +23,11 @@
   border-top-right-radius: 40%;
 }
 
-.footer .triangle {
+.rtl .footer .triangle {
   transform: rotate(-33deg) skewX(-30deg) scale(1, 0.866);
+}
+.ltr .footer .triangle {
+  transform: rotate(-90deg) skewX(-30deg) scale(1, 0.866);
 }
 .footer .triangle:before {
   transform: rotate(-135deg) skewX(-45deg) scale(1.414, 0.707)
@@ -37,9 +40,15 @@
 .footer h5 {
   font-weight: 400;
   font-size: 1.3rem;
-  padding-right: 7%;
   padding-bottom: 3%;
 }
+.rtl .footer .company h5 {
+  padding-right: 3%;
+}
+.ltr .footer h5 {
+  padding-left: 12%;
+}
+
 .footer h6 {
   font-size: 1.1rem;
 }
@@ -49,8 +58,17 @@
   font-weight: 300;
   font-size: 15px;
   padding-bottom: 2px;
-  padding-left: 0;
-  padding-right: 4%;
+
+}
+.rtl .footer ul li,
+.rtl .footer ul li a {
+  padding-right: 0;
+  padding-left: 4%;
+}
+.ltr .footer ul li,
+.ltr .footer ul li a {
+  padding-right: 0;
+  padding-left: 2%;
 }
 .footer ul li:hover a {
   font-size: 16px;
@@ -113,23 +131,66 @@
 }
 @media (max-width: 768px) {
   /* For tablets: */
+.rtl .policty .triangle{
+  margin-top: 8% !important;
+}
+.ltr .policty .triangle{
+  margin-top: 8% !important;
+}
   .footer .company h5 {
     font-size: 1.6rem;
     font-weight: 400;
     padding-bottom: 3%;
   }
+  .rtl .footer h5 {
+    padding-right: 2% !important;
+}
+.ltr .footer h5 {
+  padding-left: 5% !important;
+}
   .footer .company a,
   .footer .company li {
     font-size: 18px !important;
     font-weight: 300 !important;
-    margin-right: 2px !important;
+  }
+  .ltr .footer .company a,
+  .ltr .footer .company li {
+    margin-left: -4% !important;
   }
 
   .footer .triangle,
   .footer .triangle:before,
   .footer .triangle:after {
-    width: 0.5em;
-    height: 0.5em;
+    width: 0.4em;
+    height: 0.4em;
+    margin-top: 2% !important;
+  }
+  .rtl .footer .triangle,
+  .rtl .footer .triangle:before,
+  .rtl .footer .triangle:after {
+    margin-left: 4% !important ;
+  }
+  .list1 .triangle,
+  
+  .list1 .triangle:before,
+  .list1 .triangle:after{
+    margin-top: 5% !important;
+  }
+  .rtl .list1 Link{
+    padding-right: 2% !important;
+  }
+  .ltr .list1 Link{
+    padding-left: 2% !important;
+  }
+  .rtl .footer .triangle,
+  .rtl .footer .triangle:before,
+ .rtl .footer .triangle:after {
+    margin-left: 4% !important;
+  }
+  .ltr .footer .triangle,
+  .ltr .footer .triangle:before,
+ .ltr .footer .triangle:after {
+    margin-right: 4% !important;
   }
   .footer .privity_list a {
     font-size: 1.4rem;
@@ -160,10 +221,14 @@
   }
   .footer p {
     font-size: 17px;
-    padding-right: 2% !important;
     padding-bottom: 2% !important;
   }
-
+  .rtl .footer p {
+    padding-right: 2% !important;
+  }
+  .ltr .footer p {
+    padding-left: 2% !important;
+  }
   .footer .footer_logo {
     margin: auto;
     text-align: center;
@@ -192,8 +257,11 @@
     font-weight: 300 !important;
     line-height: 30px;
   }
-.ml-3{
+.rtl .ml-3{
   margin-left: .3em;
+}
+.ltr .ml-3{
+  margin-right: .3em;
 }
   .footer .triangle,
   .footer .triangle:before,
@@ -203,6 +271,11 @@
   }
   .footer .privity_list .triangle {
     margin-top: .7em !important;
+  }
+  .rtl .footer .privity_list .triangle {
+    margin-left: .4em;
+  }
+  .ltr .footer .privity_list .triangle {
     margin-left: .4em;
   }
   .footer .privity_list a {
@@ -238,6 +311,14 @@
     padding-right: 2% !important;
     padding-bottom: 2% !important;
   }
+  .rtl .footer p {
+    padding-right: 2% !important;
+  }
+  .ltr .footer p {
+    padding-left: 2% !important;
+  }
+
+
 
   .footer .footer_logo {
     margin: auto;
