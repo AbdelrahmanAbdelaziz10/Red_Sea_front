@@ -1,29 +1,35 @@
-.triangle-com{
-    color: var(--heavenly);
-    filter: url('#goo');
-    position: absolute;
+.triangle-com {
+  color: var(--heavenly);
+  filter: url("#goo");
+  position: absolute;
 }
-.rtl .triangle-com{
-    transform: rotate(-90deg);
+.rtl .triangle-com {
+  /* transform: rotate(-90deg); */
 }
-.ltr .right .triangle-com{
-    transform: rotate(-30deg);
+.ltr .right .triangle-com {
+  /* transform: rotate(-180deg); */
+  transform: rotateY(180deg);
 }
-.ltr .left .triangle-com{
-    transform: rotate(-330deg) !important;
+.ltr .left .triangle-com {
+  /* transform: rotate(-330deg) !important; */
+  transform: rotateY(0) !important;
 }
-.triangle-before{
-    content: '""';
-    display: block;
-    padding-top: 86%;
-    background: currentColor;
-    clip-path: polygon(50% 0, 100% 100%, 0 100%);
-    overflow: hidden;
-    background-Size: cover;
+.triangle-before {
+  content: '""';
+  display: block;
+  padding-top: 86%;
+  background: currentColor;
+  clip-path: polygon(100% 0%, 100% 100%, 0% 50%);
+  overflow: hidden;
+  background-size: cover;
 }
-.ltr .right .triangle-before{
-    margin-right: 10%;
+.triangle-control-com-left .triangle-com {
+  /* transform: rotate(90deg) !important; */
+  transform: rotateY(180deg) !important;
 }
-.rtl .right.description .triangle-com{
-    margin-top: 8rem;
+.ltr .right .triangle-before {
+  margin-right: 10%;
+}
+.rtl .right.description .triangle-com {
+  margin-top: 8rem;
 }

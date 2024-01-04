@@ -1,0 +1,17 @@
+
+.small_card .Swiper{
+    margin-top: 2%;
+}
+  .small_card .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+      display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .small_card .swiper-backface-hidden .swiper-slide {
+    height: 200px !important;
+    margin-bottom: 0 !important;
+  }
+  

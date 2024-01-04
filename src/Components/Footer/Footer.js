@@ -15,7 +15,6 @@ const Footer = () => {
   const { t, i18n } = useTranslation();
   const { data: setting } = useFetch(`/api/v1/website/setting`);
   const { data: product, loading } = useFetch(`/api/v1/products`);
-  console.log("product", product);
 
   return (
     <footer className="footer py-4">

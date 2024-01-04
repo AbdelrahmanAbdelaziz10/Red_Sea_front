@@ -1,10 +1,10 @@
+import "./AboutLift.css";
 
 import { Col, Container, Row } from "react-bootstrap";
 
 import React from "react";
 import Title from "../Title/Title";
 import Triangle from "../Triangle/Triangle";
-import style from "./AboutLift.css";
 
 const AboutLeft = ({ title, head, aboutAr, aboutImage, loading }) => {
   return (
@@ -42,4 +42,3 @@ const AboutLeft = ({ title, head, aboutAr, aboutImage, loading }) => {
 };
 
 export default AboutLeft;
-

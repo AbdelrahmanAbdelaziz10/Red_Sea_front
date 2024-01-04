@@ -93,7 +93,6 @@ const Form = () => {
         );
 
         // Handle success, e.g., show a success message or redirect
-        console.log("Form submitted successfully", response.data);
         handleClick();
       } catch (error) {
         // Handle error, e.g., show an error message

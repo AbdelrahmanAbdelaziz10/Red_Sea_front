@@ -1,6 +1,5 @@
 .header {
   height: 115vh;
-  background-color: gainsboro;
 }
 .swiper {
   position: absolute;
@@ -65,7 +64,13 @@
   border-radius: 4px;
   overflow: hidden;
   width: 70vw;
+  height: 60vh !important;
 }
+
+.header .video iframe {
+  height: 60vh !important;
+}
+
 .header .video video {
   width: 60vw;
   border-radius: 4px !important;

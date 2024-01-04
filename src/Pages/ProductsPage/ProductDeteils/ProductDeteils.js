@@ -1,9 +1,12 @@
 import "./productdeteils.css";
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "./style.css";
+import { Mousewheel, Pagination } from "swiper/modules";
 import { Card, Col, Container, Row } from "react-bootstrap";
 import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
 import React, { useContext, useEffect, useRef, useState } from "react";
-
 import { CgMaximizeAlt } from "react-icons/cg";
 import { ContextLang } from "../../../App";
 import { FaRegPlayCircle } from "react-icons/fa";
@@ -39,7 +42,6 @@ const ProductDeteils = ({ productData, loading }) => {
     return <div>LOADING ...</div>;
   }
 
-  console.log(productData?.video);
   return (
     <section className="product_container  ">
       <div className="product product-details">
@@ -83,9 +85,7 @@ const ProductDeteils = ({ productData, loading }) => {
                     allowTransparency="true"
                     allowfullscreen
                     allow="autoplay"
-                  >
-
-                  </iframe>
+                  ></iframe>
                   {!play && (
                     <div class="poster-overlay">
                       <img
@@ -97,28 +97,36 @@ const ProductDeteils = ({ productData, loading }) => {
                 </div>
               </div>
               <div className="small_card col-lg-4 ">
-                {productData?.images.map((images) => {
-                  return (
-                    <Card
-                      className="card-alpom"
-                      onClick={() => setPosterSrc(images.image)}
-                    >
-                      <img
-                        src={`https://beautyproducts.website/${images.image}`}
-                        alt=""
-                      />
-                    </Card>
-                  );
-                })}
-
-                {/* <div className="arrow-slider  d-flex">
+                <Swiper
+                  direction={"vertical"}
+                  slidesPerView={3}
+                  pagination={{
+                    clickable: true,
+                  }}
+                  modules={[ Pagination]}
+                  className="mySwiper"
+                >
+                    {productData?.images.map((images) => {
+                      return (
+                        <SwiperSlide className="card-alpom"
+                        onClick={() => setPosterSrc(images.image)}>
+                          <img
+                            src={`https://beautyproducts.website/${images.image}`}
+                            alt=""
+                          />
+                        </SwiperSlide>
+                      );
+                    })}
+                </Swiper>
+                {/*<div className="arrow-slider  d-flex">
                   <Card className="btn2 border">
                     <IoMdArrowDropup />
                   </Card>
                   <Card className="btn2 border ">
                     <IoMdArrowDropdown />
                   </Card>
-                </div> */}
+                </div>{" "}
+                */}
               </div>
             </Row>
           </Row>

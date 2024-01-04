@@ -133,6 +133,9 @@
   .ltr .contact{
     margin-right: 2rem;
   }
+  .ltr .btn{
+    width: 10vh !important;
+  }
   .ltr .navbar-nav{
     display: flex !important;
     flex-direction: column !important;

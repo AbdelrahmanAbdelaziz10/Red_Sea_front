@@ -105,7 +105,8 @@
 }
 
 .triangle-control-com-left .triangle-com {
-  transform: rotate(90deg) !important;
+  /* transform: rotate(90deg) !important; */
+  transform: rotateY(180deg);
 }
 
 .triangle-control-com-left :first-child {

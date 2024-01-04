@@ -179,9 +179,21 @@
   margin-right: 0 !important;
 }
 .ltr .paragraph {
-  margin-right: -10% !important;
+  margin-right: 2% !important;
 }
 @media (max-width: 768px) {
+  .ltr .triangle-control-com {
+    position: relative;
+    left: 6rem;
+}
+.ltr .left .triangle-control-com-left {
+  position: absolute;
+  right: 30rem !important;
+}
+.rtl .triangle-control-com {
+  right: 15rem !important;
+  top: .5rem;
+}
   .about_text {
     text-align: center;
   }

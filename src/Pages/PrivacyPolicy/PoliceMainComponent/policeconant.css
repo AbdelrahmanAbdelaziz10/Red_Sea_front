@@ -8,7 +8,7 @@
   position: relative;
   min-height: 100vh;
 }
-.packaging_height{
+.packaging_height {
   height: 25rem;
 }
 
@@ -33,22 +33,31 @@
   padding: 0 30px;
   margin-top: 5%;
 }
-.ltr .Product_page .product_container.packaging .prod_title .map_text .triangle_control {
+.ltr
+  .Product_page
+  .product_container.packaging
+  .prod_title
+  .map_text
+  .triangle_control {
   left: 54% !important;
+}
+
+.packaging .triangle-control-com {
+  /* margin-right: 5rem; */
+  left: -2rem;
+  top: 6rem;
 }
 
 /* zahra-page-triangle */
-.rtl .packaging .packaging .triangle-control-com{
-  margin-right: 5rem;
+.rtl .packaging .packaging .triangle-control-com {
+  /* margin-right: 5rem; */
 }
 
-.rtl .prod_title.m_right .triangle_control{
+.rtl .prod_title.m_right .triangle_control {
   right: 55% !important;
-
 }
-.ltr .m_right .triangle_control{
+.ltr .m_right .triangle_control {
   left: 54% !important;
-
 }
 .rtl .m_right .triangle,
 .rtl .m_right .triangle:before,
@@ -62,23 +71,24 @@
   width: 2em !important;
   height: 2em !important;
 }
-.rtl .Product_page .margin_right .triangle_control{
+.rtl .Product_page .margin_right .triangle_control {
   right: 59.4% !important;
 }
-.ltr .Product_page .margin_right .triangle_control{
+.ltr .Product_page .margin_right .triangle_control {
   left: 54% !important;
 }
-.ltr .product_container .policy_paragraph{
+.ltr .product_container .policy_paragraph {
   margin-left: 0 !important;
   margin-right: 0 !important;
   width: 100% !important;
-
 }
 
 .ltr .packaging .triangle-control-com {
-  top: 10rem;
-  left: 44rem;
-  transform: rotate(30deg);
+  /* top: 10rem;
+  left: 44rem; */
+  left: calc(100% - 31rem);
+  top: 5rem;
+  /* transform: rotate(30deg); */
 }
 .ltr .packaging .triangle-control-com :first-child {
   left: 3rem;
@@ -87,18 +97,26 @@
 @media (max-width: 768px) {
   /* For tablets: */
   .ltr .packaging .triangle-control-com {
-    top: 5rem;
-    left: 29rem;
-    transform: rotate(30deg);
+    top: 3rem;
+    left: 16rem;
+  }
+  .rtl .packaging .triangle-control-com {
+    top: -4rem !important;
+    right: 6rem !important;
   }
   .ltr.packaging .triangle-control-com :first-child {
     left: 3rem;
   }
-  
-  .ltr .Product_page .product_container.packaging .prod_title .map_text .triangle_control {
+
+  .ltr
+    .Product_page
+    .product_container.packaging
+    .prod_title
+    .map_text
+    .triangle_control {
     left: 57% !important;
   }
-  .rtl .packaging .triangle-control-com{
+  .rtl .packaging .triangle-control-com {
     margin-top: 9rem;
     margin-right: -6rem;
   }
@@ -107,14 +125,14 @@
     padding: 0 30px;
     margin-top: 0% !important;
   }
-  .ltr .Product_page .margin_right .triangle_control{
+  .ltr .Product_page .margin_right .triangle_control {
     left: 56% !important;
   }
-  .product{
+  .product {
     overflow: hidden;
     height: auto;
   }
-  .margin_right .triangle_control{
+  .margin_right .triangle_control {
     right: 62.4% !important;
   }
 
@@ -124,33 +142,42 @@
   .zahra_page .product {
     position: relative;
     min-height: auto;
-}
- .product_container .m_right .triangle_control {
-  right: 57% !important;
-}
-.Product_page .packaging .margin_right .triangle_control{
-  left: 57% !important;
-}
-.rtl .Product_page .packaging .margin_right .triangle_control{
-  right: 63% !important;
-}
+  }
+  .product_container .m_right .triangle_control {
+    right: 57% !important;
+  }
+  .Product_page .packaging .margin_right .triangle_control {
+    left: 57% !important;
+  }
+  .rtl .Product_page .packaging .margin_right .triangle_control {
+    right: 63% !important;
+  }
 }
 
 @media (max-width: 425px) {
-    /* For mobile phones: */
-    .ltr .packaging .triangle-control-com {
-      top: -8rem;
-      left: 10rem;
-      transform: rotate(30deg);
-    }
-    .ltr .packaging .triangle-control-com :first-child {
-      left: 3rem;
-    }
-    .ltr .Product_page .product_container.packaging .prod_title .map_text .triangle_control {
-      left: 59% !important;
-    }
+  /* For mobile phones: */
+
+  .ltr .packaging .triangle-control-com {
+    top: -4rem;
+    left: -1rem;
+  }
+  .rtl .packaging .triangle-control-com {
+    top: -4rem !important;
+    right: 6rem !important;
+  }
+  .ltr .packaging .triangle-control-com :first-child {
+    left: 3rem;
+  }
+  .ltr
+    .Product_page
+    .product_container.packaging
+    .prod_title
+    .map_text
+    .triangle_control {
+    left: 59% !important;
+  }
   .rtl .packaging .triangle-control-com,
-  .ltr .packaging .triangle-control-com{
+  .ltr .packaging .triangle-control-com {
     margin-top: 5rem;
     margin-right: -4rem;
   }
@@ -162,16 +189,16 @@
     padding: 0 30px;
     margin-top: 0% !important;
   }
-  .ltr .Product_page .margin_right .triangle_control{
+  .ltr .Product_page .margin_right .triangle_control {
     left: 59% !important;
   }
-  .rtl .Product_page .margin_right .triangle_control{
+  .rtl .Product_page .margin_right .triangle_control {
     right: 70% !important;
   }
   .ltr .product_container .m_right .triangle_control {
     left: 59% !important;
   }
-  .margin_right .triangle_control{
+  .margin_right .triangle_control {
     right: 70.4% !important;
   }
   .rtl .zahra-page-triangle.triangle_control {
@@ -194,8 +221,8 @@
   .zahra_page .product {
     position: relative;
     min-height: auto;
-}
-.m-mall-screen{
-  margin: 0 3% !important;
-}
+  }
+  .m-mall-screen {
+    margin: 0 3% !important;
+  }
 }
