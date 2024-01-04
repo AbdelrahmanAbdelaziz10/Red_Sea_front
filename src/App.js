@@ -14,18 +14,29 @@ import ZahraProduct from "./Pages/ProductsPage/ZahraProduct";
 import Footer from "./Components/Footer/Footer";
 import ltl from './direction/ltr.css';
 import rtl from './direction/rtl.css';
+import ClimbingBoxLoader  from "react-spinners/ClipLoader";
 
 
 export const ContextLang = createContext();
 
 function App() {
   const [selectedLanguage, setSelectedLanguage] = useState("ar");
-  // document.documentElement.dir = selectedLanguage === "ar" ? "rtl" : "ltr"; // change direction
-
+  const [loading, setLoading]=useState(false)
+  useEffect(()=>{
+    setLoading(true)
+    setTimeout(()=>{
+      setLoading(false)
+    },4000)
+  },[])
   return (
     <ContextLang.Provider value={{ selectedLanguage, setSelectedLanguage }}>
       <div className={selectedLanguage=== 'ar'? "App rtl": "App ltr"}>
-        <BrowserRouter>
+      {
+        loading?
+        <div className="loading d-flex justify-content-center">
+        <ClimbingBoxLoader color={'#29abe2'} loading={loading} size={100} />
+        </div>
+        : <BrowserRouter>
           <Routes>
             <Route path="/" element={<HomePage  />} />
             <Route path="/about" element={<AboutPage />} />
@@ -43,6 +54,8 @@ function App() {
       </div>
       <Footer />
         </BrowserRouter>
+      }
+
       </div>
     </ContextLang.Provider>
   );

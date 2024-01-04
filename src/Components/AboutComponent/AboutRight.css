@@ -50,28 +50,6 @@
 .ltr .about-page-triangle.triangle_control {
   left: 8rem !important;
 }
-.about-page-triangle.triangle_control .triangle,
-.about-page-triangle.triangle_control .triangle::before,
-.about-page-triangle.triangle_control .triangle::after {
-  width: 13em;
-  height: 13em;
-  border: 2px 0px 1px 0;
-}
-
-.about-page-triangle-bg.about-page-triangle.triangle_control {
-  right: 10rem !important;
-}
-
-.about-page-triangle-bg.about-page-triangle.triangle_control .triangle,
-.about-page-triangle-bg.about-page-triangle.triangle_control .triangle::before,
-.about-page-triangle-bg.about-page-triangle.triangle_control .triangle::after {
-  background-size: cover;
-  background-position: center;
-  opacity: 1 !important;
-  border-top-right-radius: 40%;
-  border: solid #29abe2;
-  background-image: url(../../images/company2.jpg);
-}
 .description2 .list {
   color: #635d5d;
   font-weight: 400;
@@ -158,7 +136,12 @@
 .lt .About .aboutright .prod_title .map_text .triangle_control {
   left: 56% !important;
 }
-
+.rtl .triangle-control-com :nth-child(1) {
+  top: -3rem !important;
+}
+.rtl .triangle-control-com :nth-child(2) {
+  top: -3rem !important;
+}
 /*  */
 
 .rtl .description2 {

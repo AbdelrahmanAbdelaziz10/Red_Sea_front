@@ -10,7 +10,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { FaRegCirclePlay } from "react-icons/fa6";
 import { NavBar } from "../NavBar/NavBar";
 import poster from "../../images/company 12.jpg";
-import vedio from "../../images/video.mp4";
 import useFetch from './../../hooks/useFeatch';
 import { useTranslation } from 'react-i18next';
 

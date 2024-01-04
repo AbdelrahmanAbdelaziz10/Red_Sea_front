@@ -111,14 +111,14 @@ const ProductDeteils = ({ productData, loading }) => {
                   );
                 })}
 
-                <div className="arrow-slider  d-flex">
+                {/* <div className="arrow-slider  d-flex">
                   <Card className="btn2 border">
                     <IoMdArrowDropup />
                   </Card>
                   <Card className="btn2 border ">
                     <IoMdArrowDropdown />
                   </Card>
-                </div>
+                </div> */}
               </div>
             </Row>
           </Row>

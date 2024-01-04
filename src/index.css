@@ -5,6 +5,12 @@
 }
 .App{
   overflow: hidden;
+  width: 100%;
+  height: 100%;
+
+}
+.App .loading{
+  margin-top: 16rem;
 }
 :root {
   --main: #0b057a;
@@ -176,6 +182,10 @@ Link {
   :root {
     font-size: 14px;
   }
+  
+.App .loading{
+  margin-top: 30rem;
+}
   .triangle,
   .triangle:before,
   .triangle:after {
@@ -191,6 +201,9 @@ Link {
 @media (max-width: 425px) {
   :root {
     font-size: 13px;
+  }
+  .App .loading{
+    margin-top: 30rem;
   }
   .rtl .triangle,
   .rtl .triangle:before,

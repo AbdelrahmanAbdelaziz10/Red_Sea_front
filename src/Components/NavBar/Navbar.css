@@ -1,6 +1,5 @@
 .contact_list {
   direction: rtl;
-
 }
 .navbar {
   background-color: #f4f5f948;
@@ -98,27 +97,8 @@
   position: relative;
   z-index: 11111;
 }
-.form-select option {
-  background-color: #ffffff77 !important;
-  color: #333 !important;
-  padding: 8px;
-  border: none;
-  cursor: pointer;
-  text-align: center;
-  border-radius: 4%;
-}
 .nav-link.active {
   color: var(--heavenly) !important;
-}
-.form-select option:hover {
-  background-color: #f0f0f0 !important;
-  color: var(--heavenly) !important;
-}
-
-.form-select option:checked {
-  background-color: #e0e0e0 !important;
-  color: var(--heavenly);
-  font-weight: bold;
 }
 .contact_list li {
   margin-left: 1.5%;
@@ -126,11 +106,28 @@
 .navbar-toggler:focus {
   border: none !important;
 }
-.form-select {
+.btn {
   background-color: #f4f5f967 !important;
   color: #fff !important;
   border: none !important;
 }
+.navbar .language_icon {
+  color: var(--heavenly);
+  font-size: 1.3rem;
+}
+.rtl .btn{
+  direction: rtl;
+}
+.ltr .btn{
+  direction: ltr;
+}
+.btn:hover{
+  color:var(--heavenly) !important;
+  transition: all .5s;
+}
+
+
+
 
 @media (max-width: 768px) {
   .ltr .contact{

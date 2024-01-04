@@ -1,7 +1,7 @@
 import "./Navbar.css";
 
 import React, { useContext, useState, useTransition } from "react";
-
+import { MdLanguage } from "react-icons/md";
 import { CgMenuLeft } from "react-icons/cg";
 import { ContextLang } from "../../App";
 import { IoCall } from "react-icons/io5";
@@ -18,7 +18,7 @@ export const NavBar = () => {
   const location = useLocation();
 
   const handleChangeLanguage = (language) => {
-    setSelectedLanguage(language);
+    setSelectedLanguage(language)
     i18n.changeLanguage(language);
   };
 
@@ -156,7 +156,14 @@ export const NavBar = () => {
           <div className="nav-item pe-5 me-3">
             <ul className="navbar-nav">
               <li class="nav-item dropdown">
-                <select
+              { selectedLanguage ==="ar"?
+              <button className="btn " onClick={(e) => handleChangeLanguage("en")}>
+              العربية <MdLanguage className="language_icon" />
+              </button>
+              :<button className="btn" onClick={(e) => handleChangeLanguage("ar")}>
+              English <MdLanguage className="language_icon" />
+              </button>}
+                {/* <select
                   id="languageSelect"
                   className="form-select"
                   value={selectedLanguage}
@@ -164,7 +171,7 @@ export const NavBar = () => {
                 >
                   <option value="en">English</option>
                   <option value="ar">العربية</option>
-                </select>
+                </select> */}
               </li>
             </ul>
           </div>

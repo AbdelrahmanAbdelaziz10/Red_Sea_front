@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import AboutMain from "./AboutMain/AboutMain";
 import Brand from "../../Components/Brand/Brand";
@@ -8,13 +8,21 @@ import Footer from "../../Components/Footer/Footer";
 import Head from "../../Components/Head/Head";
 import Products from "../../Components/Products/Products";
 import contactPoster from "../../images/company 3.jpg";
+import ClimbingBoxLoader  from "react-spinners/ClipLoader";
 
 const AboutPage = () => {
   const { selectedLanguage } = useContext(ContextLang);
   const { t, i18n } = useTranslation();
-
+  const [loading, setLoading]=useState(false)
+  useEffect(()=>{
+    setLoading(true)
+    setTimeout(()=>{
+      setLoading(false)
+    },4000)
+  },[])
   return (
-    <div className="Product_page About">
+    <>
+        <div className="Product_page About">
       <Head title={t("about")} poster={contactPoster} />
       <Container>
         <AboutMain
@@ -30,6 +38,8 @@ const AboutPage = () => {
       </div>
 
     </div>
+    </>
+
   );
 };
 

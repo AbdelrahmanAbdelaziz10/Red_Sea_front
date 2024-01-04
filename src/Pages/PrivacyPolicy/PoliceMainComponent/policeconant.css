@@ -38,7 +38,7 @@
 }
 
 /* zahra-page-triangle */
-.rtl .packaging .triangle-control-com{
+.rtl .packaging .packaging .triangle-control-com{
   margin-right: 5rem;
 }
 
@@ -75,23 +75,23 @@
 
 }
 
-.ltr .triangle-control-com {
+.ltr .packaging .triangle-control-com {
   top: 10rem;
   left: 44rem;
   transform: rotate(30deg);
 }
-.ltr .triangle-control-com :first-child {
+.ltr .packaging .triangle-control-com :first-child {
   left: 3rem;
 }
 
 @media (max-width: 768px) {
   /* For tablets: */
-  .ltr .triangle-control-com {
-    top: 0rem;
+  .ltr .packaging .triangle-control-com {
+    top: 5rem;
     left: 29rem;
     transform: rotate(30deg);
   }
-  .ltr .triangle-control-com :first-child {
+  .ltr.packaging .triangle-control-com :first-child {
     left: 3rem;
   }
   
@@ -117,30 +117,7 @@
   .margin_right .triangle_control{
     right: 62.4% !important;
   }
-  .rtl .zahra-page-triangle.triangle_control {
-    top: 4rem !important;
-    right: 4rem !important;
-  }
-  .ltr .zahra-page-triangle.triangle_control {
-    top: 0rem !important;
-    left: 33rem !important;
-  }
-  .zahra-page-triangle.triangle_control .triangle,
-  .zahra-page-triangle.triangle_control .triangle::before,
-  .zahra-page-triangle.triangle_control .triangle::after {
-    width: 17em;
-    height: 17em;
-  }
-  
- .rtl .zahra-page-triangle-bg.zahra-page-triangle.triangle_control {
-    right: 6rem !important;
-   top: 19% !important;
-  }  
-  .ltr .zahra-page-triangle-bg.zahra-page-triangle.triangle_control {
-    left: 30rem !important;
-   top: 0% !important;
-  }  
-  
+
   .zahra_page p {
     width: 80%;
   }
@@ -151,22 +128,22 @@
  .product_container .m_right .triangle_control {
   right: 57% !important;
 }
-.Product_page .margin_right .triangle_control{
+.Product_page .packaging .margin_right .triangle_control{
   left: 57% !important;
 }
-.rtl .Product_page .margin_right .triangle_control{
+.rtl .Product_page .packaging .margin_right .triangle_control{
   right: 63% !important;
 }
 }
 
 @media (max-width: 425px) {
     /* For mobile phones: */
-    .ltr .triangle-control-com {
+    .ltr .packaging .triangle-control-com {
       top: -8rem;
       left: 10rem;
       transform: rotate(30deg);
     }
-    .ltr .triangle-control-com :first-child {
+    .ltr .packaging .triangle-control-com :first-child {
       left: 3rem;
     }
     .ltr .Product_page .product_container.packaging .prod_title .map_text .triangle_control {
@@ -204,21 +181,6 @@
   .ltr .zahra-page-triangle.triangle_control {
     top: 3rem !important;
     left: 16rem !important;
-  }
-  .zahra-page-triangle.triangle_control .triangle,
-  .zahra-page-triangle.triangle_control .triangle::before,
-  .zahra-page-triangle.triangle_control .triangle::after {
-    width: 12em !important;
-    height: 12em !important;
-  }
-  
-  .rtl .zahra-page-triangle-bg.zahra-page-triangle.triangle_control {
-    right: 10rem !important;
-    top:7rem !important;
-  }
-  .ltr .zahra-page-triangle-bg.zahra-page-triangle.triangle_control {
-    left: 14rem !important;
-    top:3rem !important;
   }
   .zahra_page p {
     width: 100% !important;
