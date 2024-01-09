@@ -11,14 +11,18 @@ import { Row } from "react-bootstrap";
 import logo from "../../images/redsea logo.png";
 import { useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import useFetch from "../../hooks/useFeatch";
+import Product from "./../ProductsComponent/Product/Product";
 
 export const NavBar = () => {
   const { t, i18n } = useTranslation();
   const { selectedLanguage, setSelectedLanguage } = useContext(ContextLang);
   const location = useLocation();
+  const { data: sub } = useFetch(`/api/v1/sub-categories`);
+  const { data: product } = useFetch(`/api/v1/products`);
 
   const handleChangeLanguage = (language) => {
-    setSelectedLanguage(language)
+    setSelectedLanguage(language);
     i18n.changeLanguage(language);
   };
 
@@ -36,7 +40,7 @@ export const NavBar = () => {
           </li>
         </ul>
       </Row>
-      <nav className="navbar navbar-expand-lg px-3 mx-5 justify-content-between">
+      <nav className="navbar navbar-expand-lg  mx-lg-5 justify-content-between">
         <button
           className="navbar-toggler"
           type="button"
@@ -67,7 +71,7 @@ export const NavBar = () => {
               </li>
               <li className="nav-item">
                 <Link
-                  activeClassName="active"
+                  activeclassName="active"
                   className={`${
                     location.pathname === "/about" ? "active" : ""
                   } nav-link`}
@@ -77,9 +81,9 @@ export const NavBar = () => {
                   {t("about")}
                 </Link>
               </li>
-              <li class="nav-item dropdown">
+              <li className="nav-item dropdown">
                 <Link
-                  activeClassName="active"
+                  activeclassName="active"
                   className={`${
                     location.pathname === "/products" ? "active" : ""
                   } nav-link dropdown-toggle`}
@@ -90,19 +94,52 @@ export const NavBar = () => {
                 >
                   {t("product")}
                 </Link>
-                <ul class="dropdown-menu">
-                  <li className="dropmenu">
+                <ul className="dropdown-menu px-5 dropdown_product">
+                  <li className="dropmenu drop_title">
+                  <p>
                     <Link
-                      class="dropdown-item"
+                      className="dropdown-item"
                       to="/products"
-                      activeClassName="active"
+                      activeclassName="active"
                     >
                       {t("allproduct")}
                     </Link>
+                    </p>
                   </li>
+                  {sub &&
+                    sub.map((sub) => {
+                      return (
+                        <li className="dropmenu drop_title">
+                          <p>
+                            {selectedLanguage == "ar"
+                              ? sub.name_ar
+                              : Product.name_en}
+                          </p>
+                          {product &&
+                            product.map((pro) => {
+                              return (
+                                <>
+                                  {sub.name_ar == pro.sub_category_name_ar ? (
+                                    <Link
+                                      className="dropdown-item product_title"
+                                      to={`/products/${pro.id}`}
+                                      activeclassName="active"
+                                    >
+                                      {selectedLanguage == "ar"
+                                        ? pro.name_ar
+                                        : pro.name_eny}
+                                    </Link>
+                                  ) : null}
+                                </>
+                              );
+                            })}
+                        </li>
+                      );
+                    })}
                 </ul>
               </li>
-              <li class="nav-item dropdown">
+
+              <li className="nav-item dropdown ">
                 <Link
                   className={`${
                     location.pathname === "/brand" ? "active" : ""
@@ -111,16 +148,16 @@ export const NavBar = () => {
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
-                  activeClassName="active"
+                  activeclassName="active"
                 >
                   {t("brand")}
                 </Link>
-                <ul class="dropdown-menu">
+                <ul className="dropdown-menu dropdown_brand">
                   <li className="dropmenu">
                     <Link
-                      class="dropdown-item"
+                      className="dropdown-item"
                       to="/brand"
-                      activeClassName="active"
+                      activeclassName="active"
                     >
                       {t("brand")}
                     </Link>
@@ -134,7 +171,7 @@ export const NavBar = () => {
                   } nav-link`}
                   aria-current="page"
                   to="/packaging"
-                  activeClassName="active"
+                  activeclassName="active"
                 >
                   {t("packaging")}
                 </Link>
@@ -146,7 +183,7 @@ export const NavBar = () => {
                   } nav-link`}
                   aria-current="page"
                   to="/contact"
-                  activeClassName="active"
+                  activeclassName="active"
                 >
                   {t("contact")}
                 </Link>
@@ -155,14 +192,22 @@ export const NavBar = () => {
           </div>
           <div className="nav-item pe-5 me-3">
             <ul className="navbar-nav">
-              <li class="nav-item dropdown">
-              { selectedLanguage ==="ar"?
-              <button className="btn " onClick={(e) => handleChangeLanguage("en")}>
-              العربية <MdLanguage className="language_icon" />
-              </button>
-              :<button className="btn" onClick={(e) => handleChangeLanguage("ar")}>
-              English <MdLanguage className="language_icon" />
-              </button>}
+              <li className="nav-item dropdown">
+                {selectedLanguage === "ar" ? (
+                  <button
+                    className="btn "
+                    onClick={(e) => handleChangeLanguage("en")}
+                  >
+                    العربية <MdLanguage className="language_icon" />
+                  </button>
+                ) : (
+                  <button
+                    className="btn"
+                    onClick={(e) => handleChangeLanguage("ar")}
+                  >
+                    English <MdLanguage className="language_icon" />
+                  </button>
+                )}
                 {/* <select
                   id="languageSelect"
                   className="form-select"

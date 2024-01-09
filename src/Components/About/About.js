@@ -1,7 +1,9 @@
 import React from "react";
 import { Container, Row } from "react-bootstrap";
 import "./About.css";
+import { MdOutlineMoreHoriz } from "react-icons/md";
 import { useTranslation } from 'react-i18next';
+import { Link } from "react-router-dom";
 const About = () => {
   const { t, i18n } = useTranslation();
   return (
@@ -14,9 +16,9 @@ const About = () => {
               <div className="triangle" />
             </div>
             <div className="text-center">
-              <p className="text-center">{t("about_title")}</p>
+              <p className="text-center about_title">{t("about_title")}</p>
               <p className="about_prag">{t("about_p")}</p>
-              <button className="btnn mt-2"> {t("about_btn")}</button>
+              <Link to='/about' className="btnn"> {t("about_btn")} </Link>
             </div>
           </div>
         </Row>

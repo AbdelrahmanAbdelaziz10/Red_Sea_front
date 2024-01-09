@@ -11,11 +11,10 @@ const Head = ({title,poster}) => {
     <header className="head ">
     <NavBar />
     <div className="content d-flex justify-content-center">
-    <div className="head_img mb-5">
+    <div className="head_img mb-5" style={{backgroundImage:`url('${poster}')`}}>
       <div className="header_hover" />
-        <img src={poster} alt="" />
       </div>
-      <div className="head_text d-flex justify-content-center">
+      <div className="head_text d-flex justify-content-center" >
         <p>{t('home')} <IoIosArrowBack /> {title}</p>
       </div>
     </div>

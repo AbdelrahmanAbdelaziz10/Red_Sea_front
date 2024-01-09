@@ -1,6 +1,6 @@
 .product {
   z-index: 11111;
-  top: -9rem;
+  top: -7rem !important;
   border-radius: 8px;
   background-color: var(--white);
 }
@@ -18,20 +18,29 @@
 .zahra_page p {
   color: #635d5d;
   width: 70%;
-  margin-right: auto;
-  padding: 0 30px;
+  margin-left: 0 !important;
   line-height: 2.2;
+  font-size: 1.064rem;
+}
+
+.rtl .zahra_page p div {
+  text-align: right !important;
 }
 .rtl .zahra_page p {
-  text-align: right;
+  text-align: right !important;
   padding: 0 30px;
+  margin-right: auto;
+
 }
 .ltr .zahra_page p {
-  width: 80%;
-  margin-right: auto;
-  text-align: left;
-  padding: 0 30px;
-  margin-top: 5%;
+  margin-left: auto;
+  width: 85%;
+  margin-right: 2rem;
+  text-align: left !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  margin-left: 0 !important;
+  margin-top: -2rem ;
 }
 .ltr
   .Product_page
@@ -52,7 +61,6 @@
 .rtl .packaging .packaging .triangle-control-com {
   /* margin-right: 5rem; */
 }
-
 .rtl .prod_title.m_right .triangle_control {
   right: 55% !important;
 }
@@ -82,26 +90,62 @@
   margin-right: 0 !important;
   width: 100% !important;
 }
-
+.rtl .packaging:hover .triangle-control-com :last-child {
+  animation-name: animation;
+  animation-duration: 0.5s;  
+  transition: all 1.6s;
+}
+.ltr .packaging:hover .triangle-control-com :last-child {
+  animation-name: animation_ltr;
+  animation-duration: 0.5s;  
+  transition: all 1.6s;
+}
 .ltr .packaging .triangle-control-com {
   /* top: 10rem;
   left: 44rem; */
   left: calc(100% - 31rem);
-  top: 5rem;
+  top: -1rem;
   /* transform: rotate(30deg); */
 }
 .ltr .packaging .triangle-control-com :first-child {
   left: 3rem;
 }
 
+@keyframes animation{
+  0%{left: 30rem;}
+  20%{left: 28rem;}
+  40%{left: 26rem;}
+  50% {left: 24rem;}
+  50% {left: 24rem;}
+  60%{left: 26rem;}
+  80%{left: 28rem;}
+  100%{left: 30rem;}
+
+}
+@keyframes animation_ltr{
+  0%{right: 50rem;}
+  20%{right: 48rem;}
+  40%{right: 46rem;}
+  50% {right: 42rem;}
+  50% {right: 42rem;}
+  60%{right: 46rem;}
+  80%{right: 48rem;}
+  100%{right: 50rem;}
+
+}
+
 @media (max-width: 768px) {
   /* For tablets: */
+  .packaging .triangle-control-com .triangle-com {
+    width: 26rem !important;
+    height: 28rem !important;
+  }
   .ltr .packaging .triangle-control-com {
-    top: 3rem;
-    left: 16rem;
+    top: -3rem;
+    left: 18rem;
   }
   .rtl .packaging .triangle-control-com {
-    top: -4rem !important;
+    top: -6rem !important;
     right: 6rem !important;
   }
   .ltr.packaging .triangle-control-com :first-child {
@@ -122,8 +166,8 @@
   }
   .ltr .zahra_page p {
     width: 90%;
-    padding: 0 30px;
     margin-top: 0% !important;
+    padding-left:1rem !important ;
   }
   .ltr .Product_page .margin_right .triangle_control {
     left: 56% !important;
@@ -157,16 +201,21 @@
 @media (max-width: 425px) {
   /* For mobile phones: */
 
+  .packaging .triangle-control-com .triangle-com {
+    width: 22rem !important;
+    height: 24rem !important;
+  }
+
   .ltr .packaging .triangle-control-com {
-    top: -4rem;
-    left: -1rem;
+    top: -5rem;
+    left: 2rem;
   }
   .rtl .packaging .triangle-control-com {
-    top: -4rem !important;
-    right: 6rem !important;
+    top: -1rem !important;
+    right: 8rem !important;
   }
   .ltr .packaging .triangle-control-com :first-child {
-    left: 3rem;
+    left: 1.8rem;
   }
   .ltr
     .Product_page
@@ -174,7 +223,7 @@
     .prod_title
     .map_text
     .triangle_control {
-    left: 59% !important;
+    left: 61% !important;
   }
   .rtl .packaging .triangle-control-com,
   .ltr .packaging .triangle-control-com {
@@ -186,15 +235,15 @@
   }
   .ltr .zahra_page p {
     width: 90%;
-    padding: 0 30px;
     margin-top: 0% !important;
+    padding-left:1.2rem !important ;
   }
   .ltr .Product_page .margin_right .triangle_control {
     left: 59% !important;
   }
-  .rtl .Product_page .margin_right .triangle_control {
-    right: 70% !important;
-  }
+  .rtl .Product_page .packaging .margin_right .triangle_control {
+    right: 71.5% !important;
+}
   .ltr .product_container .m_right .triangle_control {
     left: 59% !important;
   }

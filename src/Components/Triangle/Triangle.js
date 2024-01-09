@@ -1,15 +1,16 @@
+import "./traingle.css";
+
 import React from "react";
-import './traingle.css';
+
 const Triangle = ({ backgroundImage, width, height }) => {
   return (
     <div
       className="triangle-com"
       style={{
-        color: 'var(--heavenly)',
+        color: "var(--heavenly)",
         filter: "url('#goo')",
         width: `${width}`,
         height: `${height}`,
-
       }}
     >
       <div
@@ -23,6 +24,7 @@ const Triangle = ({ backgroundImage, width, height }) => {
           backgroundImage: `url('${backgroundImage}')`,
           // overflow: "hidden",
           // backgroundSize: "cover",
+          height: "100%",
         }}
       ></div>
       <svg
@@ -38,7 +40,7 @@ const Triangle = ({ backgroundImage, width, height }) => {
             <feColorMatrix
               in="blur"
               mode="matrix"
-              values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 40 -9"
+              values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 200 -9"
               result="goo"
             />
             <feComposite in="SourceGraphic" in2="goo" operator="atop" />

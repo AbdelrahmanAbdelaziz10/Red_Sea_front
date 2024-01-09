@@ -36,30 +36,92 @@
   font-size: 2.3rem;
   color: #fff;
 }
-.navbar .navbar-nav .nav-item:hover .nav-link,
-.navbar .navbar-nav .dropmenu:hover .dropdown-item {
-  color: var(--heavenly) !important ;
-  transition: all 0.5s;
-}
 .navbar .dropdown-menu {
-  background-color: #f4f5f948;
-  border: 2px solid #f4f5f948;
-  width: 95%;
+  position: relative;
+  background-color: #fff;
+  text-align: center;
+  border: none;
+  border-radius: 0;
 }
+
+/* ==== brand Dropdown ====*/
+.dropdown_brand{
+  background-color: #FFFFFF;
+  padding: 0 !important;
+}
+.dropdown_brand .dropmenu .dropdown-item{
+  border-bottom: none !important;
+  font-size: 15px ;
+  padding: 5% 8%;
+  color: #777777 !important;
+}
+.dropdown_brand .dropmenu .dropdown-item:hover{
+  background-color: var(--heavenly) !important;
+  color: #fff !important;
+  transition: all .5s;
+  padding: 5% 5% !important;
+}
+.rtl .dropdown_brand .dropmenu .dropdown-item{
+  text-align: right !important;
+}
+.ltr .dropdown_brand .dropmenu .dropdown-item{
+  text-align: left !important;
+}
+
+/* ==== product Dropdown ====*/
+.rtl .dropdown_product.show{
+  display: flex;
+  justify-content:space-between;
+}
+.rtl .dropdown_product.dropdown-menu[data-bs-popper] {
+  top: 100%;
+   right: -9rem; 
+  width: 89vw;
+}
+.rtl .dropdown_product .drop_title p{
+  border-bottom: 1px dashed #4d4d4d9f ;
+  padding-bottom: 5%;
+
+}
+.rtl .dropdown_product .drop_title p .dropdown-item{
+  padding: 0 !important;
+  background-color: #fff !important;
+}
+.rtl .dropdown_product .drop_title p,
+.rtl .dropdown_product .drop_title p .dropdown-item
+{
+  color: #000 !important;
+  font-size: 16px !important;
+  margin-bottom: 0 !important;
+}
+.rtl .dropdown_product .drop_title .dropdown-item.product_title{
+  padding-right: 0% !important;
+  text-align: right !important;
+}
+
+.rtl .dropdown_product .drop_title .product_title{
+  color: #777777 !important;
+  font-size: 13px;
+  padding: 8% 0;
+  border-bottom: 1px dashed #4d4d4d9f ;
+}
+.rtl .dropdown_product .drop_title .product_title:hover{
+  color: var(--heavenly) !important;
+  padding-right: 5% !important;
+  transition: all .5s;
+}
+
 .rtl .navbar .dropdown-menu .dropmenu {
   padding-right: 0;
   text-align: right;
-}.ltr .navbar .dropdown-menu .dropmenu {
+  direction: rtl;
+}
+.ltr .navbar .dropdown-menu .dropmenu {
   padding-right: 0;
   text-align: left;
-}
-.navbar .dropdown-menu .dropmenu .dropdown-item {
-  width: 100%;
-}
-.navbar .dropdown-menu .dropmenu:hover .dropdown-item {
-  background-color: #f4f5f948 !important;
-}
+  direction: ltr;
 
+}
 .navbar .contact {
   position: relative;
   top: 10px !important;
@@ -136,6 +198,12 @@
   .ltr .btn{
     width: 10vh !important;
   }
+  nav.navbar {
+    padding: 0;
+    position: relative;
+    margin-left: 5rem !important;
+    margin-right: 4rem !important;
+  }
   .ltr .navbar-nav{
     display: flex !important;
     flex-direction: column !important;
@@ -146,10 +214,7 @@
     margin-left: 3% !important;
 
   }
-  nav.navbar {
-    padding: 0;
-    position: relative;
-  }
+
   nav.navbar .navbar-collapse {
     position: absolute;
     right: 0px;
@@ -158,8 +223,12 @@
   .navbar .collapse {
     background-color: #f4f5f948 !important;
   }
-  .contact_list {
-    margin-right: 7%;
+  .rtl .contact_list {
+    margin-right: 6% !important;
+  }
+  .ltr .contact_list {
+    margin-right: 1% !important;
+    right: 0;
   }
   .navbar .navbar-brand {
     max-width: 10vw;
@@ -181,10 +250,12 @@
   }
 }
 
-@media (max-width: 425px) {
+@media screen and (max-width:481px) {
   nav.navbar {
     padding: 0;
     position: relative;
+    margin-left: 3rem !important;
+    margin-right: 2rem !important;
   }
   nav.navbar .navbar-collapse {
     position: absolute;
@@ -202,7 +273,8 @@
   }
   .navbar .logo_nav {
     width: 16vw;
-    margin-top: -5em;
+    position: relative;
+    left: 2rem !important;
   }
   .navbar .navbar-brand {
     position: relative;
@@ -217,4 +289,13 @@
   .navbar .collapse {
     width: 83vw;
   }
+  .ltr .btn{
+    width: 22vw !important;
+  }
+  .ltr .me-3 {
+    margin-right: -.1rem!important;
+}
+.contact_title p{
+  padding: 0 3%;
+}
 }

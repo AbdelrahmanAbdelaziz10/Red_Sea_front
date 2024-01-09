@@ -1,14 +1,17 @@
 import { ContacMain } from './Contact Main/ContacMain';
 import { Container } from 'react-bootstrap'
-import Footer from '../../Components/Footer/Footer';
 import Head from '../../Components/Head/Head';
 import { Map } from '../../Components/Map/Map';
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import contactPoster from '../../images/company2.jpg'
 import { useTranslation } from 'react-i18next';
+import { ContextLang } from '../../App';
 const Conact = () => {
-
+  const { selectedLanguage } = useContext(ContextLang);
   const { t, i18n } = useTranslation();
+  useEffect(()=>{
+    document.title=`${t('page_title')}${t('contact')}`;
+  },[selectedLanguage])
 
   return (
     <div className='Contact'>

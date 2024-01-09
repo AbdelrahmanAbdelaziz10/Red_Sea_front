@@ -7,14 +7,18 @@
     margin-bottom: 3%;
 
 }
-.about p{
-    text-align: center;
-    font-size: 1.2rem;
+.about .map_text p{
+    font-size: 16px;
+    font-weight: 300 !important;
     color: var(--gray);
-    padding: 0 6%;
     opacity: 1 !important;
-
 }
+.rtl .about .map_text p{
+text-align: right;
+}
+.ltr .about .map_text p{
+    text-align: left;
+    }
 .about .about_prag{
     opacity: 1;
     font-weight: 200;
@@ -22,12 +26,18 @@
 .about .btnn{
     text-align: center;
     background-color: var(--heavenly);
-    color: var(--main);
+    color: var(--main) !important;
     border-radius: 50px 50px;
     padding: 7px 25px;
     word-spacing: 2px;
     border: none;
 }
+.about .btnn:hover{
+    background-color: #fff;
+    border: 2px solid var(--heavenly);
+    color: var(--heavenly) !important;
+}
+
 .about .triangle {
 	position: absolute;
 	background-color: var(--heavenly);

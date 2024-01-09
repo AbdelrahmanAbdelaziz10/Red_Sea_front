@@ -11,7 +11,7 @@ export const ContacMain = () => {
 
   return (
     <section className="">
-      <div className="contact-page">
+      <div className="contact-page product">
         <div className="contact_title pt-4">
           <Title
             title={t('contact')}

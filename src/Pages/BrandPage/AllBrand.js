@@ -1,5 +1,5 @@
 import "./AllBrand.css";
-
+import { motion } from "framer-motion";
 import { Card, Col, Container, Row } from "react-bootstrap";
 
 import React from "react";
@@ -20,7 +20,7 @@ const AllBrand = ({ selectedLanguage }) => {
         <Container className="">
           <Row className="d-flex justify-content-center pb-5 mt-md-4 brand_row">
             {brand ? (
-              brand.map((brand) => (
+              brand.map((brand,i) => (
                 <Col
                   key={brand.id}
                   lg="4"
@@ -29,18 +29,22 @@ const AllBrand = ({ selectedLanguage }) => {
                   xs="12"
                   className="d-flex justify-content-center flex_col mt-4 my-3"
                 >
-                  <Card className="brand_card">
+                  <motion.div
+                    initial={{opacity:0,translatX:-50, translateY:-50}}
+                    animate={{opacity:1, translateX:0, translateY:0}}
+                    trannsition={{duration:0.3, delay:i*2}}
+                    className="card brand_card"
+                  >
                     <img
                       src={`https://beautyproducts.website/${brand.brand}`}
                       alt=""
                     />
-                  </Card>
+                  </motion.div>
                   <p className="product_description mt-2">
                     {selectedLanguage === "ar"
                       ? brand.description_ar
                       : brand.description_en}
                   </p>
-
                 </Col>
               ))
             ) : (
@@ -54,4 +58,3 @@ const AllBrand = ({ selectedLanguage }) => {
 };
 
 export default AllBrand;
-

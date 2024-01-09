@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 
 import AllBrand from "./AllBrand";
 import { Container } from "react-bootstrap";
@@ -12,6 +12,10 @@ import { useTranslation } from "react-i18next";
 const BrandPage = () => {
   const { t, i18n } = useTranslation();
   const { selectedLanguage } = useContext(ContextLang);
+  useEffect(()=>{
+    document.title=`${t('page_title')}${t('allbrand')}`;
+  },[selectedLanguage])
+
   return (
     <div className="Product_page">
       <Head title={t("brand_title")} poster={contactPoster} />

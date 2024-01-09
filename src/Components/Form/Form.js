@@ -1,14 +1,16 @@
 import "./form.css";
 import "sweetalert2/dist/sweetalert2.min.css";
-
+import { SiMinutemailer } from "react-icons/si";
 import React, { useState } from "react";
 
 import Swal from "sweetalert2";
 import axios from "axios";
 import { useTranslation } from "react-i18next";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Form = () => {
   const { t, i18n } = useTranslation();
+  const [capVal,setCapVal]=useState(null)
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -27,7 +29,7 @@ const Form = () => {
     if (!formData.name.trim()) {
       newErrors.name = "Name is required";
     }
-
+  
     // Validate email
     if (!formData.email.trim()) {
       newErrors.email = "Email is required";
@@ -39,15 +41,11 @@ const Form = () => {
       newErrors.email = "Invalid email address";
     }
 
-    // Validate phone (optional)
-    // Validate Phone
-    const phoneRegex = /^\d{10}$/;
-    if (!formData.phone.trim()) {
-      newErrors.phone = "Valid 10-digit phone number is required";
-    } else if (!phoneRegex.test(formData.phone)) {
-      newErrors.phone = "Invalid Phone Number address";
+    // Validate recaptcha
+    if(capVal==null){
+      newErrors.recaptcha = "you Should Improve You not Robot";
     }
-
+    
     // Validate subject
     if (!formData.subject.trim()) {
       newErrors.subject = "Subject is required";
@@ -81,7 +79,7 @@ const Form = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (validateForm()) {
+    if (validateForm()&&capVal!=null ) {
       // If form is valid, make the API call
       try {
         setIsSubmitting(true);
@@ -104,7 +102,7 @@ const Form = () => {
     }
   };
 
-  const handleChange = (e) => {
+  const handleChange = (e)=> {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
@@ -113,7 +111,7 @@ const Form = () => {
 
   return (
     <form className="form mx-1" onSubmit={handleSubmit}>
-      <div class="mb-3 form_row">
+      <div className="mb-3 form_row">
         <label for="exampleFormControlInput1" className="form-label">
           {t("form_name")}
         </label>
@@ -126,7 +124,7 @@ const Form = () => {
           value={formData.name}
           onChange={handleChange}
         />
-        {errors.name && <p>{errors.name}</p>}
+        {errors.name && <p className="error">{errors.name}</p>}
       </div>
 
       <div className="mb-3 form_row">
@@ -141,7 +139,7 @@ const Form = () => {
           value={formData.email}
           onChange={handleChange}
         />
-        {errors.email && <p>{errors.email}</p>}
+        {errors.email && <p className="error">{errors.email}</p>}
       </div>
 
       <div className="mb-3 form_row">
@@ -156,7 +154,6 @@ const Form = () => {
           value={formData.phone}
           onChange={handleChange}
         />
-        {errors.phone && <p>{errors.phone}</p>}
       </div>
       <div className="mb-3 form_row">
         <label for="exampleFormControlInput1" className="form-label">
@@ -170,27 +167,37 @@ const Form = () => {
           value={formData.subject}
           onChange={handleChange}
         />
-        {errors.subject && <p>{errors.subject}</p>}
+        {errors.subject && <p className="error">{errors.subject}</p>}
       </div>
 
       <div className="mb-3 form_row">
         <label for="exampleFormControlInput1" className="form-label ">
           {t("form_massage")}
         </label>
-        <input
-          name="message"
-          type="text"
-          className="form-control massage"
-          id="exampleFormControlInput1"
-          value={formData.message}
-          onChange={handleChange}
+        <textarea 
+        className="form-control massage"
+        id="exampleFormControlInput1"
+        name="message"
+        value={formData.message}
+        type="text"
+        onChange={handleChange}
         />
-        {errors.message && <p>{errors.message}</p>}
+        {errors.message && <p className="error">{errors.message}</p>}
+      </div>
+      {/* 6LcqBUkpAAAAAPQtjxVWkhPPvwdEc5cPgivmEGiw */}
+
+      <div className="mb-3 form_row">
+      <ReCAPTCHA 
+      className="recaptcha"
+      sitekey="6LcqBUkpAAAAAPQtjxVWkhPPvwdEc5cPgivmEGiw"
+      onChange={(val)=>setCapVal(val)}
+      />
+      {errors.recaptcha && <p className="error">{errors.recaptcha}</p>}
       </div>
 
       <div className="mt-5 mb-5 d-flex justify-content-center">
         <button className="btn btn2 " disabled={isSubmitting}>
-          {t("form_btn")}
+          {t("form_btn")} 
         </button>
       </div>
     </form>

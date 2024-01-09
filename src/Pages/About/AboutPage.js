@@ -13,13 +13,10 @@ import ClimbingBoxLoader  from "react-spinners/ClipLoader";
 const AboutPage = () => {
   const { selectedLanguage } = useContext(ContextLang);
   const { t, i18n } = useTranslation();
-  const [loading, setLoading]=useState(false)
   useEffect(()=>{
-    setLoading(true)
-    setTimeout(()=>{
-      setLoading(false)
-    },4000)
-  },[])
+    document.title=`${t('page_title')}${t('about')}`;
+  },[selectedLanguage])
+
   return (
     <>
         <div className="Product_page About">

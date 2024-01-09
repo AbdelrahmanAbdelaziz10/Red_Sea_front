@@ -72,7 +72,7 @@ const Header = ({ toggleDirection }) => {
           <iframe
             ref={videoRef}
             title="youtube video"
-            class="videoIframe js-videoIframe"
+            className="videoIframe js-videoIframe"
             src={`https://www.youtube.com/embed/${videoId}?autoplay=${autoPlay}`}
             frameborder="0"
             allowTransparency="true"

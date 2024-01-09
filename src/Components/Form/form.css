@@ -6,7 +6,14 @@
 }
 .form .form-label{
     color: var(--main);
+    font-size: 1.3rem;
+    font-family: myfont;
+}
+.rtl .form .form-label{
     margin-right: 2%;
+}
+.ltr .form .form-label{
+    margin-left: 2%;
 }
 .form .form-control{
     border: 2px solid var(--heavenly);
@@ -20,23 +27,35 @@
     height: 25vh;
 }
 .form .btn2{
-    background-color: var(--main);
+    background-color: var(--main) !important;
     color: #fff;
     width: 20%;
     padding-bottom: 6px;
     border-radius: 20px 20px;
     font-family: myfont;
     transition: all .5s;
+    font-size: 1.2rem;
 }
 .form .btn2:hover{
-    background-color: var(--main);
-    color: #fff;
+    background-color: #fff !important;
+    border: 2px solid var(--main) !important;
+    color: var(--main) !important;
 }
 .swal2-container {
     position: fixed;
     z-index: 99999;
     width: 100%;
     height: 100%;
+  }
+  .ltr .recaptcha{
+    direction: ltr;
+  }
+  .rtl .recaptcha{
+    direction: rtl;
+  }
+  .form .error{
+    color: red;
+    padding-top: 1%;
   }
 @media (max-width: 425px) {
     /* For mobile phones: */

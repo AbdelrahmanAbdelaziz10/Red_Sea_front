@@ -15,12 +15,11 @@ const Footer = () => {
   const { t, i18n } = useTranslation();
   const { data: setting } = useFetch(`/api/v1/website/setting`);
   const { data: product, loading } = useFetch(`/api/v1/products`);
-
   return (
     <footer className="footer py-4">
       <Container>
         <div className="row mb-5">
-          <Col xs="5" lg="3" md="4" sm="5" className="company">
+          <Col xs="5" lg="3" md="4" sm="5" className="company small_call">
             <h5>{t("title")}</h5>
             <ul className="list1">
               <li className="d-flex">
@@ -35,9 +34,13 @@ const Footer = () => {
                 <div className="triangle me-1 mt-md-2  ms-md-1" />
                 <Link to="/brand"> {t("brand")}</Link>
               </li>
+              <li className="d-flex">
+                <div className="triangle me-1 mt-md-2  ms-md-1" />
+                <Link to="/brand"> {t("packaging")}</Link>
+              </li>
             </ul>
           </Col>
-          <Col lg="3" md="6" sm="6" xs="6" className="company">
+          <Col lg="3" md="6" sm="7" xs="7" className="company">
             <h5>{t("product")}</h5>
             <ul className="list1">
               {product
@@ -110,19 +113,19 @@ const Footer = () => {
           <Col lg="6" md="12" sm="12" xs="12" className="">
             <ul className="d-flex justify-content-end Social_icon">
               <li>
-                <a href="" target="_blank">
+                <Link to={setting&&setting[0]?.youtube} target="_blank">
                   <FaYoutube />
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="" target="_blank">
+                <Link to={setting&&setting[0]?.facebook} target="_blank">
                   <FaFacebook />
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="" target="_blank" className="">
+                <Link to={setting&&setting[0]?.instagram} target="_blank" className="">
                   <FaInstagram className="instagram_icon" />
-                </a>
+                </Link>
               </li>
             </ul>
           </Col>
@@ -130,7 +133,7 @@ const Footer = () => {
         <div className="line" />
         <div className="row footer_tola justify-content-between ">
           <Col lg="10" md="12" className="mt-4 footer-end">
-            <h6 className="me-4 mb-md-4">{t("footer_p")}</h6>
+            <p className="me-4 mb-md-4">{t("footer_p")}</p>
           </Col>
           <Col lg="2" md="12" className="mt-2 left footer-end mt-md-4">
             <p className="pe-1">{t("design")}</p>

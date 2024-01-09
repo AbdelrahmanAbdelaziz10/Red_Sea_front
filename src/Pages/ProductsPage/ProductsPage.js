@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import Brand from "./../../Components/Brand/Brand";
 import { Container } from "react-bootstrap";
@@ -11,6 +11,9 @@ import contactPoster from "../../images/company 6.jpg";
 const ProductsPage = () => {
   const { t, i18n } = useTranslation();
   const { selectedLanguage } = useContext(ContextLang);
+  useEffect(()=>{
+    document.title=`${t('page_title')}${t('product')}`;
+  },[selectedLanguage])
 
   return (
     <div className="Product_page">

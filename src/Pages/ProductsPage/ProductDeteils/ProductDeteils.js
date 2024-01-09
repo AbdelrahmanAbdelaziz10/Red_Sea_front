@@ -1,16 +1,16 @@
 import "./productdeteils.css";
-import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "./style.css";
-import { Mousewheel, Pagination } from "swiper/modules";
-import { Card, Col, Container, Row } from "react-bootstrap";
-import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
+
+import { Col, Container, Row } from "react-bootstrap";
 import React, { useContext, useEffect, useRef, useState } from "react";
-import { CgMaximizeAlt } from "react-icons/cg";
+
 import { ContextLang } from "../../../App";
 import { FaRegPlayCircle } from "react-icons/fa";
+import { IoCloseOutline } from "react-icons/io5";
 import ProductComp from "../../../Components/Product components/ProductComp";
+import ProductDetailsSlider from "../../../Components/ProductDetailsSlider/ProductDetailsSlider";
 import Title from "../../../Components/Title/Title";
 import { useTranslation } from "react-i18next";
 
@@ -22,7 +22,11 @@ const ProductDeteils = ({ productData, loading }) => {
   const videoRef = useRef(null);
 
   const playVideo = () => {
-    setPlay(!play);
+    setPlay(true);
+  };
+
+  const handleCloseDialog = () => {
+    setPlay(false);
   };
 
   const getVideoId = (url) => {
@@ -32,11 +36,12 @@ const ProductDeteils = ({ productData, loading }) => {
 
     return match && match[2].length === 11 ? match[2] : null;
   };
+
   useEffect(() => {
     setPosterSrc(productData?.images[0].image);
   }, [productData?.images]);
+
   const videoId = getVideoId(productData?.video);
-  const autoPlay = !play ? 0 : 1;
 
   if (loading) {
     return <div>LOADING ...</div>;
@@ -58,75 +63,28 @@ const ProductDeteils = ({ productData, loading }) => {
               </div>
             </div>
           </div>
-          <Row className="d-flex justify-content-center pb-3 mt-5 mx-5 ">
-            <Row className="card col-lg-10  ">
+          <Row className="d-flex  justify-content-center pb-3 mt-5 mx-5">
+            <Row className="card col-lg-10  pb-4 position-relative">
               <div className="card_icon">
-                {/* <div className="arrow d-flex align-items-center mt-4">
-                  <div className="triangle me-4 mt-1" />
-                  <div className="triangle triangle2 me-3" />
-                </div> */}
                 <div className="show_icon d-block">
                   <div className="icon-border mb-2" onClick={playVideo}>
                     <FaRegPlayCircle />
                   </div>
-                  {/* <div className="icon-border">
-                    <CgMaximizeAlt />
-                  </div> */}
                 </div>
               </div>
               <div className="card_img col-lg-8 col-md-5 col-sm-2 d-flex justify-content-center">
-                <div className="p-relative video-container">
-                  <iframe
-                    ref={videoRef}
-                    title="youtube video"
-                    class="videoIframe js-videoIframe"
-                    src={`https://www.youtube.com/embed/${videoId}?autoplay=${autoPlay}`}
-                    frameborder="0"
-                    allowTransparency="true"
-                    allowfullscreen
-                    allow="autoplay"
-                  ></iframe>
-                  {!play && (
-                    <div class="poster-overlay">
-                      <img
-                        src={`https://beautyproducts.website/${posterSrc}`}
-                        alt="Video Poster"
-                      />
-                    </div>
-                  )}
+                <div className="poster-overlay">
+                  <img
+                    src={`https://beautyproducts.website/${posterSrc}`}
+                    alt="Video Poster"
+                  />
                 </div>
               </div>
               <div className="small_card col-lg-4 ">
-                <Swiper
-                  direction={"vertical"}
-                  slidesPerView={3}
-                  pagination={{
-                    clickable: true,
-                  }}
-                  modules={[ Pagination]}
-                  className="mySwiper"
-                >
-                    {productData?.images.map((images) => {
-                      return (
-                        <SwiperSlide className="card-alpom"
-                        onClick={() => setPosterSrc(images.image)}>
-                          <img
-                            src={`https://beautyproducts.website/${images.image}`}
-                            alt=""
-                          />
-                        </SwiperSlide>
-                      );
-                    })}
-                </Swiper>
-                {/*<div className="arrow-slider  d-flex">
-                  <Card className="btn2 border">
-                    <IoMdArrowDropup />
-                  </Card>
-                  <Card className="btn2 border ">
-                    <IoMdArrowDropdown />
-                  </Card>
-                </div>{" "}
-                */}
+                <ProductDetailsSlider
+                  productData={productData}
+                  setPosterSrc={setPosterSrc}
+                />
               </div>
             </Row>
           </Row>
@@ -160,6 +118,28 @@ const ProductDeteils = ({ productData, loading }) => {
               />
             </Col>
           </Row>
+          {play && (
+            <div className="video-wrapper">
+              <div className="video-dialog">
+                <div
+                  className="icon_x position-absolute"
+                  onClick={handleCloseDialog}
+                >
+                  <IoCloseOutline />
+                </div>
+                <iframe
+                  ref={videoRef}
+                  title="youtube video"
+                  className="videoIframe js-videoIframe"
+                  src={`https://www.youtube.com/embed/${videoId}?autoplay=${0}`}
+                  frameborder="0"
+                  allowTransparency="true"
+                  allowfullscreen
+                  allow="autoplay"
+                ></iframe>
+              </div>
+            </div>
+          )}
         </Container>
       </div>
     </section>

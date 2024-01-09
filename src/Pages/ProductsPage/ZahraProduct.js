@@ -5,17 +5,22 @@ import Head from "../../Components/Head/Head";
 import PolicyConant from "../PrivacyPolicy/PoliceMainComponent/PolicyConant";
 import ProductDeteils from "./ProductDeteils/ProductDeteils";
 import Products from "../../Components/Products/Products";
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import contactPoster from "../../images/company 6.jpg";
 import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFeatch";
 import { useTranslation } from 'react-i18next';
+import { ContextLang } from "../../App";
 
 const ZahraProduct = () => {
   const { t, i18n } = useTranslation();
+  const { selectedLanguage } = useContext(ContextLang);
 
   const { productId } = useParams();
   const { data: productData, loading } = useFetch(`/api/v1/products/get-product?productID=${productId}`);
+  useEffect(()=>{
+    document.title=`${t('page_title')}${t('product_deteils')}`;
+  },[selectedLanguage])
 
   return (
     <div className="Product_page details Contact ">

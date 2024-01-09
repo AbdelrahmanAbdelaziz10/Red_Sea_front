@@ -7,10 +7,16 @@
   overflow: hidden;
   width: 100%;
   height: 100%;
+  font-family: myfont;
 
 }
 .App .loading{
   margin-top: 16rem;
+  flex-direction: column;
+  align-items: center;
+}
+.App .loading .loading_logo{
+  width: 10vw;
 }
 :root {
   --main: #0b057a;
@@ -66,6 +72,23 @@ a,
 Link {
   cursor: pointer !important;
 }
+p{
+  font-size: 17px;
+  font-weight: 500 !important;
+}
+ul {
+  padding-left: 0rem !important;
+}
+.map_text .triangle_control {
+  z-index: 1;
+  opacity: 1;
+}
+.map_text h4,
+.map_text h5 {
+  position: relative;
+  z-index: 111111;
+}
+
 .contact_container {
   background-color: var(--white);
   margin-bottom: 1% !important;
@@ -76,6 +99,7 @@ Link {
 }
 .homepage_product .product {
   background-color: var(--main) !important;
+  border-radius: 0;
 }
 .homepage_product .product h4,
 .homepage_product .product p {

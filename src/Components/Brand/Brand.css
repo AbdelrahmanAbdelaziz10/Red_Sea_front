@@ -2,11 +2,15 @@
   overflow: hidden;
   top: -10px;
 }
- .brand .col_card .brand_card {
+ .brand .brand_slider .brand_card {
   padding-top: 2px;
   box-shadow: 5px 5px 10px #4d4d4db0;
-  min-height: 110px;
-  width: 28vh;
+  height: 25vh;
+  width: 17vw !important;
+  padding: 0 1% !important;
+}
+.brand .brand_slider .slick-dots{
+  display: none !important;
 }
 .brand .brand_img {
   width: 100% !important;
@@ -38,6 +42,11 @@ img {
   .brand .brand_card{
     margin-bottom: 9% !important;
   }
+  .brand .brand_slider .brand_card {
+    height: 15vh;
+    width: 20vw !important;
+
+  }
   .rtl .Home .brand .map_text .triangle_control,
   .rtl .Product_page .mp-right .map_text .triangle_control{
 
@@ -46,9 +55,10 @@ img {
 }
 @media (max-width: 425px) {
   /* For tablets: */
-   .brand .brand_card {
-    min-width: 30vw !important;
 
+  .brand .brand_slider .brand_card {
+    height: 10vh;
+    width: 20vw !important;
   }
   .rtl .Home .brand .map_text .triangle_control,
   .rtl .Product_page .mp-right .map_text .triangle_control{

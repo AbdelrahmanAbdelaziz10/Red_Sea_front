@@ -1,6 +1,6 @@
 .product {
   z-index: 11111;
-  top: -9rem;
+  top: -7rem !important;
   border-radius: 8px;
   background-color: var(--white);
 }

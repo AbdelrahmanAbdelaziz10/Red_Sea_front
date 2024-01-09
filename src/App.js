@@ -1,7 +1,7 @@
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { createContext, useEffect, useState } from "react";
-
+import redseaLogo from './images/redsea logo.png';
 import AboutPage from "./Pages/About/AboutPage";
 import BrandPage from "./Pages/BrandPage/BrandPage";
 import Contact from "./Pages/Contact/Contact";
@@ -26,7 +26,7 @@ function App() {
     setLoading(true)
     setTimeout(()=>{
       setLoading(false)
-    },4000)
+    },10)
   },[])
   return (
     <ContextLang.Provider value={{ selectedLanguage, setSelectedLanguage }}>
@@ -34,6 +34,9 @@ function App() {
       {
         loading?
         <div className="loading d-flex justify-content-center">
+        <div className="loading_logo">
+          <img src={redseaLogo} alt=''/>
+        </div>
         <ClimbingBoxLoader color={'#29abe2'} loading={loading} size={100} />
         </div>
         : <BrowserRouter>

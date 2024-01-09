@@ -53,7 +53,7 @@
   font-size: 1.1rem;
 }
 .footer ul li,
-.footer ul li a {
+.footer ul li Link {
   font-family: myfont;
   font-weight: 300;
   font-size: 15px;
@@ -61,32 +61,34 @@
 
 }
 .rtl .footer ul li,
-.rtl .footer ul li a {
+.rtl .footer ul li Link {
   padding-right: 0;
   padding-left: 4%;
 }
 .ltr .footer ul li,
-.ltr .footer ul li a {
+.ltr .footer ul li Link {
   padding-right: 0;
   padding-left: 2%;
 }
-.footer ul li:hover a {
-  font-size: 16px;
+.rtl .footer ul li:hover {
+  margin-right: 4%;
   transition: all 0.5s;
 }
+
 .footer ul li:hover {
-  font-size: 1.1rem;
   transition: all 0.5s;
   cursor: pointer;
 }
+.ltr .footer ul li:hover {
+  margin-left: 4%;
+  transition: all .6s;
+}
+
 .footer .arrow_icon {
   color: var(--heavenly);
   font-size: 2rem;
   border-radius: 3px;
   font-weight: 700;
-}
-.footer .privity_list {
-  gap: 17%;
 }
 .footer .privity_list li {
   display: flex;
@@ -110,6 +112,8 @@
   font-size: 2.2rem;
 }
 .footer .line {
+  text-align: center;
+  margin: auto;
   width: 88vw;
   height: 0.1vh;
   background-color: var(--heavenly);
@@ -121,11 +125,11 @@
 }
 .footer p {
   margin: 0;
-  font-size: 15px;
-  font-weight: 300;
-  letter-spacing: 1px;
+  font-size: 14px !important;
 }
-
+.footer .pe-1 {
+  font-size: 11px !important;
+}
 .footer .footer_logo {
   width: 9vw;
 }
@@ -135,7 +139,8 @@
   margin-top: 8% !important;
 }
 .ltr .policty .triangle{
-  margin-top: 8% !important;
+  margin-top: 6% !important;
+  margin-right: 4% !important;
 }
   .footer .company h5 {
     font-size: 1.6rem;
@@ -187,10 +192,15 @@
  .rtl .footer .triangle:after {
     margin-left: 4% !important;
   }
+  .ltr .footer .small_call .triangle,
+  .ltr .footer .small_call .triangle:before,
+ .ltr .footer .small_call .triangle:after {
+    margin-right: 8% !important;
+  }
   .ltr .footer .triangle,
   .ltr .footer .triangle:before,
  .ltr .footer .triangle:after {
-    margin-right: 4% !important;
+    margin-right: 3% !important;
   }
   .footer .privity_list a {
     font-size: 1.4rem;
@@ -257,6 +267,9 @@
     font-weight: 300 !important;
     line-height: 30px;
   }
+  .footer .privity_list {
+    gap: 1%;
+}
 .rtl .ml-3{
   margin-left: .3em;
 }
@@ -302,9 +315,9 @@
   .footer_tola {
     flex-direction: column-reverse;
   }
-  .footer_tola h6 {
-    text-align: center;
-    font-size: 1rem !important;
+  .footer_tola p {
+    text-align: center !important;
+    font-size: 10px !important;
   }
   .footer p {
     font-size: 16px;

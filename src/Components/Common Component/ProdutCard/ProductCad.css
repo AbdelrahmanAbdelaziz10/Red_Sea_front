@@ -1,42 +1,40 @@
 
-.product_row .card{
-    max-width: 84%;
-    max-height: 45vh !important;
+.product_card{
+    width: 99% !important;
+    height: 45vh !important;
     border: none !important;
     border-radius: 9px !important;
     box-shadow: 1px 1px 10px var(--gray);
 }
-.card:hover{
-    transform: scale(1);
-    transition: all .7s ;
+.card.product_card:hover{
+    box-shadow: 5px 5px 30px #29abe2;
+    transform: scale(1.05) !important;
+    transition: all .5s ;
 }
-.product_row .card .img{
-    width: 60%;
-    max-height: 70% !important;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.product_container .product .product_row .card .img{
+    min-width: 10vw !important;
+    min-height: 30vh !important;
+    overflow: visible;
 }
+.product_row .card .img img{
+    width: 100% !important;
+    height: 100%;
+}
+.card.product_card:hover img{
+    transform: scale(1.1) !important;
+    transition: all .8s;
+
+}
+
 .card h6{
     color: var(--main);
-    text-align: center;
-    margin-bottom: 7%;
     font-size: 1.1rem;
-}
-.rtl .card h6{
-    text-align: center;
-}
-.ltr .card h6{
-    margin-left: 21%;
-    margin-top: 4%;
 }
 .product_row .card .product_btn{
     background-color: var(--heavenly);
     border: none;
     width: 50%;
-    height: 13%;
+    height: 15%;
     padding-bottom: 2%;
     margin-left: 50%;
     border-radius: 15px 0 9px 0;
@@ -46,10 +44,11 @@
 }
 .product .product_description{
     color: var(--gray) ;
-    width: 70%;
+    width: 85%;
     text-align: right;
     font-family: myfont;
     font-size: .9rem;
+    margin-top: 2%;
 }
 .flex_col{
     flex-direction: column;
@@ -138,6 +137,18 @@
     /* For tablets: */
     .arrow .triangle1{
         margin-top: .3rem !important;
+    }
+    .product_container .product .product_row .card .img{
+        min-width: 10vw !important;
+        min-height: 24vh !important;
+    }
+    .product_card{
+        margin-top: 5% !important;
+        min-width: 90% !important;
+        height: 35vh !important;
+        border: none !important;
+        border-radius: 9px !important;
+        box-shadow: 1px 1px 10px var(--gray);
     }
 }
 
