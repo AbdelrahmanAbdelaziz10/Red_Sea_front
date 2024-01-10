@@ -1,9 +1,11 @@
 import "./ProductCad.css";
-import { motion } from "framer-motion";
+
 import React, { useContext } from "react";
+
+import { ContextLang } from "../../../App";
+import { motion } from "framer-motion";
 import { useNavigate } from "react-router";
 import { useTranslation } from "react-i18next";
-import { ContextLang } from "../../../App";
 
 const ProductCard = ({ product }) => {
   const { selectedLanguage } = useContext(ContextLang);
@@ -12,7 +14,7 @@ const ProductCard = ({ product }) => {
 
   const navigate = useNavigate();
   return (
-    <div className="d-flex justify-content-center flex_col">
+    <div className="d-flex justify-content-center flex_col w-100">
       <motion.div
         initial={{ opacity: 0, translatX: -50, translateY: -50 }}
         animate={{ opacity: 1, translateX: 0, translateY: 0 }}

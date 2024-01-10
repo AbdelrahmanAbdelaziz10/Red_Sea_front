@@ -14,7 +14,7 @@ const AboutLeft = ({ title, head, aboutAr, aboutImage, loading }) => {
       </div>
       <Row className="d-flex justify-content-center mt-5 pb-2 me-3">
         <Col lg="7" md="12" xs="12" sm="12">
-          <div className="pt-5 about_text">
+          <div className="pt-lg-5 about_text">
             <p className="paragraph">
               <span>{head}</span>
               <br />

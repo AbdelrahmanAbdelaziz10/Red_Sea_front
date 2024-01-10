@@ -15,10 +15,16 @@ const ProductDetailsSlider = ({ productData, setPosterSrc }) => {
     vertical: true,
     verticalSwiping: true,
   };
-
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1
+  };
   return (
     <div className="product_details_slider">
-      <Slider {...sliderSettings} className="">
+      <Slider {...sliderSettings} className="details_slider">
         {productData &&
           productData?.images.map((slide) => (
             <div className="img" key={productData.id}>
@@ -40,6 +46,26 @@ const ProductDetailsSlider = ({ productData, setPosterSrc }) => {
             </div>
           ))}
       </Slider>
+      <Slider {...settings} className="respons_mobile_slider">
+            <div>
+              <h3>1</h3>
+            </div>
+            <div>
+              <h3>2</h3>
+            </div>
+            <div>
+              <h3>3</h3>
+            </div>
+            <div>
+              <h3>4</h3>
+            </div>
+            <div>
+              <h3>5</h3>
+            </div>
+            <div>
+              <h3>6</h3>
+            </div>
+          </Slider>
     </div>
   );
 };

@@ -32,6 +32,15 @@
   font-size: 16px;
   opacity: 0.9;
 }
+.about_text .paragraph{
+  color: var(--gray);
+}
+.rtl .about_text .paragraph{
+  text-align: right;
+}
+.ltr .about_text .paragraph{
+  text-align: left;
+}
 .about .paragraph-header {
   font-size: 17px !important;
   opacity: 1 !important;
@@ -90,7 +99,10 @@
     top: 0;
   }
   .ltr .triangle-control-com :first-child {
-    left: -2rem;
+    left: 5rem;
+  }
+  .ltr .triangle-control-com :last-child {
+    left: 7rem;
   }
 }
 
@@ -98,6 +110,12 @@
   /* For mobile phones: */
   .about_text {
     text-align: center;
+  }
+  .ltr .triangle-control-com :first-child {
+    left: -1rem;
+  }
+  .ltr .triangle-control-com :last-child {
+    left: 1rem;
   }
 
   .about-page-triangle.triangle_control {
@@ -137,10 +155,10 @@
   left: 56% !important;
 }
 .rtl .triangle-control-com :nth-child(1) {
-  top: -3rem !important;
+  top: -4rem !important;
 }
 .rtl .triangle-control-com :nth-child(2) {
-  top: -3rem !important;
+  top: -4rem !important;
 }
 /*  */
 
@@ -182,6 +200,32 @@
   margin-right: 2% !important;
 }
 @media (max-width: 768px) {
+  .rtl .triangle-control-com :nth-child(1) {
+    top: -9rem !important;
+  }
+  .rtl .triangle-control-com :nth-child(2) {
+    top: -9rem !important;
+  }
+  .rtl .description2 {
+    margin-right: -5%;
+}
+.rtl .m-right .triangle-control-com-left :first-child{
+  top:3rem;
+}
+.rtl .m-right .triangle-control-com-left :last-child{
+  top:3rem;
+}
+  .ltr .about_text {
+    margin-left: 0%;
+    margin-right: 0 !important;
+  }
+  .ltr .about_text .paragraph {
+    text-align: left;
+    padding-left: 5% !important;
+}
+  .ltr .description2 {
+    margin-left: -5%;
+}
   .ltr .triangle-control-com {
     position: relative;
     left: 6rem;
@@ -211,5 +255,19 @@
   .triangle-control-com {
     top: -7rem;
     right: 3rem;
+  }
+  .rtl .triangle-control-com :nth-child(1){
+    right: -10rem !important;
+  }
+  .rtl .triangle-control-com :nth-child(2){
+    right: -8rem !important;
+  }
+  .rtl .triangle-control-com-left :nth-child(1){
+    left: 5rem !important;
+    top:0rem !important;
+  }
+  .rtl .triangle-control-com-left :nth-child(2){
+    left: 7rem !important;
+    top:0rem !important;
   }
 }

@@ -1,20 +1,23 @@
 import "./Navbar.css";
 
 import React, { useContext, useState, useTransition } from "react";
-import { MdLanguage } from "react-icons/md";
+
 import { CgMenuLeft } from "react-icons/cg";
 import { ContextLang } from "../../App";
 import { IoCall } from "react-icons/io5";
+import { IoCloseSharp } from "react-icons/io5";
 import { IoIosMail } from "react-icons/io";
 import { Link } from "react-router-dom";
+import { MdLanguage } from "react-icons/md";
+import Product from "./../ProductsComponent/Product/Product";
 import { Row } from "react-bootstrap";
 import logo from "../../images/redsea logo.png";
+import useFetch from "../../hooks/useFeatch";
 import { useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import useFetch from "../../hooks/useFeatch";
-import Product from "./../ProductsComponent/Product/Product";
 
 export const NavBar = () => {
+  const [shownav, setShownav] = useState(false);
   const { t, i18n } = useTranslation();
   const { selectedLanguage, setSelectedLanguage } = useContext(ContextLang);
   const location = useLocation();
@@ -28,27 +31,160 @@ export const NavBar = () => {
 
   return (
     <>
+      {shownav && (
+        <div className="fixed">
+          <IoCloseSharp
+            className="exit_icon"
+            onClick={() => {
+              setShownav(false);
+            }}
+          />
+          <div className="list_container">
+            <div className="list_title mb-4">
+              <h3>{t("nav_title")}</h3>
+            </div>
+            <ul className="model">
+              <li className="pt-2 ">
+                <Link
+                  className={`${
+                    location.pathname === "/" ? "active" : ""
+                  } nav-link`}
+                  aria-current="page"
+                  to="/"
+                >
+                  {t("home")}
+                </Link>
+              </li>
+              <li className="">
+                <Link
+                  activeclassName="active"
+                  className={`${
+                    location.pathname === "/about" ? "active" : ""
+                  } nav-link`}
+                  aria-current="page"
+                  to="/about"
+                >
+                  {t("about")}
+                </Link>
+              </li>
+              <div
+                className="accordion accordion-flush"
+                id="accordionFlushExample"
+              >
+                <div className="accordion-item ">
+                  <Link className="accordion-header  ">
+                    <button
+                      className="accordion-button collapsed "
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseOne"
+                      aria-expanded="false"
+                      aria-controls="flush-collapseOne"
+                    >
+                      {t("product")}
+                    </button>
+                  </Link>
+                  <div
+                    id="flush-collapseOne"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    {sub &&
+                      sub.map((sub) => {
+                        return (
+                          <li className="dropmenu drop_title">
+                            <p>
+                              {selectedLanguage == "ar"
+                                ? sub.name_ar
+                                : sub.name_en}
+                            </p>
+                            {product &&
+                              product.map((pro) => {
+                                return (
+                                  <>
+                                    {sub.name_ar == pro.sub_category_name_ar ? (
+                                      <Link
+                                        className="dropdown-item product_title"
+                                        to={`/products/${pro.id}`}
+                                        activeclassName="active"
+                                      >
+                                        {selectedLanguage == "ar"
+                                          ? pro.name_ar
+                                          : pro.name_en}
+                                      </Link>
+                                    ) : null}
+                                  </>
+                                );
+                              })}
+                          </li>
+                        );
+                      })}{" "}
+                    {/* <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div> */}
+                  </div>
+                </div>
+              </div>
+
+              <li className="">
+                <Link
+                  className={`${
+                    location.pathname === "/" ? "active" : ""
+                  } nav-link`}
+                  aria-current="page"
+                  to="/brand"
+                >
+                  {t("brand")}
+                </Link>
+              </li>
+              <li className="">
+                <Link
+                  className={`${
+                    location.pathname === "/packaging" ? "active" : ""
+                  } nav-link`}
+                  aria-current="page"
+                  to="/packaging"
+                  activeclassName="active"
+                >
+                  {t("packaging")}
+                </Link>
+              </li>
+              <li className=" ">
+                <Link
+                  className={`${
+                    location.pathname === "/contact" ? "active" : ""
+                  } nav-link`}
+                  aria-current="page"
+                  to="/contact"
+                  activeclassName="active"
+                >
+                  {t("contact")}
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      )}
+
       <Row className="pt-3 contact">
         <ul className="d-flex justify-content-start contact_list">
           <li>
-            info@rsdyemen.com
-            <IoIosMail className="contact_icon" />
+            <Link to="mailto:info@rsdyemen.com" target="_blank">
+              info@rsdyemen.com
+              <IoIosMail className="contact_icon me-1" />
+            </Link>
           </li>
           <li>
-            04218294
-            <IoCall className="contact_icon" />
+            <Link to="tel:04218294" target="_blank">
+              04218294
+              <IoCall className="contact_icon me-1" />
+            </Link>
           </li>
         </ul>
       </Row>
       <nav className="navbar navbar-expand-lg  mx-lg-5 justify-content-between">
         <button
-          className="navbar-toggler"
+          className="navbar-toggler menu"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          onClick={() => setShownav(true)}
         >
           <span className="menu">
             <CgMenuLeft />
@@ -96,14 +232,14 @@ export const NavBar = () => {
                 </Link>
                 <ul className="dropdown-menu px-5 dropdown_product">
                   <li className="dropmenu drop_title">
-                  <p>
-                    <Link
-                      className="dropdown-item"
-                      to="/products"
-                      activeclassName="active"
-                    >
-                      {t("allproduct")}
-                    </Link>
+                    <p>
+                      <Link
+                        className="dropdown-item"
+                        to="/products"
+                        activeclassName="active"
+                      >
+                        {t("allproduct")}
+                      </Link>
                     </p>
                   </li>
                   {sub &&
@@ -208,15 +344,6 @@ export const NavBar = () => {
                     English <MdLanguage className="language_icon" />
                   </button>
                 )}
-                {/* <select
-                  id="languageSelect"
-                  className="form-select"
-                  value={selectedLanguage}
-                  onChange={(e) => handleChangeLanguage(e.target.value)}
-                >
-                  <option value="en">English</option>
-                  <option value="ar">العربية</option>
-                </select> */}
               </li>
             </ul>
           </div>

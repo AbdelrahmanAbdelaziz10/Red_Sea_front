@@ -1,9 +1,10 @@
 import "./AllBrand.css";
-import { motion } from "framer-motion";
+
 import { Card, Col, Container, Row } from "react-bootstrap";
 
 import React from "react";
 import Title from "../../Components/Title/Title";
+import { motion } from "framer-motion";
 import useFetch from "../../hooks/useFeatch";
 import { useTranslation } from "react-i18next";
 
@@ -20,19 +21,19 @@ const AllBrand = ({ selectedLanguage }) => {
         <Container className="">
           <Row className="d-flex justify-content-center pb-5 mt-md-4 brand_row">
             {brand ? (
-              brand.map((brand,i) => (
+              brand.map((brand, i) => (
                 <Col
                   key={brand.id}
                   lg="4"
                   md="4"
                   sm="12"
                   xs="12"
-                  className="d-flex justify-content-center flex_col mt-4 my-3"
+                  className="d-flex justify-content-start flex_col mt-4 my-3"
                 >
                   <motion.div
-                    initial={{opacity:0,translatX:-50, translateY:-50}}
-                    animate={{opacity:1, translateX:0, translateY:0}}
-                    trannsition={{duration:0.3, delay:i*2}}
+                    initial={{ opacity: 0, translatX: -50, translateY: -50 }}
+                    animate={{ opacity: 1, translateX: 0, translateY: 0 }}
+                    trannsition={{ duration: 0.3, delay: i * 2 }}
                     className="card brand_card"
                   >
                     <img

@@ -20,7 +20,7 @@ const AboutRight = ({
       <div className="prod_title m-right pt-4">
         <Title title={title} pragraph="" />
       </div>
-      <Row className="d-flex about_right justify-content-center mt-5 pb-2 me-5">
+      <Row className="d-flex about_right justify-content-center mt-5 pb-2 me-lg-5">
         <Col lg="3" md="12" xs="12" sm="12">
           <div className=" justify-content-center">
             <div className="triangle-control-com">
@@ -35,7 +35,7 @@ const AboutRight = ({
           </div>
         </Col>
         <Col lg="8" md="10" xs="12" sm="12">
-          <div className="pt-5 about_text">
+          <div className="pt-lg-5 about_text">
             <span className="paragraph-header pe-lg-5 "> {head}</span> <br />
             <p className="paragraph me-lg-5">{aboutAr}</p>
             <p className="description2">

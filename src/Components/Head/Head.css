@@ -24,12 +24,17 @@
 }
 @media (max-width: 768px) {
     /* For tablets: */
+    .head_img{
+        background-size:cover;
+        background-position: 0% 70% !important;
+    
+    }
     .head{
         height: 42vh !important;
         overflow: hidden;
     }
     .head .head_text{
-        margin-top: 27% !important;
+        margin-top: 24% !important;
         font-size: 1.2rem !important;
     }
   }
@@ -40,7 +45,13 @@
         overflow: hidden !important;
     }
     .head .head_text{
-        margin-top: 10em !important;
+        margin-top: 8em !important;
+        font-size: 1.4rem !important;
+    }
+  }
+  @media (max-width:375px){
+    .head .head_text{
+        margin-top: 5em !important;
         font-size: 1.4rem !important;
     }
   }

@@ -71,8 +71,7 @@
         color: var(--gray);
     }
     .flex_col .brand_card{
-        max-height: 25vh !important;
-        min-height: 13vh !important;
+        height: 15vh !important;
         min-width: 20vw;
     }
     .flex_col .brand_card img{

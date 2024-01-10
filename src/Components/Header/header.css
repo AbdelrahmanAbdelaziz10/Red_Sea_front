@@ -13,6 +13,11 @@
 .swiper-pagination-vertical.swiper-pagination-bullets {
   right: calc(100% - 1.5rem) !important;
 }
+.swiper-pagination {
+  position: absolute !important;
+  left: 0 !important;
+
+}
 .swiper-slide {
   text-align: center;
   font-size: 18px;
@@ -33,7 +38,29 @@
   position: absolute;
   z-index: 11;
 }
+.slide .slider_arrow{
+  font-size: 2rem;
+  font-family: 900 !important;
+  color: #fff;
+}
+.rtl .slide .slider_arrow .arrow_l{
+  transform: rotate(-135deg);
+  cursor: pointer;
 
+}
+.ltr .slide .slider_arrow .arrow_l{
+  transform: rotate(45deg);
+  cursor: pointer;
+
+}
+.rtl .slide .slider_arrow .arrow_r{
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+.ltr .slide .slider_arrow .arrow_r{
+  transform: rotate(-135deg);
+  cursor: pointer;
+}
 .header .head_text {
   position: absolute;
   z-index: 11111;
@@ -57,13 +84,13 @@
 }
 .header .video {
   position: relative;
-  top: -14rem;
+  top: -7rem;
   left: 0;
   right: 0;
   z-index: 11111;
   border-radius: 4px;
   overflow: hidden;
-  width: 60vw;
+  width: 65vw;
 }
 
 .header .video iframe {
@@ -88,19 +115,32 @@
   /* .header .video {
     display: none !important;
   } */
-
   .header .swiper {
     height: 65%;
   }
 
   .header {
-    height: 63vh;
+    height: 100vh;
     overflow: hidden;
+  }
+  .rtl .header .head_text{
+    margin-right: 5%;
+    font-size: 24px;
+  }
+  .ltr .header .head_text{
+    margin-left: 5%;
+  }
+ .header .head_text h1{
+    font-size: 24px !important;
+  }
+
+  .header .head_text h2{
+    font-size: 22px !important;
   }
 
   .header .video {
-    top: -15rem;
-      width: 70vw;
+    top: -6rem;
+      width: 75vw;
   }
 
   .header .video video {
@@ -113,21 +153,41 @@
   }
 }
 @media (max-width: 425px) {
-  .header {
-    height: 50vh;
-    overflow: hidden;
-  }
-  .header .head_text {
-    margin-top: 19%;
-    top: 10rem;
-    margin-right: 4%;
-  }
   .header .swiper {
     height: 80%;
   }
   .header .video {
-      width: 70vw;
-      height: 25vh;
+    top: -8rem;
+      width: 75vw;
+      height: 20vh;
+  }
+  .header {
+    height: 86vh;
+    overflow: hidden;
+  }
+  .rtl .header .head_text{
+    margin-right: 5%;
+    font-size: 24px;
+    margin-top: 25% ;
+
+  }
+  .ltr .header .head_text{
+    margin-left: 5%;
+    margin-top: 25% ;
+
+  }
+ .rtl .header .head_text h1{
+    font-size: 20px !important;
+  }
+  .ltr .header .head_text h1{
+    font-size: 18px !important;
+  }
+
+  .header .head_text h2{
+    font-size: 17px !important;
   }
 
 }
+
+
+

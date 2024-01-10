@@ -46,6 +46,10 @@
 .medals_list li {
   color: #635d5d;
 }
+.rtl .about .triangle_control {
+  right: 54% !important;
+  top: -1px;
+}
 
 @media (max-width: 768px) {
   /* For tablets: */
@@ -53,7 +57,14 @@
     text-align: center;
     margin-top: 52%;
   }
+  .rtl .about .triangle_control {
+    right: 52% !important;
+    top: -1px;
+  }
+  .rtl .m-right .triangle_control {
+    right: 56% !important;
 
+  }
   .about-left {
     top: -5rem !important;
     right: 0rem !important;
@@ -143,11 +154,11 @@
   margin-bottom: 8rem !important;
 }
 .ltr .triangle-control-com-left :nth-child(1) {
-  left: 3rem !important;
+  left: 1rem !important;
 }
 
 .ltr .triangle-control-com-left :nth-child(2) {
-  left: 1rem;
+  left: -1rem;
 }
 @media (max-width: 768px) {
   .about_text {
@@ -179,21 +190,33 @@
   .about_text {
     margin-top: 79%;
   }
-
-  .ltr .About .about-us .left .prod_title .map_text .triangle_control {
-    left: 65% !important;
+  .ltr .triangle-control-com-left :nth-child(1) {
+    left: 5rem !important;
   }
+  .ltr .paragraph {
+    margin-right: 0% !important;
+}
+.ltr .description2 {
+  margin-left: 2% !important;
+}
+  .ltr .triangle-control-com-left :nth-child(2) {
+    left: 3rem;
+  }
+
   .ltr .About .about-us .right .prod_title .map_text .triangle_control {
     left: 65% !important;
   }
   .ltr .About .ma-right .right .prod_title .map_text .triangle_control {
-    left: 99% !important;
+    left: 99.8% !important;
   }
+  .ltr .About .about-us .left .prod_title .map_text .triangle_control {
+    left: 67% !important;
+}
   .ltr .About .aboutleft .left .prod_title .map_text .triangle_control {
     left: 110% !important;
   }
   .ltr .About .medals .left .prod_title .map_text .triangle_control {
-    left: 81% !important;
+    left: 83% !important;
   }
   .about-left {
     right: 1.5rem !important;

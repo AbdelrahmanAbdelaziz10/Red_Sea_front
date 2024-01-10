@@ -219,6 +219,9 @@ ul {
   .triangle_control {
     bottom: 7rem;
   }
+  .App .loading_logo{
+    width: 20vw !important; 
+  }
   
 }
 
@@ -227,7 +230,10 @@ ul {
     font-size: 13px;
   }
   .App .loading{
-    margin-top: 30rem;
+    margin-top: 17rem;
+  }
+  .App .loading_logo{
+    width: 20vw !important; 
   }
   .rtl .triangle,
   .rtl .triangle:before,

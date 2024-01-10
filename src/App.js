@@ -26,7 +26,7 @@ function App() {
     setLoading(true)
     setTimeout(()=>{
       setLoading(false)
-    },10)
+    },2500)
   },[])
   return (
     <ContextLang.Provider value={{ selectedLanguage, setSelectedLanguage }}>
@@ -37,7 +37,6 @@ function App() {
         <div className="loading_logo">
           <img src={redseaLogo} alt=''/>
         </div>
-        <ClimbingBoxLoader color={'#29abe2'} loading={loading} size={100} />
         </div>
         : <BrowserRouter>
           <Routes>
