@@ -19,7 +19,7 @@ const AllBrand = ({ selectedLanguage }) => {
           <Title className="" title={t("brand")} pragraph={t("brand_p")} />
         </div>
         <Container className="">
-          <Row className="d-flex justify-content-center pb-5 mt-md-4 brand_row">
+          <Row className="d-flex justify-content-center align-items-start pb-5 mt-md-4 brand_row">
             {brand ? (
               brand.map((brand, i) => (
                 <Col
@@ -36,16 +36,22 @@ const AllBrand = ({ selectedLanguage }) => {
                     trannsition={{ duration: 0.3, delay: i * 2 }}
                     className="card brand_card"
                   >
-                    <img
-                      src={`https://beautyproducts.website/${brand.brand}`}
-                      alt=""
-                    />
+                    <div className="img">
+                      <img
+                        src={`https://beautyproducts.website/${brand.brand}`}
+                        alt=""
+                      />
+                    </div>
                   </motion.div>
-                  <p className="product_description mt-2">
-                    {selectedLanguage === "ar"
-                      ? brand.description_ar
-                      : brand.description_en}
-                  </p>
+                  <p
+                    className="product_description mt-2"
+                    dangerouslySetInnerHTML={{
+                      __html:
+                        selectedLanguage === "ar"
+                          ? brand.description_ar.slice(0, 70)
+                          : brand.description_en.slice(0, 70),
+                    }}
+                  />
                 </Col>
               ))
             ) : (

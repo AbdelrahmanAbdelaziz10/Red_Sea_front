@@ -1,115 +1,119 @@
-
-.product{
-    position: relative;
-    z-index: 11111;
-    top:-9rem;
-    border-radius: 8px;
-    background-color: var(--white);
-    color: var(--gray);
+.product {
+  position: relative;
+  z-index: 11111;
+  top: -9rem;
+  border-radius: 8px;
+  background-color: var(--white);
+  color: var(--gray);
 }
 
-.prod_title p{
-    color: var(--gray) ;
+.prod_title p {
+  color: var(--gray);
 }
-.flex_col .brand_card{
-    box-shadow: 5px 5px 10px #4d4d4db0;
-    max-height: 25vh !important;
-    overflow: hidden;
+.flex_col .brand_card {
+  box-shadow: 5px 5px 10px #4d4d4db0;
+  min-height: 25vh !important;
+  max-height: 25vh !important;
+  overflow: hidden;
 }
-.flex_col .brand_card:hover{
-    box-shadow: 5px 5px 30px #29abe2;
-    transform: scale(1.1) !important;
-
+.flex_col .brand_card .img {
+  height: 100%;
+  width: 100%;
 }
-.brand_card img{
-    height: 100% !important;
+.flex_col .brand_card:hover {
+  box-shadow: 5px 5px 30px #29abe2;
+  transform: scale(1.1) !important;
 }
-.ltr .brand_row{
-    margin-left: 4rem !important;
-    margin-right: 0rem !important;
+.brand_card img {
+  height: 100% !important;
 }
-.rtl .brand_row{
-    margin-right: 4rem !important;
-    margin-left: 0rem !important;
+.ltr .brand_row {
+  margin-left: 4rem !important;
+  margin-right: 0rem !important;
+}
+.rtl .brand_row {
+  margin-right: 4rem !important;
+  margin-left: 0rem !important;
 }
 
 .brand .brand_img {
-    width: 100%;
-    padding: 9px;
+  width: 100%;
+  padding: 9px;
   border-radius: 2px;
 }
-.flex_col{
-    flex-direction: column;
-    justify-content: center !important;
+.flex_col {
+  flex-direction: column;
+  justify-content: center !important;
 }
-.product_description{
-    color: var(--gray) ;
-    width: 70%;
-    font-family: myfont;
-    font-size: .9rem;
+.product_description {
+  color: var(--gray);
+  width: 70%;
+  font-family: myfont;
+  font-size: 0.9rem;
 }
-.rtl .product_description{
-    text-align: right;
+.rtl .product_description,
+.rtl .product_description div,
+.rtl .product_description p {
+  text-align: right !important;
 }
-.ltr .product_description{
-    text-align: left  !important;
-
+.ltr .product_description,
+.ltr .product_description div,
+.ltr .product_description p {
+  text-align: left !important;
 }
-.rtl .brands .ml_right .map_text .triangle_control{
-    right: 54%;
+.rtl .brands .ml_right .map_text .triangle_control {
+  right: 54%;
 }
-.ltr .brands .ml_right .map_text .triangle_control{
-    left: 50% !important;
+.ltr .brands .ml_right .map_text .triangle_control {
+  left: 50% !important;
 }
 
 @media (max-width: 768px) {
-    /* For tablets: */
-    .product{
-        top:-5rem !important;
-        border-radius: 8px;
-        background-color: var(--white);
-        color: var(--gray);
-    }
-    .flex_col .brand_card{
-        height: 15vh !important;
-        min-width: 20vw;
-    }
-    .flex_col .brand_card img{
-    }
-    
-    .rtl .ml_right .map_text .triangle_control{
-        right: 56% !important;
-    }
-    .ltr .ml_right .triangle_control{
-        left: 2% !important;
-    }
-    .brand_card{
-        width: 100% !important;
-    }
-    .ltr .brands .ml_right .map_text .triangle_control{
-        left: 50% !important;
-    }
+  /* For tablets: */
+  .product {
+    top: -5rem !important;
+    border-radius: 8px;
+    background-color: var(--white);
+    color: var(--gray);
+  }
+  .flex_col .brand_card {
+    height: 15vh !important;
+    min-width: 20vw;
+  }
+  .flex_col .brand_card img {
+  }
 
+  .rtl .ml_right .map_text .triangle_control {
+    right: 56% !important;
+  }
+  .ltr .ml_right .triangle_control {
+    left: 2% !important;
+  }
+  .brand_card {
+    width: 100% !important;
+  }
+  .ltr .brands .ml_right .map_text .triangle_control {
+    left: 50% !important;
+  }
 }
 
 @media (max-width: 425px) {
-    /* For mobile phones: */
-    .flex_col{
-        flex-direction: column;
-        justify-content: center !important;
-        margin-right: 10% !important;
-    }
-    .flex_col .brand_card{
-        min-width: 48vw !important;
-    }
-    .ltr .brand_row{
-        margin-left: 7rem !important;
-    }
-    .rtl .brands .ml_right .map_text .triangle_control{
-        right: 61% !important;
-    }
-    .ltr .brands .ml_right .map_text .triangle_control{
-        left: 50% !important;
-    }
-    
-}  
+  /* For mobile phones: */
+  .flex_col {
+    flex-direction: column;
+    justify-content: center !important;
+    margin-right: 10% !important;
+  }
+  .flex_col .brand_card {
+    min-width: 48vw !important;
+  }
+  .ltr .brand_row {
+    margin-left: 7rem !important;
+  }
+  .rtl .brands .ml_right .map_text .triangle_control {
+    right: 61% !important;
+  }
+  .ltr .brands .ml_right .map_text .triangle_control {
+    left: 50% !important;
+  }
+}

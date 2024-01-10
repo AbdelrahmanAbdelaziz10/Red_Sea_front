@@ -14,7 +14,7 @@ const ProductCard = ({ product }) => {
 
   const navigate = useNavigate();
   return (
-    <div className="d-flex justify-content-center flex_col w-100">
+    <div className="d-flex justify-content-start flex_col w-100">
       <motion.div
         initial={{ opacity: 0, translatX: -50, translateY: -50 }}
         animate={{ opacity: 1, translateX: 0, translateY: 0 }}
@@ -41,11 +41,20 @@ const ProductCard = ({ product }) => {
           {t("product_btn")}
         </button>
       </motion.div>
-      <p className="product_description">
+      <p
+        className="product_description"
+        dangerouslySetInnerHTML={{
+          __html:
+            product && selectedLanguage === "ar"
+              ? product.description_ar.slice(0, 85)
+              : product.description_en.slice(0, 66),
+        }}
+      />
+      {/* <p className="product_description">
         {product && selectedLanguage === "ar"
           ? product.description_ar.slice(0, 75)
           : product.description_en.slice(0, 66)}
-      </p>
+      </p> */}
     </div>
   );
 };
