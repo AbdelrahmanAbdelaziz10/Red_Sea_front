@@ -5,7 +5,7 @@ import "swiper/css/navigation";
 import "swiper/css/autoplay";
 
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { CiLocationArrow1 } from "react-icons/ci";
@@ -14,17 +14,19 @@ import { NavBar } from "../NavBar/NavBar";
 import useFetch from "./../../hooks/useFeatch";
 import { useInView } from "react-intersection-observer";
 import { useTranslation } from "react-i18next";
+import { ContextLang } from "../../App";
 
 const Header = ({ toggleDirection }) => {
-  const { data: setting } = useFetch(`/api/v1/website/setting`);
+  const { data: setting } = useFetch("/api/v1/website/setting");
   const { t, i18n } = useTranslation();
-  const { data: slider } = useFetch(`/api/v1/sliders`);
+  const { data: slider } = useFetch("/api/v1/sliders");
   const [autoPlay, setAutoPlay] = useState(0);
+  const [autoPlaySlider, setAutoPlaySlider] = useState(0);
   const [ref, inView] = useInView();
-
   const [play, setPlay] = useState(false);
   const videoRef = useRef(null);
   const sliderRef = useRef(null);
+  const { selectedLanguage } = useContext(ContextLang);
 
   const playVedio = () => {
     setPlay(!play);
@@ -40,11 +42,16 @@ const Header = ({ toggleDirection }) => {
 
   const videoId = getVideoId(setting && setting[0]?.video);
 
+  // const videoSliderId =
+  //   slider && slider?.map((slide) => getVideoId(slide?.video_url));
+
   useEffect(() => {
     if (inView) {
       setAutoPlay(1);
+      setAutoPlaySlider(1);
     } else {
       setAutoPlay(0);
+      setAutoPlaySlider(0);
     }
   }, [inView]);
 
@@ -53,8 +60,9 @@ const Header = ({ toggleDirection }) => {
       <NavBar />
       <Swiper
         modules={[Pagination, Navigation, Autoplay]}
+        // modules={[Pagination, Navigation]}
         slidesPerView={1}
-        autoplay={{ delay: 2000 }}
+        autoplay={{ delay: 4000 }}
         spaceBetween={30}
         loop={true}
         pagination={{
@@ -65,20 +73,36 @@ const Header = ({ toggleDirection }) => {
         className="mySwiper"
       >
         {slider &&
-          slider.map((slide) => {
+          slider.map((slide, idx) => {
             return (
               <SwiperSlide className="slide">
-                <img
-                  src={`https://beautyproducts.website/${slide.slider}`}
-                  alt=""
-                />
+                {slide?.slider !== null ? (
+                  <img
+                    src={`https://beautyproducts.website/${slide?.slider}`}
+                    alt=""
+                  />
+                ) : (
+                  <div className="video_slider" ref={ref}>
+                    <iframe
+                      title="youtube video"
+                      className="videoIframe js-videoIframe"
+                      src={`https://www.youtube.com/embed/${getVideoId(
+                        slide?.video_url
+                      )}?autoplay=${autoPlaySlider}&loop=1&controls=0&mute=1`}
+                      frameborder="0"
+                      allowTransparency="true"
+                      allowfullscreen
+                      allow="autoplay"
+                    ></iframe>
+                  </div>
+                )}
+
                 <div className="header_hover" />
                 <div className="head_text">
                   <div className="slider_arrow">
                     <CiLocationArrow1
                       className=" arrow_r"
                       onClick={() => {
-                        console.log(sliderRef.current);
                         sliderRef.current?.slideNext();
                       }}
                     />
@@ -87,8 +111,16 @@ const Header = ({ toggleDirection }) => {
                       onClick={() => sliderRef.current?.slidePrev()}
                     />
                   </div>
-                  <h1>{t("hometitle")}</h1>
-                  <h2>{t("homeTitle_p")}</h2>
+                  <h1>
+                    {slide && selectedLanguage === "ar"
+                      ? slide.title1_ar
+                      : slide.title1_en}
+                  </h1>
+                  <h2>
+                    {slide && selectedLanguage === "ar"
+                      ? slide.title2_ar
+                      : slide.title2_en}
+                  </h2>
                 </div>
               </SwiperSlide>
             );
@@ -107,7 +139,8 @@ const Header = ({ toggleDirection }) => {
               ref={videoRef}
               title="youtube video"
               className="videoIframe js-videoIframe"
-              src={`https://www.youtube.com/embed/${videoId}?autoplay=${autoPlay}`}
+              // src={`https://www.youtube.com/embed/${videoId}?autoplay=${autoPlay}`}
+              src={`https://www.youtube.com/embed/G0LFwHpNIVg?autoplay=${autoPlay}`}
               frameborder="0"
               allowTransparency="true"
               allowfullscreen

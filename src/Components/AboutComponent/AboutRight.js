@@ -41,7 +41,7 @@ const AboutRight = ({
             <p className="description2">
               <span>{head2}</span>
               <br />
-              {description2 &&
+              {/* {description2 &&
                 description2.map((about) => {
                   return (
                     <>
@@ -49,7 +49,16 @@ const AboutRight = ({
                       <br />
                     </>
                   );
-                })}
+                })} */}
+              {description2 && (
+                <>
+                  <span
+                    className="list"
+                    dangerouslySetInnerHTML={{ __html: description2 }}
+                  />
+                  <br />
+                </>
+              )}
             </p>
           </div>
         </Col>
@@ -59,4 +68,3 @@ const AboutRight = ({
 };
 
 export default AboutRight;
-

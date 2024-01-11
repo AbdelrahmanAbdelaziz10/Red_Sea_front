@@ -113,5 +113,3 @@ const AboutMain = ({ selectedLanguage }) => {
 };
 
 export default AboutMain;
-
-

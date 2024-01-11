@@ -29,7 +29,7 @@ const ProductCard = ({ product }) => {
         <div className="img ">
           <img
             alt={product.name_ar}
-            src={`https://beautyproducts.website/${product.images[0].image}`}
+            src={`https://beautyproducts.website/${product?.images[0].image}`}
           />
         </div>
         <button

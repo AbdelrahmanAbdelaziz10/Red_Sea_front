@@ -16,7 +16,6 @@
 .swiper-pagination {
   position: absolute !important;
   left: 0 !important;
-
 }
 .swiper-slide {
   text-align: center;
@@ -38,26 +37,24 @@
   position: absolute;
   z-index: 11;
 }
-.slide .slider_arrow{
+.slide .slider_arrow {
   font-size: 2rem;
   font-family: 900 !important;
   color: #fff;
 }
-.rtl .slide .slider_arrow .arrow_l{
+.rtl .slide .slider_arrow .arrow_l {
   transform: rotate(-135deg);
   cursor: pointer;
-
 }
-.ltr .slide .slider_arrow .arrow_l{
-  transform: rotate(45deg);
-  cursor: pointer;
-
-}
-.rtl .slide .slider_arrow .arrow_r{
+.ltr .slide .slider_arrow .arrow_l {
   transform: rotate(45deg);
   cursor: pointer;
 }
-.ltr .slide .slider_arrow .arrow_r{
+.rtl .slide .slider_arrow .arrow_r {
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+.ltr .slide .slider_arrow .arrow_r {
   transform: rotate(-135deg);
   cursor: pointer;
 }
@@ -96,7 +93,8 @@
 .header .video iframe {
   height: 100%;
   width: 100%;
-  position: absolute;}
+  position: absolute;
+}
 
 .header .video video {
   width: 60vw;
@@ -111,6 +109,12 @@
   cursor: pointer;
   margin-top: 13%;
 }
+
+.header .video_slider,
+.header .video_slider iframe {
+  width: 100%;
+  height: 100%;
+}
 @media (max-width: 768px) {
   /* .header .video {
     display: none !important;
@@ -123,24 +127,24 @@
     height: 100vh;
     overflow: hidden;
   }
-  .rtl .header .head_text{
+  .rtl .header .head_text {
     margin-right: 5%;
     font-size: 24px;
   }
-  .ltr .header .head_text{
+  .ltr .header .head_text {
     margin-left: 5%;
   }
- .header .head_text h1{
+  .header .head_text h1 {
     font-size: 24px !important;
   }
 
-  .header .head_text h2{
+  .header .head_text h2 {
     font-size: 22px !important;
   }
 
   .header .video {
     top: -6rem;
-      width: 75vw;
+    width: 75vw;
   }
 
   .header .video video {
@@ -158,36 +162,30 @@
   }
   .header .video {
     top: -8rem;
-      width: 75vw;
-      height: 20vh;
+    width: 75vw;
+    height: 20vh;
   }
   .header {
     height: 86vh;
     overflow: hidden;
   }
-  .rtl .header .head_text{
+  .rtl .header .head_text {
     margin-right: 5%;
     font-size: 24px;
-    margin-top: 25% ;
-
+    margin-top: 25%;
   }
-  .ltr .header .head_text{
+  .ltr .header .head_text {
     margin-left: 5%;
-    margin-top: 25% ;
-
+    margin-top: 25%;
   }
- .rtl .header .head_text h1{
+  .rtl .header .head_text h1 {
     font-size: 20px !important;
   }
-  .ltr .header .head_text h1{
+  .ltr .header .head_text h1 {
     font-size: 18px !important;
   }
 
-  .header .head_text h2{
+  .header .head_text h2 {
     font-size: 17px !important;
   }
-
 }
-
-
-

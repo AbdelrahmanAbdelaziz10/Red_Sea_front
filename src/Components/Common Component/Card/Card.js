@@ -22,24 +22,24 @@ const CardComponent = ({
   return (
     <div
       className={`card slider_card d-flex flex-column mb-5 mt-4 ${
-        clickedCard === slide.id ? "hovered_card" : ""
+        clickedCard === slide?.id ? "hovered_card" : ""
       }`}
       key={slide.id}
       id={slide.id}
     >
       <div className="slider_card_overlay position-absolute" />
-      {clickedCard === slide.id && (
+      {clickedCard === slide?.id && (
         <div className="x_icon" onClick={handleCloseImgSlider}>
           <IoCloseOutline />
         </div>
       )}
-      {clickedCard === slide.id ? (
-        <CardImgSlider id={slide.id} />
+      {clickedCard === slide?.id ? (
+        <CardImgSlider id={slide?.id} />
       ) : (
-        <div className="img pt-4" onClick={() => handleClickOnImg(slide.id)}>
+        <div className="img pt-4" onClick={() => handleClickOnImg(slide?.id)}>
           <img
-            alt={slide.name_ar}
-            src={`https://beautyproducts.website/${slide.images[0]?.image}`}
+            alt={slide?.name_ar}
+            src={`https://beautyproducts.website/${slide?.images[0]?.image}`}
           />
         </div>
       )}

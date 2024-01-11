@@ -7,10 +7,10 @@ import React, { useContext } from "react";
 import Title from "../Title/Title";
 import Triangle from "../Triangle/Triangle";
 import { BiSolidRightArrow } from "react-icons/bi";
-import { ContextLang } from './../../App';
+import { ContextLang } from "./../../App";
 
 const AboutLeft = ({ title, head, aboutAr, aboutImage, loading }) => {
-  const {selectedLanguage}=useContext(ContextLang)
+  const { selectedLanguage } = useContext(ContextLang);
   return (
     <Container className="about left position-relative modals">
       <div className="prod_title m-right  pt-4">
@@ -27,9 +27,11 @@ const AboutLeft = ({ title, head, aboutAr, aboutImage, loading }) => {
                   aboutAr.map((about) => {
                     return (
                       <li className="mt-2">
-                      {
-                        selectedLanguage==="ar"? <BiSolidLeftArrow className="arrow ms-1" />: <BiSolidRightArrow className="arrow me-2" />
-                      }
+                        {selectedLanguage === "ar" ? (
+                          <BiSolidLeftArrow className="arrow ms-1" />
+                        ) : (
+                          <BiSolidRightArrow className="arrow me-2" />
+                        )}
                         {about}
                       </li>
                     );
