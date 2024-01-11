@@ -25,6 +25,12 @@
 .description2 span {
   font-weight: bold;
 }
+.rtl .list p{
+  text-align: right !important;
+}
+.ltr .list p{
+  text-align: left !important ;
+}
 .about p {
   text-align: right;
   color: #635d5d;
@@ -59,7 +65,8 @@
 .ltr .about-page-triangle.triangle_control {
   left: 8rem !important;
 }
-.description2 .list {
+.description2 .list,
+.description2 .list p {
   color: #635d5d;
   font-weight: 400;
 }

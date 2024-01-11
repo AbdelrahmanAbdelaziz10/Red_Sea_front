@@ -10,11 +10,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import { CiLocationArrow1 } from "react-icons/ci";
 import { Container } from "react-bootstrap";
+import { ContextLang } from "../../App";
 import { NavBar } from "../NavBar/NavBar";
 import useFetch from "./../../hooks/useFeatch";
 import { useInView } from "react-intersection-observer";
 import { useTranslation } from "react-i18next";
-import { ContextLang } from "../../App";
 
 const Header = ({ toggleDirection }) => {
   const { data: setting } = useFetch("/api/v1/website/setting");
@@ -23,6 +23,7 @@ const Header = ({ toggleDirection }) => {
   const [autoPlay, setAutoPlay] = useState(0);
   const [autoPlaySlider, setAutoPlaySlider] = useState(0);
   const [ref, inView] = useInView();
+  const [ref1, inView1] = useInView();
   const [play, setPlay] = useState(false);
   const videoRef = useRef(null);
   const sliderRef = useRef(null);
@@ -48,12 +49,18 @@ const Header = ({ toggleDirection }) => {
   useEffect(() => {
     if (inView) {
       setAutoPlay(1);
-      setAutoPlaySlider(1);
     } else {
       setAutoPlay(0);
-      setAutoPlaySlider(0);
     }
   }, [inView]);
+
+  useEffect(() => {
+    if (inView1) {
+      setAutoPlaySlider(1);
+    } else {
+      setAutoPlaySlider(0);
+    }
+  }, [inView1]);
 
   return (
     <header className="header ">
@@ -82,7 +89,7 @@ const Header = ({ toggleDirection }) => {
                     alt=""
                   />
                 ) : (
-                  <div className="video_slider" ref={ref}>
+                  <div className="video_slider" ref={ref1}>
                     <iframe
                       title="youtube video"
                       className="videoIframe js-videoIframe"
