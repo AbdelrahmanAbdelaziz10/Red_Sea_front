@@ -15,7 +15,7 @@ const Product = ({setNavshow}) => {
   const { data: product } = useFetch("/api/v1/products");
 
   const handleClickOnImg = (cardId) => {
-    console.log(cardId);
+    // console.log(cardId);
     setClickedCard(cardId === clickedCard ? null : cardId);
     setNavshow("false")
   };

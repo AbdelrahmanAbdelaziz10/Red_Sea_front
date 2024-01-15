@@ -37,7 +37,7 @@ const ProductDeteils = ({ productData, loading, setNavshow }) => {
   const handleClickOnImg = (cardId) => {
     setClickedCardDeteils(cardId === clickedCardDeteils ? null : cardId);
     setNavshow("false");
-    console.log(cardId);
+    // console.log(cardId);
   };
 
   const handleCloseImg = (cardId) => {

@@ -31,7 +31,7 @@ export const NavBar = ({navshow}) => {
     setSelectedLanguage(language);
     i18n.changeLanguage(language);
   };
-console.log(navshow)
+// console.log(navshow)
   const handleScroll = () => {
     if (window.scrollY > 50) {
       setScrolling(true);

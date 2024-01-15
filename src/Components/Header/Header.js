@@ -140,7 +140,8 @@ const Header = ({ toggleDirection,navshow }) => {
             className="video video-container d-flex justify-content-center"
             ref={ref}
           >
-            <iframe
+                        {setting[0]?.video !== undefined?
+                        (            <iframe
               ref={videoRef}
               title="youtube video"
               className="videoIframe js-videoIframe"
@@ -150,7 +151,20 @@ const Header = ({ toggleDirection,navshow }) => {
               allowTransparency="true"
               allowfullscreen
               allow="autoplay"
-            ></iframe>
+            ></iframe>):
+            (<iframe
+              ref={videoRef}
+              title="youtube video"
+              className="videoIframe js-videoIframe"
+              // src={`https://www.youtube.com/embed/${videoId}?autoplay=${autoPlay}`}
+              src={`https://www.youtube.com/embed/G0LFwHpNIVg?autoplay=${autoPlay}`}
+              frameborder="0"
+              allowTransparency="true"
+              allowfullscreen
+              allow="autoplay"
+            ></iframe>)}
+
+
           </div>
         </div>
       ) : null}
