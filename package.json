@@ -1,5 +1,4 @@
 {
-  "homepage": "http://AbdelrahmanAbdelaziz10.githup.io/Work",
   "name": "redsea-program",
   "version": "0.1.0",
   "private": true,
@@ -35,8 +34,6 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "predebloy":"npm run build",
-    "deploy": "gh-page -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
 import { createContext, useEffect, useState } from "react";
 import redseaLogo from "./images/redsea logo.png";
 import AboutPage from "./Pages/About/AboutPage";
@@ -37,7 +37,7 @@ function App() {
             </div>
           </div>
         ) : (
-          <BrowserRouter>
+          <Router basename="/">
             <Routes>
               <Route path="/" element={<HomePage navshow={navshow} />} />
               <Route path="/about" element={<AboutPage navshow={navshow}/>} />
@@ -48,10 +48,10 @@ function App() {
               <Route path="/contact" element={<Contact navshow={navshow}/>} />
               <Route path="/privacy_policy" element={<PolicyPage navshow={navshow}/>} />
               <Route path="/terms_using" element={<TermsPage navshow={navshow}/>} />
-              <Route path="/*" element={<Error404 />} />
+              <Route path="*" element={<Error404 />} />
             </Routes>
 
-          </BrowserRouter>
+          </Router>
         )}
       </div>
     </ContextLang.Provider>
