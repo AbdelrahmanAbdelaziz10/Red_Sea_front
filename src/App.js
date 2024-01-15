@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { createContext, useEffect, useState } from "react";
 import redseaLogo from "./images/redsea logo.png";
 import AboutPage from "./Pages/About/AboutPage";

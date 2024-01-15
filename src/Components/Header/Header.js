@@ -97,7 +97,7 @@ const Header = ({ toggleDirection, navshow }) => {
                       className="videoIframe js-videoIframe"
                       src={`https://www.youtube.com/embed/${getVideoId(
                         slide?.video_url
-                      )}?autoplay=${autoPlaySlider}&controls=0&mute=1`}
+                      )}?autoplay=${autoPlaySlider}&loop=1&controls=0&mute=1`}
                       frameborder="0"
                       allowTransparency="true"
                       allowfullscreen
