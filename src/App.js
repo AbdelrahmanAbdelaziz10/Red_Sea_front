@@ -37,7 +37,7 @@ function App() {
             </div>
           </div>
         ) : (
-          <Router basename="/">
+          <Router basename="/redsea.beautyproducts.website">
             <Routes>
               <Route path="/" element={<HomePage navshow={navshow} />} />
               <Route path="/about" element={<AboutPage navshow={navshow}/>} />
