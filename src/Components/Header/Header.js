@@ -3,22 +3,22 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
-import 'swiper/css/effect-fade';
+import "swiper/css/effect-fade";
 
-import { Autoplay,EffectFade, Navigation, Pagination } from "swiper/modules";
+import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import { CiLocationArrow1 } from "react-icons/ci";
 import { Container } from "react-bootstrap";
 import { ContextLang } from "../../App";
-import HeaderSlider from './../HeaderSlider/HeaderSlider';
+import HeaderSlider from "./../HeaderSlider/HeaderSlider";
 import { NavBar } from "../NavBar/NavBar";
 import useFetch from "./../../hooks/useFeatch";
 import { useInView } from "react-intersection-observer";
 import { useTranslation } from "react-i18next";
 
-const Header = ({ toggleDirection,navshow }) => {
+const Header = ({ toggleDirection, navshow }) => {
   const { data: setting } = useFetch("/api/v1/website/setting");
   const { t, i18n } = useTranslation();
   const { data: slider } = useFetch("/api/v1/sliders");
@@ -37,13 +37,14 @@ const Header = ({ toggleDirection,navshow }) => {
 
   const getVideoId = (url) => {
     const regExp =
-      /^.(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]).*/;
+      /^(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/;
     const match = url?.match(regExp);
 
-    return match && match[2].length === 11 ? match[2] : null;
+    return match ? match[1] : null;
   };
 
   const videoId = getVideoId(setting && setting[0]?.video);
+  console.log(getVideoId(slider[1]?.video_url));
 
   useEffect(() => {
     if (inView) {
@@ -63,14 +64,14 @@ const Header = ({ toggleDirection,navshow }) => {
 
   return (
     <header className="header ">
-      <NavBar navshow={navshow}/>
+      <NavBar navshow={navshow} />
 
       {/* <HeaderSlider slider={slider} />  */}
 
       <Swiper
-        modules={[Autoplay,EffectFade, Navigation, Pagination]}
+        modules={[Autoplay, EffectFade, Navigation, Pagination]}
         slidesPerView={1}
-        effect={'fade'}
+        effect={"fade"}
         autoplay={{ delay: 2000, disableOnInteraction: false }}
         spaceBetween={0}
         pagination={{
@@ -84,7 +85,7 @@ const Header = ({ toggleDirection,navshow }) => {
           slider.map((slide, idx) => {
             return (
               <SwiperSlide className="slide">
-                {slide?.slider !== null ? (
+                {slide?.video_url === null ? (
                   <img
                     src={`https://beautyproducts.website/${slide?.slider}`}
                     alt=""
@@ -140,31 +141,31 @@ const Header = ({ toggleDirection,navshow }) => {
             className="video video-container d-flex justify-content-center"
             ref={ref}
           >
-                        {setting[0]?.video !== undefined?
-                        (            <iframe
-              ref={videoRef}
-              title="youtube video"
-              className="videoIframe js-videoIframe"
-              src={`https://www.youtube.com/embed/${videoId}?autoplay=${autoPlay}`}
-              // src={`https://www.youtube.com/embed/G0LFwHpNIVg?autoplay=${autoPlay}`}
-              frameborder="0"
-              allowTransparency="true"
-              allowfullscreen
-              allow="autoplay"
-            ></iframe>):
-            (<iframe
-              ref={videoRef}
-              title="youtube video"
-              className="videoIframe js-videoIframe"
-              // src={`https://www.youtube.com/embed/${videoId}?autoplay=${autoPlay}`}
-              src={`https://www.youtube.com/embed/G0LFwHpNIVg?autoplay=${autoPlay}`}
-              frameborder="0"
-              allowTransparency="true"
-              allowfullscreen
-              allow="autoplay"
-            ></iframe>)}
-
-
+            {setting[0]?.video !== undefined ? (
+              <iframe
+                ref={videoRef}
+                title="youtube video"
+                className="videoIframe js-videoIframe"
+                src={`https://www.youtube.com/embed/${videoId}?autoplay=${autoPlay}`}
+                // src={`https://www.youtube.com/embed/G0LFwHpNIVg?autoplay=${autoPlay}`}
+                frameborder="0"
+                allowTransparency="true"
+                allowfullscreen
+                allow="autoplay"
+              ></iframe>
+            ) : (
+              <iframe
+                ref={videoRef}
+                title="youtube video"
+                className="videoIframe js-videoIframe"
+                // src={`https://www.youtube.com/embed/${videoId}?autoplay=${autoPlay}`}
+                src={`https://www.youtube.com/embed/G0LFwHpNIVg?autoplay=${autoPlay}`}
+                frameborder="0"
+                allowTransparency="true"
+                allowfullscreen
+                allow="autoplay"
+              ></iframe>
+            )}
           </div>
         </div>
       ) : null}
