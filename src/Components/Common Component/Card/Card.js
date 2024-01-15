@@ -22,8 +22,8 @@ const CardComponent = ({
   return (
     <div
       className={`card slider_card d-flex flex-column mb-5 mt-4 ${
-        clickedCard === slide?.id ? "hovered_card" : ""
-      }`}
+        clickedCard == slide?.id ? "hovered_card" : ""
+      }  `}
       key={slide.id}
       id={slide.id}
     >
@@ -33,19 +33,21 @@ const CardComponent = ({
           <IoCloseOutline />
         </div>
       )}
-      {clickedCard === slide?.id ? (
+
+      {clickedCard == slide?.id ? (
         <CardImgSlider id={slide?.id} />
       ) : (
         <div className="img pt-4" onClick={() => handleClickOnImg(slide?.id)}>
+          <h6 className="pt-3 text-center">
+            {slide && selectedLanguage === "ar" ? slide.name_ar : slide.name_en}
+          </h6>
           <img
             alt={slide?.name_ar}
             src={`https://beautyproducts.website/${slide?.images[0]?.image}`}
           />
         </div>
       )}
-      {/* <h6>
-        {slide && selectedLanguage === "ar" ? slide.name_ar : slide.name_en}
-      </h6> */}
+
       <button
         className="product_btn"
         onClick={() => {

@@ -10,7 +10,7 @@ import contactPoster from "../../images/company 9.jpg";
 import { useTranslation } from "react-i18next";
 import { ContextLang } from "../../App";
 
-const PolicyPage = () => {
+const PolicyPage = ({navshow}) => {
   const { t, i18n } = useTranslation();
   const { selectedLanguage } = useContext(ContextLang);
 
@@ -20,14 +20,17 @@ const PolicyPage = () => {
 
   return (
     <div className="Product_page">
-      <Head title={t("policty")} poster={contactPoster} />
+      <Head title={t("policty")} poster={contactPoster} navshow={navshow} />
       <Container>
         <PolicyConant title={t("policty")} />
       </Container>
       <div className="product_Brand">
         <Brand />
       </div>
-
+      <div className="triangle_control">
+              <div className="triangle" />
+            </div>
+            <Footer />
     </div>
   );
 };

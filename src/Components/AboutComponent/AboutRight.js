@@ -39,17 +39,8 @@ const AboutRight = ({
             <span className="paragraph-header pe-lg-5 "> {head}</span> <br />
             <p className="paragraph me-lg-5">{aboutAr}</p>
             <p className="description2">
-              <span>{head2}</span>
+              <span className="span_head">{head2}</span>
               <br />
-              {/* {description2 &&
-                description2.map((about) => {
-                  return (
-                    <>
-                      <span className="list">{about}</span>
-                      <br />
-                    </>
-                  );
-                })} */}
               {description2 && (
                 <>
                   <span

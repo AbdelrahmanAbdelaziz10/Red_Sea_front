@@ -9,7 +9,7 @@ import PackagingMain from './PackagingMain';
 import { useTranslation } from 'react-i18next';
 import { ContextLang } from '../../App';
 
-const PackagingPage = () => {
+const PackagingPage = ({navshow}) => {
   const { t, i18n } = useTranslation();
   const { selectedLanguage } = useContext(ContextLang);
   useEffect(()=>{
@@ -18,7 +18,7 @@ const PackagingPage = () => {
 
   return (
     <div className='Product_page  Contact'>
-        <Head title={t('packaging_title')} poster={contactPoster}/>
+        <Head title={t('packaging_title')} poster={contactPoster} navshow={navshow} />
         <Container className='zahra_page'>
       <PackagingMain title={t('packaging_title')} />
 
@@ -26,7 +26,10 @@ const PackagingPage = () => {
         <div className='product_Brand'>
     <Brand />
     </div>
-
+    <div className="triangle_control">
+              <div className="triangle" />
+            </div>
+            <Footer />
     </div>  
     )
 }

@@ -1,0 +1,19 @@
+.error{
+background-color: var(--main) !important;
+color: #fff !important;
+padding: 15px 20px;
+border: none;
+border-radius: 4px;
+font-size: 1.2rem;
+}
+.error:hover{
+    background-color: #fff !important;
+    color: var(--main) !important;
+    border: 2px solid var(--main) !important;
+    transition: all .5s;
+}
+@media (max-width:400) {
+    .error{
+        margin-right: 10% !important;
+    }
+}

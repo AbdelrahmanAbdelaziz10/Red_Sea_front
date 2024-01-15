@@ -94,7 +94,7 @@ const AboutMain = ({ selectedLanguage }) => {
           />
         </div>
 
-        <div className="m-right aboutleft mb-5 pb-3">
+        <div className="m-right aboutleft  mb-5 pb-5">
           <AboutLeft
             title={t("about_title6")}
             description2=""

@@ -7,8 +7,9 @@ import Footer from "./../../Components/Footer/Footer";
 import Head from "../../Components/Head/Head";
 import Product from "./../../Components/ProductsComponent/Product/Product";
 import contactPoster from "../../images/company 6.jpg";
+import { useState } from "react";
 
-const ProductsPage = () => {
+const ProductsPage = ({navshow,setNavshow}) => {
   const { t, i18n } = useTranslation();
   const { selectedLanguage } = useContext(ContextLang);
   useEffect(()=>{
@@ -17,13 +18,17 @@ const ProductsPage = () => {
 
   return (
     <div className="Product_page">
-      <Head title={t("product")} poster={contactPoster} />
+      <Head title={t("product")} poster={contactPoster} navshow={navshow}/>
       <Container className="product_container">
-        <Product selectedLanguage={selectedLanguage} />
+        <Product selectedLanguage={selectedLanguage}  setNavshow={setNavshow}/>
       </Container>
       <div className="product_Brand">
         <Brand />
       </div>
+      <div className="triangle_control">
+              <div className="triangle" />
+            </div>
+            <Footer />
     </div>
   );
 };

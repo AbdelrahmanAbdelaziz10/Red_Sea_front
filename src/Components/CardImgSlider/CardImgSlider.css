@@ -1,55 +1,54 @@
-.card_img_slider .home_product_slider{
-    padding-top: 9% !important;
+.card_img_slider .home_product_slider {
+  padding-top: 9% !important;
 }
-.card_img_slider{
-    height: 45vh !important;
+.card_img_slider {
+  height: 42vh !important;
+  width: 100% !important;
+}
 
-}
 .card_img_slider .img {
-    display: flex !important;
-    height: 100% !important;
-    align-items: center;
-    padding: 1rem 0;
-  }
-  
-  .card_img_slider .img img {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: contain;
-    min-height: 40vh !important;
-    min-width: 115% !important;
-  }
-  
-  .card_img_slider .slick-arrow {
-    position: absolute;
-    z-index: 999999 !important;
-  }
-  
-  .card_img_slider .slick-arrow:before {
-    content: "➤";
-    color: var(--heavenly);
-    font-size: 1.2rem;
-  }
-  
-  .card_img_slider .slick-next {
-    transform: rotate(180deg);
-    left: 0.5rem;
-  }
-  
-  .card_img_slider .slick-prev {
-    right: 0.5rem;
-  }
-  @media (max-width: 768px) {
-    .card_img_slider .img img {
-        object-fit: contain;
-        min-height: 22vh !important;
-        min-width: 100% !important;
-      }
-      .card_img_slider{
-        height: 28vh !important;
-    
-    }
-  }
-  @media (max-width: 425px) {
+  display: flex !important;
+  height: 100% !important;
+  align-items: center;
+  padding: 1rem 0;
+}
 
+.card_img_slider .img img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain;
+  min-height: 40vh !important;
+  min-width: 115% !important;
+}
+
+.card_img_slider .slick-arrow {
+  position: absolute;
+  z-index: 999999 !important;
+}
+
+.card_img_slider .slick-arrow:before {
+  content: "➤";
+  color: var(--heavenly);
+  font-size: 1.2rem;
+}
+
+.card_img_slider .slick-arrow.slick-next {
+  transform: rotate(180deg);
+  left: 0.5rem;
+}
+
+.card_img_slider .slick-arrow.slick-prev {
+  right: 0.5rem;
+}
+@media (max-width: 768px) {
+  .card_img_slider .img img {
+    object-fit: contain;
+    min-height: 22vh !important;
+    min-width: 100% !important;
   }
+  .card_img_slider {
+    height: 28vh !important;
+  }
+}
+@media (max-width: 425px) {
+}

@@ -16,11 +16,11 @@
   color: var(--gray);
 }
 .zahra_page p {
-  color: #635d5d;
+  color: #635d5d !important;
+  font-size: 15px !important;
   width: 70%;
   margin-left: 0 !important;
   line-height: 2.2;
-  font-size: 1.064rem;
 }
 
 .rtl .zahra_page p div {
@@ -30,6 +30,7 @@
   text-align: right !important;
   padding: 0 30px;
   margin-right: auto;
+  margin-top: -3rem;
 }
 .ltr .zahra_page p {
   margin-left: auto;
@@ -39,7 +40,7 @@
   padding-left: 0 !important;
   padding-right: 0 !important;
   margin-left: 0 !important;
-  margin-top: -2rem;
+  margin-top: -1rem;
 }
 .ltr
   .Product_page
@@ -53,7 +54,7 @@
 .packaging .triangle-control-com {
   /* margin-right: 5rem; */
   left: -2rem;
-  top: 6rem;
+  top: 5rem;
 }
 
 /* zahra-page-triangle */
@@ -93,7 +94,7 @@
   width: 100% !important;
   text-align: left;
 }
-.rtl .packaging:hover .triangle-control-com :last-child {
+/* .rtl .packaging:hover .triangle-control-com :last-child {
   animation-name: animation;
   animation-duration: 0.5s;
   transition: all 1.6s;
@@ -102,18 +103,31 @@
   animation-name: animation_ltr;
   animation-duration: 0.5s;
   transition: all 1.6s;
+} */
+
+.rtl .packaging .triangle-control-com:hover :first-child,
+.ltr .packaging .triangle-control-com:hover :first-child {
+  transform: scale(1.05) translate(-10px, -5px) !important;
+  box-shadow: rgba(255, 255, 255, 0.55) !important;
 }
+
+.rtl .packaging .triangle-control-com:hover :nth-child(2),
+.ltr .packaging .triangle-control-com:hover :nth-child(2) {
+  transform: scale(1.03) !important;
+  box-shadow: rgba(255, 255, 255, 0.55);
+}
+
 .ltr .packaging .triangle-control-com {
-  /* top: 10rem;
-  left: 44rem; */
   left: calc(100% - 31rem);
   top: -1rem;
   /* transform: rotate(30deg); */
 }
 .ltr .packaging .triangle-control-com :first-child {
-  left: 3rem;
+  left: 38rem;
 }
-
+.ltr .packaging .triangle-control-com :last-child {
+  left: 35rem;
+}
 @keyframes animation {
   0% {
     left: 30rem;
@@ -168,23 +182,34 @@
 }
 
 @media (max-width: 768px) {
+  .rtl .packaging .triangle-control-com :first-child {
+    right: -9rem !important;
+    top: -16rem !important;
+  }
+  .ltr .packaging .triangle-control-com :first-child {
+    left: 20rem;
+  }
+
+  .rtl .packaging .triangle-control-com :last-child {
+    right: -6.5rem;
+    top: -16rem !important;
+  }
+
   /* For tablets: */
   .packaging .triangle-control-com .triangle-com {
     width: 26rem !important;
     height: 28rem !important;
   }
   .ltr .packaging .triangle-control-com {
-    top: -3rem;
-    left: 18rem;
+    top: -2rem;
+    left: 17rem;
   }
-  .rtl .packaging .triangle-control-com {
-    top: -6rem !important;
-    right: 6rem !important;
+  .ltr .packaging .triangle-control-com :last-child {
+    left: 0.7rem;
   }
-  .ltr.packaging .triangle-control-com :first-child {
-    left: 3rem;
+  .ltr .packaging .triangle-control-com :first-child {
+    left: 20rem;
   }
-
   .ltr
     .Product_page
     .product_container.packaging
@@ -229,14 +254,22 @@
   .rtl .Product_page .packaging .margin_right .triangle_control {
     right: 63% !important;
   }
+  .ltr .packaging .triangle-control-com :last-child {
+    left: 17rem;
+  }
 }
 
 @media (max-width: 425px) {
   /* For mobile phones: */
-
+  .ltr .packaging .triangle-control-com :last-child {
+    left: 0.7rem;
+  }
   .packaging .triangle-control-com .triangle-com {
     width: 22rem !important;
     height: 24rem !important;
+  }
+  .ltr .packaging .triangle-control-com :first-child {
+    left: 3rem;
   }
 
   .ltr .packaging .triangle-control-com {
@@ -247,8 +280,15 @@
     top: -1rem !important;
     right: 8rem !important;
   }
+  .rtl .packaging .triangle-control-com {
+    top: 11rem !important;
+    right: 17rem !important;
+  }
+  .rtl .packaging .triangle-control-com :last-child {
+    right: -6.5rem !important;
+  }
   .ltr .packaging .triangle-control-com :first-child {
-    left: 1.8rem;
+    left: 2.5rem;
   }
   .ltr
     .Product_page
@@ -306,5 +346,16 @@
   }
   .m-mall-screen {
     margin: 0 3% !important;
+  }
+}
+@media (max-width: 380px) {
+  .rtl .packaging .triangle-control-com {
+    right: 15rem !important;
+  }
+  .rtl .packaging .triangle-control-com :last-child {
+    right: -7rem !important;
+  }
+  .ltr .packaging .triangle-control-com {
+    left: 0.5rem;
   }
 }

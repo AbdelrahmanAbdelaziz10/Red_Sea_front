@@ -58,7 +58,6 @@
   font-weight: 300;
   font-size: 15px;
   padding-bottom: 2px;
-
 }
 .rtl .footer ul li,
 .rtl .footer ul li Link {
@@ -81,7 +80,7 @@
 }
 .ltr .footer ul li:hover {
   margin-left: 4%;
-  transition: all .6s;
+  transition: all 0.6s;
 }
 
 .footer .arrow_icon {
@@ -132,16 +131,18 @@
 }
 .footer .footer_logo {
   width: 9vw;
+  cursor: pointer;
+  text-decoration: none;
 }
 @media (max-width: 768px) {
   /* For tablets: */
-.rtl .policty .triangle{
-  margin-top: 8% !important;
-}
-.ltr .policty .triangle{
-  margin-top: 6% !important;
-  margin-right: 4% !important;
-}
+  .rtl .policty .triangle {
+    margin-top: 8% !important;
+  }
+  .ltr .policty .triangle {
+    margin-top: 6% !important;
+    margin-right: 4% !important;
+  }
   .footer .company h5 {
     font-size: 1.6rem;
     font-weight: 400;
@@ -149,10 +150,10 @@
   }
   .rtl .footer h5 {
     padding-right: 2% !important;
-}
-.ltr .footer h5 {
-  padding-left: 5% !important;
-}
+  }
+  .ltr .footer h5 {
+    padding-left: 5% !important;
+  }
   .footer .company a,
   .footer .company li {
     font-size: 18px !important;
@@ -176,30 +177,29 @@
     margin-left: 4% !important ;
   }
   .list1 .triangle,
-  
   .list1 .triangle:before,
-  .list1 .triangle:after{
+  .list1 .triangle:after {
     margin-top: 5% !important;
   }
-  .rtl .list1 Link{
+  .rtl .list1 Link {
     padding-right: 2% !important;
   }
-  .ltr .list1 Link{
+  .ltr .list1 Link {
     padding-left: 2% !important;
   }
   .rtl .footer .triangle,
   .rtl .footer .triangle:before,
- .rtl .footer .triangle:after {
+  .rtl .footer .triangle:after {
     margin-left: 4% !important;
   }
   .ltr .footer .small_call .triangle,
   .ltr .footer .small_call .triangle:before,
- .ltr .footer .small_call .triangle:after {
+  .ltr .footer .small_call .triangle:after {
     margin-right: 8% !important;
   }
   .ltr .footer .triangle,
   .ltr .footer .triangle:before,
- .ltr .footer .triangle:after {
+  .ltr .footer .triangle:after {
     margin-right: 3% !important;
   }
   .footer .privity_list a {
@@ -269,13 +269,13 @@
   }
   .footer .privity_list {
     gap: 1%;
-}
-.rtl .ml-3{
-  margin-left: .3em;
-}
-.ltr .ml-3{
-  margin-right: .3em;
-}
+  }
+  .rtl .ml-3 {
+    margin-left: 0.3em;
+  }
+  .ltr .ml-3 {
+    margin-right: 0.3em;
+  }
   .footer .triangle,
   .footer .triangle:before,
   .footer .triangle:after {
@@ -283,13 +283,13 @@
     height: 0.4em;
   }
   .footer .privity_list .triangle {
-    margin-top: .7em !important;
+    margin-top: 0.7em !important;
   }
   .rtl .footer .privity_list .triangle {
-    margin-left: .4em;
+    margin-left: 0.4em;
   }
   .ltr .footer .privity_list .triangle {
-    margin-left: .4em;
+    margin-left: 0.4em;
   }
   .footer .privity_list a {
     font-size: 1.2rem;
@@ -330,8 +330,6 @@
   .ltr .footer p {
     padding-left: 2% !important;
   }
-
-
 
   .footer .footer_logo {
     margin: auto;

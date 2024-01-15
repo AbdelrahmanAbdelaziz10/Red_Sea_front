@@ -14,6 +14,7 @@
   min-width: 10vw !important;
   min-height: 30vh !important;
   overflow: visible;
+  cursor: pointer;
 }
 .product_row .card .img img {
   width: 100% !important;
@@ -27,6 +28,8 @@
 .card h6 {
   color: var(--main);
   font-size: 1.1rem;
+  width: fit-content;
+  margin: 0 auto;
 }
 .product_row .card .product_btn {
   background-color: var(--heavenly);
@@ -129,6 +132,50 @@
   position: absolute;
   top: -1px;
   left: 50%;
+}
+
+.product_img_overlay {
+  position: fixed !important;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999999999 !important;
+}
+
+.product_img_overlay .icons {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  z-index: 99999 !important;
+}
+
+.product_img_overlay .icons .icon svg {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #f2f2f2;
+}
+
+.product_img_overlay .share_list {
+  background-color: #f2f2f2;
+  border-radius: 6px;
+  padding: 1rem 2rem;
+  margin-top: 1rem;
+  min-width: 170px;
+  flex-direction: column;
+}
+
+.product_img_overlay .share_list button {
+  background: transparent;
+  color: #000;
+  cursor: pointer;
+  border: none;
+  width: fit-content;
+  font-size: 0.9rem;
+  padding-left: 1rem;
 }
 
 @media (max-width: 768px) {

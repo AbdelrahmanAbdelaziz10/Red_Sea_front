@@ -1,14 +1,17 @@
 import "./Footer.css";
+
 import { Col, Container } from "react-bootstrap";
 import { FaInstagram, FaYoutube } from "react-icons/fa";
-import { useNavigate } from "react-router";
+import React, { useContext } from "react";
+
+import { ContextLang } from "../../App";
 import { FaFacebook } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import React, { useContext } from "react";
 import footerLogo from "../../images/logo.png";
 import useFetch from "./../../hooks/useFeatch";
+import { useNavigate } from "react-router";
 import { useTranslation } from "react-i18next";
-import { ContextLang } from "../../App";
+
 const Footer = () => {
   const navigate = useNavigate();
   const { selectedLanguage } = useContext(ContextLang);
@@ -36,7 +39,7 @@ const Footer = () => {
               </li>
               <li className="d-flex">
                 <div className="triangle me-1 mt-md-2  ms-md-1" />
-                <Link to="/brand"> {t("packaging")}</Link>
+                <Link to="/packaging"> {t("packaging")}</Link>
               </li>
             </ul>
           </Col>
@@ -57,7 +60,6 @@ const Footer = () => {
                         {product && selectedLanguage === "ar"
                           ? product.name_ar
                           : product.name_en}
-
                       </li>
                     );
                   })
@@ -113,17 +115,21 @@ const Footer = () => {
           <Col lg="6" md="12" sm="12" xs="12" className="">
             <ul className="d-flex justify-content-end Social_icon">
               <li>
-                <Link to={setting&&setting[0]?.youtube} target="_blank">
+                <Link to={setting && setting[0]?.youtube} target="_blank">
                   <FaYoutube />
                 </Link>
               </li>
               <li>
-                <Link to={setting&&setting[0]?.facebook} target="_blank">
+                <Link to={setting && setting[0]?.facebook} target="_blank">
                   <FaFacebook />
                 </Link>
               </li>
               <li>
-                <Link to={setting&&setting[0]?.instagram} target="_blank" className="">
+                <Link
+                  to={setting && setting[0]?.instagram}
+                  target="_blank"
+                  className=""
+                >
                   <FaInstagram className="instagram_icon" />
                 </Link>
               </li>
@@ -137,9 +143,13 @@ const Footer = () => {
           </Col>
           <Col lg="2" md="12" className="mt-2 left footer-end mt-md-4">
             <p className="pe-1">{t("design")}</p>
-            <div className="footer_logo">
+            <a
+              className="footer_logo"
+              href="https://owntechs.com/"
+              target="_blank"
+            >
               <img src={footerLogo} alt="company_logo" />
-            </div>
+            </a>
           </Col>
         </div>
       </Container>

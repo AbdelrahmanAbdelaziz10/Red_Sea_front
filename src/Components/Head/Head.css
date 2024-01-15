@@ -1,58 +1,59 @@
-    .head{
-    position: relative;
-    height: 78vh !important;
-
+.head {
+  position: relative;
+  height: 78vh !important;
 }
-.head_img{
-    position: absolute;
-    top: 0rem !important;
-    z-index: 0;
-    width: 100%;
-    height: 84vh;
-    overflow: hidden;
-    background-size:cover;
-    background-position: 0%;
-
+.head_img {
+  position: absolute;
+  top: 0rem !important;
+  z-index: 0;
+  width: 100%;
+  height: 84vh;
+  overflow: hidden;
+  background-size: cover;
+  background-position: bottom;
+  background-position: 0%;
 }
-.head .head_text{
-    position: absolute;
-    z-index: 11;
-    color: var(--white);
-    margin-top: 18% !important;
-    font-size: 1rem !important;
-    font-family: myfont;
+.head .head_text {
+  position: absolute;
+  z-index: 11;
+  color: var(--white);
+  margin-top: 18% !important;
+  font-size: 1rem !important;
+  font-family: myfont;
 }
 @media (max-width: 768px) {
-    /* For tablets: */
-    .head_img{
-        background-size:cover;
-        background-position: 0% 70% !important;
-    
-    }
-    .head{
-        height: 42vh !important;
-        overflow: hidden;
-    }
-    .head .head_text{
-        margin-top: 24% !important;
-        font-size: 1.2rem !important;
-    }
-  }
-@media (max-width: 425px) {
-    /* For mobile phones: */
-    .head{
-        height: 40vh;
-        overflow: hidden !important;
-    }
-    .head .head_text{
-        margin-top: 8em !important;
-        font-size: 1.4rem !important;
-    }
-  }
-  @media (max-width:375px){
-    .head .head_text{
-        margin-top: 5em !important;
-        font-size: 1.4rem !important;
-    }
-  }
+  /* For tablets: */
+  .head_img {
+    position: absolute;
+    top: -15rem !important;
 
+    overflow: hidden;
+    background-size: cover;
+    background-position: 40% !important;
+    }
+  .head {
+    height: 55vh !important;
+    overflow: hidden;
+  }
+  .head .head_text {
+    margin-top: 23rem !important;
+    font-size: 1.2rem !important;
+  }
+}
+@media (max-width: 425px) {
+  /* For mobile phones: */
+  .head {
+    height: 40vh;
+    overflow: hidden !important;
+  }
+  .head .head_text {
+    margin-top: 20rem !important;
+    font-size: 1.4rem !important;
+  }
+}
+@media (max-width: 375px) {
+  .head .head_text {
+    margin-top: 13rem !important;
+    font-size: 1.4rem !important;
+  }
+}

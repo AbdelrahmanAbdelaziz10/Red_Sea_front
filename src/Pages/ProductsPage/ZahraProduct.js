@@ -12,7 +12,7 @@ import useFetch from "../../hooks/useFeatch";
 import { useTranslation } from 'react-i18next';
 import { ContextLang } from "../../App";
 
-const ZahraProduct = () => {
+const ZahraProduct = ({navshow,setNavshow}) => {
   const { t, i18n } = useTranslation();
   const { selectedLanguage } = useContext(ContextLang);
 
@@ -24,9 +24,9 @@ const ZahraProduct = () => {
 
   return (
     <div className="Product_page details Contact ">
-      <Head title={t('product') } poster={contactPoster} />
+      <Head title={t('product') } poster={contactPoster} navshow={navshow} />
       <Container>
-        <ProductDeteils productData={productData[0]} loading={loading} />
+        <ProductDeteils productData={productData[0]} loading={loading} setNavshow={setNavshow} />
       </Container>
       <div className="page_product ">
         <Products title={t('brand_product_title')}/>
@@ -34,7 +34,10 @@ const ZahraProduct = () => {
       <div className="product_Brand">
         <Brand />
       </div>
-
+      <div className="triangle_control">
+              <div className="triangle" />
+            </div>
+            <Footer />
     </div>
   );
 };

@@ -2,6 +2,8 @@
   color: var(--heavenly);
   filter: url("#goo");
   position: absolute;
+  transition: 0.5s;
+  cursor: pointer;
 }
 .rtl .triangle-com {
   /* transform: rotate(-90deg); */
@@ -33,3 +35,16 @@
 .rtl .right.description .triangle-com {
   margin-top: 8rem;
 }
+
+
+/* .triangle-com:hover {
+  transform: scale(1.05) !important;
+  box-shadow: rgba(255, 255, 255, 0.55);
+}
+
+.ltr .right .triangle-com:hover {
+  transform: rotateY(180deg) scale(1.05);
+}
+.ltr .left .triangle-com:hover {
+  transform: rotateY(0) scale(1.05) !important;
+} */

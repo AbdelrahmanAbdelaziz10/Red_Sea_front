@@ -6,7 +6,8 @@ import contactPoster from '../../images/company 9.jpg'
 import TermsMain from './TermsMainComponent/TermsMain';
 import { useTranslation } from 'react-i18next';
 import { ContextLang } from '../../App'
-const TermsPage = () => {
+import Footer from '../../Components/Footer/Footer'
+const TermsPage = ({navshow}) => {
   const { t, i18n } = useTranslation();
   const { selectedLanguage } = useContext(ContextLang);
 
@@ -16,14 +17,17 @@ const TermsPage = () => {
 
     return (
         <div className="Product_page">
-          <Head title={t('Using_role')} poster={contactPoster} />
+          <Head title={t('Using_role')} poster={contactPoster} navshow={navshow} />
           <Container>
           <TermsMain />
           </Container>
           <div className="product_Brand">
             <Brand />
           </div>
-
+          <div className="triangle_control">
+              <div className="triangle" />
+            </div>
+            <Footer />
         </div>  )
 }
 

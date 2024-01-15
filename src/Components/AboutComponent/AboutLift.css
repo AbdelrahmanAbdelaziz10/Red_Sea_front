@@ -47,7 +47,7 @@
   color: #635d5d;
 }
 .rtl .about .triangle_control {
-  right: 54% !important;
+  right: 54% ;
   top: -1px;
 }
 
@@ -58,12 +58,11 @@
     margin-top: 52%;
   }
   .rtl .about .triangle_control {
-    right: 52% !important;
+    right: 52% ;
     top: -1px;
   }
   .rtl .m-right .triangle_control {
-    right: 56% !important;
-
+    right: 56% ;
   }
   .about-left {
     top: -5rem !important;
@@ -112,7 +111,7 @@
 
 .triangle-control-com-left {
   position: relative;
-  right: 2rem;
+  right: 0.5rem;
 }
 
 .triangle-control-com-left .triangle-com {
@@ -122,7 +121,37 @@
 
 .triangle-control-com-left :first-child {
   left: 0rem !important;
+  top:-2rem;
 }
+.rtl .triangle-control-com-left :last-child {
+  top:-2rem;
+  left: 1.7rem !important;
+
+}
+.ltr .triangle-control-com-left :last-child {
+  top:-2rem;
+  left: -0.7rem !important;
+
+}
+
+.rtl .triangle-control-com-left:hover {
+  transform: scale(1.13) !important;
+  transition: all .5s;
+  box-shadow: rgba(255, 255, 255, 0.55) !important;
+}
+.ltr .triangle-control-com-left:hover :first-child {
+  transform: scale(1.1) translate(-10px, -5px) !important;
+  box-shadow: rgba(255, 255, 255, 0.55) !important;
+}
+
+.ltr .triangle-control-com-left:hover :nth-child(2) {
+  transform: scale(1.05) !important;
+  box-shadow: rgba(255, 255, 255, 0.55);
+}
+
+
+
+
 
 .ltr .About .about-us .left .prod_title .map_text .triangle_control {
   left: 53% !important;
@@ -191,16 +220,18 @@
     margin-top: 79%;
   }
   .ltr .triangle-control-com-left :nth-child(1) {
-    left: 5rem !important;
+    left: 7rem !important;
+    top:1rem;
   }
   .ltr .paragraph {
     margin-right: 0% !important;
-}
-.ltr .description2 {
-  margin-left: 2% !important;
-}
-  .ltr .triangle-control-com-left :nth-child(2) {
-    left: 3rem;
+  }
+  .ltr .description2 {
+    margin-left: 2% !important;
+  }
+  .ltr .left .triangle-control-com-left :nth-child(2) {
+    left: 5rem !important ;
+    top:1rem;
   }
 
   .ltr .About .about-us .right .prod_title .map_text .triangle_control {
@@ -211,7 +242,7 @@
   }
   .ltr .About .about-us .left .prod_title .map_text .triangle_control {
     left: 67% !important;
-}
+  }
   .ltr .About .aboutleft .left .prod_title .map_text .triangle_control {
     left: 110% !important;
   }

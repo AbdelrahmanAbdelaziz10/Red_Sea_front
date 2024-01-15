@@ -1,6 +1,8 @@
+
+
 import "./Navbar.css";
 
-import React, { useContext, useState, useTransition } from "react";
+import React, { useContext, useEffect, useState, useTransition } from "react";
 
 import { CgMenuLeft } from "react-icons/cg";
 import { ContextLang } from "../../App";
@@ -16,23 +18,46 @@ import useFetch from "../../hooks/useFeatch";
 import { useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-export const NavBar = () => {
+export const NavBar = ({navshow}) => {
   const [shownav, setShownav] = useState(false);
+  const [scrolling, setScrolling] = useState(false);
   const { t, i18n } = useTranslation();
   const { selectedLanguage, setSelectedLanguage } = useContext(ContextLang);
   const location = useLocation();
-  const { data: sub } = useFetch(`/api/v1/sub-categories`);
-  const { data: product } = useFetch(`/api/v1/products`);
+  const { data: sub } = useFetch("/api/v1/sub-categories");
+  const { data: product } = useFetch("/api/v1/products");
 
   const handleChangeLanguage = (language) => {
     setSelectedLanguage(language);
     i18n.changeLanguage(language);
   };
+console.log(navshow)
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      setScrolling(true);
+    } else {
+      setScrolling(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <>
       {shownav && (
         <div className="fixed">
+          <div
+            className="fixed_overlay"
+            onClick={() => {
+              setShownav(false);
+            }}
+          />
           <IoCloseSharp
             className="exit_icon"
             onClick={() => {
@@ -108,7 +133,7 @@ export const NavBar = () => {
                                         to={`/products/${pro.id}`}
                                         activeclassName="active"
                                       >
-                                        {selectedLanguage == "ar"
+                                        {selectedLanguage === "ar"
                                           ? pro.name_ar
                                           : pro.name_en}
                                       </Link>
@@ -180,7 +205,13 @@ export const NavBar = () => {
           </li>
         </ul>
       </Row>
-      <nav className="navbar navbar-expand-lg  mx-lg-5 justify-content-between">
+      <nav
+        className={navshow === "true"? `navbar navbar-expand-lg  mx-lg-5 justify-content-between ${
+          scrolling ? "scrolled_navbar" : ""
+        }`:`navbar opacity_0 navbar-expand-lg  mx-lg-5 justify-content-between ${
+          scrolling ? "scrolled_navbar" : ""
+        }`}
+      >
         <button
           className="navbar-toggler menu"
           type="button"
@@ -247,23 +278,23 @@ export const NavBar = () => {
                       return (
                         <li className="dropmenu drop_title">
                           <p>
-                            {selectedLanguage == "ar"
+                            {selectedLanguage === "ar"
                               ? sub.name_ar
-                              : Product.name_en}
+                              : sub.name_en}
                           </p>
                           {product &&
                             product.map((pro) => {
                               return (
                                 <>
-                                  {sub.name_ar == pro.sub_category_name_ar ? (
+                                  {sub.name_ar === pro.sub_category_name_ar ? (
                                     <Link
                                       className="dropdown-item product_title"
                                       to={`/products/${pro.id}`}
                                       activeclassName="active"
                                     >
-                                      {selectedLanguage == "ar"
+                                      {selectedLanguage === "ar"
                                         ? pro.name_ar
-                                        : pro.name_eny}
+                                        : pro.name_en}
                                     </Link>
                                   ) : null}
                                 </>

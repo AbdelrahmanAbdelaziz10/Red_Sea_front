@@ -19,16 +19,17 @@
   font-weight: 300;
   font-family: myfont;
 }
-.description2 {
-  margin-right: -15%;
+.rtl .description2 {
+  margin-right: -10% !important;
+  margin-top: 6% !important;
 }
 .description2 span {
   font-weight: bold;
 }
-.rtl .list p{
+.rtl .list p {
   text-align: right !important;
 }
-.ltr .list p{
+.ltr .list p {
   text-align: left !important ;
 }
 .about p {
@@ -38,13 +39,14 @@
   font-size: 16px;
   opacity: 0.9;
 }
-.about_text .paragraph{
+.about_text .paragraph {
   color: var(--gray);
+  font-size: 15px;
 }
-.rtl .about_text .paragraph{
+.rtl .about_text .paragraph {
   text-align: right;
 }
-.ltr .about_text .paragraph{
+.ltr .about_text .paragraph {
   text-align: left;
 }
 .about .paragraph-header {
@@ -68,8 +70,42 @@
 .description2 .list,
 .description2 .list p {
   color: #635d5d;
-  font-weight: 400;
+  font-size: 15px !important;
 }
+
+.ltr .triangle-control-com {
+  left: 0 !important;
+}
+
+.triangle-control-com {
+  transition: 0.5s;
+}
+
+.rtl .about .triangle-control-com:hover :first-child {
+  transform: scale(1.1) translate(-10px, -5px) !important;
+  box-shadow: rgba(255, 255, 255, 0.55) !important;
+}
+
+.rtl .about .triangle-control-com:hover :nth-child(2) {
+  transform: scale(1.05) !important;
+  box-shadow: rgba(255, 255, 255, 0.55);
+}
+.ltr .triangle-control-com:hover {
+  transform: scale(1.13) !important;
+  transition: all .5s;
+  box-shadow: rgba(255, 255, 255, 0.55) !important;
+}
+
+/* .ltr .right .triangle-control-com:hover :first-child { */
+  /* transform: rotateY(0deg) scale(1.1) translate(10px, 5px) !important; */
+  /* box-shadow: rgba(255, 255, 255, 0.55) !important; */
+/* } */
+/*  */
+/* .ltr .right .triangle-control-com:hover :nth-child(2) { */
+  /* transform: rotateY(0deg) scale(1.05) !important; */
+  /* box-shadow: rgba(255, 255, 255, 0.55); */
+/* }  */
+
 @media (max-width: 768px) {
   /* For tablets: */
   .about_text {
@@ -106,10 +142,10 @@
     top: 0;
   }
   .ltr .triangle-control-com :first-child {
-    left: 5rem;
+    left: 10rem;
   }
   .ltr .triangle-control-com :last-child {
-    left: 7rem;
+    left: 11.7rem;
   }
 }
 
@@ -119,10 +155,10 @@
     text-align: center;
   }
   .ltr .triangle-control-com :first-child {
-    left: -1rem;
+    left: 3rem;
   }
   .ltr .triangle-control-com :last-child {
-    left: 1rem;
+    left: 4.9rem;
   }
 
   .about-page-triangle.triangle_control {
@@ -162,12 +198,12 @@
   left: 56% !important;
 }
 .rtl .triangle-control-com :nth-child(1) {
-  top: -4rem !important;
+  top: -7rem !important;
 }
 .rtl .triangle-control-com :nth-child(2) {
-  top: -4rem !important;
+  top: -7rem !important;
 }
-/*  */
+
 
 .rtl .description2 {
   margin-right: -15%;
@@ -180,8 +216,9 @@
   margin-left: 95% !important;
   width: 40%;
 }
-.description2 span {
+.description2 .span_head {
   font-weight: bold;
+  color: var(--gray);
 }
 .about p {
   text-align: right;
@@ -195,10 +232,6 @@
   opacity: 1 !important;
 }
 
-.description2 .list {
-  color: #635d5d;
-  font-weight: 400;
-}
 .ltr .about_text {
   margin-left: 13%;
   margin-right: 0 !important;
@@ -215,13 +248,13 @@
   }
   .rtl .description2 {
     margin-right: -5%;
-}
-.rtl .m-right .triangle-control-com-left :first-child{
-  top:3rem;
-}
-.rtl .m-right .triangle-control-com-left :last-child{
-  top:3rem;
-}
+  }
+  .rtl .m-right .triangle-control-com-left :first-child {
+    top: 3rem;
+  }
+  .rtl .m-right .triangle-control-com-left :last-child {
+    top: 3rem;
+  }
   .ltr .about_text {
     margin-left: 0%;
     margin-right: 0 !important;
@@ -229,22 +262,22 @@
   .ltr .about_text .paragraph {
     text-align: left;
     padding-left: 5% !important;
-}
+  }
   .ltr .description2 {
     margin-left: -5%;
-}
+  }
   .ltr .triangle-control-com {
     position: relative;
     left: 6rem;
-}
-.ltr .left .triangle-control-com-left {
-  position: absolute;
-  right: 30rem !important;
-}
-.rtl .triangle-control-com {
-  right: 15rem !important;
-  top: .5rem;
-}
+  }
+  .ltr .left .triangle-control-com-left {
+    position: absolute;
+    right: 30rem !important;
+  }
+  .rtl .triangle-control-com {
+    right: 15rem !important;
+    top: 0.5rem;
+  }
   .about_text {
     text-align: center;
   }
@@ -259,22 +292,36 @@
   .about_text {
     margin-top: 79%;
   }
+  .rtl .right .description2{
+    margin-right: 2% !important;
+  }
+  .ltr .right .description2{
+    margin-left: 2% !important;
+  }
   .triangle-control-com {
     top: -7rem;
     right: 3rem;
   }
-  .rtl .triangle-control-com :nth-child(1){
-    right: -10rem !important;
+  .rtl .triangle-control-com :nth-child(1) {
+    right: -11rem !important;
   }
-  .rtl .triangle-control-com :nth-child(2){
-    right: -8rem !important;
+  .rtl .triangle-control-com :nth-child(2) {
+    right: -9rem !important;
   }
-  .rtl .triangle-control-com-left :nth-child(1){
+  .rtl .triangle-control-com-left :nth-child(1) {
     left: 5rem !important;
-    top:0rem !important;
+    top: -2.5rem !important;
   }
-  .rtl .triangle-control-com-left :nth-child(2){
+  .rtl .triangle-control-com-left :nth-child(2) {
     left: 7rem !important;
-    top:0rem !important;
+    top: -2.5rem !important;
+  }
+  .rtl .aboutleft .triangle-control-com-left :nth-child(1) {
+    left: 5rem !important;
+    top: 6rem !important;
+  }
+  .rtl .aboutleft .triangle-control-com-left :nth-child(2) {
+    left: 7rem !important;
+    top: 6rem !important;
   }
 }

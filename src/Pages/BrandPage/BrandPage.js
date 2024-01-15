@@ -9,7 +9,7 @@ import Products from "../../Components/Products/Products";
 import contactPoster from "../../images/company 5.jpg";
 import { useTranslation } from "react-i18next";
 
-const BrandPage = () => {
+const BrandPage = ({navshow}) => {
   const { t, i18n } = useTranslation();
   const { selectedLanguage } = useContext(ContextLang);
   useEffect(()=>{
@@ -18,13 +18,17 @@ const BrandPage = () => {
 
   return (
     <div className="Product_page">
-      <Head title={t("brand_title")} poster={contactPoster} />
+      <Head title={t("brand_title")} poster={contactPoster} navshow={navshow}/>
       <Container className="brands">
         <AllBrand selectedLanguage={selectedLanguage} />
       </Container>
       <div className="brandpage_product m-right mt-3">
         <Products title={t("brand_product_title")} />
       </div>
+      <div className="triangle_control">
+              <div className="triangle" />
+            </div>
+            <Footer />
     </div>
   );
 };

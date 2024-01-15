@@ -3,20 +3,43 @@
   padding: 0;
   box-sizing: border-box;
 }
-.App{
+.App {
   overflow: hidden;
   width: 100%;
   height: 100%;
   font-family: myfont;
-
 }
-.App .loading{
+.App .loading {
   margin-top: 16rem;
   flex-direction: column;
   align-items: center;
 }
-.App .loading .loading_logo{
+.App .loading .loading_logo {
   width: 10vw;
+}
+.App .loading img {
+  animation-name: bouncing;
+  animation-duration: 1s;
+}
+@keyframes bouncing {
+  0% {
+    transform: scale(0.1);
+  }
+  20% {
+    transform: scale(0.8);
+  }
+  40% {
+    transform: scale(1.5);
+  }
+  60% {
+    transform: scale(0.1);
+  }
+  80% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 :root {
   --main: #0b057a;
@@ -72,7 +95,7 @@ a,
 Link {
   cursor: pointer !important;
 }
-p{
+p {
   font-size: 17px;
   font-weight: 500 !important;
 }
@@ -86,7 +109,7 @@ ul {
 .map_text h4,
 .map_text h5 {
   position: relative;
-  z-index: 111111;
+  z-index: 111;
 }
 
 .contact_container {
@@ -142,7 +165,10 @@ ul {
 .triangle {
   position: absolute;
   background-color: var(--heavenly);
+  cursor: pointer;
+  transition: 0.5s;
 }
+
 .triangle:before,
 .triangle:after {
   content: "";
@@ -155,7 +181,7 @@ ul {
   width: 12em;
   height: 12em;
   border-top-right-radius: 40%;
-  z-index: 11111;
+  z-index: 11;
 }
 
 .rtl .triangle {
@@ -172,19 +198,24 @@ ul {
   transform: rotate(135deg) skewY(-45deg) scale(0.707, 1.414) translate(50%);
 }
 
+.triangle:hover {
+  transform: rotate(-90deg) skewX(-30deg) scale(1, 0.866) scale(1.05);
+}
+
 .header_hover {
   background-color: #0b057a7e;
   width: 100%;
   height: 100%;
   position: absolute;
   top: 0;
+  left: 0;
   z-index: 11;
 }
 .ma-right .prod_title .triangle_control {
-  right: 60% !important;
+  right: 60%;
 }
 .ma-right .prod_title.m-right .triangle_control {
-  right: 62% !important;
+  right: 62%;
 }
 .m-small .prod_title.m-right .triangle_control {
   right: 56% !important;
@@ -206,10 +237,10 @@ ul {
   :root {
     font-size: 14px;
   }
-  
-.App .loading{
-  margin-top: 30rem;
-}
+
+  .App .loading {
+    margin-top: 30rem;
+  }
   .triangle,
   .triangle:before,
   .triangle:after {
@@ -219,21 +250,20 @@ ul {
   .triangle_control {
     bottom: 7rem;
   }
-  .App .loading_logo{
-    width: 20vw !important; 
+  .App .loading_logo {
+    width: 20vw !important;
   }
-  
 }
 
 @media (max-width: 425px) {
   :root {
     font-size: 13px;
   }
-  .App .loading{
+  .App .loading {
     margin-top: 17rem;
   }
-  .App .loading_logo{
-    width: 20vw !important; 
+  .App .loading_logo {
+    width: 20vw !important;
   }
   .rtl .triangle,
   .rtl .triangle:before,
