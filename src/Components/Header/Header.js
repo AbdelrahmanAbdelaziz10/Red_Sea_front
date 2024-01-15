@@ -85,7 +85,7 @@ const Header = ({ toggleDirection, navshow }) => {
           slider.map((slide, idx) => {
             return (
               <SwiperSlide className="slide">
-                {slide?. slider!== null ? (
+                {slide?.slider!== null ? (
                   <img
                     src={`https://beautyproducts.website/${slide?.slider}`}
                     alt=""
