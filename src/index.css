@@ -232,7 +232,27 @@ ul {
 .m-right .prod_title .triangle_control {
   right: 56% !important;
 }
+@media (min-width: 577px) and (max-width: 992px) {
+  :root {
+    font-size: 14px;
+  }
 
+  .App .loading {
+    margin-top: 30rem;
+  }
+  .triangle,
+  .triangle:before,
+  .triangle:after {
+    width: 9em;
+    height: 9em;
+  }
+  .triangle_control {
+    bottom: 7rem;
+  }
+  .App .loading_logo {
+    width: 20vw !important;
+  }
+}
 @media (max-width: 768px) {
   :root {
     font-size: 14px;

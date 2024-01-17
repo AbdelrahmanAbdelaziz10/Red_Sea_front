@@ -77,6 +77,14 @@
   .rtl .details .page_product .prod_title .map_text .triangle_control{
     right:58% !important;
   }
+  @media (min-width: 577px) and (max-width: 992px) {
+    .ltr .Product_page .brandpage_product .product .prod_title .map_text .triangle_control{
+        left: 62% !important;
+      }
+      .ltr .details .page_product .prod_title .map_text .triangle_control{
+        left:58% !important;
+      }
+  }
   @media (max-width: 768px) {
     .ltr .Product_page .brandpage_product .product .prod_title .map_text .triangle_control{
         left: 62% !important;

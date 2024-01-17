@@ -67,7 +67,32 @@
 .ltr .brands .ml_right .map_text .triangle_control {
   left: 50% !important;
 }
+@media (min-width: 577px) and (max-width: 992px){
+  /* For tablets: */
+  .product {
+    top: -5rem !important;
+    border-radius: 8px;
+    background-color: var(--white);
+    color: var(--gray);
+  }
+  .flex_col .brand_card {
+    min-height: 12vh !important;
+    min-width: 20vw;
+  }
 
+  .rtl .ml_right .map_text .triangle_control {
+    right: 56% !important;
+  }
+  .ltr .ml_right .triangle_control {
+    left: 2% !important;
+  }
+  .brand_card {
+    width: 100% !important;
+  }
+  .ltr .brands .ml_right .map_text .triangle_control {
+    left: 50% !important;
+  }
+}
 @media (max-width: 768px) {
   /* For tablets: */
   .product {

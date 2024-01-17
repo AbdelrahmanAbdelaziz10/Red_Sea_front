@@ -177,6 +177,25 @@
   font-size: 0.9rem;
   padding-left: 1rem;
 }
+@media (min-width: 577px) and (max-width: 992px){
+  /* For tablets: */
+  .arrow .triangle1 {
+    margin-top: 0.3rem !important;
+  }
+  .product_container .product .product_row .card .img {
+    min-width: 10vw !important;
+    min-height: 24vh !important;
+  }
+  .product_card {
+    margin-top: 5% !important;
+    min-width: 90% !important;
+    height: 35vh !important;
+    border: none !important;
+    border-radius: 9px !important;
+    box-shadow: 1px 1px 10px var(--gray);
+  }
+}
+
 
 @media (max-width: 768px) {
   /* For tablets: */

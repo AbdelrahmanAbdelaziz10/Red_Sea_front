@@ -96,93 +96,6 @@
   box-shadow: rgba(255, 255, 255, 0.55) !important;
 }
 
-/* .ltr .right .triangle-control-com:hover :first-child { */
-  /* transform: rotateY(0deg) scale(1.1) translate(10px, 5px) !important; */
-  /* box-shadow: rgba(255, 255, 255, 0.55) !important; */
-/* } */
-/*  */
-/* .ltr .right .triangle-control-com:hover :nth-child(2) { */
-  /* transform: rotateY(0deg) scale(1.05) !important; */
-  /* box-shadow: rgba(255, 255, 255, 0.55); */
-/* }  */
-
-@media (max-width: 768px) {
-  /* For tablets: */
-  .about_text {
-    text-align: center;
-  }
-
-  .about-page-triangle.triangle_control {
-    top: 10.5rem !important;
-    right: 20rem !important;
-  }
-  .about-page-triangle.triangle_control .triangle,
-  .about-page-triangle.triangle_control .triangle::before,
-  .about-page-triangle.triangle_control .triangle::after {
-    width: 13em;
-    height: 13em;
-    border: 2px 0px 1px 0;
-  }
-
-  .about-page-triangle-bg.about-page-triangle.triangle_control {
-    right: 21.5rem !important;
-    top: 12rem !important;
-  }
-
-  .about_text {
-    margin-top: 52%;
-  }
-
-  .triangle-control-com {
-    top: -8rem;
-    right: 2rem;
-  }
-
-  .ltr .triangle-control-com {
-    top: 0;
-  }
-  .ltr .triangle-control-com :first-child {
-    left: 10rem;
-  }
-  .ltr .triangle-control-com :last-child {
-    left: 11.7rem;
-  }
-}
-
-@media (max-width: 425px) {
-  /* For mobile phones: */
-  .about_text {
-    text-align: center;
-  }
-  .ltr .triangle-control-com :first-child {
-    left: 3rem;
-  }
-  .ltr .triangle-control-com :last-child {
-    left: 4.9rem;
-  }
-
-  .about-page-triangle.triangle_control {
-    top: 10.5rem !important;
-    right: 11rem !important;
-  }
-  .about-page-triangle.triangle_control .triangle,
-  .about-page-triangle.triangle_control .triangle::before,
-  .about-page-triangle.triangle_control .triangle::after {
-    width: 13em;
-    height: 13em;
-    border: 2px 0px 1px 0;
-  }
-
-  .about-page-triangle-bg.about-page-triangle.triangle_control {
-    right: 12.4rem !important;
-    top: 12.5rem !important;
-  }
-
-  .about_text {
-    margin-top: 79%;
-  }
-}
-
 .triangle-control-com {
   position: relative;
   left: 2rem;
@@ -239,7 +152,169 @@
 .ltr .paragraph {
   margin-right: 2% !important;
 }
+/* .ltr .right .triangle-control-com:hover :first-child { */
+  /* transform: rotateY(0deg) scale(1.1) translate(10px, 5px) !important; */
+  /* box-shadow: rgba(255, 255, 255, 0.55) !important; */
+/* } */
+/*  */
+/* .ltr .right .triangle-control-com:hover :nth-child(2) { */
+  /* transform: rotateY(0deg) scale(1.05) !important; */
+  /* box-shadow: rgba(255, 255, 255, 0.55); */
+/* }  */
+@media (min-width: 577px) and (max-width: 992px) {
+  /* For tablets: */
+  .about_text {
+    text-align: center;
+  }
+
+  .about-page-triangle.triangle_control {
+    top: 10.5rem !important;
+    right: 20rem !important;
+  }
+  .about-page-triangle.triangle_control .triangle,
+  .about-page-triangle.triangle_control .triangle::before,
+  .about-page-triangle.triangle_control .triangle::after {
+    width: 13em;
+    height: 13em;
+    border: 2px 0px 1px 0;
+  }
+
+  .about-page-triangle-bg.about-page-triangle.triangle_control {
+    right: 21.5rem !important;
+    top: 12rem !important;
+  }
+
+  .about_text {
+    margin-top: 52%;
+  }
+
+  .triangle-control-com {
+    top: -8rem;
+    right: 2rem;
+  }
+
+  .ltr .triangle-control-com {
+    top: -1rem;
+  }
+  .ltr .triangle-control-com :first-child {
+    left: 10rem;
+  }
+  .ltr .triangle-control-com :last-child {
+    left: 11.7rem;
+  }
+  .rtl .triangle-control-com :nth-child(1) {
+    top: -10rem !important;
+  }
+  .rtl .triangle-control-com :nth-child(2) {
+    top: -10rem !important;
+  }
+  .rtl .m-right .triangle-control-com-left :first-child {
+    top: 7rem !important;
+}
+.rtl .m-right .triangle-control-com-left :last-child {
+  top: 7rem !important;
+}
+  .rtl .description2 {
+    margin-right: -5%;
+  }
+  .rtl .m-right .triangle-control-com-left :first-child {
+    top: 3rem;
+  }
+  .rtl .m-right .triangle-control-com-left :last-child {
+    top: 3rem;
+  }
+  .ltr .about_text {
+    margin-left: 0%;
+    margin-right: 0 !important;
+  }
+  .ltr .about_text .paragraph {
+    text-align: left;
+    padding-left: 0% !important;
+
+  }
+  .rtl .triangle-control-com-left :first-child {
+    left: 0rem !important;
+    top: 4rem;
+}
+.rtl .triangle-control-com-left :last-child {
+  top: 4rem;
+}
+  .ltr .About .about-us .left .prod_title .map_text .triangle_control {
+    left: 23rem !important;
+}
+.ltr .medals .About .about-us .left .prod_title.m-right .map_text .triangle_control {
+  left: 30rem !important;
+}
+  .ltr .About .ma-right .right .prod_title .map_text .triangle_control{
+        left: 30rem !important;
+}
+.ltr .About .aboutleft .left .prod_title .map_text .triangle_control {
+  left: 38rem !important;
+}
+  .ltr .description2 {
+    margin-left: 0%;
+  }
+  .ltr .triangle-control-com {
+    position: relative;
+    left: 6rem;
+  }
+  .ltr .left .triangle-control-com-left {
+    position: absolute;
+    right: 30rem !important;
+  }
+  .rtl .triangle-control-com {
+    right: 15rem !important;
+    top: 0.5rem;
+  }
+  .about_text {
+    text-align: center;
+  }
+  .about_text {
+    margin-top: 52%;
+  }
+}
+
 @media (max-width: 768px) {
+  /* For tablets: */
+  .about_text {
+    text-align: center;
+  }
+
+  .about-page-triangle.triangle_control {
+    top: 10.5rem !important;
+    right: 20rem !important;
+  }
+  .about-page-triangle.triangle_control .triangle,
+  .about-page-triangle.triangle_control .triangle::before,
+  .about-page-triangle.triangle_control .triangle::after {
+    width: 13em;
+    height: 13em;
+    border: 2px 0px 1px 0;
+  }
+
+  .about-page-triangle-bg.about-page-triangle.triangle_control {
+    right: 21.5rem !important;
+    top: 12rem !important;
+  }
+
+  .about_text {
+    margin-top: 52%;
+  }
+
+  .triangle-control-com {
+    top: -8rem;
+    right: 2rem;
+  }
+
+  .ltr .triangle-control-com {
+    top: 0;
+  }
+  .ltr .triangle-control-com :first-child {
+    left: 10rem;
+  }
+  .ltr .triangle-control-com :last-child {
+    left: 11.7rem;
+  }
   .rtl .triangle-control-com :nth-child(1) {
     top: -9rem !important;
   }
@@ -285,10 +360,85 @@
     margin-top: 52%;
   }
 }
-@media (max-width: 425px) {
+@media (max-width: 576px) {
+  /* Styles for small devices */
   .about_text {
     text-align: center;
   }
+  .about_text {
+    margin-top: 79%;
+  }
+  .rtl .right .description2{
+    margin-right: 2% !important;
+  }
+  .ltr .right .description2{
+    margin-left: 2% !important;
+  }
+  .rtl .m-right .triangle_control {
+    right: 56% !important;
+}
+.rtl .ma-right .prod_title.m-right .triangle_control {
+  right: 73% !important;
+}
+  .triangle-control-com {
+    top: -7rem;
+    right: 3rem;
+  }
+  .rtl .triangle-control-com :nth-child(1) {
+    right: -11rem !important;
+  }
+  .rtl .triangle-control-com :nth-child(2) {
+    right: -9rem !important;
+  }
+  .rtl .triangle-control-com-left :nth-child(1) {
+    left: 5rem !important;
+    top: -1.8rem !important;
+  }
+  .rtl .triangle-control-com-left :nth-child(2) {
+    left: 7rem !important;
+    top: -1.8rem !important;
+  }
+  .rtl .aboutleft .triangle-control-com-left :nth-child(1) {
+    left: 5rem !important;
+    top: 6rem !important;
+  }
+  .rtl .aboutleft .triangle-control-com-left :nth-child(2) {
+    left: 7rem !important;
+    top: 6rem !important;
+  }
+  /* For mobile phones: */
+  .about_text {
+    text-align: center;
+  }
+  .ltr .triangle-control-com :first-child {
+    left: 3rem;
+  }
+  .ltr .triangle-control-com :last-child {
+    left: 4.9rem;
+  }
+
+  .about-page-triangle.triangle_control {
+    top: 10.5rem !important;
+    right: 11rem !important;
+  }
+  .about-page-triangle.triangle_control .triangle,
+  .about-page-triangle.triangle_control .triangle::before,
+  .about-page-triangle.triangle_control .triangle::after {
+    width: 13em;
+    height: 13em;
+    border: 2px 0px 1px 0;
+  }
+
+  .about-page-triangle-bg.about-page-triangle.triangle_control {
+    right: 12.4rem !important;
+    top: 12.5rem !important;
+  }
+
+  .about_text {
+    margin-top: 79%;
+  }
+}
+@media (max-width: 425px) {
   .about_text {
     margin-top: 79%;
   }
@@ -323,5 +473,36 @@
   .rtl .aboutleft .triangle-control-com-left :nth-child(2) {
     left: 7rem !important;
     top: 6rem !important;
+  }
+  /* For mobile phones: */
+  .about_text {
+    text-align: center;
+  }
+  .ltr .triangle-control-com :first-child {
+    left: 3rem;
+  }
+  .ltr .triangle-control-com :last-child {
+    left: 4.9rem;
+  }
+
+  .about-page-triangle.triangle_control {
+    top: 10.5rem !important;
+    right: 11rem !important;
+  }
+  .about-page-triangle.triangle_control .triangle,
+  .about-page-triangle.triangle_control .triangle::before,
+  .about-page-triangle.triangle_control .triangle::after {
+    width: 13em;
+    height: 13em;
+    border: 2px 0px 1px 0;
+  }
+
+  .about-page-triangle-bg.about-page-triangle.triangle_control {
+    right: 12.4rem !important;
+    top: 12.5rem !important;
+  }
+
+  .about_text {
+    margin-top: 79%;
   }
 }

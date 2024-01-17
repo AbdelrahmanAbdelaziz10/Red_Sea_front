@@ -8,6 +8,18 @@
     right: 4.5em !important;
 }
 
+@media (min-width: 577px) and (max-width: 992px) {
+    /* For mobile Tablet: */
+    .aboutleft.m-right .map_text .triangle{
+        right: 6em !important;
+    }
+    
+    .medals.m-right .map_text .triangle{
+        right: 1.6em !important;
+
+    }
+}
+
 @media (max-width: 768px) {
     /* For mobile Tablet: */
     .aboutleft.m-right .map_text .triangle{

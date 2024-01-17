@@ -57,7 +57,18 @@
   border: none;
   border-radius: 0;
 }
-
+.ltr .dropdown .dropdown_arrow{
+  color: var(--heavenly);
+  font-size: 1.3rem;
+  margin-top: 13%;
+  margin-left: -7%;
+}
+.rtl .dropdown .dropdown_arrow{
+  color: var(--heavenly);
+  font-size: 1.3rem;
+  margin-top: 15%;
+  margin-right: -7%;
+}
 /* ==== brand Dropdown ====*/
 .dropdown_brand {
   background-color: #ffffff;
@@ -156,7 +167,9 @@
   top: 10px !important;
   z-index: 100000;
 }
-
+.drop_title .parg{
+  color: var(--main) !important;
+}
 .navbar ul li:not(:last-of-type) {
   padding-right: 20px;
 }
@@ -227,6 +240,197 @@
 .opacity_0{
   display: none !important;
 }
+@media (min-width: 577px) and (max-width: 992px) {
+  .fixed {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(40, 40, 48, 0.623);
+    z-index: 1222222222222;
+  }
+  .fixed .fixed_overlay {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(40, 40, 48, 0.623);
+    z-index: -1;
+  }
+  .fixed .list_container {
+    background-color: #fff;
+    width: 60%;
+    padding-top: 2%;
+    scroll-behavior: smooth;
+  }
+  .fixed .list_container .list_title {
+    background-color: var(--main);
+    text-align: center;
+    color: #fff;
+    padding: 2% 0;
+    border-radius: 6px;
+    margin: 0% 3%;
+  }
+  .fixed .exit_icon {
+    font-size: 3rem;
+    color: #000;
+    position: fixed;
+    top: 2rem;
+  }
+  .rtl .fixed .exit_icon {
+    left: 2rem !important;
+  }
+  .ltr .fixed .exit_icon {
+    right: 2rem !important;
+  }
+  .fixed .exit_icon:hover {
+    color: rgb(116, 8, 8);
+    transition: all 0.5s;
+    transform: rotate(180deg);
+  }
+  .fixed .model {
+    background-color: var(--main);
+    height: 100vh !important;
+  }
+  .fixed .model:first-child {
+    margin-top: 5% !important;
+  }
+  .fixed .model .list_title {
+    background-color: #fff;
+    color: var(--main);
+    padding: 5% 0;
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .rtl .fixed ul.model li {
+    border-bottom: 1px solid #fff;
+    padding-right: 4%;
+  }
+  .ltr .fixed ul.model li {
+    border-bottom: 1px solid #fff;
+    padding-left: 4%;
+  }
+  .fixed ul.model li .nav-link.nav-link.active {
+    color: var(--heavenly) !important;
+  }
+
+  .fixed ul.model li .nav-link,
+  .accordion-header button {
+    font-size: 1.5rem !important;
+    margin: 4% 0;
+    color: #fff !important;
+  }
+  .fixed ul.model li .nav-link:hover {
+    color: var(--heavenly);
+    padding-right: 4%;
+    transition: all 0.5s;
+  }
+  .fixed .model .product_title {
+    color: #fff !important;
+  }
+  .fixed .collapsed {
+    background-color: var(--main) !important;
+    color: #fff !important;
+  }
+  .fixed .collapsed {
+    border-bottom: 1px solid #fff;
+    margin-top: 0;
+  }
+  .fixed .collapsed:focus {
+    border: none !important;
+  }
+  .fixed .accordion-collapse li p {
+    font-size: 20px !important;
+    color: var(--main) !important;
+    padding: 2% 0;
+    border-bottom: 1px solid #4d4d4dbb;
+  }
+  .fixed .accordion-collapse li .product_title {
+    color: #4d4d4d !important;
+    font-size: 18px;
+    border-bottom: 1px solid #4d4d4dbb;
+    padding: 2% 0;
+  }
+  .fixed .accordion-collapse li .product_title:hover {
+    color: var(--heavenly) !important;
+    padding-right: 4%;
+  }
+
+  .ltr .contact {
+    margin-right: 2rem;
+  }
+  .ltr .btn {
+    width: 10vh !important;
+  }
+  nav.navbar {
+    padding: 0;
+    position: relative;
+    margin-left: 5rem !important;
+    margin-right: 4rem !important;
+    width: 87%;
+  }
+  .ltr .navbar-nav {
+    display: flex !important;
+    flex-direction: column !important;
+    direction: ltr;
+    margin-top: 2% !important;
+  }
+  .ltr .navbar-nav li {
+    margin-left: 3% !important;
+  }
+
+  nav.navbar .navbar-collapse {
+    position: absolute;
+    right: 0px;
+    top: 100%;
+  }
+  .navbar .collapse {
+    background-color: #f4f5f948 !important;
+  }
+  .rtl .contact_list {
+    margin-right: 6% !important;
+  }
+  .ltr .contact_list {
+    margin-right: 1% !important;
+    right: 0;
+  }
+  .navbar .navbar-brand {
+    max-width: 10vw;
+  }
+  .navbar .navbar-toggler {
+    color: #fff !important;
+  }
+  .navbar .logo_nav {
+    width: 13vw;
+    margin-top: -5em;
+  }
+  .navbar .navbar-brand {
+    position: relative;
+    top: 35px !important;
+    left: -12px !important;
+  }
+  .navbar.scrolled_navbar {
+    width: 87%;
+    top: 1.3rem;
+    right: -1rem;
+  }
+  .accordion-button:not(.collapsed)::after ,
+  .collapsed::after {
+    display: none !important;
+}
+.collapsed .dropdown_arrow{
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-top: 1%;
+}
+.accordion-button  {
+  color: var(--main) !important;
+  font-size: 1.5rem !important;
+}
+}
+
+
 @media (max-width: 768px) {
   .fixed {
     display: block;
@@ -401,9 +605,41 @@
     top: 1.3rem;
     right: -1rem;
   }
+  .accordion-button:not(.collapsed)::after ,
+  .collapsed::after {
+    display: none !important;
+}
+.collapsed .dropdown_arrow{
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-top: 1%;
+}
+.accordion-button  {
+  color: var(--main) !important;
+  font-size: 1.5rem !important;
+}
 }
 
+@media (max-width: 576px) {
+  .ltr .contact {
+    margin-right: -1rem !important;
+}
+}
 @media screen and (max-width: 481px) {
+  .rtl .accordion-button  {
+    font-size: 1.2rem !important;
+    padding-right: .9rem !important;
+  }
+  .ltr .accordion-button  {
+    font-size: 1.2rem !important;
+    padding-left: .9rem !important;
+  }
+  .navbar .logo_nav {
+    width: 17vw !important;
+    margin-top: -4.8em !important; 
+    left: 3rem !important;
+}
   .ltr .fixed .list_container .list_title h3 {
     font-size: 17px;
   }
@@ -411,7 +647,7 @@
     padding: 0;
     position: relative;
     margin-left: 3rem !important;
-    margin-right: 2rem !important;
+    margin-right: 1.5rem !important;
   }
   nav.navbar .navbar-collapse {
     position: absolute;
@@ -458,6 +694,8 @@
   .navbar.scrolled_navbar {
     width: 89%;
     top: 1rem;
+    margin-right: 2rem !important;
+
   }
   .fixed .accordion-collapse li p {
     font-size: 15px !important;
@@ -470,4 +708,10 @@
   .accordion-header button {
     font-size: 1.2rem !important;
   }
+
+}
+@media (max-width: 380px){
+  .navbar .logo_nav {
+    margin-top: -4.6em !important;
+}
 }

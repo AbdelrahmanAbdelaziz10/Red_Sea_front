@@ -1,9 +1,5 @@
-
-
 import "./Navbar.css";
-
 import React, { useContext, useEffect, useState, useTransition } from "react";
-
 import { CgMenuLeft } from "react-icons/cg";
 import { ContextLang } from "../../App";
 import { IoCall } from "react-icons/io5";
@@ -17,8 +13,9 @@ import logo from "../../images/redsea logo.png";
 import useFetch from "../../hooks/useFeatch";
 import { useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { IoIosArrowDown } from "react-icons/io";
 
-export const NavBar = ({navshow}) => {
+export const NavBar = ({ navshow }) => {
   const [shownav, setShownav] = useState(false);
   const [scrolling, setScrolling] = useState(false);
   const { t, i18n } = useTranslation();
@@ -31,7 +28,7 @@ export const NavBar = ({navshow}) => {
     setSelectedLanguage(language);
     i18n.changeLanguage(language);
   };
-// console.log(navshow)
+  // console.log(navshow)
   const handleScroll = () => {
     if (window.scrollY > 50) {
       setScrolling(true);
@@ -97,23 +94,36 @@ export const NavBar = ({navshow}) => {
                 id="accordionFlushExample"
               >
                 <div className="accordion-item ">
-                  <Link className="accordion-header  ">
                     <button
-                      className="accordion-button collapsed "
+                      className="accordion-button collapsed"
                       type="button"
                       data-bs-toggle="collapse"
                       data-bs-target="#flush-collapseOne"
                       aria-expanded="false"
                       aria-controls="flush-collapseOne"
                     >
+
                       {t("product")}
+                      {selectedLanguage !== " " ? (
+                        <IoIosArrowDown className="dropdown_arrow" />
+                      ) : null}
                     </button>
-                  </Link>
                   <div
                     id="flush-collapseOne"
                     class="accordion-collapse collapse"
                     data-bs-parent="#accordionFlushExample"
                   >
+                    <li className="dropmenu drop_title">
+                      <p>
+                        <Link
+                          className="dropdown-item parg"
+                          to="/products"
+                          activeclassName="active"
+                        >
+                          {t("allproduct")}
+                        </Link>
+                      </p>
+                    </li>
                     {sub &&
                       sub.map((sub) => {
                         return (
@@ -206,11 +216,15 @@ export const NavBar = ({navshow}) => {
         </ul>
       </Row>
       <nav
-        className={navshow === "true"? `navbar navbar-expand-lg  mx-lg-5 justify-content-between ${
-          scrolling ? "scrolled_navbar" : ""
-        }`:`navbar opacity_0 navbar-expand-lg  mx-lg-5 justify-content-between ${
-          scrolling ? "scrolled_navbar" : ""
-        }`}
+        className={
+          navshow === "true"
+            ? `navbar navbar-expand-lg  mx-lg-5 justify-content-between ${
+                scrolling ? "scrolled_navbar" : ""
+              }`
+            : `navbar opacity_0 navbar-expand-lg  mx-lg-5 justify-content-between ${
+                scrolling ? "scrolled_navbar" : ""
+              }`
+        }
       >
         <button
           className="navbar-toggler menu"
@@ -248,7 +262,10 @@ export const NavBar = ({navshow}) => {
                   {t("about")}
                 </Link>
               </li>
-              <li className="nav-item dropdown">
+              <li className="nav-item dropdown d-flex justify-content-center">
+                {selectedLanguage === "en" ? (
+                  <IoIosArrowDown className="dropdown_arrow" />
+                ) : null}
                 <Link
                   activeclassName="active"
                   className={`${
@@ -261,6 +278,9 @@ export const NavBar = ({navshow}) => {
                 >
                   {t("product")}
                 </Link>
+                {selectedLanguage === "ar" ? (
+                  <IoIosArrowDown className="dropdown_arrow" />
+                ) : null}
                 <ul className="dropdown-menu px-5 dropdown_product">
                   <li className="dropmenu drop_title">
                     <p>

@@ -44,7 +44,7 @@ const Header = ({ toggleDirection, navshow }) => {
   };
 
   const videoId = getVideoId(setting && setting[0]?.video);
-  console.log(getVideoId(slider[1]?.video_url));
+  // console.log(getVideoId(slider[1]?.video_url));
 
   useEffect(() => {
     if (inView) {
@@ -62,13 +62,18 @@ const Header = ({ toggleDirection, navshow }) => {
     }
   }, [inView1]);
 
+  const swiperRef = useRef(null);
+
+  useEffect(() => {
+    swiperRef.current?.swiper.update();
+  }, [selectedLanguage]);
+
   return (
     <header className="header ">
       <NavBar navshow={navshow} />
 
-      {/* <HeaderSlider slider={slider} />  */}
-
       <Swiper
+        key={selectedLanguage}
         modules={[Autoplay, EffectFade, Navigation, Pagination]}
         slidesPerView={1}
         effect={"fade"}
@@ -79,13 +84,17 @@ const Header = ({ toggleDirection, navshow }) => {
         }}
         navigation={false}
         onSwiper={(it) => (sliderRef.current = it)}
+        onSlideChange={() => {
+          // Handle slide change, and manually start autoplay if needed
+          swiperRef.current?.swiper.autoplay.start();
+        }}
         className="mySwiper"
       >
         {slider &&
           slider.map((slide, idx) => {
             return (
-              <SwiperSlide className="slide">
-                {slide?.slider!== null ? (
+              <SwiperSlide className="slide" key={slide.id}>
+                {slide?.slider !== null ? (
                   <img
                     src={`https://beautyproducts.website/${slide?.slider}`}
                     alt=""
@@ -97,8 +106,10 @@ const Header = ({ toggleDirection, navshow }) => {
                       className="videoIframe js-videoIframe"
                       src={`https://www.youtube.com/embed/${getVideoId(
                         slide?.video_url
-                      )}?autoplay=${autoPlaySlider}&loop=1&controls=0&mute=1`}
-                      frameborder="0"
+                      )}?autoplay=${autoPlaySlider}&loop=1&controls=0&mute=1&rel=0&playlist=${getVideoId(
+                        slide?.video_url
+                      )}`}
+                      frameBorder="0"
                       allowTransparency="true"
                       allowfullscreen
                       allow="autoplay"
@@ -141,31 +152,34 @@ const Header = ({ toggleDirection, navshow }) => {
             className="video video-container d-flex justify-content-center"
             ref={ref}
           >
-            {setting[0]?.video !== undefined ? (
+            {
+              setting[0]?.video !== null ? (
+                <iframe
+                  ref={videoRef}
+                  title="youtube video"
+                  className="videoIframe js-videoIframe"
+                  src={`https://www.youtube.com/embed/${videoId}?autoplay=${autoPlay}&loop=1`}
+                  // src={https://www.youtube.com/embed/G0LFwHpNIVg?autoplay=${autoPlay}}
+                  frameborder="0"
+                  allowtransparency="true"
+                  allowFullScreen
+                  allow="autoplay"
+                ></iframe>
+              ) : null
+              /* (
               <iframe
                 ref={videoRef}
                 title="youtube video"
                 className="videoIframe js-videoIframe"
-                src={`https://www.youtube.com/embed/${videoId}?autoplay=${autoPlay}`}
-                // src={`https://www.youtube.com/embed/G0LFwHpNIVg?autoplay=${autoPlay}`}
+                // src={https://www.youtube.com/embed/${videoId}?autoplay=${autoPlay}}
+                src={https://www.youtube.com/embed/G0LFwHpNIVg?autoplay=${autoPlay}}
                 frameborder="0"
                 allowTransparency="true"
                 allowfullscreen
                 allow="autoplay"
               ></iframe>
-            ) : (
-              <iframe
-                ref={videoRef}
-                title="youtube video"
-                className="videoIframe js-videoIframe"
-                // src={`https://www.youtube.com/embed/${videoId}?autoplay=${autoPlay}`}
-                src={`https://www.youtube.com/embed/G0LFwHpNIVg?autoplay=${autoPlay}`}
-                frameborder="0"
-                allowTransparency="true"
-                allowfullscreen
-                allow="autoplay"
-              ></iframe>
-            )}
+            ) */
+            }
           </div>
         </div>
       ) : null}

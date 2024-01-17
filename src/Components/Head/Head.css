@@ -21,6 +21,25 @@
   font-size: 1rem !important;
   font-family: myfont;
 }
+@media (min-width: 577px) and (max-width: 992px)  {
+  /* For tablets: */
+  .head_img {
+    position: absolute;
+    top: -15rem !important;
+
+    overflow: hidden;
+    background-size: cover;
+    background-position: 40% !important;
+    }
+  .head {
+    height: 55vh !important;
+    overflow: hidden;
+  }
+  .head .head_text {
+    margin-top: 23rem !important;
+    font-size: 1.2rem !important;
+  }
+}
 @media (max-width: 768px) {
   /* For tablets: */
   .head_img {
@@ -38,6 +57,12 @@
   .head .head_text {
     margin-top: 23rem !important;
     font-size: 1.2rem !important;
+  }
+}
+@media (max-width: 576px) {
+  .head .head_text {
+    margin-top: 20rem !important;
+    font-size: 1.4rem !important;
   }
 }
 @media (max-width: 425px) {

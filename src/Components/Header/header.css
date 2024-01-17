@@ -1,6 +1,5 @@
 .header {
   height: 172vh;
-  background-color: var(--main);
 }
 .swiper {
   position: absolute;
@@ -122,11 +121,50 @@
 .header .swiper-wrapper {
   transition-timing-function: linear;
 }
+@media (min-width: 577px) and (max-width: 992px) {
+  .header .swiper {
+    height: 65%;
+  }
+
+  .header {
+    height: 100vh;
+    overflow: hidden;
+  }
+  .header .head_text {
+    margin-top: 35% !important;
+  }
+  .rtl .header .head_text {
+    margin-right: 5%;
+    font-size: 24px;
+  }
+  .ltr .header .head_text {
+    margin-left: 5%;
+  }
+  .header .head_text h1 {
+    font-size: 24px !important;
+  }
+
+  .header .head_text h2 {
+    font-size: 22px !important;
+  }
+
+  .header .video {
+    top: -6rem;
+    width: 100%;
+    height: 32vh;
+  }
+
+  .header .video video {
+    width: 100%;
+  }
+  .header .head_text {
+    margin-top: 17%;
+    top: 10rem;
+    margin-right: 4%;
+  }
+}
 
 @media screen and (max-width: 768px) {
-  /* .header .video {
-    display: none !important;
-  } */
   .header .swiper {
     height: 65%;
   }
@@ -201,6 +239,11 @@
 
   .header .head_text h5 {
     font-size: 15px !important;
+  }
+  .mySwiper .video_slider{
+    width: 90vh !important;
+    height: 80vh !important;
+
   }
 }
 

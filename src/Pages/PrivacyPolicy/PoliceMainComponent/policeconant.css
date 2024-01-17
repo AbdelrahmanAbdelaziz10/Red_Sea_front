@@ -180,7 +180,83 @@
     right: 50rem;
   }
 }
+@media (min-width: 577px) and (max-width: 992px){
+  .rtl .packaging .triangle-control-com :first-child {
+    right: -9rem !important;
+    top: -16rem !important;
+  }
+  .ltr .packaging .triangle-control-com :first-child {
+    left: 20rem;
+  }
 
+  .rtl .packaging .triangle-control-com :last-child {
+    right: -6.5rem;
+    top: -16rem !important;
+  }
+
+  /* For tablets: */
+  .packaging .triangle-control-com .triangle-com {
+    width: 26rem !important;
+    height: 28rem !important;
+  }
+  .ltr .packaging .triangle-control-com {
+    top: -2rem;
+    left: 17rem;
+  }
+  .ltr .packaging .triangle-control-com :last-child {
+    left: 0.7rem;
+  }
+  .ltr .packaging .triangle-control-com :first-child {
+    left: 20rem;
+  }
+  .ltr
+    .Product_page
+    .product_container.packaging
+    .prod_title
+    .map_text
+    .triangle_control {
+    left: 57% !important;
+  }
+  .rtl .packaging .triangle-control-com {
+    margin-top: 9rem;
+    margin-right: -6rem;
+  }
+  .ltr .zahra_page p {
+    width: 90%;
+    margin-top: 0% !important;
+    padding-left: 1rem !important ;
+  }
+  .ltr .Product_page .margin_right .triangle_control {
+    left: 56% !important;
+  }
+  .product {
+    overflow: hidden;
+    height: auto;
+  }
+  .margin_right .triangle_control {
+    right: 62.4% !important;
+  }
+
+  .zahra_page p {
+    width: 80%;
+  }
+  .zahra_page .product {
+    position: relative;
+    min-height: auto;
+  }
+  .product_container .m_right .triangle_control {
+    right: 57% !important;
+  }
+  .Product_page .packaging .margin_right .triangle_control {
+    left: 57% !important;
+  }
+  .rtl .Product_page .packaging .margin_right .triangle_control {
+    right: 63% !important;
+  }
+  .ltr .packaging .triangle-control-com :last-child {
+    left: 17rem;
+  }
+}
 @media (max-width: 768px) {
   .rtl .packaging .triangle-control-com :first-child {
     right: -9rem !important;

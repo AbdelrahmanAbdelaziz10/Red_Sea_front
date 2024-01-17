@@ -50,7 +50,40 @@
   right: 54% ;
   top: -1px;
 }
+@media (min-width: 577px) and (max-width: 992px) {
+  /* For tablets: */
+  .about_text {
+    text-align: center;
+    margin-top: 52%;
+  }
+  .rtl .about .triangle_control {
+    right: 56% !important;
+    top: -1px;
+  }
+  .rtl .ma-right .about .prod_title .map_text .triangle_control{
+    right: 66% !important;
+  }
+  .about-left {
+    top: -5rem !important;
+    right: 0rem !important;
+  }
+  .triangle-control-com-left {
+    top: -37rem;
+    right: calc(-50% + 13rem) !important;
+  }
 
+  .modals .triangle-control-com-left {
+    top: -47rem;
+  }
+
+  .triangle-control-com-left :nth-child(2) {
+    left: 2rem;
+  }
+
+  .ltr .triangle-control-com-left {
+    top: 8rem !important;
+  }
+}
 @media (max-width: 768px) {
   /* For tablets: */
   .about_text {
@@ -150,9 +183,6 @@
 }
 
 
-
-
-
 .ltr .About .about-us .left .prod_title .map_text .triangle_control {
   left: 53% !important;
 }
@@ -168,8 +198,8 @@
 .ltr .About .aboutleft .left .prod_title .map_text .triangle_control {
   left: 72% !important;
 }
-.ltr .About .medals .left .prod_title .map_text .triangle_control {
-  left: 57% !important;
+.ltr .About .medals .left.modals .prod_title .map_text .triangle_control {
+  left: 72% !important;
 }
 .ltr .left .triangle-control-com-left {
   position: absolute;
@@ -215,6 +245,34 @@
     left: 67% !important;
   }
 }
+@media (max-width: 576px) {
+  .ltr .triangle-control-com-left :nth-child(1) {
+    left: 5rem !important;
+    top:1rem !important;
+}
+.ltr .triangle-control-com-left :nth-child(2) {
+  left: 3rem !important;
+  top:1rem !important;
+
+}
+
+  .ltr .About .about-us .left .prod_title .map_text .triangle_control {
+    left: 66% !important;
+  }
+.ltr .About .about-us .right .prod_title .map_text .triangle_control {
+  left: 65% !important;
+}
+.ltr .About .ma-right .right .prod_title .map_text .triangle_control {
+  left: 92% !important;
+}
+.ltr .About .aboutleft .left .prod_title .map_text .triangle_control {
+  left: 110% !important;
+}
+.ltr .About .medals .left .prod_title .map_text .triangle_control {
+  left: 82% !important;
+}
+}
+
 @media (max-width: 425px) {
   .about_text {
     margin-top: 79%;

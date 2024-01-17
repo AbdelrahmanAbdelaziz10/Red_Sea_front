@@ -113,6 +113,18 @@
   text-align: center !important;
   margin-left: 0 !important;
 }
+@media (min-width: 577px) and (max-width: 992px) {
+  .slider_card.card {
+    max-width: 60vw !important;
+    border: none !important;
+    border-radius: 9px !important;
+    box-shadow: 1px 1px 10px var(--gray);
+    margin: 0 4em 0 0;
+    max-height: 20vh !important;
+    min-height: 20vh !important;
+  }
+}
+
 @media (max-width: 768px) {
   .slider_card.card {
     max-width: 60vw !important;
