@@ -44,6 +44,7 @@ img {
   .brand {
     margin-bottom: 20%;
   }
+
   .brand .brand_card {
     margin-bottom: 9% !important;
   }
@@ -73,6 +74,12 @@ img {
   .rtl .Product_page .mp-right .map_text .triangle_control {
     right: 56% !important;
   }
+}
+
+@media (max-width: 576px){
+  .rtl .Home .brand .map_text .triangle_control, .rtl .Product_page .mp-right .map_text .triangle_control {
+    right: 62% !important;
+}
 }
 @media (max-width: 425px) {
   /* For tablets: */

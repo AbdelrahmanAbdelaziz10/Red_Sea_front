@@ -23,7 +23,7 @@ const HomePage = ({navshow}) => {
       </div>
       <Brand />
       <LocationMap title={t('map')} />
-      <div className="triangle_control">
+      <div className="triangle_control footer">
               <div className="triangle" />
             </div>
             <Footer />

@@ -1,7 +1,5 @@
 import "./AboutRight.css";
-
 import { Col, Container, Row } from "react-bootstrap";
-
 import React from "react";
 import Title from "../Title/Title";
 import Triangle from "../Triangle/Triangle";
@@ -37,7 +35,12 @@ const AboutRight = ({
         <Col lg="8" md="10" xs="12" sm="12">
           <div className="pt-lg-5 about_text">
             <span className="paragraph-header pe-lg-5 "> {head}</span> <br />
-            <p className="paragraph me-lg-5">{aboutAr}</p>
+            <p
+              className="paragraph me-lg-5"
+              dangerouslySetInnerHTML={{
+                __html: aboutAr,
+              }}
+            />
             <p className="description2">
               <span className="span_head">{head2}</span>
               <br />

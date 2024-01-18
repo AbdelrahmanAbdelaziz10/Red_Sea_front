@@ -30,7 +30,7 @@ const Sliders = ({ selectedLanguage }) => {
     speed: 500,
     arrows: true,
     slidesToScroll: 1,
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 2000,
     responsive: [
       {

@@ -79,21 +79,27 @@
 
 .triangle-control-com {
   transition: 0.5s;
-}
+ } 
+/*
+/* .rtl .about .triangle-control-com:hover :first-child { */
+  /* transform: scale(1.1) translate(-10px, -5px) !important; */
+  /* box-shadow: rgba(255, 255, 255, 0.55) !important; */
+/* } */
+/*  */
+/* .rtl .about .triangle-control-com:hover :nth-child(2) { */
+  /* transform: scale(1.05) !important; */
+  /* box-shadow: rgba(255, 255, 255, 0.55); */
+/* } */
+/* .ltr .triangle-control-com:hover { */
+  /* transform: scale(1.13) !important; */
+  /* transition: all .5s; */
+  /* box-shadow: rgba(255, 255, 255, 0.55) !important; */
+/* } */
+.triangle-control-com:hover {
+  animation-name: triangle;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 
-.rtl .about .triangle-control-com:hover :first-child {
-  transform: scale(1.1) translate(-10px, -5px) !important;
-  box-shadow: rgba(255, 255, 255, 0.55) !important;
-}
-
-.rtl .about .triangle-control-com:hover :nth-child(2) {
-  transform: scale(1.05) !important;
-  box-shadow: rgba(255, 255, 255, 0.55);
-}
-.ltr .triangle-control-com:hover {
-  transform: scale(1.13) !important;
-  transition: all .5s;
-  box-shadow: rgba(255, 255, 255, 0.55) !important;
 }
 
 .triangle-control-com {
@@ -240,16 +246,19 @@
   top: 4rem;
 }
   .ltr .About .about-us .left .prod_title .map_text .triangle_control {
-    left: 23rem !important;
+    left: 27rem !important;
+}
+.ltr .About .about-us .left.modals .prod_title .map_text .triangle_control {
+  left: 33rem !important;
 }
 .ltr .medals .About .about-us .left .prod_title.m-right .map_text .triangle_control {
   left: 30rem !important;
 }
   .ltr .About .ma-right .right .prod_title .map_text .triangle_control{
-        left: 30rem !important;
+        left: 34rem !important;
 }
 .ltr .About .aboutleft .left .prod_title .map_text .triangle_control {
-  left: 38rem !important;
+  left: 41rem !important;
 }
   .ltr .description2 {
     margin-left: 0%;
@@ -375,7 +384,10 @@
     margin-left: 2% !important;
   }
   .rtl .m-right .triangle_control {
-    right: 56% !important;
+    right: 63% !important;
+}
+.rtl .m-right.prod_title .triangle_control {
+  right: 56% !important;
 }
 .rtl .ma-right .prod_title.m-right .triangle_control {
   right: 73% !important;
@@ -392,11 +404,27 @@
   }
   .rtl .triangle-control-com-left :nth-child(1) {
     left: 5rem !important;
-    top: -1.8rem !important;
+    top: 2rem !important;
   }
+  .rtl .Home .brand .map_text .triangle_control,
+  .rtl .Product_page .mp-right .map_text .triangle_control {
+    right: 59% !important;
+}
   .rtl .triangle-control-com-left :nth-child(2) {
     left: 7rem !important;
-    top: -1.8rem !important;
+    top: 2rem !important;
+  }
+  .rtl .medals .triangle-control-com-left :nth-child(1) {
+    top: -2rem !important;
+  }
+  .rtl .medals .triangle-control-com-left :nth-child(2) {
+    top: -2rem !important;
+  }
+  .rtl .aboutleft.m-right .triangle-control-com-left :nth-child(1) {
+    top: 6rem !important;
+  }
+  .rtl .aboutleft.m-right .triangle-control-com-left :nth-child(2) {
+    top: 6rem !important;
   }
   .rtl .aboutleft .triangle-control-com-left :nth-child(1) {
     left: 5rem !important;
@@ -439,6 +467,12 @@
   }
 }
 @media (max-width: 425px) {
+  .rtl .About .ma-right.aboutleft .right .prod_title .map_text .triangle_control {
+    right: 63.5% !important;
+}
+.ltr .About .ma-right.aboutleft .right .prod_title .map_text .triangle_control {
+  left: 99% !important;
+}
   .about_text {
     margin-top: 79%;
   }
@@ -460,11 +494,11 @@
   }
   .rtl .triangle-control-com-left :nth-child(1) {
     left: 5rem !important;
-    top: -2.5rem !important;
+    top: -1rem !important;
   }
   .rtl .triangle-control-com-left :nth-child(2) {
     left: 7rem !important;
-    top: -2.5rem !important;
+    top: -1rem !important;
   }
   .rtl .aboutleft .triangle-control-com-left :nth-child(1) {
     left: 5rem !important;
@@ -505,4 +539,15 @@
   .about_text {
     margin-top: 79%;
   }
+}
+@media (max-width:380px) {
+  .rtl .medals .triangle-control-com-left :nth-child(1) {
+    top: -3rem !important;
+}
+.rtl .medals .triangle-control-com-left :nth-child(2) {
+  top: -3rem !important;
+}
+.ltr .About .ma-right.aboutleft .right .prod_title .map_text .triangle_control {
+  left: 105% !important;
+}
 }

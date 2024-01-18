@@ -104,19 +104,23 @@
   animation-duration: 0.5s;
   transition: all 1.6s;
 } */
-
-.rtl .packaging .triangle-control-com:hover :first-child,
-.ltr .packaging .triangle-control-com:hover :first-child {
-  transform: scale(1.05) translate(-10px, -5px) !important;
-  box-shadow: rgba(255, 255, 255, 0.55) !important;
+/*  */
+/* .rtl .packaging .triangle-control-com:hover :first-child, */
+/* .ltr .packaging .triangle-control-com:hover :first-child { */
+  /* transform: scale(1.05) translate(-10px, -5px) !important; */
+  /* box-shadow: rgba(255, 255, 255, 0.55) !important; */
+/* } */
+/*  */
+/* .rtl .packaging .triangle-control-com:hover :nth-child(2), */
+/* .ltr .packaging .triangle-control-com:hover :nth-child(2) { */
+  /* transform: scale(1.03) !important; */
+  /* box-shadow: rgba(255, 255, 255, 0.55); */
+/* } */
+.rtl .packaging .triangle-control-com:hover{
+  animation-name: triangleleft;
+  animation-duration: 2.5s;
+  animation-iteration-count: infinite;
 }
-
-.rtl .packaging .triangle-control-com:hover :nth-child(2),
-.ltr .packaging .triangle-control-com:hover :nth-child(2) {
-  transform: scale(1.03) !important;
-  box-shadow: rgba(255, 255, 255, 0.55);
-}
-
 .ltr .packaging .triangle-control-com {
   left: calc(100% - 31rem);
   top: -1rem;

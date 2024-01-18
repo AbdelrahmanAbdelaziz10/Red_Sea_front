@@ -93,6 +93,11 @@
         left:58% !important;
       }
   }
+  @media (max-width: 576px) {
+    .ltr .Product_page .brandpage_product .product .prod_title .map_text .triangle_control {
+      left: 72% !important;
+  }
+  }
   @media (max-width: 425px) {
     .ltr .Product_page .brandpage_product .product .prod_title .map_text .triangle_control{
         left: 69% !important;

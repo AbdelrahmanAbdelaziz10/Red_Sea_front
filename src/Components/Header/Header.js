@@ -77,7 +77,7 @@ const Header = ({ toggleDirection, navshow }) => {
         modules={[Autoplay, EffectFade, Navigation, Pagination]}
         slidesPerView={1}
         effect={"fade"}
-        autoplay={{ delay: 2000, disableOnInteraction: false }}
+        autoplay={{ delay: 3000 , disableOnInteraction: false }}
         spaceBetween={0}
         pagination={{
           clickable: true,
