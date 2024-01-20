@@ -35,7 +35,7 @@ const Brand = () => {
             brands.map((brand) => (
               <div className="brand_card pb-2 mb-2">
                   <img
-                    src={`https://beautyproducts.website/${brand.brand}`}
+                    src={`https://dashboard.rsdyemen.com//${brand.brand}`}
                     alt={brand.title_en}
                   />
                 </div>

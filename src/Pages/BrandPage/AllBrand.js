@@ -38,7 +38,7 @@ const AllBrand = ({ selectedLanguage }) => {
                   >
                     <div className="img">
                       <img
-                        src={`https://beautyproducts.website/${brand.brand}`}
+                        src={`https://dashboard.rsdyemen.com//${brand.brand}`}
                         alt=""
                       />
                     </div>

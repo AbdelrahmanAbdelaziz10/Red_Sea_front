@@ -24,7 +24,7 @@ const TermsPage = ({navshow}) => {
           <div className="product_Brand">
             <Brand />
           </div>
-          <div className="triangle_control">
+          <div className="triangle_control foot">
               <div className="triangle" />
             </div>
             <Footer />

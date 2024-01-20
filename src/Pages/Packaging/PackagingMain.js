@@ -23,7 +23,7 @@ const PackagingMain = ({ title }) => {
             <div className="triangle-control-com">
               <Triangle backgroundImage="" width={"28rem"} height={"30rem"} />
               <Triangle
-                backgroundImage={`https://beautyproducts.website/${
+                backgroundImage={`https://dashboard.rsdyemen.com//${
                   packaging && packaging[0]?.image
                 }`}
                 width={"29rem"}

@@ -24,7 +24,7 @@ const Conact = ({navshow}) => {
     </section>
 
         <Map />
-        <div className="triangle_control">
+        <div className="triangle_control foot">
               <div className="triangle" />
             </div>
             <Footer />

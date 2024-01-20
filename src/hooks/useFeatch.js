@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const BASE_URL = "https://beautyproducts.website";
+const BASE_URL = "https://dashboard.rsdyemen.com/";
 
 function useFetch(url) {
   const [data, setData] = useState([]);

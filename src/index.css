@@ -156,6 +156,7 @@ ul {
   position: relative;
   left: -80%;
   bottom: 9rem;
+  z-index: 10101010;
 }
 .rtl .triangle_control {
   left: -80%;
@@ -200,10 +201,11 @@ ul {
   transform: rotate(135deg) skewY(-45deg) scale(0.707, 1.414) translate(50%);
 }
 
-.triangle_control.footer .triangle:hover {
+.foot .triangle:hover {
   animation-name: triangle;
   animation-duration: 2s;
   animation-iteration-count: infinite;
+
 
 }
 @keyframes triangle{

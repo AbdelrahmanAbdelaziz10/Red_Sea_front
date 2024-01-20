@@ -31,7 +31,7 @@ const CardImgSlider = ({ selectedLanguage, id }) => {
             >
               <img
                 alt={slider[0].name_ar}
-                src={`https://beautyproducts.website/${slide.image}`}
+                src={`https://dashboard.rsdyemen.com//${slide.image}`}
               />
             </div>
           ))}

@@ -25,7 +25,7 @@ const BrandPage = ({navshow}) => {
       <div className="brandpage_product m-right mt-3">
         <Products title={t("brand_product_title")} />
       </div>
-      <div className="triangle_control">
+      <div className="triangle_control foot">
               <div className="triangle" />
             </div>
             <Footer />
