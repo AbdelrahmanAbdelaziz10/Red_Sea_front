@@ -45,7 +45,7 @@ const ProductCard = ({
   const shareOnFacebook = () => {
     window.open(
       `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-        `https://dashboard.rsdyemen.com//${product?.images[0].image}`)}`,
+        `https://dashboard.rsdyemen.com/${product?.images[0].image}`)}`,
       "_blank"
     );
   };
@@ -53,7 +53,7 @@ const ProductCard = ({
   const shareOnX = () => {
     window.open(
       `https://twitter.com/intent/tweet?url=${encodeURIComponent(
-        `https://dashboard.rsdyemen.com//${product?.images[0].image}`)}`,
+        `https://dashboard.rsdyemen.com/${product?.images[0].image}`)}`,
       "_blank"
     );
   };
@@ -75,7 +75,7 @@ const ProductCard = ({
           <div className="img" onClick={() => handleClickOnImg(product?.id)}>
             <img
               alt={product.name_ar}
-              src={`https://dashboard.rsdyemen.com//${product?.images[0].image}`}
+              src={`https://dashboard.rsdyemen.com/${product?.images[0].image}`}
             />
           </div>
           <button

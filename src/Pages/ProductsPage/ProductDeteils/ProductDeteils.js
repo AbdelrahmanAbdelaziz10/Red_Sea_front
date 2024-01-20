@@ -90,7 +90,7 @@ const ProductDeteils = ({ productData, loading, setNavshow }) => {
   const shareOnFacebook = () => {
     window.open(
       `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
-        `https://dashboard.rsdyemen.com//${product?.images[0].image}`
+        `https://dashboard.rsdyemen.com/${product?.images[0].image}`
       )}`,
       "_blank"
     );
@@ -99,7 +99,7 @@ const ProductDeteils = ({ productData, loading, setNavshow }) => {
   const shareOnX = () => {
     window.open(
       `https://twitter.com/intent/tweet?url=${encodeURIComponent(
-        `https://dashboard.rsdyemen.com//${product?.images[0].image}`
+        `https://dashboard.rsdyemen.com/${product?.images[0].image}`
       )}`,
       "_blank"
     );
@@ -137,7 +137,7 @@ const ProductDeteils = ({ productData, loading, setNavshow }) => {
                     onClick={() => handleClickOnImg(productData?.id)}
                   >
                     <img
-                      src={`https://dashboard.rsdyemen.com//${posterSrc}`}
+                      src={`https://dashboard.rsdyemen.com/${posterSrc}`}
                       alt="Video Poster"
                     />
                   </div>

@@ -28,7 +28,7 @@ const CardImgSlider = ({ selectedLanguage, id }) => {
             <div className="img d-flex justify-content-center align-content-center" key={slider[0].id}>
               <img
                 alt={slider[0].name_ar}
-                src={`https://dashboard.rsdyemen.com//${slide.image}`}
+                src={`https://dashboard.rsdyemen.com/${slide.image}`}
               />
             </div>
           ))}

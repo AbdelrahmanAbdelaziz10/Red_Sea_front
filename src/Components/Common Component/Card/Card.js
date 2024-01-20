@@ -43,7 +43,7 @@ const CardComponent = ({
           </h6>
           <img
             alt={slide?.name_ar}
-            src={`https://dashboard.rsdyemen.com//${slide?.images[0]?.image}`}
+            src={`https://dashboard.rsdyemen.com/${slide?.images[0]?.image}`}
           />
         </div>
       )}

@@ -42,11 +42,11 @@ function HeaderSlider({ slider }) {
     //   className="mySwiper"
     // >
     //   {slider.map((slide) =>
-    //     // <div data-src={`https://dashboard.rsdyemen.com//${slide?.slider}`} />
+    //     // <div data-src={`https://dashboard.rsdyemen.com/${slide?.slider}`} />
     //     slide?.slider !== null ? (
-    //       <div data-src={`https://dashboard.rsdyemen.com//${slide?.slider}`} />
+    //       <div data-src={`https://dashboard.rsdyemen.com/${slide?.slider}`} />
     //     ) : (
-    //       //   <img src={`https://dashboard.rsdyemen.com//${slide?.slider}`} alt="" />
+    //       //   <img src={`https://dashboard.rsdyemen.com/${slide?.slider}`} alt="" />
     //       <div className="video_slider" ref={ref1}>
     //         <iframe
     //           title="youtube video"
@@ -76,7 +76,7 @@ function HeaderSlider({ slider }) {
           slider.map((slide, idx) => (
             <div
               key={slide.id}
-              data-src={`https://dashboard.rsdyemen.com//${slide.slider}`}
+              data-src={`https://dashboard.rsdyemen.com/${slide.slider}`}
             >
               {slide.video_url ? (
                 <div className="video_slider">

@@ -96,7 +96,7 @@ const Header = ({ toggleDirection, navshow }) => {
               <SwiperSlide className="slide" key={slide.id}>
                 {slide?.slider !== null ? (
                   <img
-                    src={`https://dashboard.rsdyemen.com//${slide?.slider}`}
+                    src={`https://dashboard.rsdyemen.com/${slide?.slider}`}
                     alt=""
                   />
                 ) : (

@@ -31,7 +31,7 @@ const ProductDetailsSlider = ({ productData, setPosterSrc }) => {
               <img
                 onClick={() => setPosterSrc(slide.image)}
                 alt={productData.name_ar}
-                src={`https://dashboard.rsdyemen.com//${slide.image}`}
+                src={`https://dashboard.rsdyemen.com/${slide.image}`}
               />
             </div>
           ))}
@@ -41,7 +41,7 @@ const ProductDetailsSlider = ({ productData, setPosterSrc }) => {
               <img
                 onClick={() => setPosterSrc(slide.image)}
                 alt={productData.name_ar}
-                src={`https://dashboard.rsdyemen.com//${slide.image}`}
+                src={`https://dashboard.rsdyemen.com/${slide.image}`}
               />
             </div>
           ))}

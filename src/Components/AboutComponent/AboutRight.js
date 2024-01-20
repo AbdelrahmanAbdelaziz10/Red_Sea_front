@@ -24,7 +24,7 @@ const AboutRight = ({
             <div className="triangle-control-com">
               <Triangle backgroundImage="" width={"19rem"} height={"19rem"} />
               <Triangle
-                backgroundImage={`https://dashboard.rsdyemen.com//${aboutImage}`}
+                backgroundImage={`https://dashboard.rsdyemen.com/${aboutImage}`}
                 width={"19rem"}
                 height={"19rem"}
               />

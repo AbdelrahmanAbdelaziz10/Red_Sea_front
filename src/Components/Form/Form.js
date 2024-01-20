@@ -86,7 +86,7 @@ const Form = () => {
 
         // Assuming your API endpoint is '/api/contact'
         const response = await axios.post(
-          "https://dashboard.rsdyemen.com//api/v1/contact",
+          "https://dashboard.rsdyemen.com/api/v1/contact",
           formData
         );
 
