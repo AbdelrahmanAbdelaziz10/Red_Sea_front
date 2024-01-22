@@ -8,12 +8,12 @@
     z-index: 11;
 
 }
-.product p{
-    text-align: center;
-    font-size: 1,2rem;
-    font-weight: 400;
-    color: var(--white);
-}
+/* .product p{ */
+    /* text-align: center; */
+    /* font-size: 1.2rem; */
+    /* font-weight: 400; */
+    /* color: var(--white); */
+/* } */
 .product .triangle {
 	position: absolute;
 	background-color: var(--heavenly);

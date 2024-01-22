@@ -32,11 +32,13 @@ const TermsMain = () => {
                 ? terms[0]?.copyright_ar
                 : terms[0]?.copyright_en}
             </p>
-            <p className="policy_paragraph  ">
-              {terms && selectedLanguage === "ar"
+            <p className="policy_paragraph  "
+            dangerouslySetInnerHTML={{ __html:
+              terms && selectedLanguage === "ar"
                 ? terms[0]?.special_marks_ar
-                : terms[0]?.special_marks_en}
-            </p>
+                : terms[0]?.special_marks_en}}
+            />
+
           </Row>
         </Container>
       </div>

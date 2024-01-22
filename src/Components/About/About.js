@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const About = () => {
   const { t, i18n } = useTranslation();
   return (
-    <section className="about pb-5 mb-5 mt-3">
+    <section className="about pb-5 mb-5">
       <Container>
         <Row className="mb-5 pb-5">
           <div className="map_text about_title mt-4 ">

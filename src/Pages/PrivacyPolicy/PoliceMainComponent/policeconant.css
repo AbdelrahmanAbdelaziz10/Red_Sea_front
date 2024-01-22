@@ -11,7 +11,13 @@
 .packaging_height {
   height: 25rem;
 }
+ .rtl .policy_paragraph .MsoNormal span{
+  font-size: 1.1rem !important;
+  line-height: 2.5rem !important;
+  font-weight: 400 !important;
+  color: #635d5d !important;
 
+ }
 .prod_title p {
   color: var(--gray);
 }
@@ -85,40 +91,49 @@
 .ltr .Product_page .margin_right .triangle_control {
   left: 54% !important;
 }
-.rtl .product_container .policy_paragraph {
-  text-align: right;
+
+.product_container .policy_paragraph{
+/* text-align: center; */
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--gray);
+}
+.rtl .product_container .policy_paragraph,
+.rtl .product_container .policy_paragraph p {
+  text-align: right !important; 
+  color: #635d5d !important;
 }
 .ltr .product_container .policy_paragraph {
   margin-left: 0 !important;
   margin-right: 0 !important;
   width: 100% !important;
-  text-align: left;
+  text-align: left !important;
 }
 /* .rtl .packaging:hover .triangle-control-com :last-child {
   animation-name: animation;
-  animation-duration: 0.5s;
+  animation-duration: 5s;
   transition: all 1.6s;
 }
 .ltr .packaging:hover .triangle-control-com :last-child {
   animation-name: animation_ltr;
-  animation-duration: 0.5s;
+  animation-duration: 5s;
   transition: all 1.6s;
 } */
 /*  */
 /* .rtl .packaging .triangle-control-com:hover :first-child, */
 /* .ltr .packaging .triangle-control-com:hover :first-child { */
-  /* transform: scale(1.05) translate(-10px, -5px) !important; */
-  /* box-shadow: rgba(255, 255, 255, 0.55) !important; */
+/* transform: scale(1.05) translate(-10px, -5px) !important; */
+/* box-shadow: rgba(255, 255, 255, 0.55) !important; */
 /* } */
 /*  */
 /* .rtl .packaging .triangle-control-com:hover :nth-child(2), */
 /* .ltr .packaging .triangle-control-com:hover :nth-child(2) { */
-  /* transform: scale(1.03) !important; */
-  /* box-shadow: rgba(255, 255, 255, 0.55); */
+/* transform: scale(1.03) !important; */
+/* box-shadow: rgba(255, 255, 255, 0.55); */
 /* } */
-.rtl .packaging .triangle-control-com:hover{
+.rtl .packaging .triangle-control-com {
   animation-name: triangleleft;
-  animation-duration: 2.5s;
+  animation-duration: 5s;
   animation-iteration-count: infinite;
 }
 .ltr .packaging .triangle-control-com {
@@ -184,7 +199,7 @@
     right: 50rem;
   }
 }
-@media (min-width: 577px) and (max-width: 992px){
+@media (min-width: 577px) and (max-width: 992px) {
   .rtl .packaging .triangle-control-com :first-child {
     right: -9rem !important;
     top: -16rem !important;

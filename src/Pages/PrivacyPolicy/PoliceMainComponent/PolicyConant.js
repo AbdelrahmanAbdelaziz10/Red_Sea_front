@@ -20,10 +20,12 @@ const PolicyConant = ({ title }) => {
         </div>
         <Container className="position-relative">
           <Row className="d-flex justify-content-center mt-5 pb-4 mx-5">
-            <p className="policy_paragraph mx-4">
-              {policy && selectedLanguage === "ar"
+            <p className="policy_paragraph mx-4" 
+            dangerouslySetInnerHTML={{ __html: policy && selectedLanguage === "ar"
                 ? policy[0]?.description_ar
-                : policy[0]?.description_en}
+                : policy[0]?.description_en}}
+            >
+              
             </p>
           </Row>
         </Container>

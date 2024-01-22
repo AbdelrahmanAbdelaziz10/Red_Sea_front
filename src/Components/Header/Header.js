@@ -77,7 +77,7 @@ const Header = ({ toggleDirection, navshow }) => {
         modules={[Autoplay, EffectFade, Navigation, Pagination]}
         slidesPerView={1}
         effect={"fade"}
-        autoplay={{ delay: 3000 , disableOnInteraction: false }}
+        autoplay={{ delay: 4000, disableOnInteraction: false }}
         spaceBetween={0}
         pagination={{
           clickable: true,
@@ -146,40 +146,38 @@ const Header = ({ toggleDirection, navshow }) => {
             );
           })}
       </Swiper>
-      {setting.video !== " " ? (
+
+      {setting.video !== null ? (
         <div className="d-flex justify-content-center">
           <div
             className="video video-container d-flex justify-content-center"
             ref={ref}
           >
-            {
-              setting[0]?.video !== null ? (
-                <iframe
-                  ref={videoRef}
-                  title="youtube video"
-                  className="videoIframe js-videoIframe"
-                  src={`https://www.youtube.com/embed/${videoId}?autoplay=${autoPlay}&loop=1`}
-                  // src={https://www.youtube.com/embed/G0LFwHpNIVg?autoplay=${autoPlay}}
-                  frameborder="0"
-                  allowtransparency="true"
-                  allowFullScreen
-                  allow="autoplay"
-                ></iframe>
-              ) : null
-              /* (
+            <iframe
+              ref={videoRef}
+              title="youtube video"
+              className="videoIframe js-videoIframe"
+              src={`https://www.youtube.com/embed/${videoId}?autoplay=${autoPlay}&loop=1&rel=0&playlist=${videoId}`}
+              // src={https://www.youtube.com/embed/G0LFwHpNIVg?autoplay=${autoPlay}}
+              frameborder="0"
+              allowtransparency="true"
+              allowFullScreen
+              allow="autoplay"
+            ></iframe>
+
+            {/* (
               <iframe
                 ref={videoRef}
                 title="youtube video"
                 className="videoIframe js-videoIframe"
                 // src={https://www.youtube.com/embed/${videoId}?autoplay=${autoPlay}}
-                src={https://www.youtube.com/embed/G0LFwHpNIVg?autoplay=${autoPlay}}
+                src={`https://www.youtube.com/embed/G0LFwHpNIVg?autoplay=${autoPlay}`}
                 frameborder="0"
                 allowTransparency="true"
                 allowfullscreen
                 allow="autoplay"
               ></iframe>
-            ) */
-            }
+            )  */}
           </div>
         </div>
       ) : null}

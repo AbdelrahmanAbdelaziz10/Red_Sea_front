@@ -47,7 +47,7 @@
   color: #635d5d;
 }
 .rtl .about .triangle_control {
-  right: 54% ;
+  right: 54%;
   top: -1px;
 }
 .triangle-control-com-left {
@@ -59,72 +59,111 @@
   /* transform: rotate(90deg) !important; */
   transform: rotateY(180deg);
 }
-.rtl .m-right.aboutleft{
+.rtl .m-right.aboutleft {
   margin-bottom: 5rem !important;
 }
 .triangle-control-com-left :first-child {
   left: 0rem !important;
-  top:-2rem;
+  top: -2rem;
 }
 .rtl .triangle-control-com-left :last-child {
-  top:-2rem;
+  top: -2rem;
   left: 1.7rem !important;
-
 }
 .ltr .triangle-control-com-left :last-child {
-  top:-2rem;
+  top: -2rem;
   left: -0.7rem !important;
-
 }
 
 /* .rtl .triangle-control-com-left:hover { */
-  /* transform: scale(1.13) !important; */
-  /* transition: all .5s; */
-  /* box-shadow: rgba(255, 255, 255, 0.55) !important; */
+/* transform: scale(1.13) !important; */
+/* transition: all .5s; */
+/* box-shadow: rgba(255, 255, 255, 0.55) !important; */
 /* } */
 /* .ltr .triangle-control-com-left:hover :first-child { */
-  /* transform: scale(1.1) translate(-10px, -5px) !important; */
-  /* box-shadow: rgba(255, 255, 255, 0.55) !important; */
+/* transform: scale(1.1) translate(-10px, -5px) !important; */
+/* box-shadow: rgba(255, 255, 255, 0.55) !important; */
 /* } */
 /*  */
 /* .ltr .triangle-control-com-left:hover :nth-child(2) { */
-  /* transform: scale(1.05) !important; */
-  /* box-shadow: rgba(255, 255, 255, 0.55); */
+/* transform: scale(1.05) !important; */
+/* box-shadow: rgba(255, 255, 255, 0.55); */
 /* } */
-.rtl .triangle-control-com-left:hover {
-  animation-name: triangle;
-  animation-duration: 2s;
+.rtl .triangle-control-com-left {
+  animation-name: triangleleft;
+  animation-duration: 5s;
   animation-iteration-count: infinite;
 }
-.ltr .triangle-control-com-left:hover {
+.ltr .triangle-control-com-left {
   /* top:7.5rem; */
   animation-name: triangleleft;
-  animation-duration: 2.5s;
+  animation-duration: 5s;
   animation-iteration-count: infinite;
 }
-@keyframes triangleleft{
-  0%{top:7.3rem}
-  5%{top:7rem}
-  10%{top:6.7rem}
-  15%{top:6.4rem}
-  20%{top:6.1rem}
-  25%{top:5.8rem}
-  30%{top:6.1rem}
-  35%{top:6.4rem}
-  40%{top:6.7rem}
-  45%{top:7rem}
-  50%{top: 7.3rem}
-  55%{top:7rem}
-  60%{top:6.7rem}
-  65%{top:6.4rem}
-  70%{top:6.1rem}
-  75%{top:5.8rem}
-  80%{top:6.1rem}
-  85%{top:6.4rem}
-  90%{top:6.7rem}
-  95%{top:7rem}
-  100%{top:7.3rem}
-
+@keyframes triangleleft {
+  0% {
+    top: 7.3rem;
+  }
+  5% {
+    top: 7rem;
+  }
+  10% {
+    top: 6.7rem;
+  }
+  15% {
+    top: 6.4rem;
+  }
+  20% {
+    top: 6.1rem;
+  }
+  25% {
+    top: 5.8rem;
+  }
+  30% {
+    top: 6.1rem;
+  }
+  35% {
+    top: 6.4rem;
+  }
+  40% {
+    top: 6.7rem;
+  }
+  45% {
+    top: 7rem;
+  }
+  50% {
+    top: 7.3rem;
+  }
+  55% {
+    top: 7rem;
+  }
+  60% {
+    top: 6.7rem;
+  }
+  65% {
+    top: 6.4rem;
+  }
+  70% {
+    top: 6.1rem;
+  }
+  75% {
+    top: 5.8rem;
+  }
+  80% {
+    top: 6.1rem;
+  }
+  85% {
+    top: 6.4rem;
+  }
+  90% {
+    top: 6.7rem;
+  }
+  95% {
+    top: 7rem;
+  }
+  100% {
+    top: 7.3rem;
+  }
 }
 
 .ltr .About .about-us .left .prod_title .map_text .triangle_control {
@@ -164,18 +203,90 @@
   left: -1rem;
 }
 @media (min-width: 577px) and (max-width: 992px) {
+  .rtl .triangle-control-com-left {
+    animation-name: trianglemedia;
+  }
+  .ltr .triangle-control-com-left {
+    animation-name: triangleleft !important;
+  }
+  @keyframes trianglemedia {
+    0% {
+      top: -36rem;
+    }
+    5% {
+      top: -35.7rem;
+    }
+    10% {
+      top: -35.4rem;
+    }
+    15% {
+      top: -35.1rem;
+    }
+    20% {
+      top: -34.8rem;
+    }
+    25% {
+      top: -34.5rem;
+    }
+    30% {
+      top: -34.8rem;
+    }
+    35% {
+      top: -35.1rem;
+    }
+    40% {
+      top: -35.4rem;
+    }
+    45% {
+      top: -35.7rem;
+    }
+    50% {
+      top: -36rem;
+    }
+    55% {
+      top: -36.3rem;
+    }
+    60% {
+      top: -36.6rem;
+    }
+    65% {
+      top: -36.9rem;
+    }
+    70% {
+      top: -37.2rem;
+    }
+    75% {
+      top: -37.5rem;
+    }
+    80% {
+      top: -37.2rem;
+    }
+    85% {
+      top: -36.9rem;
+    }
+    90% {
+      top: -36.6rem;
+    }
+    95% {
+      top: -36.3rem;
+    }
+    100% {
+      top: -36rem;
+    }
+  }
+
   /* For tablets: */
   .about_text {
     text-align: center;
     margin-top: 52%;
   }
-  .rtl .m-right.aboutleft{
+  .rtl .m-right.aboutleft {
     margin-bottom: 0rem !important;
   }
   .ltr .About .about-us .right .prod_title .map_text .triangle_control {
     left: 56% !important;
-}
-  .rtl .ma-right .about .prod_title .map_text .triangle_control{
+  }
+  .rtl .ma-right .about .prod_title .map_text .triangle_control {
     right: 66% !important;
   }
   .about-left {
@@ -195,12 +306,12 @@
     left: 2rem;
   }
 
-  .ltr .triangle-control-com-left {
+  /* .ltr .triangle-control-com-left {
     top: 8rem !important;
-  }
+  } */
 }
 @media (max-width: 768px) {
-  .rtl .m-right.aboutleft{
+  .rtl .m-right.aboutleft {
     margin-bottom: 0rem !important;
   }
   .about_text {
@@ -208,7 +319,7 @@
     margin-top: 52%;
   }
   .rtl .about-us .about .triangle_control {
-    right: 52% ;
+    right: 52%;
     top: -1px;
   }
   .about-left {
@@ -228,9 +339,10 @@
     left: 2rem;
   }
 
-  .ltr .triangle-control-com-left {
+  /* .ltr .triangle-control-com-left {
     top: 8rem !important;
-  }  .about_text {
+  } */
+  .about_text {
     text-align: center;
     margin-top: 52%;
   }
@@ -245,7 +357,13 @@
   .ltr .About .about-us .right .prod_title .map_text .triangle_control {
     left: 59% !important;
   }
-  .ltr .About .ma-right.aboutleft .right .prod_title .map_text .triangle_control {
+  .ltr
+    .About
+    .ma-right.aboutleft
+    .right
+    .prod_title
+    .map_text
+    .triangle_control {
     left: 73.5% !important;
   }
   .ltr .About .m-right.aboutleft .left .prod_title .map_text .triangle_control {
@@ -256,41 +374,117 @@
   }
 }
 @media (max-width: 576px) {
+  .rtl .triangle-control-com-left {
+    animation-name: trianglemedia;
+  }
+  .ltr .triangle-control-com-left {
+    animation-name: triangleleft !important;
+  }
+  @keyframes trianglemedia {
+    0% {
+      top: -36rem;
+    }
+    5% {
+      top: -35.7rem;
+    }
+    10% {
+      top: -35.4rem;
+    }
+    15% {
+      top: -35.1rem;
+    }
+    20% {
+      top: -34.8rem;
+    }
+    25% {
+      top: -34.5rem;
+    }
+    30% {
+      top: -34.8rem;
+    }
+    35% {
+      top: -35.1rem;
+    }
+    40% {
+      top: -35.4rem;
+    }
+    45% {
+      top: -35.7rem;
+    }
+    50% {
+      top: -36rem;
+    }
+    55% {
+      top: -36.3rem;
+    }
+    60% {
+      top: -36.6rem;
+    }
+    65% {
+      top: -36.9rem;
+    }
+    70% {
+      top: -37.2rem;
+    }
+    75% {
+      top: -37.5rem;
+    }
+    80% {
+      top: -37.2rem;
+    }
+    85% {
+      top: -36.9rem;
+    }
+    90% {
+      top: -36.6rem;
+    }
+    95% {
+      top: -36.3rem;
+    }
+    100% {
+      top: -36rem;
+    }
+  }
   .ltr .triangle-control-com-left :nth-child(1) {
     left: 5rem !important;
-    top:.5rem !important;
-}
-.rtl .m-right.aboutleft{
-  margin-bottom: 0rem !important;
-}
-.ltr .triangle-control-com-left :nth-child(2) {
-  left: 3rem !important;
-  top: .5rem !important;
-
-}
-.ltr .About .about-us .left .prod_title .map_text .triangle_control {
-  left: 66% !important;
-}
-
-.ltr .About .m-right.medals .left .prod_title .map_text .triangle_control{
-      left: 81% !important;
+    top: 0.5rem !important;
   }
-.ltr .About .about-us .right .prod_title .map_text .triangle_control {
-  left: 65% !important;
-}
-.ltr .About .ma-right.aboutleft .right .prod_title .map_text .triangle_control {
+  .rtl .m-right.aboutleft {
+    margin-bottom: 0rem !important;
+  }
+  .ltr .triangle-control-com-left :nth-child(2) {
+    left: 3rem !important;
+    top: 0.5rem !important;
+  }
+  .ltr .About .about-us .left .prod_title .map_text .triangle_control {
+    left: 66% !important;
+  }
+
+  .ltr .About .m-right.medals .left .prod_title .map_text .triangle_control {
+    left: 81% !important;
+  }
+  .ltr .About .about-us .right .prod_title .map_text .triangle_control {
+    left: 65% !important;
+  }
+  .ltr
+    .About
+    .ma-right.aboutleft
+    .right
+    .prod_title
+    .map_text
+    .triangle_control {
     left: 92% !important;
-}
-.ltr .About .m-right.aboutleft .left .prod_title .map_text .triangle_control {
-      left: 110% !important;
-}
-.ltr .About .medals .left .prod_title .map_text .triangle_control {
-  left: 82% !important;
-}
+  }
+  .ltr .About .m-right.aboutleft .left .prod_title .map_text .triangle_control {
+    left: 110% !important;
+  }
+  .ltr .About .medals .left .prod_title .map_text .triangle_control {
+    left: 82% !important;
+  }
 }
 
 @media (max-width: 425px) {
-  .rtl .m-right.aboutleft{
+  .rtl .m-right.aboutleft {
     margin-bottom: 0rem !important;
   }
   .about_text {
@@ -318,7 +512,7 @@
   }
   .ltr .triangle-control-com-left :nth-child(1) {
     left: 7rem !important;
-    top:1rem;
+    top: 1rem;
   }
   .ltr .paragraph {
     margin-right: 0% !important;
@@ -328,7 +522,7 @@
   }
   .ltr .left .triangle-control-com-left :nth-child(2) {
     left: 5rem !important ;
-    top:1rem;
+    top: 1rem;
   }
 
   .ltr .About .about-us .right .prod_title .map_text .triangle_control {
@@ -355,12 +549,11 @@
     text-align: left !important;
   }
 }
-@media (max-width:380) {
+@media (max-width: 380) {
   .ltr .triangle-control-com-left :nth-child(1) {
     top: 10rem !important ;
   }
-  .rtl .m-right.aboutleft{
+  .rtl .m-right.aboutleft {
     margin-bottom: 0rem !important;
   }
-
 }

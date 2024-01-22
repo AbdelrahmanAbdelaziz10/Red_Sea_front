@@ -162,7 +162,7 @@ export const NavBar = ({ navshow }) => {
               <li className="">
                 <Link
                   className={`${
-                    location.pathname === "/" ? "active" : ""
+                    location.pathname === "/brand" ? "active" : ""
                   } nav-link`}
                   aria-current="page"
                   to="/brand"

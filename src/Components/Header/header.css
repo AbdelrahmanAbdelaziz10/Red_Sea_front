@@ -1,5 +1,5 @@
 .header {
-  height: 172vh;
+  margin-bottom: -3rem !important;
 }
 .swiper {
   position: absolute;
@@ -10,7 +10,7 @@
   z-index: 1;
   direction: rtl !important;
 }
-.ltr .head_text {
+.ltr .head_text{
   width: 90% !important;
   direction: ltr;
 }
@@ -128,12 +128,10 @@
 }
 @media (min-width: 577px) and (max-width: 992px) {
   .header .swiper {
-    /* height: 100%; */
-    height: 110vh;
+    height: 60vh;
   }
 
   .header {
-    /* height: 100vh; */
     overflow: hidden;
   }
   .header .head_text {
@@ -172,11 +170,10 @@
 
 @media screen and (max-width: 768px) {
   .header .swiper {
-    /* height: 100%; */
+    height: 50rem;
   }
 
   .header {
-    /* height: 100vh; */
     overflow: hidden;
   }
   .header .head_text {
@@ -215,7 +212,7 @@
 
 @media (max-width: 425px) {
   .header .swiper {
-    /* height: 100%; */
+    height: 55rem;
   }
   .header .video {
     top: -8.5rem;
@@ -223,7 +220,6 @@
     height: 26vh;
   }
   .header {
-    /* height: 100vh !important; */
     overflow: hidden;
   }
   .header .head_text {
@@ -246,15 +242,14 @@
   .header .head_text h5 {
     font-size: 15px !important;
   }
-  .mySwiper .video_slider {
-    width: 90vh !important;
-    height: 80vh !important;
+  .mySwiper .video_slider{
+    width: 220vw !important;
   }
 }
 
 @media (max-width: 380px) {
   .header .swiper {
-    /* height: 100%; */
+    height: 50rem;
   }
   .header .video {
     top: -8.5rem;
@@ -262,7 +257,6 @@
     height: 31.7vh;
   }
   .header {
-    /* height: 125vh !important; */
     overflow: hidden;
   }
 }
