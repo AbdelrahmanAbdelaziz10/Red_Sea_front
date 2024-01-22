@@ -102,12 +102,19 @@
 .rtl .product_container .policy_paragraph p {
   text-align: right !important; 
   color: #635d5d !important;
+  font-size: 1.1rem;
+
 }
 .ltr .product_container .policy_paragraph {
   margin-left: 0 !important;
   margin-right: 0 !important;
   width: 100% !important;
   text-align: left !important;
+  font-size: 1.1rem;
+
+}
+.m-mall-screen span{
+  font-size: 1.1rem;
 }
 /* .rtl .packaging:hover .triangle-control-com :last-child {
   animation-name: animation;
@@ -372,11 +379,11 @@
     left: 2rem;
   }
   .rtl .packaging .triangle-control-com {
-    top: -1rem !important;
+    /* top: -1rem !important; */
     right: 8rem !important;
   }
   .rtl .packaging .triangle-control-com {
-    top: 11rem !important;
+    /* top: 11rem !important; */
     right: 17rem !important;
   }
   .rtl .packaging .triangle-control-com :last-child {
@@ -441,6 +448,59 @@
   }
   .m-mall-screen {
     margin: 0 3% !important;
+  }
+  .rtl .packaging .triangle-control-com {
+    animation-name: packingright !important;
+  }
+  .ltr .packaging .triangle-control-com {
+    animation-name: packing !important;
+  }
+  @keyframes packing{
+    0%{top:-5rem}
+    5%{top:-5.3rem}
+    10%{top:-5.6rem}
+    15%{top:-5.9rem}
+    20%{top:-6.2rem}
+    25%{top:-6.5rem}
+    30%{top:-6.2rem}
+    35%{top:-5.9rem}
+    40%{top:-5.6rem}
+    45%{top:-5.3rem}
+    50%{top: -5rem}
+    55%{top:-5.3rem}
+    60%{top:-5.6rem}
+    65%{top:-5.9rem}
+    70%{top:-6.2rem}
+    75%{top:-6.5rem}
+    80%{top:-6.2rem}
+    85%{top:-5.9rem}
+    90%{top:-5.6rem}
+    95%{top:-5.3rem}
+    100%{top:-5rem}
+  
+  }
+  @keyframes packingright{
+    0%{top:11rem}
+    5%{top:10.7rem}
+    10%{top:10.4rem}
+    15%{top:10.1rem}
+    20%{top:9.8rem}
+    25%{top:9.5rem}
+    30%{top:9.8rem}
+    35%{top:10.1rem}
+    40%{top:10.4rem}
+    45%{top:10.7rem}
+    50%{top: 10.7rem}
+    55%{top:10.4rem}
+    65%{top:10.1rem}
+    70%{top:9.8rem}
+    75%{top:9.5rem}
+    80%{top:9.8rem}
+    85%{top:10.1rem}
+    90%{top:10.4rem}
+    95%{top:10.7rem}
+    100%{top:11rem}
+  
   }
 }
 @media (max-width: 380px) {

@@ -4,20 +4,16 @@
   border-radius: 8px;
   background-color: var(--white);
 }
-
 .about-left {
   position: relative;
 }
-
 .about .product {
   position: relative;
   min-height: 100vh;
 }
-
 .prod_title p {
   color: var(--gray);
 }
-
 .policy_paragraph {
   color: #4d4d4d !important;
   line-height: 2.3;
@@ -25,7 +21,6 @@
   font-weight: 300;
   font-family: myfont;
 }
-
 .paragraph span {
   font-weight: bold;
 }
@@ -104,7 +99,7 @@
 /* box-shadow: rgba(255, 255, 255, 0.55); */
 /* } */
 .rtl .triangle-control-com-left {
-  animation-name: triangleleft;
+  animation-name: triangle;
   animation-duration: 5s;
   animation-iteration-count: infinite;
 }
@@ -120,39 +115,30 @@
   0% {
     top: 7.3rem;
   }
-
   5% {
     top: 7rem;
   }
-
   10% {
     top: 6.7rem;
   }
-
   15% {
     top: 6.4rem;
   }
-
   20% {
     top: 6.1rem;
   }
-
   25% {
     top: 5.8rem;
   }
-
   30% {
     top: 6.1rem;
   }
-
   35% {
     top: 6.4rem;
   }
-
   40% {
     top: 6.7rem;
   }
-
   45% {
     top: 7rem;
   }
