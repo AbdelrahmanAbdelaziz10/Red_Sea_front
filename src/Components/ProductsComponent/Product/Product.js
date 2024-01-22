@@ -29,7 +29,7 @@ const Product = ({setNavshow}) => {
     <section className="product_container  ">
       <div className="product">
         <div className="prod_title pt-4">
-          <Title title={t("product")} pragraph={t("brand_p")} />
+          <Title title={t("product")} pragraph={t("product_p")} />
         </div>
         <Container className="">
           <Row className="d-flex product_row justify-content-center pb-2 ">

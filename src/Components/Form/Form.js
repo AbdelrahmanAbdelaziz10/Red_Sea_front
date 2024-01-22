@@ -184,12 +184,14 @@ const Form = () => {
         />
         {errors.message && <p className="error">{errors.message}</p>}
       </div>
-      {/* 6LcqBUkpAAAAAPQtjxVWkhPPvwdEc5cPgivmEGiw */}
+      {/* new site key : 6LeRhlgpAAAAABFk594TKSlRFWw9TlKn4zYRvAh9*/}
+      {/* new secrete key : 6LeRhlgpAAAAAI_0tZhdECGHthehn7IApTYh9jIv */}
+
 
       <div className="mb-3 form_row">
       <ReCAPTCHA 
       className="recaptcha"
-      sitekey="6LcqBUkpAAAAAPQtjxVWkhPPvwdEc5cPgivmEGiw"
+      sitekey="6LeRhlgpAAAAABFk594TKSlRFWw9TlKn4zYRvAh9"
       onChange={(val)=>setCapVal(val)}
       />
       {errors.recaptcha && <p className="error">{errors.recaptcha}</p>}

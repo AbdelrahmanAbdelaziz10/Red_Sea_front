@@ -147,58 +147,58 @@
 .ltr .packaging .triangle-control-com :last-child {
   left: 35rem;
 }
-@keyframes animation {
-  0% {
-    left: 30rem;
-  }
-  20% {
-    left: 28rem;
-  }
-  40% {
-    left: 26rem;
-  }
-  50% {
-    left: 24rem;
-  }
-  50% {
-    left: 24rem;
-  }
-  60% {
-    left: 26rem;
-  }
-  80% {
-    left: 28rem;
-  }
-  100% {
-    left: 30rem;
-  }
-}
-@keyframes animation_ltr {
-  0% {
-    right: 50rem;
-  }
-  20% {
-    right: 48rem;
-  }
-  40% {
-    right: 46rem;
-  }
-  50% {
-    right: 42rem;
-  }
-  50% {
-    right: 42rem;
-  }
-  60% {
-    right: 46rem;
-  }
-  80% {
-    right: 48rem;
-  }
-  100% {
-    right: 50rem;
-  }
-}
+/* @keyframes animation { */
+  /* 0% { */
+    /* left: 30rem; */
+  /* } */
+  /* 20% { */
+    /* left: 28rem; */
+  /* } */
+  /* 40% { */
+    /* left: 26rem; */
+  /* } */
+  /* 50% { */
+    /* left: 24rem; */
+  /* } */
+  /* 50% { */
+    /* left: 24rem; */
+  /* } */
+  /* 60% { */
+    /* left: 26rem; */
+  /* } */
+  /* 80% { */
+    /* left: 28rem; */
+  /* } */
+  /* 100% { */
+    /* left: 30rem; */
+  /* } */
+/* } */
+/* @keyframes animation_ltr { */
+  /* 0% { */
+    /* right: 50rem; */
+  /* } */
+  /* 20% { */
+    /* right: 48rem; */
+  /* } */
+  /* 40% { */
+    /* right: 46rem; */
+  /* } */
+  /* 50% { */
+    /* right: 42rem; */
+  /* } */
+  /* 50% { */
+    /* right: 42rem; */
+  /* } */
+  /* 60% { */
+    /* right: 46rem; */
+  /* } */
+  /* 80% { */
+    /* right: 48rem; */
+  /* } */
+  /* 100% { */
+    /* right: 50rem; */
+  /* } */
+/* } */
 @media (min-width: 577px) and (max-width: 992px) {
   .rtl .packaging .triangle-control-com :first-child {
     right: -9rem !important;
