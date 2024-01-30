@@ -81,7 +81,7 @@ const ProductCard = ({
           <button
             className="product_btn"
             onClick={() => {
-              navigate(`/products/${product.id}`);
+              navigate(`/products/${product?.id}`);
             }}
           >
             {t("product_btn")}

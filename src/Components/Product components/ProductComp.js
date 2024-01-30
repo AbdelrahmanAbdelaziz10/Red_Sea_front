@@ -7,11 +7,10 @@ import React from "react";
 const ProductComp = ({ feature, outer, inner, selectedLanguage }) => {
   return (
     <Row className=" mb-4 justify-content-center">
-      <Col lg="4" md="4" xs="6">
+       <Col lg="4" md="4" xs="6">
         <ul>
           <li>{selectedLanguage === "ar" ? " اسم المنتج " : "product name"}</li>
-          {feature &&
-            feature.map((product) => {
+          {feature && feature.map((product) => {
               return (
                 <>
                   <li className="table_list mt-2">{product}</li>
@@ -36,8 +35,8 @@ const ProductComp = ({ feature, outer, inner, selectedLanguage }) => {
               );
             })}
         </ul>
-      </Col>
-      <Col lg="4" md="4" xs="6">
+      </Col> 
+       <Col lg="4" md="4" xs="6">
         <ul>
           <li>
             {selectedLanguage === "ar"
@@ -53,7 +52,7 @@ const ProductComp = ({ feature, outer, inner, selectedLanguage }) => {
               );
             })}
         </ul>
-      </Col>
+      </Col> 
 
     </Row>
   );

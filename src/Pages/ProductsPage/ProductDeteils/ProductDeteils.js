@@ -160,6 +160,7 @@ const ProductDeteils = ({ productData, loading, setNavshow }) => {
                       : productData?.description_en
                   }
                 />
+
                 <ProductComp
                   selectedLanguage={selectedLanguage}
                   feature={
