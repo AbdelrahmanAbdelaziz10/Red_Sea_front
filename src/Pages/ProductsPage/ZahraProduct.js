@@ -21,7 +21,10 @@ const ZahraProduct = ({navshow,setNavshow}) => {
   useEffect(()=>{
     document.title=`${t('page_title')}${t('product_deteils')}`;
   },[selectedLanguage])
-
+  
+useEffect(()=>{
+  window.scrollTo(0,0)
+})
   return (
     <div className="Product_page details Contact ">
       <Head title={t('product') } poster={contactPoster} navshow={navshow} />

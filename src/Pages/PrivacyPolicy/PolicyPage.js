@@ -16,6 +16,7 @@ const PolicyPage = ({navshow}) => {
 
   useEffect(() => {
     document.title = `${t("page_title")}${t("policty")}`;
+      window.scrollTo(0,0)
   }, [selectedLanguage]);
 
   return (
